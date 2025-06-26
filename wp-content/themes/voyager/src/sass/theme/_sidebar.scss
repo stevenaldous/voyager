@@ -1,0 +1,133 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Sidebars
+///////////////////////////////////////////////////////////////////////////////////
+/// 
+.sidebar {
+    // form styles
+    form {
+        input[type="text"],
+        input[type="url"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="password"],
+        input[type="file"],
+        textarea{
+            background-color: transparent;
+            border: none;
+            border-bottom: var(--color-n200) solid 1px;
+            padding: 0.75rem 0.75rem 0.75rem 0;
+        }
+        textarea { height: 100px;}
+        .gfield_html {
+            font-size: 0.625rem;
+            text-align: center;
+            p,a { font-size: inherit; }
+            a {
+                color: $jem1;
+            }
+        }
+    }
+
+
+    // menu styles 
+    .sb-menu {
+        padding: 0;
+        width: 100%;
+        li{
+            padding: 0;
+            border-bottom: 1px var(--color-body) solid; 
+            &::before {
+                content: '\f061';
+                right: 0;
+                left: auto;
+                top: 50%;
+                @include transform(translateY(-50%));
+            }
+            a {
+                padding: 0.5rem;
+                color: $body;
+                color: var(--color-body);
+                text-decoration: none;
+                &:hover, &:focus {
+                    color: $jem1-hover;
+                    color: var(--color-jem1-hover);
+                }
+            }
+        }
+    }
+
+    // posts styles
+    .sb-blog {
+        article {
+            border-bottom: solid var(--color-n600) 1px;
+            &:first-of-type {
+                border-top: solid var(--color-n600) 1px;
+            }
+            h3 { 
+                font-size: 1rem; 
+                line-height: 1.875;
+            }
+            a {
+                color: $jem1;
+                color: var(--color-jem1);
+                text-decoration: none;
+                &:hover, &:focus {
+                    color: $jem1-hover;
+                    color: var(--color-jem1-hover);
+                }
+            }
+        }
+    }
+
+
+
+    // CTA styles
+    .sb-cta {
+        .bg-bg, .bg-light, .bg-white, .bg-jem1 {
+            .no-btn {
+                color: $jem1;
+                color: var(--color-jem1);
+                &:hover, &:focus { 
+                    color: $jem1-hover;
+                    color: var(--color-jem1-hover);
+                }
+            }
+        }
+        .bg-jem1 .no-btn {
+            color: $jem2;
+            color: var(--color-jem2);
+            &:hover, &:focus { 
+                color: $jem2-hover;
+                color: var(--color-jem2-hover);
+            }
+        }
+        .bg-jem2 .no-btn,
+        .bg-dark .no-btn {
+            color: $jem2;
+            color: var(--color-jem2);
+            &:hover, &:focus { 
+                color: $jem2-hover;
+                color: var(--color-jem2-hover);
+            }
+        }
+    }
+}
+
+
+// img styles 
+.sidebar{
+    .img-accent-bg {
+        width: calc(100% - 25px);
+    }
+}
+
+/// testimonial
+.sb-test {
+    .test-wrap { box-shadow: 0 1rem 6.188rem rgba(0,46,73,.15); }
+    .icon-wrap { display: none; }
+    .testimonial-card {
+        box-shadow: none !important;
+        padding: 0.5rem 1rem !important;
+    }
+}

@@ -1,0 +1,60 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Mixins - Functions for SCSS to make building a site better
+///////////////////////////////////////////////////////////////////////////////////
+
+
+@mixin cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@mixin abs-v-center {
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+  
+@mixin transition( $p  ) {
+  -webkit-transition: $p;
+  -o-transition: $p;
+  -moz-transition: $p;
+  transition: $p;
+}
+
+@mixin mb-border-radius( $r ) {
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  -ms-border-radius: $r;
+  border-radius: $r;
+}
+
+@mixin transform( $t ) {
+  -moz-transform: $t;
+  -o-transform: $t;
+  -webkit-transform: $t;
+  transform: $t;
+}
+
+@mixin backface-visibility ( $v ) {
+  -webkit-backface-visibility:$v;
+  -moz-backface-visibility:$v;
+  -o-backface-visibility:$v;
+  backface-visibility:$v;
+}
+
+@mixin transform-style( $v ) {
+  -webkit-transform-style: $v;
+  -moz-transform-style: $v;
+  -o-transform-style: $v;
+  transform-style: $v;
+}
+
+@mixin letter-spacing( $v ) {
+  letter-spacing: calc(1rem * 0.001 * $v );
+}

@@ -1,0 +1,31 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Sidebars/Off Canvas PopOuts
+///////////////////////////////////////////////////////////////////////////////////
+
+/* Global button reset */ 
+.offcanvas .btn-close {
+    background: transparent;
+    font-size: 2rem;
+    color: $body;
+    color: var(--color-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    margin: 0;
+    &.btn-close-white {
+        color: $white;
+        color: var(--color-white);
+        filter: none;
+    }
+    &:hover, &:focus {
+        color: $jem1;
+        color: var(--color-jem1);
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////
+// OffCanvas Mobile Menu
+///////////////////////////////////////////////////////////////////////////////////
+.offcanvas-menu {
+    z-index: 1000000;
+}

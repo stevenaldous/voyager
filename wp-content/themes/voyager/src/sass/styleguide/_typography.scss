@@ -1,0 +1,210 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Site Typography
+///////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////
+// Basic Text Styles //////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+p, ol, ul { 
+	line-height: 1.8;
+	text-underline-offset: 0.15rem;
+	// font sizing and weight from color/font panel
+	font-size: var(--font-size-body );
+	font-weight: var(--font-weight-body);
+}
+.text-wrap p:last-of-type ,
+.txt-wrap p:last-of-type { margin-bottom: 0; }
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Heading Styles /////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+// font family
+  h1,  h2,  h3,  h4,  h5,  h6,
+ .h1, .h2, .h3, .h4, .h5, .h6 { 
+	font-family: var(--font-hx);
+	color: var(--color-hx)
+}
+
+$ids: '1', '2', '3', '4' ,'5', '6';
+
+@each $id in ( $ids ) {
+	h#{$id}, .h#{$id}, .f#{$id} {
+		font-size: var(--font-size-h#{$id} );
+		font-weight: var(--font-weight-h#{$id});
+		line-height: 1.2;
+	}	
+}
+// subheader/subtitle
+.subh, .subt {
+	font-size: var(--font-size-subh );
+	font-weight: var(--font-weight-subh);
+	line-height: 1.417;
+}
+.subt-shadow {
+	color: var(--color-hx);
+	font-size: var(--font-size-h4);
+	line-height: 1.2;
+	font-family: var(--font-hx);
+	text-shadow: 1px 1px 2px var(--color-hx) ;
+
+}
+.pret {
+	font-size: var(--font-size-pret );
+	font-weight: var(--font-weight-pret);
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+.font-hx   { font-family: var(--font-hx); }
+.font-body { font-family: var(--font-body); }
+///////////////////////////////////////////////////////////////////////////////////
+// Font Utils     /////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
+// tiny/small font rule
+.font-sm,
+.text-small {
+	font-size: var(--font-size-sm );
+	font-weight: var(--font-weight-sm);
+	p, a, ul, ol { font-size: var(--font-size-sm); } 
+}
+
+// support a larger font size for text content
+.font-lg, 
+.text-large {
+	font-size: var(--font-size-large);
+	p, a, ul, ol { font-size: var(--font-size-large); } 
+}
+.fw-unset { font-weight: unset; }
+///////////////////////////////////////////////////////////////////////////////////
+// Lists //////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+ul { 
+	display: inline-block;
+	text-align: left;
+}
+main ul:not(.social):not(.slick-dots):not(.pagination):not(.clean) {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 1.5rem;
+	li{
+		position: relative;
+		margin-bottom: 0.5rem;
+		&::before {
+			// icon
+			font: var(--jem-fa);
+			content: '\f054';
+			color: $jem2;
+			color: var(--color-jem2);
+			// render rules 
+			display: inline-block;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			// positioning 
+			left: -2.4rem;
+			position: absolute;
+			text-align: center;
+			width: var(--fa-li-width,2em);
+			line-height: inherit;
+		}
+	}
+	ul {
+		display: block;
+	}
+}
+
+ul.inline {
+	list-style: none;
+	padding: 0;
+	li {
+		display: inline;
+	}
+}
+ul.clean{
+	list-style: none;
+	padding: 0;
+}
+ul.bold {
+	li {
+		font-weight: 600;
+	}
+}
+
+// ordered list
+ol {
+	padding-left: 1.5rem;
+	li {
+		margin-bottom: 0.5rem;
+		&::marker {
+			color: $jem2;
+			color: var(--color-jem2);
+			font-weight: 600;
+		}
+	}
+}
+
+li p:last-of-type { margin-bottom: 0; }
+
+///////////////////////////////////////////////////////////////////////////////////
+// Text Utility classes ///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width: $d_md){
+	.two-col {
+		columns: 2;
+	}
+}
+.text-justify {
+    text-align: justify;
+}
+
+
+// class to add design elements to divs or text
+.flair {
+	position: relative;
+    padding-top: 1rem;
+	&::before {
+		content: "";
+		position: relative;
+		// margin: 0 auto 1rem;
+		width: 80px;
+		height: 5px;
+		background-color: var(--color-jem2, $jem2);
+		display: block;
+	}
+}
+.pret.flair{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 5px;
+	&::before {
+		width: 60px;
+		display: inline-block;
+		margin-bottom: 0;
+		margin-right: 0.5rem;
+	}
+}
+.bg-jem2 .flair::before { background-color: var(--color-jem1, $jem1); }
+.text-start .pret.flair  { justify-content: flex-start; }
+.text-center .pret.flair { justify-content: center; }
+.text-end .pret.flair    { justify-content: flex-end; }
+@media screen and (min-width: $d_md){
+	.text-md-start .pret.flair  { justify-content: flex-start; }
+	.text-md-center .pret.flair { justify-content: center; }
+	.text-md-end .pret.flair    { justify-content: flex-end; }
+}
+@media screen and (min-width: $d_lg){
+	.text-lg-start .pret.flair  { justify-content: flex-start; }
+	.text-lg-center .pret.flair { justify-content: center; }
+	.text-lg-end .pret.flair    { justify-content: flex-end; }
+}
+@media screen and (min-width: $d_xl){
+	.text-xl-start .pret.flair  { justify-content: flex-start; }
+	.text-xl-center .pret.flair { justify-content: center; }
+	.text-xl-end .pret.flair    { justify-content: flex-end; }
+}
+@media screen and (min-width: $d_xxl){
+	.text-xxl-start .pret.flair  { justify-content: flex-start; }
+	.text-xxl-center .pret.flair { justify-content: center; }
+	.text-xxl-end .pret.flair    { justify-content: flex-end; }
+}

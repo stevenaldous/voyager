@@ -1,0 +1,151 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Heros
+///////////////////////////////////////////////////////////////////////////////////
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 275px;
+    .overlay {
+        z-index: 0;
+        overflow: hidden;
+    }
+    &:not(.hero-team) header {
+        position: relative;
+        z-index: 1;
+        padding: 2rem 0;
+        z-index: 4;
+        &.has-bg {
+            padding: 2rem;
+            .head-bg { z-index: -1;}
+        }
+    }
+    h1,.h1 { font-size: var(--font-size-display); }
+    .subt { font-size: var(--font-size-h5); }
+    @media #{$mq-md} {
+        min-height: 500px;
+        &:not(.hero-team):not(.hero-resources):not(.hero-faqs) header { max-width: 850px;}
+    }
+   
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Hero - Team
+///////////////////////////////////////////////////////////////////////////////////
+
+.hero.hero-team{
+    padding-bottom: 0;
+    .info-wrap {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        margin-bottom: 0.75rem;
+        i {  
+            margin-top: 4px;
+            margin-right: 0.5rem;
+            color: $jem1;
+            color: var(--color-jem1);
+        }
+    }
+    a{     
+        font-weight: initial;
+        text-decoration: none;
+        color: $body;
+        color: var(--color-black);
+        &:hover, &:focus {
+            color: $jem1;
+            color: var(--color-jem1);
+        }
+    }
+
+
+    @media #{$mq_lg} {
+        h1, .h1 { font-size: 3.125rem; }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Page/Archive Heros w/BG img 
+///////////////////////////////////////////////////////////////////////////////////
+
+.hero.bg-img {
+    .overlay {
+        background-image: linear-gradient(transparent,rgba( var(--color-white), 0.9));
+        @media #{$mq_md} { background-image: linear-gradient(-90deg, transparent, rgba( var(--color-rgb-white), 0.9)) ; }
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////
+// Hero - Home
+///////////////////////////////////////////////////////////////////////////////////
+.hero.hero-home {
+    .overlay {
+        background-image: linear-gradient(transparent,rgba( var(--color-rgb-white), 0.9));
+        @media #{$mq_md} { background-image: linear-gradient(-90deg, transparent, rgba( var(--color-rgb-white), 0.9)) ; }
+    }
+    .obj img {
+        object-position: top center;
+    }
+    .btn { padding: 0.75rem 1rem;}
+
+    height: 100%;
+    min-height: 580px;
+}
+
+
+.hero-bar {
+    position: relative;
+    z-index: 5;
+    .feat {
+        i{ font-size: 1.125rem;}
+        .font-hx { 
+            font-weight: var(--font-weight-h4);
+            font-size: 0.6875rem;
+        }
+        .text { 
+            font-size: 0.5625rem; 
+            line-height: 1.45;
+        }
+    }
+    @media #{$mq_md} {
+        .feat{
+            i { font-size: 2.5rem;}
+            .font-hx { font-size: 1.375rem; }
+            .text { font-size: 1rem;}
+    }}
+    @media #{$mq_xl} {
+        .feat{
+            i { font-size: 3.75rem;}
+            .font-hx { font-size: 2.375rem; }
+            .text { font-size: 1.5rem;}
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Hero - Dark colors
+///////////////////////////////////////////////////////////////////////////////////
+.hero.jem-dark {
+    .overlay {
+        background-image: linear-gradient(transparent,rgba( var(--color-rgb-jem1-dark), 0.9));
+        @media #{$mq_md} { background-image: linear-gradient(-90deg, transparent, rgba( var(--color-rgb-jem1-dark), 0.9)) ; }
+    }
+    // color: var(--color-white);
+    // h1, .h1 { color: var(--color-white); }
+}
+
+
+// 404 page
+.error404 .hero { 
+    min-height: 65vh;
+    @media #{$mq_md} {
+        padding: 6rem 0;
+    }
+}
+
+
+// Thank You 
+.page-template-thanks .hero { 
+    min-height: 90vh;
+    @media #{$mq_md} {
+        padding: 4rem 0;
+    }
+}

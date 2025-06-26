@@ -1,0 +1,13 @@
+// All Jem Theme SCSS files goes in this file for selection, ordering, and compilation. Simply comment out if not needed in the project and add files as needed. 
+
+// Theme must run first files ////////////////////////////////////////////////////////////////////////////////
+@import "variables";        // Theme Variables (fonts, colors, breakpoints, etc.)
+@import "mixins";           // MB specific Mixins to make coding easier/faster
+
+// Theme Styleguide /////////////////////////////////////////////////////////////////////////////////////////
+@import "styleguide";       // This should be filled out with the style guide from design for each project
+                            // styleguide contains Hx fonts, links, buttons, etc
+@import "typography";       // Headings, Lists, and body font rules
+@import "colors";           // rules for background colors, font colors, etc. More global rules than specific section rules
+@import "buttons";          // Buttons and Link colors
+@import "media";            // images, iframes, aspect ratios, etc

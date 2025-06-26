@@ -1,0 +1,148 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Site Style-guide - rules for core theme. Typography and Buttons/Links are 
+// found in separate scss files
+///////////////////////////////////////////////////////////////////////////////////
+html { overflow-y: scroll;}
+html ,body {
+	overflow-x: hidden;
+}
+
+
+body {
+	position: relative;
+	font-size: 16px;
+	max-width: 100%;
+
+	// bs open menu jump resolve. 
+	padding-right: 0 !important;
+	background-color:  var(--color-bg);
+	color: $body;
+	color: var(--color-body);
+	font-family: var(--font-body);
+
+}
+  *:visited, *:focus-visible {
+	outline: $focus-50;
+  	outline: var(--color-focus-50);
+  } 
+
+.container-jem {
+	width: 90vw;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: auto;
+    margin-left: auto;
+	max-width: 2000px;
+}
+//reset BS container padding
+// .container { padding-left: 5%; padding-right: 5%; }
+// @media #{$mq_sm}  { .container-sm { padding-left: 5%; padding-right: 5%; } } 
+// @media #{$mq_md}  { .container-md { padding-le ft: 5%; padding-right: 5%; } } 
+// @media #{$mq_lg}  { .container-lg { padding-left: 5%; padding-right: 5%; } } 
+// @media #{$mq_xl}  { .container-xl { padding-left: 5%; padding-right: 5%; } } 
+// @media #{$mq_xxl} { .container-xxl { padding-left: 5%; padding-right: 5%; } } 
+//reset BS container width
+// @media #{$mq_md} {
+// 	.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+// 		max-width: 1024px;
+// 	}
+// }
+// @media #{$mq_lg} {
+// 	.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+// 		max-width: 1710px;
+// 	}
+// }
+// @media #{$mq_xl} {
+// 	.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+// 		max-width: 1710px;
+// 	}
+// }
+@media #{$mq_xxl} {
+	.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+		max-width: 1710px;
+	}
+}
+// manage nested containers
+[class*='container'] .container,
+[class*='container'] .container-jem,
+[class*='container'] .container-fluid {
+	padding-right: calc(var(--bs-gutter-x)* .5);;
+    padding-left: calc(var(--bs-gutter-x)* .5);;
+}
+
+.container-jem {
+	max-width: 90vw;
+}
+
+/* Remove outline for non-keyboard :focus */
+*:focus:not(.focus-visible) {outline: none !important; box-shadow: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;}
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Utilities / Helper Classes
+///////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////
+// MISC CLASSES ///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+// reset address margin
+address { margin-bottom: 0; }
+
+/// 
+.abs-cover {
+	@include cover();
+}
+
+
+
+// class to add design elements to divs or text
+.flair {
+	position: relative;
+    padding-top: 1rem;
+	&::before {
+		content: "";
+		position: relative;
+		left: 0;
+		top: 0;
+		width: 80px;
+		height: 5px;
+		background-color: var(--color-jem2, $jem2);
+		display: block;
+		margin-bottom: 1.5rem;
+	}
+}
+.bg-jem2 .flair::before { background-color: var(--color-jem1, $jem1); }
+// support a larger font size for text content
+.font-lg {
+	p, a, ul, ol { font-size: var(--font-size-em); } 
+}
+
+
+// basic overlay 
+.overlay {
+	@include cover();
+	z-index: 0;
+	& + div:not(.overlay):not(.img-overlay) {
+		position: relative;
+		z-index: 2;
+	}
+}
+// img overlay 
+.img-overlay {
+	@include cover();
+	z-index: -1;
+}
+
+
+// basic box shadow
+.shadow {
+	box-shadow: 0.3rem 0.3rem 0.6rem rgba( var(--color-rgb-black) , 0.2)!important;
+}
+
+[class*='rounded'] { overflow: hidden; }
+.rounded { @include border-radius( 5px !important); }
+.rounded-3 { @include border-radius( 10px !important); }
+.rounded-5 { @include border-radius( 15px !important); }
+.rounded-50 { @include border-radius( 1000px !important)}

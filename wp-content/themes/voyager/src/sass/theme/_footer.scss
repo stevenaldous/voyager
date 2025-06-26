@@ -1,0 +1,140 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Footer
+///////////////////////////////////////////////////////////////////////////////////
+
+.site-footer {
+    // default header bg and effect 
+    a:not(.btn):not( [class*='h6'] ), a.nav-link {
+        text-decoration: none;
+        font-weight: var(--font-weight-body);
+    }
+    a.nav-link { padding: 0;}
+    p:not([class*="h"]) {
+        margin-bottom: 0;
+        font-size: 1rem;
+    }
+
+    .navbar-brand {
+        display: block;
+        max-width: 100%;
+        height: 120px;
+        max-height: 120px;
+        margin: 0 auto 1rem;
+        img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+    }
+    .badge { max-width: 215px;}
+    .pho-wrap {
+        i,a {font-size: var(--font-size-h5); }
+        a   {font-weight: 700; }
+    }
+    .add-wrap {
+        p { line-height: 1.1; }
+    } 
+
+    .social-wrap { display: flex; }
+    .border-top { opacity: 0.1; } // set opacity for divider
+    .foot-menu .nav-link { padding-left: 0; }
+    
+    .site-info .si-links span:not(:first-of-type):before {
+        content: '|';
+        margin: 0 0.5rem;
+        color: inherit;
+        font-weight: 300;
+    }
+    // form styles
+    .form-wrap {
+        .title { color: $review; color: var(--review); }
+
+        @media #{$mq_xl} { 
+            .gfield--width-half { max-width: 24%; }
+        }
+    }
+    .copyr,
+    .si-links a {
+        font-size: 0.9rem;
+        font-weight: 300;
+    }
+    .si-links a {
+        &::before {
+            content: '|';
+            margin: 0 0.25rem;
+            color: $white;
+            color: var(--color-white );
+        }
+    }
+
+    // locs grid layout
+    .loc-grid {
+        display: flex;
+        flex-direction: column;
+        a { 
+            color: $white;
+            color: var(--color-white );
+            &:hover, &:focus { color: $jem2; color: var(--color-jem2) }
+        }
+        .loc-card {
+            width: 100%;
+            background-color: $jem1;
+            background-color: var(--color-jem1);
+
+            color: $white;
+            color: var(--color-white );
+            &:nth-of-type(even) {
+                background-color: $jem1-hover;
+                background-color: var(--color-jem1-hover);        
+            }
+        }
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    // tablet +
+    @media( min-width: $d_md ) {
+        .loc-grid {
+            flex-direction: row;
+        }
+
+    }
+    ///////////////////////////////////////////////////////////////////////////////////
+    // laptop +
+    @media( min-width: $d_lg ) {
+        .navbar-brand {
+            height: 150px;
+            margin: 0 auto 1rem 0;
+        }
+        // form styles
+        .form-wrap {
+            .title {
+                font-size: 2.250rem;
+            }
+            .subt {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+
+// footer light bg
+footer .footer-contact {
+    background-color: $white;
+    background-color: var(--color-white);
+    .site-info,
+    .social {
+            // non hover items
+        p { 
+            color: $jem1;
+            color: var(--color-jem1);
+        }
+        //hoverable items
+        .si-links,
+        a, a.nav-link {
+            color: $jem1;
+            color: var(--color-jem1);
+            &:hover, &:focus { color: $jem1-hover; color: var(--color-jem1-hover); }
+        }
+    }
+}

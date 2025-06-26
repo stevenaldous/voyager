@@ -1,0 +1,196 @@
+///////////////////////////////////////////////////////////////////////////////////
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Links //////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+a {
+    color: $jem1;
+	color: var(--color-jem1);
+	font-weight: 700;
+	font-size: inherit;
+	text-decoration-thickness: 1px;
+	@include transition(all 250ms);
+	&:hover, &:focus {
+		color: $jem1-hover;
+		color: var(--color-jem1-hover);
+	}
+}
+
+a.img-link {
+	display: block;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	@include mb-border-radius(0);
+	img {
+		@include transition( all ease-in-out 450ms ); /* Animation */
+		cursor: pointer;
+	}
+	&:hover img, &:focus img {
+		transform: scale(1.03);
+	}
+}
+a.img-hover {
+	position: relative;
+	.overlay {
+		background-color: rgba( $jem2, 0.8) ;
+		background-color: rgba( var(--color-jem2), 0.8) ;
+		color: $white;
+		color: var(--color-white);
+		opacity: 0;
+		@include transition( opacity ease-in-out 450ms ); /* Animation */
+		&::after {
+			content: 'Learn More';
+			text-transform: uppercase;
+			color: $white;
+            font-size: 1.1rem;
+            padding: 0.5rem 1.5rem;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            @include transform( translateY(-50%) );
+            text-align: center;
+		}
+	}
+	&:hover, &:focus { .overlay { opacity: 1; } }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Buttons ////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+.btn,
+input[type="submit"]  {
+	border: none;
+	@include mb-border-radius( 3px );
+	@include f1_bold();
+	@include letter-spacing( 40 );
+	font-size: 0.938rem;
+	line-height: 1.2;
+	padding: 1rem 2rem;
+	@include transition(all 350ms);
+	&.btn-fw {
+		width: 100%;
+	}
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	i { margin-left: 0.25rem; }
+	&.reverse {
+		flex-direction: row-reverse;
+		i {
+			margin-left: 0;
+			margin-right: 0.25rem;
+		}
+	}
+}
+.btn-primary {	
+	color: $white;
+	color: var(--color-white);
+	background-color: $jem1;
+	background-color: var(--color-jem1);
+	border: solid 2px currentColor;
+	&:hover, &:focus {
+		background-color: $jem1-hover;
+		background-color: var(--color-jem1-hover);
+		border-color: currentColor;
+	}
+}
+
+.btn-secondary {
+	color: $white;
+	color: var(--color-white);
+	background-color: $jem2;
+	background-color: var(--color-jem2);
+	border: solid 2px currentColor;
+	&:hover, &:focus {
+		color: $white;
+		color: var(--color-white);
+		background-color: $jem2-hover;
+		background-color: var(--color-jem2-hover);
+		border-color: currentColor;
+	}
+}
+
+.btn-outline {	
+	color: $white;
+	color: var(--color-white);
+	border: solid 2px var(--color-white);
+	background-color: transparent;
+	&:hover, &:focus {
+		color: $white;
+		color: var(--color-white);
+		background-color: $n200;
+		background-color: var(--color-n200);
+	}
+}
+
+.btn-outline-dark {	
+	color: $jem1;
+	color: var(--color-jem1);
+	border: solid 2px currentColor;
+	background-color: transparent;
+	&:hover, &:focus {
+		color: $white;
+		color: var(--color-white);
+		border-color: currentColor;
+		background-color: $jem1-hover;
+		background-color: var(--color-jem1-hover);
+
+	}
+}
+
+.btn.no-btn {
+	padding: 0.5rem 0 0 0;
+	color: $jem1;
+	color: var(--color-jem1);
+	text-transform: uppercase;
+	text-decoration: none;
+	// text-underline-offset: 0.15rem;
+	// text-decoration-thickness: 2px;
+	&:hover, &:focus {
+		color: $jem1-hover;
+		color: var(--color-jem1-hover);
+	}
+}
+
+button:focus {outline:0 !important;}
+
+input[type="submit"] {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	color: $white;
+	color: var(--color-white);
+	background-color: $jem1;
+	background-color: var(--color-jem1);
+	border: solid 2px currentColor;
+	&:hover, &:focus {
+		background-color: $jem1-hover;
+		background-color: var(--color-jem1-hover);
+		border-color: currentColor;
+	}
+}
+
+// social btn
+.btn-social {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: solid 2px currentColor;
+	@include mb-border-radius(5px);
+	width: 36px;
+	height: 36px;
+	@include transition(all 350ms);
+	text-decoration: none;
+}
+.social li {
+	margin-left: 0.3rem;
+	margin-right: 0.3rem;
+	font-size: 1.5rem;
+	&:first-of-type { margin-left: 0; }
+	&:last-of-type  { margin-right: 0; }
+}

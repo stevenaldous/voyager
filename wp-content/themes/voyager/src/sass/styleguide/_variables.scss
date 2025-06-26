@@ -1,0 +1,108 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder. 
+// Just copy a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
+// As example you find one of the most important Bootstrap variable below: $brand-primary.
+// Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
+// Just add your color code here, compile the theme.scss file to change this color everywhere
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// DISPLAY SIZES //////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+$d_xs: 0;
+$d_sm: 576px;
+$d_md: 768px;
+$d_lg: 992px;
+$d_xl: 1200px;
+$d_xxl: 1500px;
+
+///////////////////////////////////////////////////////////////////////////////////
+// Media Queries //////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+$mq-sm: "(min-width: #{$d_sm})";
+$mq-md: "(min-width: #{$d_md})";
+$mq-lg: "(min-width: #{$d_lg})";
+$mq-xl: "(min-width: #{$d_xl})";
+$mq-xxl: "(min-width: #{$d_xxl})";
+
+
+///////////////////////////////////////////////
+// Fonts //////////////////////////////////////
+///////////////////////////////////////////////
+$fb: 'Mulish', sans-serif; // body
+$fh: 'Playfair Display', serif; // header
+
+@mixin f1_reg() {
+	font-family: $fb;
+	font-family: var(--font-body);
+	font-weight: 400;
+}
+@mixin f1_sbold() {
+	font-family: $fb;
+	font-family: var(--font-body);
+	font-weight: 600;
+}
+@mixin f1_bold() {
+	font-family: $fb;
+	font-family: var(--font-body);
+	font-weight: 700;
+}
+@mixin f1_xbold() {
+	font-family: $fb;
+	font-family: var(--font-body);
+	font-weight: 800;
+}
+@mixin f2_reg() {
+	font-family: $fh;
+	font-family: var(--font-hx);
+	font-weight: 400;
+}
+@mixin f2_bold() {
+	font-family: $fh;
+	font-family: var(--font-hx);
+	font-weight: 700;
+}
+
+///////////////////////////////////////////////
+// Colors //////////////////////////////////////
+///////////////////////////////////////////////
+/// color system panel defaults and variable backups. 
+// theme primary colors
+$jem1: #0C39BE;
+$jem1-hover: #042A99;
+$jem1-light: #011759;
+$jem1-dark: #011759;
+// theme secondary colors
+$jem2: #FFD954;
+$jem2-hover: #f9c81e;
+$jem2-body: #051649;
+$jem2-focus: #1C1E23;
+// body/text colors
+$headline: #051649;
+$body: #051649;
+// neutral colors
+$white: #FFFFFF;
+$n50: #FFFFFF;
+$n200: #A7ADBD;
+$n400: #7C849C;
+$n600: #6E7691;
+$n800: #636A82;
+$n900: #52596C;
+$black: #1C1E23;
+// system/status colors
+$error: #DF0E0E;
+$error-50: #F44141;
+$warning: #FF8900;
+$warning-50: #FFC27C;
+$success: #01B977;
+$success-50: #25D998;
+$focus: #291AD1;
+$focus-50: #5375EE;
+$review: #FFD954;
+$review-50: #FFF0BB;
+
+// rando bg hex
+$bg: #F6F6F5;
+
+// set Bootstrap primary color
+$primary: $jem1;

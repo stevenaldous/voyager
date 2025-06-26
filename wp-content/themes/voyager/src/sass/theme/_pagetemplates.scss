@@ -1,0 +1,84 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Page Templates
+///////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////
+// Process Steps
+///////////////////////////////////////////////////////////////////////////////////
+.process-wrap {
+    display: flex;
+    flex-direction: column;
+    .process-card {
+        border-top: solid 1px var(--color-n200);
+        padding: 0 2rem;
+        width: 100%;  
+        &:last-of-type { border-bottom: solid 1px var(--color-n200); }
+        p { 
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        .f1 { @include f2_bold (); }
+        .num {
+            width: 2rem;
+            padding-top: 0.5rem;
+            p {
+                @include f2_bold ();
+                font-size: var(--font-size-h1);
+                line-height: 1.1;
+                //margin-top: -1.85rem;
+            }
+        }    
+    }
+
+
+    // tablet +
+    @media( min-width: $d_md ) {
+        &:not(.process-vert) {
+            flex-direction: row;
+            justify-content: space-between;
+            .process-card {
+                border-left: solid 1px var(--color-n200);
+                border-top: none;
+                padding: 0 2rem;
+                &:last-of-type { 
+                    border-right: solid 1px var(--color-n200); 
+                    border-bottom: none;
+                }
+            }
+        }
+    }   
+}
+///////////////////////////////////////////////////////////////////////////////////
+// Contact Bar
+///////////////////////////////////////////////////////////////////////////////////
+.contact-bar {
+    .btn {
+        padding: 1.5rem 2rem;
+        .text-wrap { 
+            // text-align: left;
+        }
+    }
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Resource Library
+///////////////////////////////////////////////////////////////////////////////////
+.reslib-section { 
+    padding-top: 2rem;
+    @media #{$mq_lg} {  padding-top: 3rem; }
+}
+.reslib_feat_vid {
+    @media #{$mq_md} {
+        .vid-slider {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 2rem;
+        }
+        .vid-slide {
+            width: 31%;
+        }
+    }
+}

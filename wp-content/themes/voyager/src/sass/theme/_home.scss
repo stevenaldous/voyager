@@ -1,0 +1,308 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Home Global rules
+///////////////////////////////////////////////////////////////////////////////////
+.home-section {
+    position: relative;
+    overflow: hidden;
+    .h1 span { 
+        color: $jem1;
+        color: var(--color-jem1);
+        display: block;
+        @media #{$mq_md} { display: inline; }
+    }
+    &.bg-jem2 {
+        .subt { color: var(--color-jem1, $jem1 );}
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////
+// Home intro
+///////////////////////////////////////////////////////////////////////////////////
+.home_intro {
+    .subt {
+        max-width: 80%;
+        br { display: none; }
+    }
+    @media #{$mq_md} {
+        .subt { max-width: 100%;}
+    }
+    @media #{$mq_lg} {
+        .subt br { display: block; }
+    }
+    @media #{$mq_xxl} {
+        .h1 br { display: none; }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Home Services
+///////////////////////////////////////////////////////////////////////////////////
+.home_services {
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Home Cases/////////////////////////////////////////
+
+.home_cases.cases-simple {
+    .shadow { box-shadow: none !important;}
+    .card-cases{
+        padding: 0;
+        border-radius: 0 !important;
+        border: none;
+        .inner {
+            padding: 2rem 0 1rem 0;
+            border-top: solid currentColor 3px;
+        }
+    }
+    @media #{$mq_md} {
+        .card-cases .inner {
+            padding: 0 0 0 2rem;
+            border-top:  none;
+            border-left: solid currentColor 3px;
+            justify-content: space-between !important;
+        }
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////
+// Home testimonials
+///////////////////////////////////////////////////////////////////////////////////
+.home_testimonials {
+    .sec-footer .text-wrap {
+        max-width: 580px;
+        font-size: 1.5rem;
+    }
+    // Hof home testimonial SLIDER
+    .slider-wrap {
+        .slick-track{ display: flex !important; }
+        .slick-slide{ height: inherit !important; }
+        img { display: inline-block;}
+    }  
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Home Team//////////////////////////////////////////////////////////
+.home_team {
+    &.team-full-slider {
+        @media #{$mq_md} {
+            header { margin-bottom: 2rem; }
+            .team-img {
+                position: absolute;
+                bottom: 0;
+            }
+            .name {
+                font-size: 0.9375rem;
+    
+            }
+        }
+        @media #{$mq_xxl} { .team-img { top: 10%; } }
+    }
+
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Home blog
+///////////////////////////////////////////////////////////////////////////////////
+.home_blog {
+    .img-wrap { max-height: 200px;}
+    .blog-col .inner {
+        max-width: 438px;
+        margin: 2.5rem 1.25rem 3.5rem;
+    }
+    @media #{$mq_md} {
+        .img-wrap { max-height: unset;}
+        .blog-col .inner { margin: 4.5rem 3rem 3.5rem; }
+    }
+    @media #{$mq_xl} {
+        .blog-col .inner { margin: 5.5rem 6rem 5.5rem; }
+    }
+
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Home cta
+///////////////////////////////////////////////////////////////////////////////////
+.home_cta_box {
+    .img-wrap {
+        padding-top: 1.5rem;
+        img {
+            max-width: 200px;
+        }
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////
+// Home Message
+///////////////////////////////////////////////////////////////////////////////////
+.home_message {
+    .font-lg:not(:first-of-type) {
+        &::before {
+            content: '';
+            display: block;
+            position: relative;
+            background-color: currentColor;
+            height: 5px;
+            width: 80px;
+            margin: 2rem auto;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Home Services
+///////////////////////////////////////////////////////////////////////////////////
+.home_services {
+
+    &.services-list,
+    &.services-list-icons {
+        ul {
+            li {
+                padding: 0.75rem 0;
+                border-bottom: 1px solid currentColor;
+                font-size: var(--font-size-h6);
+                &:last-of-type {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    &.services-block {
+        .services {
+            .icon-wrap {
+                position: relative;
+                padding: 1.5rem 0 0 1.5rem;
+                i { 
+                    font-size: 3rem;
+                    color: currentColor;
+                    &::after {
+                        content: '';
+                        background-color: currentColor;
+                        opacity: 0.05;
+                        position: absolute;
+                        width: 60px;
+                        height: 60px;
+                        left: 0px;
+                        top: 0px;
+                        @include mb-border-radius(50%); 
+    
+                    }
+                }
+                &::after {
+                    content: '';
+                        background-color: currentColor;
+                        opacity: 0.05;
+                        position: absolute;
+                        width: 60%;
+                        right: 10px;
+                        top: 50%;
+                        @include transform(translateY(-50%));
+                        height: 2px;
+                }
+                
+                
+            }
+            a:not(.btn) {
+                text-decoration: none;
+                text-transform: capitalize;
+                color: var(--color-jem2);
+                &:hover, &:focus { color: var(--color-jem2--hover); }
+            }
+        }
+    }
+    
+
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Home Practice Bar
+///////////////////////////////////////////////////////////////////////////////////
+.home_practices_bar {
+    a {
+        text-decoration: none;
+        
+    }
+    .icon-wrap {
+        position: relative;
+        width: 90px;
+        height: 90px;
+        padding: 1rem;
+        color: var(--color-jem1 , $jem1);
+        i { font-size: 2rem; }
+        &::after {
+            content: '';
+            background-color: currentColor;
+            opacity: 0.1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            @include mb-border-radius(50%); 
+        }
+    }
+    .h6 { color: var(--color-body, $body ); }
+    a:hover, a:focus {
+        .icon-wrap, .h6 { color: var(--color-jem1-hover , $jem1-hover); }
+        .icon-wrap &::after { opacity: 0.6; }
+    }
+    &.bg-dark,
+    &.bg-jem1,
+    &.bg-black {
+        .icon-wrap, .h6 { color: var(--color-white , $white); }
+        a:hover, a:focus {
+            .icon-wrap, .h6 { color: var(--color-jem2 , $jem2); }
+        }
+    }
+    &.bg-jem2 {
+        .icon-wrap, .h6 { color: var(--color-jem2-body , $jem2-body); }
+        a:hover, a:focus {
+            .icon-wrap, .h6 { color: var(--color-jem2-focus , $jem2-focus); }
+        }
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Home Practice Areas
+///////////////////////////////////////////////////////////////////////////////////
+.home_practices.practices-list {
+    .img-wrap.obj img { object-position: top center; } 
+    .pa-inner { padding: 45px 40px; } 
+    ul {
+        li {
+            border-bottom: solid 1px rgba( var(--color-rgb-jem1) , 0.2 );
+            padding: 0.75rem 0;
+            a { 
+                font-family: var(--font-hx);
+                font-weight: 400;
+                font-size: 1.375rem;
+                text-decoration: none;
+                @include letter-spacing(25);
+            }
+            i { font-size: 1.25rem; color: currentColor;}
+        }
+    }
+    @media screen and (max-width: $d_md - 1 ) {
+        .container-fluid {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+    }
+    @media #{$mq_md} { 
+        .img-wrap.obj { 
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 51%;
+        } 
+    }
+    @media #{$mq_lg} { 
+        .pa-inner { padding: 100px 50px 110px 0; }
+    }
+}
+

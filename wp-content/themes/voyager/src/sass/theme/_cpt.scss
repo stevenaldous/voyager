@@ -1,0 +1,219 @@
+///////////////////////////////////////////////////////////////////////////////////
+// CPT Template styles
+///////////////////////////////////////////////////////////////////////////////////
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// TEAM - Single Template styles
+///////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// CARDS - CPT card styles
+///////////////////////////////////////////////////////////////////////////////////
+a[class*='card-'] { display: block; text-decoration: none;}
+///////////////////////////////////////////////////////////////////////////////////
+// Practices Card
+///////////////////////////////////////////////////////////////////////////////////
+.card-practice {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem 1.5rem;   
+    .icon-wrap {
+        position: relative;
+        color: currentColor;
+        margin-bottom: 1rem;
+        i { font-size: 2rem; }
+        &.icon-cir{
+            width: 90px;
+            height: 90px;
+            padding: 1rem;
+            &::after {
+                content: '';
+                background-color: currentColor;
+                opacity: 0.1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                @include mb-border-radius(50%); 
+            }
+        }
+    }
+    .h6 { color: currentColor; margin-top: 1rem;}
+    &.bg-white {
+        .h6 { color: var(--color-hx); }
+        .icon-wrap { color: var(--color-jem2); }
+        &:hover, &:focus {
+            .h6 { color: var(--color-white); }
+            .icon-wrap { color: var(--color-white); }
+        }
+    }
+    
+
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Award card
+///////////////////////////////////////////////////////////////////////////////////
+.award-card {
+    img { 
+        margin: 0 auto;
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////
+// Testimonial card
+///////////////////////////////////////////////////////////////////////////////////
+.testimonial-card  {
+    .icon-wrap img {
+        max-width: 60px;
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////
+// Location Image
+///////////////////////////////////////////////////////////////////////////////////
+.card-location-image  {
+    .overlay {
+        background-color: $jem1-dark;
+        background-color: var(--color-jem1-dark);
+        opacity: 0.4;
+    }
+    a:hover, &:focus {
+        .overlay { opacity: 0.75; }
+    }
+    .name-wrap {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        left: 0;
+        width: 100%;
+    }
+}
+.card-location {
+    padding: 2rem 1.5rem;
+    .bottom {
+        position: relative;
+        &::before {
+            content: '';
+            top: 0;
+            left: 0;
+            display: block;
+            position: relative;
+            background-color: currentColor;
+            height: 5px;
+            width: 50px;
+            margin: 0.5rem auto 1rem;
+        }
+    }
+    &.text-start .bottom::before { margin-left: 0; }
+    &.text-end   .bottom::before { margin-right: 0; }
+
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Home Location grid
+///////////////////////////////////////////////////////////////////////////////////
+@media #{$mq_md} {
+    // alternate middle section order on tablet
+    .loc-grid-wrap .grid-item{
+        &:nth-of-type(1)  { order: 0; }
+        &:nth-of-type(2)  { order: 1; }
+        &:nth-of-type(3)  { order: 3; }
+        &:nth-of-type(4)  { order: 2; }
+        &:nth-of-type(5)  { order: 4; }
+        &:nth-of-type(6)  { order: 5; }
+        &:nth-of-type(7)  { order: 7; }
+        &:nth-of-type(8)  { order: 6; }
+        &:nth-of-type(9)  { order: 8; }
+        &:nth-of-type(10) { order: 9; }
+        &:nth-of-type(11) { order: 11; }
+        &:nth-of-type(12) { order: 10; }
+    }   
+}
+// reset order on laptop
+@media #{$mq_lg} {
+    .loc-grid-wrap .grid-item{
+        &:nth-of-type(1)  { order: 0; }
+        &:nth-of-type(2)  { order: 1; }
+        &:nth-of-type(3)  { order: 2; }
+        &:nth-of-type(4)  { order: 3; }
+        &:nth-of-type(5)  { order: 4; }
+        &:nth-of-type(6)  { order: 5; }
+        &:nth-of-type(7)  { order: 6; }
+        &:nth-of-type(8)  { order: 7; }
+        &:nth-of-type(9)  { order: 8; }
+        &:nth-of-type(10) { order: 9; }
+        &:nth-of-type(11) { order: 10; }
+        &:nth-of-type(12) { order: 11; }
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////
+// Team card
+///////////////////////////////////////////////////////////////////////////////////
+// team ratio for hero and card
+.ratio-team { --bs-aspect-ratio: calc( (380/300) * 100% ); }
+//team card
+.team-card {
+    .overlay { 
+        @include transition( all 450ms );
+        opacity: 0; 
+    }
+    .overlay {
+        background-color: $jem1;
+        background-color: var(--color-jem1); 
+        &::before {
+            content: 'VIEW PROFILE';
+            color: $white;
+            color: var(--color-white);
+            font-size: 1.1rem;
+            padding: 0.5rem 1.5rem;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            @include transform( translateY(-50%) );
+            text-align: center;
+        }
+    }
+    a { 
+        position: relative;
+        text-decoration: none; 
+        &:hover, &:focus, &:active {
+            .overlay {
+                opacity: 0.9;
+            }
+        }
+    }
+    .name { 
+        @include f1_reg(); 
+        color: $body; 
+        color: currentColor; 
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+    .pos { 
+        color: $jem1; 
+        color: var(--color-jem1); 
+    }
+}
+.jem-light .team-card a { color: var(--color-body); }
+
+// cases card
+.card-cases {
+    text-decoration: none;
+    padding: 2rem 1.5rem;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// video archive
+///////////////////////////////////////////////////////////////////////////////////
+.video-archive {
+    a.h4 { text-decoration: none; }
+}
+.card-vid a { text-decoration: none;}

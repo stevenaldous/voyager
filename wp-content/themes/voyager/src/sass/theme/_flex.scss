@@ -1,0 +1,151 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Flex Content Styles
+///////////////////////////////////////////////////////////////////////////////////
+
+// btns block gap/spacing
+.super-btns { gap: 1rem }
+
+// img + Vid alignment
+.super-img,
+.super-vid {
+    &.text-center .media-outer { margin: 0 auto;}
+    &.text-end .media-outer{ margin: 0 0 0 auto }
+}
+
+
+// super block quote
+.super-quote {
+    &.sq-bi {
+        i { font-size: 3rem; }
+    }
+    &.sq-bi,
+    &.sq-b {
+        .text-wrap { text-align: center; }
+        blockquote { 
+            padding: 3rem;
+            box-shadow: 0 1rem 6.188rem rgba( $black ,.15); 
+        }
+    }
+    &.sq-hi {
+        blockquote {
+            font-style: italic;
+            font-weight: 700;
+            border-left: solid 8px currentColor;
+            margin: 1.5rem 0;
+            padding: 1rem 0 1rem 3rem;
+        }
+        
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Spacer Block
+///////////////////////////////////////////////////////////////////////////////////
+.flex-spacer {
+    .no-vis {
+        color: transparent;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Cases Block
+///////////////////////////////////////////////////////////////////////////////////
+// .flex-cases {
+//     header .title {
+//         @include f1_bold();
+//     }
+// }
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Form Block  -- For form styles see _forms.scss
+///////////////////////////////////////////////////////////////////////////////////
+.flex-form {
+    .inner {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        @media screen and (min-width: $d_md) {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        } 
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// FAQS - Bootstrap Accordion
+///////////////////////////////////////////////////////////////////////////////////
+/// 
+.accordion {
+    .accordion-item {
+        @include mb-border-radius(0);
+        border: none;
+        border-top: var(--color-n400) 2px solid;
+        &:last-of-type { border-bottom: var(--color-n400) 2px solid;}
+    }
+    .accordion-button {
+        color: $jem1;
+        color: var(--color-jem1);
+        font-size: inherit;
+        padding-right: 3rem;
+        &::after {
+            // reset bootstrap settings for font awesome icon
+            height: 100%;
+            background-image: none;
+            // icon
+			font: var(--jem-fa);
+			content: '\2b';
+			color: inherit;
+			// render rules 
+			display: inline-block;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			// positioning 
+			right: 0;
+			position: absolute;
+			text-align: center;
+			width: var(--fa-li-width,2em);
+			line-height: inherit;
+            // positioning            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+          
+        }
+        &:not(.collapsed) {
+            background-color: $white;
+            background-color: var(--color-white);
+            color: $jem1-hover;
+            color: var(--color-jem1-hover);
+            box-shadow: none;
+            &::after {
+                content: '\f068';
+            }
+        }
+    }
+    // tax term options
+    .accordion-item.tax-term {
+        .accordion-button.tax-term { color: $body; color: var(--color-body); }
+        .accordion-body { 
+            padding: 0; 
+            .accordion-body { padding: 0 1.25rem 1rem; }
+            .accordion-item:last-of-type { border-bottom: none;}
+        }
+    }
+}
+
+// gallery
+
+.super-gallery .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    .img-wrap { flex-basis: 100%; }
+    @media #{$mq_md } { .img-wrap { flex-basis: 48%; } }
+    @media #{$mq_xl } { .img-wrap { flex-basis: 30%; } }
+}

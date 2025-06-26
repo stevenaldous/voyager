@@ -1,0 +1,143 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Images /////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+// object fit
+.obj.img-wrap {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+	&.compat-object-fit {
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		img {
+			display: none;
+		}
+	}
+}
+
+picture { 
+	display: block;
+	img, source {
+		width: 100%;
+		height: auto;
+	}
+}
+
+
+.img-accent-bg {
+	position: relative;
+	z-index: 1;
+	width: calc(100% - 25px );
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		bottom: -15px;
+		right: -15px;
+	}
+	&::before {
+		background-color: $jem1;
+		background-color: var(--color-jem1);
+		z-index: -2;
+	}
+	// Un-comment to use an textured bg
+	// &::after {
+	// 	background-image: url(../images/svg/accent-bg.svg);
+	// 	background-repeat: repeat;
+	// 	background-size: auto;  
+	// 	opacity: 0.35;
+	// 	z-index: -1;
+	// }
+	@media #{$mq_md} { width: 100%; }
+}
+
+.bg-img {
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+///////////////////////////////////////////////////////////////////////////////////
+// Embed //////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
+iframe {
+    max-width: 100%;
+    // height: auto;
+}
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Aspect Ratio Boxes /////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+/* this is pulled from https://getbootstrap.com/docs/5.2/helpers/ratio/
+*
+* <div class="ratio ratio-1x1">
+*   <div class="ratio-inner">
+*       <!-- content -->
+*   </div>
+* </div>
+*/
+
+
+/* .ratio-1x1 Bootstrap default */
+
+// landscape
+.ratio-2x1 { --bs-aspect-ratio: calc( (1/2) * 100% ); }
+.ratio-3x2 { --bs-aspect-ratio: calc( (2/3) * 100% ); }
+/* .ratio-4x3 Bootstrap default */
+.ratio-5x4 { --bs-aspect-ratio: calc( (4/5) * 100% ); }
+/* .ratio-16x9 Bootstrap default */
+/* .ratio-21x9 Bootstrap default */
+
+
+//portrait
+.ratio-1x2 { --bs-aspect-ratio: calc( (2/1) * 100% ); }
+.ratio-2x3 { --bs-aspect-ratio: calc( (3/2) * 100% ); }
+.ratio-3x4 { --bs-aspect-ratio: calc( (4/3) * 100% ); }
+.ratio-4x5 { --bs-aspect-ratio: calc( (5/4) * 100% ); }
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Maximum Width //////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+@for $i from 1 through 10 {
+	.mw-#{$i}0 { max-width: percentage($i / 10); }
+}
+// tablet
+@media #{ $mq_md } {
+	@for $i from 1 through 10 {
+		.mw-md-#{$i}0 { max-width: percentage($i / 10); }
+	}
+}
+// laptop
+@media #{ $mq_lg } {
+	@for $i from 1 through 10 {	
+		.mw-lg-#{$i}0 { max-width: percentage($i / 10); }
+	}
+}
+// desktop
+@media #{ $mq_xl } {
+	@for $i from 1 through 10 {
+		.mw-xl-#{$i}0 { max-width: percentage($i / 10); }
+	}
+}
+// desktop 24"+
+@media #{ $mq_xxl } {
+	@for $i from 1 through 10 {
+		.mw-xxl-#{$i}0 { max-width: percentage($i / 10); }
+	}
+}

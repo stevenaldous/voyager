@@ -1,0 +1,224 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Sliders
+///////////////////////////////////////////////////////////////////////////////////
+$bhw: 22px; // dot size variable
+// generic slick dot styles   -- colors in different group below
+.slick-dots {
+    text-align: center;
+    padding: 0;
+    margin: 0 1rem;
+    li {
+        position: relative;
+        display: inline-block;
+        width: $bhw;
+        height: $bhw;
+        // margin: 0 5px;
+        margin: 0;
+        padding: 0;
+        button {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            appearance: none;
+            font-size: 0;
+            line-height: 0;
+            width: $bhw;
+            height: $bhw;
+            padding: 0;
+            cursor: pointer;
+            background: transparent;
+            outline: none;
+            @include border-radius(50%);
+            // border: solid 1px transparent;
+            border: none;
+            opacity: .5;
+            &:before {
+                content: '';
+                display: block;
+                width: 60%;
+                height: 60%;
+                background-color: currentColor;
+                @include border-radius( 50% );
+            }
+            &:hover, &:focus {
+                opacity: 1;
+            }
+        }
+        // opacity active
+        &.slick-active button {
+            cursor: default;
+            opacity: 1;
+            color: $jem1-hover;
+            color: var(--color-jem1-hover);
+            border-color: var(--color-jem1-hover);
+        }
+    }
+}
+// generic slick arrow styles  -- colors in different group below
+.slick-arrow {
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    position: relative;
+    font-size: 1.5rem;
+    @media #{$mq_md} { font-size: 2rem; }
+    @media #{$mq_xl} { font-size: 3.125rem; }
+}
+
+// styles for dots and arrows if in slider
+.slick-slider {
+    &.slick-dotted {
+        margin-bottom: 25px;
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: -25px;
+        text-align: center;
+        width: 100%;
+    }
+    .slick-arrow {
+        position: absolute;
+        height: 100%;
+        top: 0;
+    }
+    .slick-prev {
+        left: -40px;
+    }
+    .slick-next {
+        right: -40px;
+    }
+}
+// styles for dots and arrows if in slick control
+.slider-wrap {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    .slick-slider { order: 0}
+    .slick-controls { order: 1;}
+}
+
+// control bar styles
+.slick-controls {
+    & ~ .slick-dotted { margin-bottom: 0; }
+    display: flex;
+    justify-content: space-between;
+    .slick-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        order: 1;
+        flex-grow: 1;
+        & li:only-of-type { display: none!important; }
+    }
+    .slick-arrow {
+        font-size: 3.125rem;
+        position: relative;
+    }
+    .slick-prev { order: 0; }
+    .slick-next { order: 2; }
+
+}
+
+// vertically center slider content
+.v-center .slick-track {
+    display: flex;
+    align-items: center;
+}
+// arrows in fw slider
+.container-fluid .slick-slider {
+    .slick-arrow { z-index: 100; width: 100px;}
+    .slick-prev  { left: 0px; }
+    .slick-next  { right: 0px; }
+}
+
+// centermode slider styles
+.centered-slider {
+    .slick-slide {
+        position: relative;
+        .overlay.slick-over {
+            background-color: $white;
+            opacity: 0.6;
+            z-index: 3;
+            @include transition(all 450ms);
+        }
+        &.slick-active {
+            .overlay.slick-over {
+                opacity: 0;
+                z-index: 0;
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Colors
+///////////////////////////////////////////////////////////////////////////////////
+
+// default arrow & dot colors
+.slick-arrow, 
+.slick-dots li button {
+    color: $n200;
+    color: var(--color-n200);
+    opacity: 0.5;
+    &:hover, &:focus {
+        opacity: 1;
+        color: $jem1-hover;
+        color: var(--color-jem1-hover);
+    }
+}
+// light background font color defaults
+.light-slider,
+.bg-dark .bg-white,
+.bg-dark .bg-light {
+    .slick-dots li button,
+    .slick-arrow {
+        color: $n200;
+        color: var(--color-n200);
+        &:hover, &:focus {
+            color: $jem1-hover;
+            color: var(--color-jem1-hover);
+        }
+    }
+}
+// dark background font color defaults
+.dark-slider,
+.bg-dark,
+.bg-jem1,
+.bg-white .bg-dark,
+.bg-white .bg-jem1 {
+    .slick-dots li button,
+	.slick-arrow {
+        color: $white;
+        color: var(--color-white);
+        &:hover, &:focus {
+            color: $jem2-hover;
+            color: var(--color-jem2-hover);
+        }
+    }
+    .slick-dots.slick-active button {
+        color: $jem2-hover;
+        color: var(--color-jem2-hover);
+        border: solid 1px var(--color-jem2-hover);
+    }
+}
+
+//experimental arrow visibility
+@media screen and #{$mq_lg} {
+    .slider-wrap  {
+        .slick-arrow { 
+            opacity: 0;
+            @include transition(opacity ease 450ms);
+        }
+        &:hover, &:focus {
+            .slick-arrow { 
+                opacity: 0.6; 
+                &:hover, &:focus { opacity: 1; }
+            }
+        }
+    }
+    .slick-arrow:hover, .slick-arrow:focus { opacity: 1; }
+}

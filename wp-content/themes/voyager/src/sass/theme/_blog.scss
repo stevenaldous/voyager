@@ -1,0 +1,449 @@
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Pagination
+///////////////////////////////////////////////////////////////////////////////////   
+#content ul.pagination {
+    justify-content: flex-start;
+    font-size: 1.125rem;
+    li:before { content: none;}
+    .page-link {
+        border: none;
+        background-color: transparent;
+        color: $jem2;
+        color: var(--color-jem2);
+        @include border-radius(6px);
+        &:hover {
+            color: $jem2-hover;
+            color: var(--color-jem2-hover);
+            background: transparent;
+            text-decoration: underline;
+        }
+    }
+    .page-item.active .page-link {
+        // text-decoration: underline;
+        color: $white;
+        color: var(--color-white);
+        background-color: $jem2;
+        background-color: var(--color-jem2);
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////
+// Post - Single Template styles
+///////////////////////////////////////////////////////////////////////////////////
+.single-post {
+    footer {
+        .post-navigation {
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                i { display: block;}
+                color: $jem2;
+                color: var(--color-jem2);
+                &:hover, &:focus {
+                    color: $jem2-hover;
+                    color: var(--color-jem2-hover);
+                }
+            }
+            .nav-previous i { margin-right: 0.5rem; }
+            .nav-next {
+                a { 
+                    justify-content: flex-end; 
+                    text-align: right;
+                }
+                i { margin-left: 0.5rem; }
+            }
+        }
+        
+        .tax-wrap {
+            border: solid 2px var(--color-jem2);
+            p {
+                text-transform: uppercase;
+            }
+            a {
+                text-transform: capitalize;
+                color: $jem2;
+                color: var(--color-jem2);
+                display: inline-block;
+                &:hover, &:focus {
+                    color: $jem2-hover;
+                    color: var(--color-jem2-hover);
+                }
+                &::after {
+                    content: ',';
+                    margin-right: 0.4rem;
+                }
+                &:last-of-type::after {
+                    content: '.';
+                }
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Post Cards
+///////////////////////////////////////////////////////////////////////////////////
+//  Flex Layout
+.post-row { 
+    gap: 2rem;
+    @media #{$mq_md} { gap: 3rem; }
+    @media #{$mq_xl} { gap: 4rem; }
+}
+// main card
+.post-card {
+    @include border-radius(0);
+    border-bottom: solid 1px var(--color-n200);
+    padding: 0 0 2rem;
+    @media #{$mq_md} { padding: 0 0 3rem; }
+    @media #{$mq_xl} { padding: 0 0 4rem; }
+    // overflow: hidden;
+    .title a { 
+        text-decoration: none;
+        color: $jem1; 
+        color: var(--color-jem1);
+        font-size: inherit;
+        &:hover, &:focus { color: var(--color-jem1-hover); }
+    }
+    img { @include border-radius(0); }
+    .byline p:last-of-type::before,
+    .term::before { 
+        content: '|';
+        margin: 0 0.3rem;
+     }
+    .ratio { --bs-aspect-ratio: calc( (212/365) * 100% ); }
+
+    // .btn-wrap .no-btn {
+    //     color: $jem2;
+    //     color: var(--color-jem2);
+    //     &:hover, &:focus {
+    //         color: $jem2-hover;
+    //         color: var(--color-jem2-hover);
+    //     }
+    // }
+    .share-wrap {
+        position: relative;
+        p {
+            opacity: 0;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            text-align: center;
+            @include transition(all 450ms);
+            &[aria-hidden="false"] {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Simple post Card
+///////////////////////////////////////////////////////////////////////////////////
+.post-card.post-simple {
+    border-bottom: solid 1px var(--color-n200);
+    .btn {
+        color: $jem2;
+        color: var(--color-jem2);
+        text-decoration: none;
+        &:hover, &:focus {
+            color: $body;
+            color: var(--color-body);
+        }
+    }
+}
+
+.search-card {
+    border-bottom: solid 1px var(--color-n200);
+    padding: 0 0 2rem;
+    @media #{$mq_md} { padding: 0 0 3rem; }
+    // @media #{$mq_xl} { padding: 0 0 4rem; }
+    .title a { 
+        text-decoration: none;
+        color: $body; 
+        &:hover, &:focus { color: $jem1; }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Blog Filter
+///////////////////////////////////////////////////////////////////////////////////
+// change this var to adust the height of filters
+$bht: 60px;
+
+.blog-filter {
+    @include border-radius(6px);
+    select, .search-field {
+        padding-left: 1rem;
+    }
+    select {
+        width: 100%;
+        border: solid 1px var(--color-n200);
+        height: $bht;
+        line-height: $bht;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        @include f1_reg();
+        color: var(--color-n200);        
+    }
+    .select-wrapper {
+        position: relative; 
+        width: 100%;
+        &::after {
+            // content: "\f078"; //chevron
+            content: "\f0d7"; //caret
+            display: inline-block;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			font: var(--jem-fa);
+            position: absolute;
+            right: 0;
+            top: 0;
+            text-align: center;
+            width: $bht;
+            line-height: $bht;
+            color: $jem1;
+            color: var(--color-jem1);
+            pointer-events: none;
+            border-left: solid 1px var(--color-n200);
+        }
+    }
+    .search-form {
+        .search-field, .no-btn { 
+            border: solid 1px var(--color-n200);
+            height: $bht;
+        }
+        .search-field {
+            @include mb-border-radius( 0 );
+            @include f1_reg();
+            color: var(--color-n200);
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: var(--color-n200);
+
+            }
+            &::-moz-placeholder { /* Firefox 19+ */
+                color: var(--color-n200);
+
+            }
+            &:-ms-input-placeholder { /* IE 10+ */
+                color: $n600;
+                color: var(--color-n200);
+            }
+            &:-moz-placeholder { /* Firefox 18- */
+                color: var(--color-n200);
+
+            }
+        }
+        .no-btn {
+            background-color: var(--color-white);
+            color: $jem1;
+            color: var(--color-jem1);
+            border-left: none;
+            width: $bht;
+            @include transition(all 250ms ease);
+            font-size: 1.3rem;
+            padding-top: 0.2rem;
+            &:hover,&:focus {
+                background-color: $jem2;
+                background-color: var(--color-jem2);
+                color: $white;
+                color: var($white);
+            }
+        }
+    }
+}
+
+
+
+// styled selects
+
+.selectNative,
+.selectCustom {
+  position: relative;
+  width: 100%;
+  height: $bht;
+}
+
+.selectCustom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+
+}
+.selectCustom-trigger {
+    height: $bht;
+    @include f1_reg();
+    color: transparent; 
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+.selectCustom-options {
+    background-color: $white;
+    padding: 1.5rem 0 0.5rem;
+    position: relative;
+    z-index: 100;
+    &::-webkit-scrollbar {
+        padding-top: 1.5rem;
+        width: 8px;
+        height: 100%;
+        margin-right: 1.5rem;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $n200;
+        background-color: var(--color-n200);
+        top: 1.5rem;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $jem1;
+        background-color: var(--color-jem1);
+        border-radius: 0;
+        opacity: 0.8;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.selectCustom-options-inner {
+    max-height: 470px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        padding-top: 1.5rem;
+        width: 8px;
+        height: 100%;
+        margin-right: 1.5rem;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $n200;
+        background-color: var(--color-n200);
+        top: 1.5rem;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $jem1;
+        background-color: var(--color-jem1);
+        border-radius: 0;
+        opacity: 0.8;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+.selectCustom-options {
+    .selectCustom-option {
+        @include f1_reg();
+        color: $jem1;
+        color: var(--color-jem1);
+        text-transform: capitalize;
+        padding: 0.5rem 2rem;
+        &:hover {
+            color: $white;
+            color: var(--color-white);
+            cursor: pointer;
+            background-color: $jem1;
+            background-color: var(--color-jem1);
+        }
+    }
+}
+
+// This media query detects devices where the primary
+// input mechanism can hover over elements. (e.g. computers with a mouse)
+@media (hover: hover) {
+    // Since we are using a mouse, it's safe to show the custom select.
+    .selectCustom:hover {
+      display: block;
+    }
+    .js-selectNative:hover {
+        color: $white;
+        & + .selectCustom {
+            display: block;
+        }
+    }
+  
+    // In a computer using keyboard? Then let's hide back the custom select
+    // while the native one is focused:
+    .selectNative:focus + .selectCustom {
+      display: none;
+    }
+  }
+
+  .selectCustom.isActive .selectCustom-options {
+    display: block;
+  }
+
+
+  .js-selectNative:focus {
+    color: $jem1;
+    color: var(--color-jem1);
+    @include f1_bold();
+  }
+
+// dark themed styles 
+.blog-filter.dark-filter {
+    background-color: $jem1-dark;
+    background-color: var(--color-jem1-dark);
+
+    .search-form .search-field,
+    .search-form .no-btn,
+    select {
+        background: $jem1-dark;
+        background: var(--color-jem1-dark);
+        border: none;
+        border-bottom: solid 1px var(--color-white);
+        color: $white;
+        color: var(--color-white);        
+    }
+    .search-form .no-btn:hover,
+    .search-form .no-btn:focus {
+        color: $jem2;
+        color: var(--color-jem2);
+    }
+
+    .select-wrapper::after {
+        border-left: 0;
+        color: $white;
+        color: var(--color-white);
+    }
+    .selectCustom-options {
+        background-color: $jem1-dark;
+        background-color: var(--color-jem1-dark);
+        .selectCustom-option {
+            color: $white;
+            color: var(--color-white);
+        }
+
+    }
+}
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Blog and Resources neg margin filter
+///////////////////////////////////////////////////////////////////////////////////
+$ht: 35px;
+body.blog,
+body.search,
+.archive-post {
+    .hero header { padding: $ht 0;}
+    .blog-filter {
+        position: relative;
+        margin-top: -$ht;
+        z-index: 100;
+    }
+
+    @media #{$mq_lg} {
+        $ht: 60px;
+        .hero header { padding: $ht 0;}
+        .blog-filter { margin-top: -$ht;}
+    }
+} 
+

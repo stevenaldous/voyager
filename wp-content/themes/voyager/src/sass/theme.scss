@@ -1,0 +1,42 @@
+@import "assets/bootstrap5/bootstrap";                             // <------- Loads Bootstrap5
+
+
+
+@import "assets/fontawesome6/fontawesome"; // <------- Font Awesome required to run any Font Awesome icons                 
+
+// Optional FA6 weight - If you don´t use the corresponding fonts comment em out 
+@import "assets/fontawesome6/brands"; //
+// @import "assets/fontawesome6/duotone";
+// @import "assets/fontawesome6/duotone-icons";
+// @import "assets/fontawesome6/thin";
+@import "assets/fontawesome6/light";
+// @import "assets/fontawesome6/sharp-light";
+@import "assets/fontawesome6/regular";
+// @import "assets/fontawesome6/sharp-regular";
+@import "assets/fontawesome6/solid";
+// @import "assets/fontawesome6/sharp-solid";
+
+
+
+
+
+
+
+// Optional files - If you don´t use the corresponding scripts/fonts comment em out 
+// @import "assets/underscores";                            // <------- Underscores media styles
+@import "assets/slick/slick";                             // <------- Loads Slick Slider Styles
+// @import "assets/slick/slick-theme";                             // <------- Loads Slick Slider Styles
+
+// Any additional imported files //
+@import "styleguide/theme_styleguide";                             // <------- Add your styles into this file
+@import "theme/child_theme";                             // <------- Add your styles into this file
+@import "assets/understrap/theme/colors";           // <-------- This creates the necessary bootstrap color classes.
+@import "assets/understrap/theme/blocks";           // <-------- This adds Bootstrap styles to blocks.
+// @import "assets/understrap/theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support
+
+
+
+
+
+
+
