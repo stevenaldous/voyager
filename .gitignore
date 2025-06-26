@@ -21,7 +21,7 @@
 wp-config.php
 
 # Themes
-# /wp-content/themes/twenty*/
+/wp-content/themes/twenty*/
 
 # Plugin
 # /wp-content/plugins/hello.php
