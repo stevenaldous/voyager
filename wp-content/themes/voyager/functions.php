@@ -180,35 +180,32 @@ $voyager_includes = array(
 
 	'/template-tags.php',           // Custom template tags for this theme.
 
-	'/template-functions.php',      // Functions which enhance the theme by hooking into WordPress.
-
-    // '/widgets.php',            // currently, all widgets are disabled in this file.
 
 	/////////////////////////////////////////////////////////////
 	// Voyager Resources 
 	/////////////////////////////////////////////////////////////
+	
+    // '/widgets.php',              // currently, all widgets are disabled in this file.
 
     '/customizer.php',           // Manage the available customizer fields
 
     '/enqueue.php',              // Load Scripts and Styles
 
-	// '/template-tags.php',        // template function
-
 	// '/blocks.php',            // Gutenberg Blocks
 
-    // '/acf.php',                  // ACF functions
+    '/acf.php',                  // ACF functions
 
     // '/grav-forms.php',           // Gravity Form functions
 
-    // '/voyager-functions.php',    // Voyager specific functions
+    '/voyager-functions.php',    // Voyager specific functions
 
-    // '/voyager-class-wp-bootstrap-navwalker.php', // Bootstrap nav-walker
+    '/voyager-class-wp-bootstrap-navwalker.php', // Bootstrap nav-walker
 
     // '/setup.php',
 
-    // '/pagination.php',            // Pagination code for archive templates
+    '/pagination.php',            // Pagination code for archive templates
 
-    // '/color-panel.php',           // Set Color variables from ACF Settings
+    '/color-panel.php',           // Set Color variables from ACF Settings
 	
     
 );

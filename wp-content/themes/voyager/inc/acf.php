@@ -9,6 +9,7 @@ if( function_exists('acf_add_options_page') ) {
         'menu_title'    => 'Site Settings & Content',
         'menu_slug'     => 'theme-general-settings',
         'capability'    => 'edit_posts',
+        'position'      => '2.1',
         'redirect'      => false
     ));
 
@@ -47,32 +48,32 @@ if( function_exists('acf_add_options_page') ) {
     // ));
 
     // Service Area Options
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Service Area Settings',
-        'menu_title'    => 'Service Area Settings',
-        'parent_slug'   => 'edit.php?post_type=services',
-    ));
+    // acf_add_options_sub_page(array(
+    //     'page_title'    => 'Service Area Settings',
+    //     'menu_title'    => 'Service Area Settings',
+    //     'parent_slug'   => 'edit.php?post_type=services',
+    // ));
 
-    // Team Options
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Team Settings',
-        'menu_title'    => 'Team Settings',
-        'parent_slug'   => 'edit.php?post_type=team',
-    ));
+    // // Team Options
+    // acf_add_options_sub_page(array(
+    //     'page_title'    => 'Team Settings',
+    //     'menu_title'    => 'Team Settings',
+    //     'parent_slug'   => 'edit.php?post_type=team',
+    // ));
 
-    // Badges Options
-     acf_add_options_sub_page(array(
-        'page_title'    => 'Badges Settings',
-        'menu_title'    => 'Badges Settings',
-        'parent_slug'   => 'edit.php?post_type=badges',
-    ));
+    // // Badges Options
+    //  acf_add_options_sub_page(array(
+    //     'page_title'    => 'Badges Settings',
+    //     'menu_title'    => 'Badges Settings',
+    //     'parent_slug'   => 'edit.php?post_type=badges',
+    // ));
 
-    // Testimonials Options
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Testimonials Settings',
-        'menu_title'    => 'Testimonials Settings',
-        'parent_slug'   => 'edit.php?post_type=testimonials',
-    ));
+    // // Testimonials Options
+    // acf_add_options_sub_page(array(
+    //     'page_title'    => 'Testimonials Settings',
+    //     'menu_title'    => 'Testimonials Settings',
+    //     'parent_slug'   => 'edit.php?post_type=testimonials',
+    // ));
 
 };
 

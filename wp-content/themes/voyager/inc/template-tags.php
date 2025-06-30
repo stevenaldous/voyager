@@ -163,3 +163,35 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+
+if ( ! function_exists( 'voyager_body_attributes' ) ) {
+	/**
+	 * Displays the attributes for the body element.
+	 */
+	function voyager_body_attributes() {
+		/**
+		 * Filters the body attributes.
+		 *
+		 * @param array $atts An associative array of attributes.
+		 */
+		$atts = array_unique( apply_filters( 'voyager_body_attributes', $atts = array() ) );
+		if ( ! is_array( $atts ) || empty( $atts ) ) {
+			return;
+		}
+
+		$attributes = '';
+		foreach ( $atts as $name => $value ) {
+			if ( $value ) {
+				if ( ! is_string( $value ) ) {
+					continue;
+				}
+				$attributes .= sanitize_key( $name ) . '="' . esc_attr( $value ) . '" ';
+			} else {
+				$attributes .= sanitize_key( $name ) . ' ';
+			}
+		}
+
+		echo trim( $attributes ); // phpcs:ignore WordPress.Security.EscapeOutput
+	}
+}
