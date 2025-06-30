@@ -5,13 +5,13 @@
     position: relative;
     overflow: hidden;
     .h1 span { 
-        color: $jem1;
-        color: var(--color-jem1);
+        color: $v1;
+        color: var(--color-v1);
         display: block;
         @media #{$mq_md} { display: inline; }
     }
-    &.bg-jem2 {
-        .subt { color: var(--color-jem1, $jem1 );}
+    &.bg-v2 {
+        .subt { color: var(--color-v1, $v1 );}
     }
 }
 ///////////////////////////////////////////////////////////////////////////////////
@@ -207,8 +207,8 @@
             a:not(.btn) {
                 text-decoration: none;
                 text-transform: capitalize;
-                color: var(--color-jem2);
-                &:hover, &:focus { color: var(--color-jem2--hover); }
+                color: var(--color-v2);
+                &:hover, &:focus { color: var(--color-v2--hover); }
             }
         }
     }
@@ -230,7 +230,7 @@
         width: 90px;
         height: 90px;
         padding: 1rem;
-        color: var(--color-jem1 , $jem1);
+        color: var(--color-v1 , $v1);
         i { font-size: 2rem; }
         &::after {
             content: '';
@@ -246,21 +246,21 @@
     }
     .h6 { color: var(--color-body, $body ); }
     a:hover, a:focus {
-        .icon-wrap, .h6 { color: var(--color-jem1-hover , $jem1-hover); }
+        .icon-wrap, .h6 { color: var(--color-v1-hover , $v1-hover); }
         .icon-wrap &::after { opacity: 0.6; }
     }
     &.bg-dark,
-    &.bg-jem1,
+    &.bg-v1,
     &.bg-black {
         .icon-wrap, .h6 { color: var(--color-white , $white); }
         a:hover, a:focus {
-            .icon-wrap, .h6 { color: var(--color-jem2 , $jem2); }
+            .icon-wrap, .h6 { color: var(--color-v2 , $v2); }
         }
     }
-    &.bg-jem2 {
-        .icon-wrap, .h6 { color: var(--color-jem2-body , $jem2-body); }
+    &.bg-v2 {
+        .icon-wrap, .h6 { color: var(--color-v2-body , $v2-body); }
         a:hover, a:focus {
-            .icon-wrap, .h6 { color: var(--color-jem2-focus , $jem2-focus); }
+            .icon-wrap, .h6 { color: var(--color-v2-focus , $v2-focus); }
         }
     }
 }
@@ -274,7 +274,7 @@
     .pa-inner { padding: 45px 40px; } 
     ul {
         li {
-            border-bottom: solid 1px rgba( var(--color-rgb-jem1) , 0.2 );
+            border-bottom: solid 1px rgba( var(--color-rgb-v1) , 0.2 );
             padding: 0.75rem 0;
             a { 
                 font-family: var(--font-hx);

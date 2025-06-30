@@ -74,18 +74,18 @@
         a { 
             color: $white;
             color: var(--color-white );
-            &:hover, &:focus { color: $jem2; color: var(--color-jem2) }
+            &:hover, &:focus { color: $v2; color: var(--color-v2) }
         }
         .loc-card {
             width: 100%;
-            background-color: $jem1;
-            background-color: var(--color-jem1);
+            background-color: $v1;
+            background-color: var(--color-v1);
 
             color: $white;
             color: var(--color-white );
             &:nth-of-type(even) {
-                background-color: $jem1-hover;
-                background-color: var(--color-jem1-hover);        
+                background-color: $v1-hover;
+                background-color: var(--color-v1-hover);        
             }
         }
     }
@@ -126,15 +126,15 @@ footer .footer-contact {
     .social {
             // non hover items
         p { 
-            color: $jem1;
-            color: var(--color-jem1);
+            color: $v1;
+            color: var(--color-v1);
         }
         //hoverable items
         .si-links,
         a, a.nav-link {
-            color: $jem1;
-            color: var(--color-jem1);
-            &:hover, &:focus { color: $jem1-hover; color: var(--color-jem1-hover); }
+            color: $v1;
+            color: var(--color-v1);
+            &:hover, &:focus { color: $v1-hover; color: var(--color-v1-hover); }
         }
     }
 }

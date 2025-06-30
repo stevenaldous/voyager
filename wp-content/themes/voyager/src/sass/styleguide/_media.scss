@@ -44,8 +44,8 @@ picture {
 		right: -15px;
 	}
 	&::before {
-		background-color: $jem1;
-		background-color: var(--color-jem1);
+		background-color: $v1;
+		background-color: var(--color-v1);
 		z-index: -2;
 	}
 	// Un-comment to use an textured bg

@@ -49,9 +49,9 @@ $bhw: 22px; // dot size variable
         &.slick-active button {
             cursor: default;
             opacity: 1;
-            color: $jem1-hover;
-            color: var(--color-jem1-hover);
-            border-color: var(--color-jem1-hover);
+            color: $v1-hover;
+            color: var(--color-v1-hover);
+            border-color: var(--color-v1-hover);
         }
     }
 }
@@ -166,8 +166,8 @@ $bhw: 22px; // dot size variable
     opacity: 0.5;
     &:hover, &:focus {
         opacity: 1;
-        color: $jem1-hover;
-        color: var(--color-jem1-hover);
+        color: $v1-hover;
+        color: var(--color-v1-hover);
     }
 }
 // light background font color defaults
@@ -179,30 +179,30 @@ $bhw: 22px; // dot size variable
         color: $n200;
         color: var(--color-n200);
         &:hover, &:focus {
-            color: $jem1-hover;
-            color: var(--color-jem1-hover);
+            color: $v1-hover;
+            color: var(--color-v1-hover);
         }
     }
 }
 // dark background font color defaults
 .dark-slider,
 .bg-dark,
-.bg-jem1,
+.bg-v1,
 .bg-white .bg-dark,
-.bg-white .bg-jem1 {
+.bg-white .bg-v1 {
     .slick-dots li button,
 	.slick-arrow {
         color: $white;
         color: var(--color-white);
         &:hover, &:focus {
-            color: $jem2-hover;
-            color: var(--color-jem2-hover);
+            color: $v2-hover;
+            color: var(--color-v2-hover);
         }
     }
     .slick-dots.slick-active button {
-        color: $jem2-hover;
-        color: var(--color-jem2-hover);
-        border: solid 1px var(--color-jem2-hover);
+        color: $v2-hover;
+        color: var(--color-v2-hover);
+        border: solid 1px var(--color-v2-hover);
     }
 }
 

@@ -6,15 +6,15 @@
 // Links //////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 a {
-    color: $jem1;
-	color: var(--color-jem1);
+    color: $v1;
+	color: var(--color-v1);
 	font-weight: 700;
 	font-size: inherit;
 	text-decoration-thickness: 1px;
 	@include transition(all 250ms);
 	&:hover, &:focus {
-		color: $jem1-hover;
-		color: var(--color-jem1-hover);
+		color: $v1-hover;
+		color: var(--color-v1-hover);
 	}
 }
 
@@ -35,8 +35,8 @@ a.img-link {
 a.img-hover {
 	position: relative;
 	.overlay {
-		background-color: rgba( $jem2, 0.8) ;
-		background-color: rgba( var(--color-jem2), 0.8) ;
+		background-color: rgba( $v2, 0.8) ;
+		background-color: rgba( var(--color-v2), 0.8) ;
 		color: $white;
 		color: var(--color-white);
 		opacity: 0;
@@ -90,12 +90,12 @@ input[type="submit"]  {
 .btn-primary {	
 	color: $white;
 	color: var(--color-white);
-	background-color: $jem1;
-	background-color: var(--color-jem1);
+	background-color: $v1;
+	background-color: var(--color-v1);
 	border: solid 2px currentColor;
 	&:hover, &:focus {
-		background-color: $jem1-hover;
-		background-color: var(--color-jem1-hover);
+		background-color: $v1-hover;
+		background-color: var(--color-v1-hover);
 		border-color: currentColor;
 	}
 }
@@ -103,14 +103,14 @@ input[type="submit"]  {
 .btn-secondary {
 	color: $white;
 	color: var(--color-white);
-	background-color: $jem2;
-	background-color: var(--color-jem2);
+	background-color: $v2;
+	background-color: var(--color-v2);
 	border: solid 2px currentColor;
 	&:hover, &:focus {
 		color: $white;
 		color: var(--color-white);
-		background-color: $jem2-hover;
-		background-color: var(--color-jem2-hover);
+		background-color: $v2-hover;
+		background-color: var(--color-v2-hover);
 		border-color: currentColor;
 	}
 }
@@ -129,31 +129,31 @@ input[type="submit"]  {
 }
 
 .btn-outline-dark {	
-	color: $jem1;
-	color: var(--color-jem1);
+	color: $v1;
+	color: var(--color-v1);
 	border: solid 2px currentColor;
 	background-color: transparent;
 	&:hover, &:focus {
 		color: $white;
 		color: var(--color-white);
 		border-color: currentColor;
-		background-color: $jem1-hover;
-		background-color: var(--color-jem1-hover);
+		background-color: $v1-hover;
+		background-color: var(--color-v1-hover);
 
 	}
 }
 
 .btn.no-btn {
 	padding: 0.5rem 0 0 0;
-	color: $jem1;
-	color: var(--color-jem1);
+	color: $v1;
+	color: var(--color-v1);
 	text-transform: uppercase;
 	text-decoration: none;
 	// text-underline-offset: 0.15rem;
 	// text-decoration-thickness: 2px;
 	&:hover, &:focus {
-		color: $jem1-hover;
-		color: var(--color-jem1-hover);
+		color: $v1-hover;
+		color: var(--color-v1-hover);
 	}
 }
 
@@ -165,12 +165,12 @@ input[type="submit"] {
 	width: 100%;
 	color: $white;
 	color: var(--color-white);
-	background-color: $jem1;
-	background-color: var(--color-jem1);
+	background-color: $v1;
+	background-color: var(--color-v1);
 	border: solid 2px currentColor;
 	&:hover, &:focus {
-		background-color: $jem1-hover;
-		background-color: var(--color-jem1-hover);
+		background-color: $v1-hover;
+		background-color: var(--color-v1-hover);
 		border-color: currentColor;
 	}
 }

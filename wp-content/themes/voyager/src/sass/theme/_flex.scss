@@ -86,8 +86,8 @@
         &:last-of-type { border-bottom: var(--color-n400) 2px solid;}
     }
     .accordion-button {
-        color: $jem1;
-        color: var(--color-jem1);
+        color: $v1;
+        color: var(--color-v1);
         font-size: inherit;
         padding-right: 3rem;
         &::after {
@@ -95,7 +95,7 @@
             height: 100%;
             background-image: none;
             // icon
-			font: var(--jem-fa);
+			font: var(--v-fa);
 			content: '\2b';
 			color: inherit;
 			// render rules 
@@ -118,8 +118,8 @@
         &:not(.collapsed) {
             background-color: $white;
             background-color: var(--color-white);
-            color: $jem1-hover;
-            color: var(--color-jem1-hover);
+            color: $v1-hover;
+            color: var(--color-v1-hover);
             box-shadow: none;
             &::after {
                 content: '\f068';

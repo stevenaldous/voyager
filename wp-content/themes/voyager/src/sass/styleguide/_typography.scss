@@ -92,10 +92,10 @@ main ul:not(.social):not(.slick-dots):not(.pagination):not(.clean) {
 		margin-bottom: 0.5rem;
 		&::before {
 			// icon
-			font: var(--jem-fa);
+			font: var(--v-fa);
 			content: '\f054';
-			color: $jem2;
-			color: var(--color-jem2);
+			color: $v2;
+			color: var(--color-v2);
 			// render rules 
 			display: inline-block;
 			text-rendering: auto;
@@ -136,8 +136,8 @@ ol {
 	li {
 		margin-bottom: 0.5rem;
 		&::marker {
-			color: $jem2;
-			color: var(--color-jem2);
+			color: $v2;
+			color: var(--color-v2);
 			font-weight: 600;
 		}
 	}
@@ -168,7 +168,7 @@ li p:last-of-type { margin-bottom: 0; }
 		// margin: 0 auto 1rem;
 		width: 80px;
 		height: 5px;
-		background-color: var(--color-jem2, $jem2);
+		background-color: var(--color-v2, $v2);
 		display: block;
 	}
 }
@@ -184,7 +184,7 @@ li p:last-of-type { margin-bottom: 0; }
 		margin-right: 0.5rem;
 	}
 }
-.bg-jem2 .flair::before { background-color: var(--color-jem1, $jem1); }
+.bg-v2 .flair::before { background-color: var(--color-v1, $v1); }
 .text-start .pret.flair  { justify-content: flex-start; }
 .text-center .pret.flair { justify-content: center; }
 .text-end .pret.flair    { justify-content: flex-end; }

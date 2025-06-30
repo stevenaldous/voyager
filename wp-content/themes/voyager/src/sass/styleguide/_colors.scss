@@ -3,12 +3,12 @@
 ///////////////////////////////////////////////////////////////////////////////////
 // color variables set at :root {
 //
-// var(--color-jem1)
-// var(--color-jem1-hover)
-// var(--color-jem1-light)
-// var(--color-jem1-dark)
-// var(--color-jem2)
-// var(--color-jem2-hover)
+// var(--color-v1)
+// var(--color-v1-hover)
+// var(--color-v1-light)
+// var(--color-v1-dark)
+// var(--color-v2)
+// var(--color-v2-hover)
 // var(--color-hx)
 // var(--color-body)
 // var(--color-white)
@@ -36,19 +36,19 @@
 .c-headline { color: $headline; color: var(--color-headline);}
 
 // Primary accent vars
-.c-jem1  { color: $jem1; color: var(--color-jem1); }
-.c-jem1-light,
-.c-jem1l { color: $jem1-light; color: var(--color-jem1-light); }
+.c-v1  { color: $v1; color: var(--color-v1); }
+.c-v1-light,
+.c-v1l { color: $v1-light; color: var(--color-v1-light); }
 .c-dark,
-.c-jem1d-dark,
-.c-jem1d { color: $jem1-dark; color: var(--color-jem1-dark); }
-.c-jem1-hover,
-.c-jem1h { color: $jem1-hover; color: var(--color-jem1-hover); }
+.c-v1d-dark,
+.c-v1d { color: $v1-dark; color: var(--color-v1-dark); }
+.c-v1-hover,
+.c-v1h { color: $v1-hover; color: var(--color-v1-hover); }
 
 // second accent vars
-.c-jem2  { color: $jem2; color: var(--color-jem2); }
-.c-jem2-hover,
-.c-jem2h { color: $jem2-hover; color: var(--color-jem2-hover); }
+.c-v2  { color: $v2; color: var(--color-v2); }
+.c-v2-hover,
+.c-v2h { color: $v2-hover; color: var(--color-v2-hover); }
 
 /* Netral Colors */
 .c-white { color: $white !important; color: var(--color-white) !important;}
@@ -86,16 +86,19 @@
 ///////////////////////////////////////////////////////////////////////////////////
 // Primary accent vars
 .bg-trans { background: transparent;}
-.bg-jem1  { background: $jem1; background: var(--color-jem1); }
-.bg-jem1-light,
-.bg-jem1l { background: $jem1-light; background: var(--color-jem1-light); }
+.bg-v1  { 
+	background: $v1; 
+	background: var(--color-v1, $v1); 
+}
+.bg-v1-light,
+.bg-v1l { background: $v1-light; background: var(--color-v1-light); }
 .bg-dark,
-.bg-jem1d-dark,
-.bg-jem1d { background: $jem1-dark; background: var(--color-jem1-dark) !important; }
-.bg-jem1-hover,
-.bg-jem1h { background: $jem1-hover; background: var(--color-jem1-hover); }
-.bg-jem1-grad {  
-	background: linear-gradient(180deg, rgba(var(--color-rgb-jem1), 0.1) 0%, rgba( var(--color-rgb-white), 0.101042) 49.48%, rgba(var(--color-rgb-jem1), 0.1) 100%),
+.bg-v1d-dark,
+.bg-v1d { background: $v1-dark; background: var(--color-v1-dark) !important; }
+.bg-v1-hover,
+.bg-v1h { background: $v1-hover; background: var(--color-v1-hover); }
+.bg-v1-grad {  
+	background: linear-gradient(180deg, rgba(var(--color-rgb-v1), 0.1) 0%, rgba( var(--color-rgb-white), 0.101042) 49.48%, rgba(var(--color-rgb-v1), 0.1) 100%),
 	linear-gradient(0deg, #FFFFFF, #FFFFFF);  
 }
 .bg-blur {
@@ -103,9 +106,9 @@
 	backdrop-filter: blur(7.5px);	
 }
 // second accent vars
-.bg-jem2  { background: $jem2; background: var(--color-jem2); }
-.bg-jem2-hover,
-.bg-jem2h { background: $jem2-hover; background: var(--color-jem2-hover); }
+.bg-v2  { background: $v2; background: var(--color-v2); }
+.bg-v2-hover,
+.bg-v2h { background: $v2-hover; background: var(--color-v2-hover); }
 
 /* Netral Colors */
 .bg-white { background: $white; background: var(--color-white);}
@@ -143,8 +146,8 @@
 
 // border colors
 .bo-white { border: solid 2px var(--color-white);}
-.bo-jem1  { border: solid 2px var(--color-jem1);}
-.bo-jem2  { border: solid 2px var(--color-jem2);}
+.bo-v1  { border: solid 2px var(--color-v1);}
+.bo-v2  { border: solid 2px var(--color-v2);}
 .bo-dark  { border: solid 2px var(--color-dark);}
 .bo-black { border: solid 2px var(--color-black);}
 
@@ -153,15 +156,15 @@
 ///////////////////////////////////////////////////////////////////////////////////
 
 // theme for light bg 
-.jem-light {
+.v-light {
 	color: $body;
-	color: var(--color-body);
+	color: var(--color-body, $body);
 	a:not(.btn), a.no-btn {
-		color: $jem1;
-		color: var(--color-jem1);
+		color: $v1;
+		color: var(--color-v1, $v1);
 		&:hover, &:focus {
-			color: $jem1-hover;
-			color: var(--color-jem1-hover);
+			color: $v1-hover;
+			color: var(--color-v1-hover, $v1-hover);
 		}
 	}
 	.subt { color: var(--color-subt-dark) }
@@ -169,21 +172,21 @@
 }
 
 // theme for dark bg 
-.jem-dark {
+.v-dark {
 	color: $white;
-	color: var(--color-white);
+	color: var(--color-white, $white);
 	h1,  h2,  h3,  h4,  h5,  h6,
 	.h1, .h2, .h3, .h4, .h5, .h6 { 
 		color: $white;
-		color: var(--color-white);
+		color: var(--color-white, $white);
    }
    .subt { color: var(--color-subt-light) }
 	a:not(.btn), a.no-btn {
 		color: $white;
 		color: var(--color-white);
 		&:hover, &:focus {
-			color: $jem2;
-			color: var(--color-jem2);
+			color: $v2;
+			color: var(--color-v2);
 		}
 	}
 }
@@ -192,42 +195,42 @@
 // hover bgs for cards
 a {
 	&[class*='bg-'] {
-		&.jem-light { 
-			color: var(--color-jem1);
-			&:hover, &:focus { color: var(--color-jem1); } 
+		&.v-light { 
+			color: var(--color-v1);
+			&:hover, &:focus { color: var(--color-v1); } 
 		}
-		&.jem-dark { 
+		&.v-dark { 
 			color: var(--color-white);
 			&:hover, &:focus { color: var(--color-white); } 
 		}
 	}
 	&.bg-white:hover,&.bg-white:focus {
-		background-color: var(--color-jem2) !important;
-		&.jem-light { 
+		background-color: var(--color-v2) !important;
+		&.v-light { 
 			color: var(--color-white);
 			&:hover, &:focus { color: var(--color-white); } 
 		}
 	}
-	&.bg-jem1:hover,&.bg-jem1:focus {
-		background-color: var(--color-jem1-hover);
+	&.bg-v1:hover,&.bg-v1:focus {
+		background-color: var(--color-v1-hover);
 	}
-	&.bg-jem2:hover,&.bg-jem2:focus {
-		background-color: var(--color-jem2-hover);
+	&.bg-v2:hover,&.bg-v2:focus {
+		background-color: var(--color-v2-hover);
 	}
 	&.bg-dark:hover,&.bg-dark:focus {
-		background-color: var(--color-jem1-hover) !important;
+		background-color: var(--color-v1-hover) !important;
 	}
 	&.bg-black:hover,&.bg-black:focus {
-		background-color: var(--color-jem1-dark) !important;
+		background-color: var(--color-v1-dark) !important;
 	}
 	&.bg-trans:hover,&.bg-trans:focus {
-		&.jem-light { 
-			color: var(--color-jem1-hover);
-			&:hover, &:focus { color: var(--color-jem1-hover); } 
+		&.v-light { 
+			color: var(--color-v1-hover);
+			&:hover, &:focus { color: var(--color-v1-hover); } 
 		}
-		&.jem-dark { 
-			color: var(--color-jem2);
-			&:hover, &:focus { color: var(--color-jem2); } 
+		&.v-dark { 
+			color: var(--color-v2);
+			&:hover, &:focus { color: var(--color-v2); } 
 		}
 	}
 }

@@ -56,6 +56,6 @@ function voyager_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function voyager_customize_preview_js() {
-	wp_enqueue_script( 'voyager-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+	wp_enqueue_script( 'voyager-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), VOYAGER_VERSION, true );
 }
 add_action( 'customize_preview_init', 'voyager_customize_preview_js' );

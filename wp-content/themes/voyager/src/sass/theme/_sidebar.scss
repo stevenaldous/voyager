@@ -24,7 +24,7 @@
             text-align: center;
             p,a { font-size: inherit; }
             a {
-                color: $jem1;
+                color: $v1;
             }
         }
     }
@@ -50,8 +50,8 @@
                 color: var(--color-body);
                 text-decoration: none;
                 &:hover, &:focus {
-                    color: $jem1-hover;
-                    color: var(--color-jem1-hover);
+                    color: $v1-hover;
+                    color: var(--color-v1-hover);
                 }
             }
         }
@@ -69,12 +69,12 @@
                 line-height: 1.875;
             }
             a {
-                color: $jem1;
-                color: var(--color-jem1);
+                color: $v1;
+                color: var(--color-v1);
                 text-decoration: none;
                 &:hover, &:focus {
-                    color: $jem1-hover;
-                    color: var(--color-jem1-hover);
+                    color: $v1-hover;
+                    color: var(--color-v1-hover);
                 }
             }
         }
@@ -84,31 +84,31 @@
 
     // CTA styles
     .sb-cta {
-        .bg-bg, .bg-light, .bg-white, .bg-jem1 {
+        .bg-bg, .bg-light, .bg-white, .bg-v1 {
             .no-btn {
-                color: $jem1;
-                color: var(--color-jem1);
+                color: $v1;
+                color: var(--color-v1);
                 &:hover, &:focus { 
-                    color: $jem1-hover;
-                    color: var(--color-jem1-hover);
+                    color: $v1-hover;
+                    color: var(--color-v1-hover);
                 }
             }
         }
-        .bg-jem1 .no-btn {
-            color: $jem2;
-            color: var(--color-jem2);
+        .bg-v1 .no-btn {
+            color: $v2;
+            color: var(--color-v2);
             &:hover, &:focus { 
-                color: $jem2-hover;
-                color: var(--color-jem2-hover);
+                color: $v2-hover;
+                color: var(--color-v2-hover);
             }
         }
-        .bg-jem2 .no-btn,
+        .bg-v2 .no-btn,
         .bg-dark .no-btn {
-            color: $jem2;
-            color: var(--color-jem2);
+            color: $v2;
+            color: var(--color-v2);
             &:hover, &:focus { 
-                color: $jem2-hover;
-                color: var(--color-jem2-hover);
+                color: $v2-hover;
+                color: var(--color-v2-hover);
             }
         }
     }

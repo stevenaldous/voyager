@@ -12,12 +12,12 @@
     .page-link {
         border: none;
         background-color: transparent;
-        color: $jem2;
-        color: var(--color-jem2);
+        color: $v2;
+        color: var(--color-v2);
         @include border-radius(6px);
         &:hover {
-            color: $jem2-hover;
-            color: var(--color-jem2-hover);
+            color: $v2-hover;
+            color: var(--color-v2-hover);
             background: transparent;
             text-decoration: underline;
         }
@@ -26,8 +26,8 @@
         // text-decoration: underline;
         color: $white;
         color: var(--color-white);
-        background-color: $jem2;
-        background-color: var(--color-jem2);
+        background-color: $v2;
+        background-color: var(--color-v2);
     }
 }
 ///////////////////////////////////////////////////////////////////////////////////
@@ -42,11 +42,11 @@
                 text-decoration: none;
                 text-transform: uppercase;
                 i { display: block;}
-                color: $jem2;
-                color: var(--color-jem2);
+                color: $v2;
+                color: var(--color-v2);
                 &:hover, &:focus {
-                    color: $jem2-hover;
-                    color: var(--color-jem2-hover);
+                    color: $v2-hover;
+                    color: var(--color-v2-hover);
                 }
             }
             .nav-previous i { margin-right: 0.5rem; }
@@ -60,18 +60,18 @@
         }
         
         .tax-wrap {
-            border: solid 2px var(--color-jem2);
+            border: solid 2px var(--color-v2);
             p {
                 text-transform: uppercase;
             }
             a {
                 text-transform: capitalize;
-                color: $jem2;
-                color: var(--color-jem2);
+                color: $v2;
+                color: var(--color-v2);
                 display: inline-block;
                 &:hover, &:focus {
-                    color: $jem2-hover;
-                    color: var(--color-jem2-hover);
+                    color: $v2-hover;
+                    color: var(--color-v2-hover);
                 }
                 &::after {
                     content: ',';
@@ -104,10 +104,10 @@
     // overflow: hidden;
     .title a { 
         text-decoration: none;
-        color: $jem1; 
-        color: var(--color-jem1);
+        color: $v1; 
+        color: var(--color-v1);
         font-size: inherit;
-        &:hover, &:focus { color: var(--color-jem1-hover); }
+        &:hover, &:focus { color: var(--color-v1-hover); }
     }
     img { @include border-radius(0); }
     .byline p:last-of-type::before,
@@ -118,11 +118,11 @@
     .ratio { --bs-aspect-ratio: calc( (212/365) * 100% ); }
 
     // .btn-wrap .no-btn {
-    //     color: $jem2;
-    //     color: var(--color-jem2);
+    //     color: $v2;
+    //     color: var(--color-v2);
     //     &:hover, &:focus {
-    //         color: $jem2-hover;
-    //         color: var(--color-jem2-hover);
+    //         color: $v2-hover;
+    //         color: var(--color-v2-hover);
     //     }
     // }
     .share-wrap {
@@ -147,8 +147,8 @@
 .post-card.post-simple {
     border-bottom: solid 1px var(--color-n200);
     .btn {
-        color: $jem2;
-        color: var(--color-jem2);
+        color: $v2;
+        color: var(--color-v2);
         text-decoration: none;
         &:hover, &:focus {
             color: $body;
@@ -165,7 +165,7 @@
     .title a { 
         text-decoration: none;
         color: $body; 
-        &:hover, &:focus { color: $jem1; }
+        &:hover, &:focus { color: $v1; }
     }
 }
 
@@ -200,15 +200,15 @@ $bht: 60px;
             display: inline-block;
 			text-rendering: auto;
 			-webkit-font-smoothing: antialiased;
-			font: var(--jem-fa);
+			font: var(--v-fa);
             position: absolute;
             right: 0;
             top: 0;
             text-align: center;
             width: $bht;
             line-height: $bht;
-            color: $jem1;
-            color: var(--color-jem1);
+            color: $v1;
+            color: var(--color-v1);
             pointer-events: none;
             border-left: solid 1px var(--color-n200);
         }
@@ -241,16 +241,16 @@ $bht: 60px;
         }
         .no-btn {
             background-color: var(--color-white);
-            color: $jem1;
-            color: var(--color-jem1);
+            color: $v1;
+            color: var(--color-v1);
             border-left: none;
             width: $bht;
             @include transition(all 250ms ease);
             font-size: 1.3rem;
             padding-top: 0.2rem;
             &:hover,&:focus {
-                background-color: $jem2;
-                background-color: var(--color-jem2);
+                background-color: $v2;
+                background-color: var(--color-v2);
                 color: $white;
                 color: var($white);
             }
@@ -301,8 +301,8 @@ $bht: 60px;
         top: 1.5rem;
     }
     &::-webkit-scrollbar-thumb {
-        background-color: $jem1;
-        background-color: var(--color-jem1);
+        background-color: $v1;
+        background-color: var(--color-v1);
         border-radius: 0;
         opacity: 0.8;
         &:hover {
@@ -326,8 +326,8 @@ $bht: 60px;
         top: 1.5rem;
     }
     &::-webkit-scrollbar-thumb {
-        background-color: $jem1;
-        background-color: var(--color-jem1);
+        background-color: $v1;
+        background-color: var(--color-v1);
         border-radius: 0;
         opacity: 0.8;
         &:hover {
@@ -338,16 +338,16 @@ $bht: 60px;
 .selectCustom-options {
     .selectCustom-option {
         @include f1_reg();
-        color: $jem1;
-        color: var(--color-jem1);
+        color: $v1;
+        color: var(--color-v1);
         text-transform: capitalize;
         padding: 0.5rem 2rem;
         &:hover {
             color: $white;
             color: var(--color-white);
             cursor: pointer;
-            background-color: $jem1;
-            background-color: var(--color-jem1);
+            background-color: $v1;
+            background-color: var(--color-v1);
         }
     }
 }
@@ -379,21 +379,21 @@ $bht: 60px;
 
 
   .js-selectNative:focus {
-    color: $jem1;
-    color: var(--color-jem1);
+    color: $v1;
+    color: var(--color-v1);
     @include f1_bold();
   }
 
 // dark themed styles 
 .blog-filter.dark-filter {
-    background-color: $jem1-dark;
-    background-color: var(--color-jem1-dark);
+    background-color: $v1-dark;
+    background-color: var(--color-v1-dark);
 
     .search-form .search-field,
     .search-form .no-btn,
     select {
-        background: $jem1-dark;
-        background: var(--color-jem1-dark);
+        background: $v1-dark;
+        background: var(--color-v1-dark);
         border: none;
         border-bottom: solid 1px var(--color-white);
         color: $white;
@@ -401,8 +401,8 @@ $bht: 60px;
     }
     .search-form .no-btn:hover,
     .search-form .no-btn:focus {
-        color: $jem2;
-        color: var(--color-jem2);
+        color: $v2;
+        color: var(--color-v2);
     }
 
     .select-wrapper::after {
@@ -411,8 +411,8 @@ $bht: 60px;
         color: var(--color-white);
     }
     .selectCustom-options {
-        background-color: $jem1-dark;
-        background-color: var(--color-jem1-dark);
+        background-color: $v1-dark;
+        background-color: var(--color-v1-dark);
         .selectCustom-option {
             color: $white;
             color: var(--color-white);

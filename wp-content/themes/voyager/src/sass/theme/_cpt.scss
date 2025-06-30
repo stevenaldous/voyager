@@ -49,7 +49,7 @@ a[class*='card-'] { display: block; text-decoration: none;}
     .h6 { color: currentColor; margin-top: 1rem;}
     &.bg-white {
         .h6 { color: var(--color-hx); }
-        .icon-wrap { color: var(--color-jem2); }
+        .icon-wrap { color: var(--color-v2); }
         &:hover, &:focus {
             .h6 { color: var(--color-white); }
             .icon-wrap { color: var(--color-white); }
@@ -80,8 +80,8 @@ a[class*='card-'] { display: block; text-decoration: none;}
 ///////////////////////////////////////////////////////////////////////////////////
 .card-location-image  {
     .overlay {
-        background-color: $jem1-dark;
-        background-color: var(--color-jem1-dark);
+        background-color: $v1-dark;
+        background-color: var(--color-v1-dark);
         opacity: 0.4;
     }
     a:hover, &:focus {
@@ -166,8 +166,8 @@ a[class*='card-'] { display: block; text-decoration: none;}
         opacity: 0; 
     }
     .overlay {
-        background-color: $jem1;
-        background-color: var(--color-jem1); 
+        background-color: $v1;
+        background-color: var(--color-v1); 
         &::before {
             content: 'VIEW PROFILE';
             color: $white;
@@ -198,11 +198,11 @@ a[class*='card-'] { display: block; text-decoration: none;}
         line-height: 1.2;
     }
     .pos { 
-        color: $jem1; 
-        color: var(--color-jem1); 
+        color: $v1; 
+        color: var(--color-v1); 
     }
 }
-.jem-light .team-card a { color: var(--color-body); }
+.v-light .team-card a { color: var(--color-body); }
 
 // cases card
 .card-cases {

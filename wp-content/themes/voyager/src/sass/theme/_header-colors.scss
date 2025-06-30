@@ -12,17 +12,17 @@
         background-color: var(--color-white); 
     }
 
-    // bg - jem1
+    // bg - v1
     .btn-pho {
-        background-color: $jem1;
-        background-color: var(--color-jem1);
+        background-color: $v1;
+        background-color: var(--color-v1);
     }
-    //  bg - jem1-dark
+    //  bg - v1-dark
     .navbar-toggler,
     .offcanvas-header .btn-close,
     .offcanvas-backdrop {
-        background-color: $jem1-dark;
-        background-color: var(--color-jem1-dark);
+        background-color: $v1-dark;
+        background-color: var(--color-v1-dark);
     }
     // color - white
     .navbar-toggler,
@@ -31,43 +31,43 @@
         color: $white;
         color: var(--color-white);
     }
-    // color - jem1
+    // color - v1
     .mob-drawer .btn-pho.pho-alt,
     .main-menu button.dropdown-toggle.show {
-        color: $jem1;
-        color: var(--color-jem1);
+        color: $v1;
+        color: var(--color-v1);
     }
-    // color - jem1dark
+    // color - v1dark
     .search-wrap input,
     .main-menu a,
     .main-menu button.dropdown-toggle  {
-        color: $jem1-dark;
-        color: var(--color-jem1-dark);
+        color: $v1-dark;
+        color: var(--color-v1-dark);
     }
-    // hover - jem1
+    // hover - v1
     .search-wrap button,
     .navbar-toggler,
     .offcanvas-header .btn-close {
         &:focus, &:hover {
-            color: $jem1;    
-            color: var(--color-jem1);
+            color: $v1;    
+            color: var(--color-v1);
         }
     }
-    // hover - jem1dark
+    // hover - v1dark
     .mob-drawer .btn-pho.pho-alt,
     .btn-pho,
     .dropdown-toggle {
         &:hover, &:focus { 
-            background-color: $jem1-dark; 
-            background-color: var(--color-jem1-dark); 
+            background-color: $v1-dark; 
+            background-color: var(--color-v1-dark); 
         }
     }
 
     // menu link mobile text styles hover
     .main-menu a {
         &:active, &:focus, &:hover  { 
-            background-color: $jem1; 
-            background-color: var(--color-jem1); 
+            background-color: $v1; 
+            background-color: var(--color-v1); 
             color: $white; 
             color: var(--color-white); 
         }
@@ -88,12 +88,12 @@
     @media( min-width: $d_md ) { 
         .btn-pho { 
             background-color: transparent; 
-            color: $jem1;
-            color: var(--color-jem1);
+            color: $v1;
+            color: var(--color-v1);
             &:hover, &:focus {
                 background-color: transparent;
-                color: $jem1-dark;
-                color: var(--color-jem1-dark);
+                color: $v1-dark;
+                color: var(--color-v1-dark);
             }
         }
         .head-slogan { 
@@ -111,30 +111,30 @@
                     background-color: $white;
                     background-color: var(--color-white);
                     input {
-                        border: solid 1px $jem1-dark;
-                        box-shadow: 0 5px 5px rgba( $jem1-dark, 0.16 );
+                        border: solid 1px $v1-dark;
+                        box-shadow: 0 5px 5px rgba( $v1-dark, 0.16 );
                     }
                 }
             }
             // input keyboard
             input:hover, input:focus {
-                border: solid 1px $jem1-dark;
-                box-shadow: 0 5px 5px rgba( $jem1-dark, 0.16 );
+                border: solid 1px $v1-dark;
+                box-shadow: 0 5px 5px rgba( $v1-dark, 0.16 );
             }
         }
         .main-menu {
             a:hover {
                 background-color: transparent;
-                color: $jem2;
-                color: var(--color-jem2);
+                color: $v2;
+                color: var(--color-v2);
             }
             // top nav styles
             .top-nav-item {
                 & > a.not-toggle,
                 & > a.dropdown-toggle {
                     &:hover, &:focus {
-                        color: $jem1-hover;
-                        color: var(--color-jem1-hover);
+                        color: $v1-hover;
+                        color: var(--color-v1-hover);
                         background-color: transparent
                     }
                 }
@@ -144,16 +144,16 @@
                 background-color: var(--color-white);
                 box-shadow: 0 3px 10px rgba( $black, 0.16 );
                 a:hover {
-                    background-color: $jem1-dark;
-                    background-color: var(--color-jem1-dark);
+                    background-color: $v1-dark;
+                    background-color: var(--color-v1-dark);
                     color: $white;
                     color: var(--color-white);
                 }
             }
             .dropdown-menu button.dropdown-toggle { 
                 &:hover, &:focus {
-                    background-color: $jem2;
-                    background-color: var(--color-jem2);
+                    background-color: $v2;
+                    background-color: var(--color-v2);
                     color: $white;
                     color: var(--color-white);
                 }
@@ -184,20 +184,20 @@
     .search-wrap input,
     .search-wrap form,
     .offcanvas { 
-        background-color: $jem1-dark; 
-        background-color: var(--color-jem1-dark); 
+        background-color: $v1-dark; 
+        background-color: var(--color-v1-dark); 
     }
 
-    // bg - jem1
+    // bg - v1
     .btn-pho {
-        background-color: $jem2;
-        background-color: var(--color-jem2);
+        background-color: $v2;
+        background-color: var(--color-v2);
     }
-    //  bg - jem1-dark
+    //  bg - v1-dark
     .offcanvas-header .btn-close,
     .offcanvas-backdrop {
-        background-color: $jem1-dark;
-        background-color: var(--color-jem1-dark);
+        background-color: $v1-dark;
+        background-color: var(--color-v1-dark);
     }
     // color - white
     .navbar-toggler,
@@ -208,42 +208,42 @@
         color: $white;
         color: var(--color-white);
     }
-    // color - jem1
+    // color - v1
     .mob-drawer .btn-pho.pho-alt,
     .main-menu button.dropdown-toggle.show,
     .navbar-toggler {
-        color: $jem1;
-        color: var(--color-jem1);
+        color: $v1;
+        color: var(--color-v1);
     }
-    // color - jem1dark
+    // color - v1dark
     .btn-pho {
-        color: $jem1-dark;
-        color: var(--color-jem1-dark);
+        color: $v1-dark;
+        color: var(--color-v1-dark);
     }
-    // hover - jem2
+    // hover - v2
     .search-wrap button,
     .navbar-toggler,
     .offcanvas-header .btn-close {
         &:focus, &:hover {
-            color: $jem2;    
-            color: var(--color-jem2);
+            color: $v2;    
+            color: var(--color-v2);
         }
     }
-    // hover - jem1dark
+    // hover - v1dark
     .mob-drawer .btn-pho.pho-alt,
     .btn-pho,
     .dropdown-toggle {
         &:hover, &:focus { 
-            background-color: $jem2-hover; 
-            background-color: var(--color-jem2-hover); 
+            background-color: $v2-hover; 
+            background-color: var(--color-v2-hover); 
         }
     }
 
     // menu link mobile text styles hover
     .main-menu a {
         &:active, &:focus, &:hover  { 
-            background-color: $jem2; 
-            background-color: var(--color-jem2); 
+            background-color: $v2; 
+            background-color: var(--color-v2); 
             color: $white; 
             color: var(--color-white); 
         }
@@ -265,8 +265,8 @@
             color: var(--color-white);
             &:hover, &:focus {
                 background-color: transparent;
-                color: $jem2-hover;
-                color: var(--color-jem2-hover);
+                color: $v2-hover;
+                color: var(--color-v2-hover);
             }
         }
         .head-slogan { 
@@ -284,51 +284,51 @@
                     background-color: $white;
                     background-color: var(--color-white);
                     input {
-                        border: solid 1px $jem1-dark;
-                        box-shadow: 0 5px 5px rgba( $jem1-dark, 0.16 );
+                        border: solid 1px $v1-dark;
+                        box-shadow: 0 5px 5px rgba( $v1-dark, 0.16 );
                     }
                 }
             }
             // input keyboard
             input:hover, input:focus {
-                border: solid 1px $jem1-dark;
-                box-shadow: 0 5px 5px rgba( $jem1-dark, 0.16 );
+                border: solid 1px $v1-dark;
+                box-shadow: 0 5px 5px rgba( $v1-dark, 0.16 );
             }
         }
         .main-menu {
             a:hover {
                 background-color: transparent;
-                color: $jem2;
-                color: var(--color-jem2);
+                color: $v2;
+                color: var(--color-v2);
             }
             // top nav styles
             .top-nav-item {
                 & > a.not-toggle,
                 & > a.dropdown-toggle {
                     &:hover, &:focus {
-                        color: $jem2-hover;
-                        color: var(--color-jem2-hover);
+                        color: $v2-hover;
+                        color: var(--color-v2-hover);
                         background-color: transparent
                     }
                 }
             }
             .dropdown-menu {
-                background-color: $jem1-dark;
-                background-color: var(--color-jem1-dark);
+                background-color: $v1-dark;
+                background-color: var(--color-v1-dark);
                 box-shadow: 0 3px 10px rgba( $black, 0.16 );
                 a:hover {
-                    background-color: $jem2;
-                    background-color: var(--color-jem2);
-                    color: $jem1-dark;
-                    color: var(--color-jem1-dark);
+                    background-color: $v2;
+                    background-color: var(--color-v2);
+                    color: $v1-dark;
+                    color: var(--color-v1-dark);
                 }
             }
             .dropdown-menu button.dropdown-toggle { 
                 &:hover, &:focus {
-                    background-color: $jem2;
-                    background-color: var(--color-jem2);
-                    color: $jem1-dark;
-                    color: var(--color-jem1-dark);
+                    background-color: $v2;
+                    background-color: var(--color-v2);
+                    color: $v1-dark;
+                    color: var(--color-v1-dark);
                 }
             }
         }
@@ -337,23 +337,23 @@
     ///////////////////////////////////////////////////////////////////////////////////   
     /// 
     /// 
-    &.bg-jem1 .nav-inner {
+    &.bg-v1 .nav-inner {
         .search-wrap input,
         .search-wrap form,
         .offcanvas { 
-            background-color: $jem1; 
-            background-color: var(--color-jem1); 
+            background-color: $v1; 
+            background-color: var(--color-v1); 
         }
         @media( min-width: $d_lg ) {
             .dropdown-menu {
-                background-color: $jem1;
-                background-color: var(--color-jem1);
+                background-color: $v1;
+                background-color: var(--color-v1);
                 box-shadow: 0 3px 10px rgba( $black, 0.16 );
                 a:hover {
-                    background-color: $jem2;
-                    background-color: var(--color-jem2);
-                    color: $jem1;
-                    color: var(--color-jem1);
+                    background-color: $v2;
+                    background-color: var(--color-v2);
+                    color: $v1;
+                    color: var(--color-v1);
                 }
             }
         }
@@ -371,8 +371,8 @@
                 background-color: var(--color-black);
                 box-shadow: 0 3px 10px rgba( $black, 0.16 );
                 a:hover {
-                    background-color: $jem2;
-                    background-color: var(--color-jem2);
+                    background-color: $v2;
+                    background-color: var(--color-v2);
                     color: $black;
                     color: var(--color-black);
                 }
@@ -386,23 +386,23 @@
 
 
 
-#main-nav.bg-jem2 .nav-inner {
+#main-nav.bg-v2 .nav-inner {
     .search-wrap input,
         .search-wrap form,
         .offcanvas { 
-            background-color: $jem2; 
-            background-color: var(--color-jem2); 
+            background-color: $v2; 
+            background-color: var(--color-v2); 
         }
         @media( min-width: $d_lg ) {
             .dropdown-menu {
-                background-color: $jem2;
-                background-color: var(--color-jem2);
+                background-color: $v2;
+                background-color: var(--color-v2);
                 box-shadow: 0 3px 10px rgba( $black, 0.16 );
                 a:hover {
-                    background-color: $jem1-hover;
-                    background-color: var(--color-jem1-hover);
-                    color: $jem2;
-                    color: var(--color-jem2);
+                    background-color: $v1-hover;
+                    background-color: var(--color-v1-hover);
+                    color: $v2;
+                    color: var(--color-v2);
                 }
             }
         }

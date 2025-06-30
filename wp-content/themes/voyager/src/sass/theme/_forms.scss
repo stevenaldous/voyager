@@ -208,7 +208,7 @@ $gf-input-radius: 0;
                 font-size: 2rem;
                 // @include transform(translateY(-50%));
                 text-align: center;
-                color: $jem1;
+                color: $v1;
                 pointer-events: none;
             }
             &.gform_card_icon_amex::after { content: "\f1f3"; }
@@ -274,8 +274,8 @@ header.form-header {
 }
 
 // light bg styles
-.form-wrap.bg-white,.jem-light {
-    .form-header .title { color: $jem1; }
+.form-wrap.bg-white,.v-light {
+    .form-header .title { color: $v1; }
     form {
         .ginput_container_select select,
         input[type="text"],
@@ -287,7 +287,7 @@ header.form-header {
         input[type="file"],
         textarea{
             border: none;
-            border-bottom: solid 1px var(--color-jem1);
+            border-bottom: solid 1px var(--color-v1);
             &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
             opacity: 0.7;
             }
@@ -303,22 +303,22 @@ header.form-header {
         }
     }
     .gfield[class*="fa-"]::before { 
-        color: $jem1;
-        color: var(--color-jem1);
+        color: $v1;
+        color: var(--color-v1);
     }
     .gfield.gfield--type-consent a {
-        color: $jem1;
-        color: var(--color-jem1);
+        color: $v1;
+        color: var(--color-v1);
         &:hover, &:focus {
-            color: $jem1-hover;
-            color: var(--color-jem1-hover);
+            color: $v1-hover;
+            color: var(--color-v1-hover);
         } 
     }
 }
 
 // dark bg styles
-.form-wrap.bg-dark,.jem-dark {
-    .form-header .title { color: $jem1; }
+.form-wrap.bg-dark,.v-dark {
+    .form-header .title { color: $v1; }
     form {
         .ginput_container_select select,
         input[type="text"],
@@ -412,8 +412,8 @@ header.form-header {
         color: var(--color-body);
         background-color: transparent;
         &:hover, &:focus {
-            color: $jem1; 
-            color: var(--color-jem1);
+            color: $v1; 
+            color: var(--color-v1);
         }
     }
     &.bg-dark {
@@ -441,8 +441,8 @@ header.form-header {
             color: $white;
             color: var(--color-white); 
             &:hover, &:focus {
-                color: $jem2-hover; 
-                color: var(--color-jem2-hover);
+                color: $v2-hover; 
+                color: var(--color-v2-hover);
             }
         }
 

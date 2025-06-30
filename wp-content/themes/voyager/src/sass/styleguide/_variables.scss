@@ -68,15 +68,15 @@ $fh: 'Playfair Display', serif; // header
 ///////////////////////////////////////////////
 /// color system panel defaults and variable backups. 
 // theme primary colors
-$jem1: #0C39BE;
-$jem1-hover: #042A99;
-$jem1-light: #011759;
-$jem1-dark: #011759;
+$v1: #0C39BE;
+$v1-hover: #042A99;
+$v1-light: #011759;
+$v1-dark: #011759;
 // theme secondary colors
-$jem2: #FFD954;
-$jem2-hover: #f9c81e;
-$jem2-body: #051649;
-$jem2-focus: #1C1E23;
+$v2: #FFD954;
+$v2-hover: #f9c81e;
+$v2-body: #051649;
+$v2-focus: #1C1E23;
 // body/text colors
 $headline: #051649;
 $body: #051649;
@@ -105,4 +105,4 @@ $review-50: #FFF0BB;
 $bg: #F6F6F5;
 
 // set Bootstrap primary color
-$primary: $jem1;
+$primary: $v1;

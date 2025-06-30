@@ -7,9 +7,9 @@
  * @package Voyager
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if ( ! defined( 'VOYAGER_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( 'VOYAGER_VERSION', '1.0.0' );
 }
 
 /**
@@ -71,16 +71,16 @@ function voyager_setup() {
 	);
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'voyager_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
-		)
-	);
+	// add_theme_support(
+	// 	'custom-background',
+	// 	apply_filters(
+	// 		'voyager_custom_background_args',
+	// 		array(
+	// 			'default-color' => 'ffffff',
+	// 			'default-image' => '',
+	// 		)
+	// 	)
+	// );
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -138,10 +138,10 @@ add_action( 'widgets_init', 'voyager_widgets_init' );
  * Enqueue scripts and styles.
  */
 function voyager_scripts() {
-	wp_enqueue_style( 'voyager-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'voyager-style', get_stylesheet_uri(), array(), VOYAGER_VERSION );
 	wp_style_add_data( 'voyager-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'voyager-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'voyager-navigation', get_template_directory_uri() . '/js/navigation.js', array(), VOYAGER_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -152,27 +152,89 @@ add_action( 'wp_enqueue_scripts', 'voyager_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
+// require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-require get_template_directory() . '/inc/template-functions.php';
+// require get_template_directory() . '/inc/template-functions.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+// require get_template_directory() . '/inc/customizer.php';
+
+
+
+
 
 /**
- * Load Jetpack compatibility file.
+ * Voyager Required Resources
+ */
+$voyager_includes = array(
+	/////////////////////////////////////////////////////////////
+	// Underscores Resources 
+	/////////////////////////////////////////////////////////////
+
+	'/custom-header.php',          	// Implement the Custom Header feature.
+
+	'/template-tags.php',           // Custom template tags for this theme.
+
+	'/template-functions.php',      // Functions which enhance the theme by hooking into WordPress.
+
+    // '/widgets.php',            // currently, all widgets are disabled in this file.
+
+	/////////////////////////////////////////////////////////////
+	// Voyager Resources 
+	/////////////////////////////////////////////////////////////
+
+    '/customizer.php',           // Manage the available customizer fields
+
+    '/enqueue.php',              // Load Scripts and Styles
+
+	// '/template-tags.php',        // template function
+
+	// '/blocks.php',            // Gutenberg Blocks
+
+    // '/acf.php',                  // ACF functions
+
+    // '/grav-forms.php',           // Gravity Form functions
+
+    // '/voyager-functions.php',    // Voyager specific functions
+
+    // '/voyager-class-wp-bootstrap-navwalker.php', // Bootstrap nav-walker
+
+    // '/setup.php',
+
+    // '/pagination.php',            // Pagination code for archive templates
+
+    // '/color-panel.php',           // Set Color variables from ACF Settings
+	
+    
+);
+
+foreach ( $voyager_includes as $file ) {
+    $filepath = locate_template( '/inc' . $file );
+    if ( ! $filepath ) {
+        trigger_error( sprintf( 'Error locating /inc%s for inclusion', $file ), E_USER_ERROR );
+    }
+    require_once $filepath;
+}
+
+
+
+
+/**
+ * Load Jetpack compatibility file if applicable.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+// add_action( 'init', 'register_acf_blocks' );
+
+// function register_acf_blocks() {
+//     register_block_type( __DIR__ . '/blocks/tabs' );
+// }

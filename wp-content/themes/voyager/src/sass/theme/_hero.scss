@@ -42,8 +42,8 @@
         i {  
             margin-top: 4px;
             margin-right: 0.5rem;
-            color: $jem1;
-            color: var(--color-jem1);
+            color: $v1;
+            color: var(--color-v1);
         }
     }
     a{     
@@ -52,8 +52,8 @@
         color: $body;
         color: var(--color-black);
         &:hover, &:focus {
-            color: $jem1;
-            color: var(--color-jem1);
+            color: $v1;
+            color: var(--color-v1);
         }
     }
 
@@ -123,10 +123,10 @@
 ///////////////////////////////////////////////////////////////////////////////////
 // Hero - Dark colors
 ///////////////////////////////////////////////////////////////////////////////////
-.hero.jem-dark {
+.hero.v-dark {
     .overlay {
-        background-image: linear-gradient(transparent,rgba( var(--color-rgb-jem1-dark), 0.9));
-        @media #{$mq_md} { background-image: linear-gradient(-90deg, transparent, rgba( var(--color-rgb-jem1-dark), 0.9)) ; }
+        background-image: linear-gradient(transparent,rgba( var(--color-rgb-v1-dark), 0.9));
+        @media #{$mq_md} { background-image: linear-gradient(-90deg, transparent, rgba( var(--color-rgb-v1-dark), 0.9)) ; }
     }
     // color: var(--color-white);
     // h1, .h1 { color: var(--color-white); }
