@@ -120,8 +120,6 @@
 
 // footer light bg
 footer .footer-contact {
-    background-color: $white;
-    background-color: var(--color-white);
     .site-info,
     .social {
             // non hover items
@@ -132,9 +130,9 @@ footer .footer-contact {
         //hoverable items
         .si-links,
         a, a.nav-link {
-            color: $v1;
-            color: var(--color-v1);
-            &:hover, &:focus { color: $v1-hover; color: var(--color-v1-hover); }
+            // color: $v1;
+            // color: var(--color-v1);
+            // &:hover, &:focus { color: $v1-hover; color: var(--color-v1-hover); }
         }
     }
 }

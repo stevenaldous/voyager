@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 
 
 ?>
-<div class="footer-main footer-contact footer bg-white">
+<div class="footer-main footer">
     <div class="container">
         <div class="row ">
             <div class="col-12 d-flex flex-column flex-md-row justify-content-between align-items-center pt-3">

@@ -4,35 +4,40 @@
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
+ * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Voyager
+ * @package Jem
  */
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 get_header();
+
+//template vars
+$sb     = get_field('sb'); 
+$class  = $sb ? 'col-12 col-lg-8' : 'col';  
+
 ?>
+<div class="page-wrapper" id="page-wrapper">
+	<div id="content" tabindex="-1">
+        <?php /* hero */ get_template_part('template-parts/modules/hero/hero', 'page'); ?>
+        <?php // page content ?>
+            <main class="site-main mt-5" id="main">
+                <div class="container">
+                    <div class="row">
+                        <div class="<?php echo $class; ?>">
+                        <?php the_content(  ); ?>
+                        <?php get_template_part('/template-parts/modules/flex/flex', 'controller'); ?>
+                        </div>
+                        <?php if( $sb ) { get_template_part('/template-parts/modules/sidebars/sidebar'); }; ?>
+                    </div>
+                </div>
+            </main>
+        <?php // page content ?>
 
-	<main id="primary" class="site-main">
+	</div>
+</div>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'templates/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer();

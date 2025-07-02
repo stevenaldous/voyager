@@ -11,19 +11,18 @@
 defined( 'ABSPATH' ) || exit;
 
 $foot = get_field( 'foot_template','options') ?: 'main';
-$bg   = get_field( 'foot_bg','options') ?: 'bg-white';
-$th   = get_field( 'foot_theme','options') ? ' v-dark' : ' v-light';
+$bg   = get_field( 'foot_bg','options') ?: 'bg-v1';
+$th   = get_field('foot_theme') ?: 'v-dark';
 
 ?>
 	<div id="wrapper-footer">
 		<footer class="site-footer" id="colophon">
-			
 			<?php 
 				if( is_page_template( 'page-templates/contact.php' ) || is_404() ||  is_page_template( 'page-templates/thanks.php' ) ) {
 					get_template_part( 'template-parts/components/footer/footer', 'contact' );
 				}
 				else {
-					echo '<div class="footer-main footer '.$bg.$th.'">';
+					echo '<div class="footer-main footer '.$bg.' '.$th.'">';
 						get_template_part( 'template-parts/components/footer/footer', $foot );
 					echo '</div>';
 				}

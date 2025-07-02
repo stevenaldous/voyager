@@ -30860,6 +30860,12 @@ iframe {
   height: 50px;
   margin-right: 0.5rem;
 }
+#main-nav .navbar-brand img {
+  max-width: 100%;
+  width: auto;
+  height: 100%;
+  max-height: 100%;
+}
 #main-nav .btn-wrap .btn.no-btn {
   padding-right: 1rem;
   text-decoration: none;
@@ -31626,36 +31632,11 @@ iframe {
   }
 }
 
-footer .footer-contact {
-  background-color: #FFFFFF;
-  background-color: var(--color-white);
-}
 footer .footer-contact .site-info p,
 footer .footer-contact .social p {
   color: #0C39BE;
   color: var(--color-v1);
 }
-footer .footer-contact .site-info .si-links,
-footer .footer-contact .site-info a, footer .footer-contact .site-info a.nav-link,
-footer .footer-contact .social .si-links,
-footer .footer-contact .social a,
-footer .footer-contact .social a.nav-link {
-  color: #0C39BE;
-  color: var(--color-v1);
-}
-footer .footer-contact .site-info .si-links:hover, footer .footer-contact .site-info .si-links:focus,
-footer .footer-contact .site-info a:hover,
-footer .footer-contact .site-info a:focus, footer .footer-contact .site-info a.nav-link:hover, footer .footer-contact .site-info a.nav-link:focus,
-footer .footer-contact .social .si-links:hover,
-footer .footer-contact .social .si-links:focus,
-footer .footer-contact .social a:hover,
-footer .footer-contact .social a:focus,
-footer .footer-contact .social a.nav-link:hover,
-footer .footer-contact .social a.nav-link:focus {
-  color: #042A99;
-  color: var(--color-v1-hover);
-}
-
 .hero {
   position: relative;
   overflow: hidden;

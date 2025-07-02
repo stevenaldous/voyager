@@ -23,22 +23,6 @@ $args = array(
 	'walker'          => new Voyager_WP_Bootstrap_Navwalker(),
 );
 
-if( get_post_type() == 'lp' ) {
-	$menu = get_field('mb_nav_menu');
-	if($menu) {
-		$args = array(
-			'container_class' => '',
-			'container_id'    => '',
-			'menu_class'      => 'main-menu navbar-nav justify-content-end flex-grow-1',
-			'fallback_cb'     => '',
-			'menu'			  => $menu,
-			'menu_id'         => 'main-menu',
-			'depth'           => 3,
-			'walker'          => new Voyager_WP_Bootstrap_Navwalker(),
-		);	
-	}
-}
-
 ?>
 <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarNavOffcanvas">
 
@@ -52,24 +36,26 @@ if( get_post_type() == 'lp' ) {
 			<?php
 				wp_nav_menu( $args );
 				
-				get_template_part('template-parts/header/partials/search'); // Search
+				// get_template_part('template-parts/header/partials/search'); // Search
 			?>
 			
 		</div>
 
-		<div class="mob-drawer d-flex d-lg-none flex-column align-items-start mt-5 pt-3">
+		
 		<?php 
+			// mobile buttons
 
-			get_template_part('template-parts/header/partials/btn');
+			// echo '<div class="mob-drawer d-flex d-lg-none flex-column align-items-start mt-5 pt-3">';
 
-			get_template_part('template-parts/header/partials/btn','two');
+			// get_template_part('template-parts/header/partials/btn');
 
-			get_template_part('template-parts/header/partials/phone','alt');
+			// get_template_part('template-parts/header/partials/btn','two');
 
+			// get_template_part('template-parts/header/partials/phone','alt');
 
+			// echo '</div> ';
 
 		?>
-		</div> 
 	</div>
 	<!-- The WordPress Menu goes here -->
 	
