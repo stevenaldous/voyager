@@ -29,7 +29,7 @@ $fa = get_field('fa_def','options') ? 'fa-'.get_field('fa_def','options') : 'fa-
 	</h2>
 
 	<?php // Top bar for mobile  ?>
-	<?php get_template_part('template-parts/modules/header/top-bar'); ?>
+	<?php get_template_part('template-parts/components/header/topbar'); ?>
 
 	<div class="container-fluid">
         <?php get_template_part('template-parts/components/header/partials/logo');  // Site Logo ?>

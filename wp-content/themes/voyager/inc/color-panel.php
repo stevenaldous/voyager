@@ -23,19 +23,36 @@ add_action('wp_head', 'voyager_color_panel');
 function voyager_color_panel() {
 
     $colors = array(
-        'v1',
-        'v1-hover',
-        'v1-light',
-        'v1-dark',
-        'v2',
-        'v2-hover',
-        'v2-body',
-        'v2-focus',
-        'hx',
-        'body',
-        'subt-dark',
-        'subt-light',
+                // Theme
         'bg',
+        // Primary Color set
+        'v1',
+        'v1-light',
+        'v1-accent',
+        // Secondary Color set
+        'v2',
+        'v2-light',
+        'v2-accent',
+        'v2-link-hover',
+        // Voyager Light Color set
+        'hx-light',
+        'hx-flair-light',
+        'pret-light',
+        'subt-light',
+        'body-light',
+        'flair-light',
+        'link-light',
+        'link-hover-light',
+        // Voyager Dark Color set
+        'hx-dark',
+        'hx-flair-dark',
+        'pret-dark',
+        'subt-dark',
+        'body-dark',
+        'flair-dark',
+        'link-dark',
+        'link-hover-dark',
+        // Neutrals
         'white',
         'n50',
         'n200',
@@ -44,6 +61,7 @@ function voyager_color_panel() {
         'n800',
         'n900',
         'black',
+        // system
         'error',
         'error-50',
         'warning',

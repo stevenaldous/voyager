@@ -1,0 +1,1215 @@
+{
+    "key": "group_65b2cacaeb3d9",
+    "title": "Settings: Colors",
+    "fields": [
+        {
+            "key": "field_6645110be9afe",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "<h1>Best Practices<\/h1>\r\n\r\nAlways make sure your colors have a good contrast from the background by using the <a href=\"https:\/\/webaim.org\/resources\/contrastchecker\/\" target=\"blank\">WebAIM: Contrast Checker<\/a>\r\n<br>\r\n<br>\r\n<strong>Links and Hover<\/strong><br>\r\n- colors should be have a 3:1 contrast ratio from surrounding text. -- <a href=\"https:\/\/webaim.org\/resources\/linkcontrastchecker\/\" target=\"blank\">WebAIM: Link Contrast Checker<\/a>\r\n- hover colors should be a noticeably different than the non-hover color.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_65b2cacaed1d4",
+            "label": "Theme Colors",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0,
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_66452cd94ad79",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "<h1>Primary Theme Colors<\/h1>\r\nThis should be a darker hue.\r\n- Used for Backgrounds and Theme Buttons.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_65b2cacaed1d6",
+            "label": "Primary Dark",
+            "name": "color-v1",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#0E1437",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_65b2cacaed1d9",
+            "label": "Primary Light",
+            "name": "color-v1-light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "This must be different than the <strong>Primary<\/strong>.<br>\r\n- Used for button hover states",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#052657",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_65b2cacaed1dd",
+            "label": "Primary Highlight\/Accent",
+            "name": "color-v1-accent",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Dark Theme Color\r\n- Primarily used for backgrounds",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#244D8B",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_66452d1f4ad7a",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "<h1>Secondary Theme Colors<\/h1>\r\nThis should be a Lighter hue.\r\n- Used for Backgrounds and Theme Buttons.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_65b2cacaed1e2",
+            "label": "Secondary Dark",
+            "name": "color-v2",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#B18C0C",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_65b2cacaed1e5",
+            "label": "Secondary Light",
+            "name": "color-v2-light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "This must be different than the <strong>Secondary<\/strong>.<br>\r\n- Used for button hover states",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#CAAC41",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_66452d654ad7b",
+            "label": "Secondary Highlight\/Accent",
+            "name": "color-v2-accent",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Resolve Accent issues on the secondary theme color background.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#E7CC6C",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_66452da84ad7c",
+            "label": "Secondary Link Hover",
+            "name": "color-v2-link-hover",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Resolve hover issues on the secondary theme color background.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#244D8B",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_66590b852d36e",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "<h1>Site Background<\/h1>\r\nSelect an option for a site background.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_66590bba2d36f",
+            "label": "Site Background Type",
+            "name": "bg_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg-theme": "Theme Background Color",
+                "bg-img": "Image",
+                "bg-hex": "Custom Color Code"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "wpml_cf_preferences": 1,
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_65b2c9fc51f59",
+            "label": "Background Color",
+            "name": "color-bg",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Background color for entire site.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66590bba2d36f",
+                        "operator": "==",
+                        "value": "bg-hex"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#fff",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_66590c5937699",
+            "label": "BG Image",
+            "name": "body_img",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66590bba2d36f",
+                        "operator": "==",
+                        "value": "bg-img"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "0.5",
+            "mime_types": "",
+            "preview_size": "medium",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_66590cad3769a",
+            "label": "BG Image Tablet +",
+            "name": "body_img_lg",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66590bba2d36f",
+                        "operator": "==",
+                        "value": "bg-img"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "0.5",
+            "mime_types": "",
+            "preview_size": "medium",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_66590cbe3769b",
+            "label": "Theme BG Color",
+            "name": "body_bg",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66590bba2d36f",
+                        "operator": "==",
+                        "value": "bg-theme"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg-white": "White",
+                "bg-jem1": "Theme Primary",
+                "bg-jem1-grad": "Theme Primary Gradient",
+                "bg-jem2": "Theme Secondary",
+                "bg-dark": "Dark",
+                "bg-black": "Black"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "wpml_cf_preferences": 1,
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_662978faa0d9c",
+            "label": "Voyager Light Theme",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_662979c0a0d9f",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "<h1>These colors will be used with light backgrounds.<\/h1>\r\ni.e. Black text on White",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6515f62483f3c",
+            "label": "Headlines\/Titles",
+            "name": "color-hx-light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#111D42",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_6515f64383f3d",
+            "label": "Body\/Text",
+            "name": "color-body-light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#3F4761",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_662989d1afca4",
+            "label": "PreTitle",
+            "name": "color-pret-light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Small text before titles",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#3F4761",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_66297b15dbe62",
+            "label": "Link",
+            "name": "color-link-light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "All text links",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#1F2F63",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_66a974f4bb275",
+            "label": "Headlines Text Accent",
+            "name": "color-hx-flair-light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Used for Title Text Accents",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "#E86E16",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_66a971a1da186",
+            "label": "Subtitles",
+            "name": "color-subt-light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "#111D42",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_66297d844b3aa",
+            "label": "Accent",
+            "name": "color-flair-light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Used for accents, flairs, list bullets, etc.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "#E86E16",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_66297bebdbe63",
+            "label": "Link Hover",
+            "name": "color-link-hover-light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "This must be different than the <strong>Link<\/strong>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#1C1E23",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_662979b2a0d9e",
+            "label": "Voyager Dark Theme",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6629791ca0d9d",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "<h1>These colors will be used with Dark backgrounds.<\/h1>\r\ni.e. White text on Navy Blue",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_66297e06af680",
+            "label": "Headlines\/Titles",
+            "name": "color-hx-dark",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFFFFF",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_66297e0baf681",
+            "label": "Body\/Text",
+            "name": "color-body-dark",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFFFFF",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_662989b9afca3",
+            "label": "PreTitle",
+            "name": "color-pret-dark",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_66297e2caf683",
+            "label": "Links & Outline Button",
+            "name": "color-link-dark",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "#F68950",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_66a974a5bb274",
+            "label": "Headlines Text Accent",
+            "name": "color-hx-flair-dark",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Used for Title Text Accents",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "#FFFFFF",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_66a970b7da185",
+            "label": "Subtitles",
+            "name": "color-subt-dark",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "#FFFFFF",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_66297e28af682",
+            "label": "Accent",
+            "name": "color-flair-dark",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Used for accents, flairs, list bullets, etc.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "#FFFFFF",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_66297e30af684",
+            "label": "Link & Outline Button Hover",
+            "name": "color-link-hover-dark",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "This must be different than the <\/strong>Link & Outline Button Color<\/strong>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "#E86E16",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_65b2cacaed1ec",
+            "label": "Neutral Colors",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0,
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_66452f14cd41a",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "<h1>Neutral Theme Colors<\/h1>\r\nGrayscale for use in backgrounds and other elements throughout the site.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_65b2cacaed1ef",
+            "label": "White",
+            "name": "color-white",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFFFFF",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed1f1",
+            "label": "50",
+            "name": "color-n50",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFFFFF",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed1f3",
+            "label": "200",
+            "name": "color-n200",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#A7ADBD",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed1f7",
+            "label": "400",
+            "name": "color-n400",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#7C849C",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed1f9",
+            "label": "600",
+            "name": "color-n600",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#6E7691",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed1fb",
+            "label": "800",
+            "name": "color-n800",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#636A82",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed1fe",
+            "label": "900",
+            "name": "color-n900",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#52596C",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed200",
+            "label": "Black",
+            "name": "color-black",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#1C1E23",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed203",
+            "label": "System Colors",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0,
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_66452f74cd41b",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "<h1>Theme System Colors<\/h1>\r\nColors for errors, successes, review stars, etc.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_65b2cacaed205",
+            "label": "Error",
+            "name": "color-error",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#DF0E0E",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed208",
+            "label": "Error 50",
+            "name": "color-error-50",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#F44141",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed20b",
+            "label": "Warning",
+            "name": "color-warning",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FF8900",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed20d",
+            "label": "Warning 50",
+            "name": "color-warning-50",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFC27C",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed210",
+            "label": "Success",
+            "name": "color-success",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#01B977",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed212",
+            "label": "Success 50",
+            "name": "color-success-50",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#25D998",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed215",
+            "label": "Focus",
+            "name": "color-focus",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#291AD1",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed217",
+            "label": "Focus 50",
+            "name": "color-focus-50",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#5375EE",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed21a",
+            "label": "Reviews",
+            "name": "color-review",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFD954",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b2cacaed21c",
+            "label": "Reviews 50",
+            "name": "color-review-50",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFF0BB",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "wpml_cf_preferences": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-colors-fonts"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Color Panel - Colors",
+    "show_in_rest": 0,
+    "modified": 1751504161
+}

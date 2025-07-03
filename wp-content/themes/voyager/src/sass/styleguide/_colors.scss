@@ -158,36 +158,70 @@
 // theme for light bg 
 .v-light {
 	color: $body;
-	color: var(--color-body, $body);
-	a:not(.btn), a.no-btn {
+	color: var(--color-body-light, $body);
+	h1,  h2,  h3,  h4,  h5,  h6,
+	.h1, .h2, .h3, .h4, .h5, .h6 { 
+		color: var(--color-hx-light);
+		span {
+			color: var(--color-hx-flair-light);
+		}
+   }
+	a:not(.btn),
+	button.no-btn,
+	button.btn-close,
+	a.no-btn {
 		color: $v1;
-		color: var(--color-v1, $v1);
+		color: var(--color-link-light);
 		&:hover, &:focus {
-			color: $v1-hover;
-			color: var(--color-v1-hover, $v1-hover);
+			color: $v1-accent;
+			color: var(--color-link-hover-light);
 		}
 	}
-	.subt { color: var(--color-subt-dark) }
-	.pret { color: var(--color-n200); }
+	.subt { color: var(--color-subt-light); }
+	.pret { color: var(--color-pret-light); }
+	.super-quote.sq-hi blockquote { border-color: var(--color-flair-light);}
+	ul:not(.social):not(.slick-dots):not(.pagination):not(.clean) li::before,
+	ol li::marker {
+		color: var(--color-flair-light);
+	}
+
+	.icon-wrap.icon-circle::after,
+	.flair::before {
+		background-color: var(--color-flair-light);
+	}
 }
 
 // theme for dark bg 
 .v-dark {
-	color: $white;
-	color: var(--color-white, $white);
+	color: $body;
+	color: var(--color-body-dark);
 	h1,  h2,  h3,  h4,  h5,  h6,
 	.h1, .h2, .h3, .h4, .h5, .h6 { 
-		color: $white;
-		color: var(--color-white, $white);
-   }
-   .subt { color: var(--color-subt-light) }
-	a:not(.btn), a.no-btn {
-		color: $white;
-		color: var(--color-white);
-		&:hover, &:focus {
-			color: $v2;
-			color: var(--color-v2);
+		color: var(--color-hx-dark, red);
+		span {
+			color: var(--color-hx-flair-dark);
 		}
+   }
+	a:not(.btn),
+	button.no-btn,
+	button.btn-close,
+	a.no-btn {
+		color: $v1;
+		color: var(--color-link-dark);
+		&:hover, &:focus {
+			color: $v1-accent;
+			color: var(--color-link-hover-dark);
+		}
+	}
+	.subt { color: var(--color-subt-dark); }
+	.pret { color: var(--color-pret-dark); }
+	.super-quote.sq-hi blockquote { border-color: var(--color-flair-dark);}
+	ul:not(.social):not(.slick-dots):not(.pagination):not(.clean) li::before,
+	ol li::marker {
+		color: var(--color-flair-dark);
+	}
+	.flair::before {
+		background-color: var(--color-flair-dark);
 	}
 }
 

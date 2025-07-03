@@ -1,0 +1,869 @@
+{
+    "key": "group_632e1a08375d4",
+    "title": "Settings: Header\/Main Menu",
+    "fields": [
+        {
+            "key": "field_632e1a157ec7a",
+            "label": "Top Bar",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0,
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65b92e3d81509",
+            "label": "Hide or show top block",
+            "name": "hide_top_block",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide",
+            "ui": 1,
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65247c5d67ecd",
+            "label": "Top Bar BG Color",
+            "name": "tb_bg",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "choices": {
+                "bg-white": "White",
+                "bg-jem1": "Theme Primary",
+                "bg-jem1l": "Theme Primary Light",
+                "bg-jem1a": "Theme Primary Accent",
+                "bg-jem1g": "Theme Primary Gradient",
+                "bg-jem2": "Theme Secondary",
+                "bg-jem2l": "Theme Secondary Light",
+                "bg-jem2a": "Theme Secondary Accent",
+                "bg-black": "Black"
+            },
+            "default_value": "bg-jem2",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_65b92f9cc4cf9",
+            "label": "Top Bar Theme",
+            "name": "tb_th",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Dark",
+            "ui_off_text": "Light",
+            "ui": 1,
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_66d8b38510421",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66d8b3241041f",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_65b9301cc4cfa",
+            "label": "Include Left Side Content?",
+            "name": "tb_con_tf",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_67e48d104b5a5",
+            "label": "Text Visual Style",
+            "name": "tb_vh",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65b9301cc4cfa",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "choices": {
+                "h1": "H1",
+                "h1 plus": "H1+",
+                "h2": "H2",
+                "h2 plus": "H2+",
+                "h3": "H3",
+                "h3 plus": "H3+",
+                "h4": "H4",
+                "h4 plus": "H4+",
+                "h5": "H5",
+                "h5 plus": "H5+",
+                "h6": "H6",
+                "h6 plus": "H6+",
+                "subt": "Subtitle",
+                "p": "P"
+            },
+            "default_value": "h6",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_65b93055c4cfb",
+            "label": "Text",
+            "name": "tb_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65b9301cc4cfa",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_66d8b39810422",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65b9301cc4cfa",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_66bbc5b526945",
+            "label": "Phone Button",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_65247b4c59e4f",
+            "label": "Include Phone Button?",
+            "name": "tb_pho_tf",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_632e1b2bca56b",
+            "label": "Phone Button Text",
+            "name": "tb_pho_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65247b4c59e4f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66bb901330068",
+            "label": "Phone Button Style",
+            "name": "tb_pho_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65247b4c59e4f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "btn-primary": "Primary Button",
+                "btn-secondary": "Secondary Button",
+                "btn-outline": "Outline",
+                "no-btn": "Text only button"
+            },
+            "default_value": "no-btn",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_66bbc1eea876a",
+            "label": "Phone Button Style Top Bar",
+            "name": "tb_pho_style_tb",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65247b4c59e4f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "btn-primary": "Primary Button",
+                "btn-secondary": "Secondary Button",
+                "btn-outline": "Outline",
+                "no-btn": "Text only button"
+            },
+            "default_value": "no-btn",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_66bbc14aa8768",
+            "label": "Phone Icon Mobile",
+            "name": "tb_pho_icon",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Select an Icon from <a href=\"https:\/\/fontawesome.com\/\" target=\"_blank\">Font Awesome<\/a>.\r\n<br>\r\nFor this icon you just need the Icon Name. \r\n<br>\r\nExample: <strong><i class=\"fa-solid fa-question\"><\/i><\/strong>  =  <strong>fa-question<\/strong>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65247b4c59e4f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "fa-phone",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66bbc1c5a8769",
+            "label": "Phone Icon Desktop+",
+            "name": "tb_pho_icon_lg",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "If blank, no icon will be displayed on Desktop",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65247b4c59e4f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_648a4ee5d248e",
+            "label": "Main Nav",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0,
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_66620e31879c3",
+            "label": "BG Color - Mobile",
+            "name": "nav_bg_mob",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Color must work with selected theme. In most cases, this is a dark bg",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_652479b04507b",
+                        "operator": "==",
+                        "value": "nav-trans"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "choices": {
+                "bg-white": "White",
+                "bg-jem1": "Theme Primary",
+                "bg-jem1l": "Theme Primary Light",
+                "bg-jem1a": "Theme Primary Accent",
+                "bg-jem1g": "Theme Primary Gradient",
+                "bg-jem2": "Theme Secondary",
+                "bg-jem2l": "Theme Secondary Light",
+                "bg-jem2a": "Theme Secondary Accent",
+                "bg-black": "Black"
+            },
+            "default_value": "bg-jem1",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_652479b04507b",
+            "label": "BG Color",
+            "name": "nav_bg",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "choices": {
+                "bg-white": "White",
+                "bg-jem1": "Theme Primary",
+                "bg-jem1l": "Theme Primary Light",
+                "bg-jem1a": "Theme Primary Accent",
+                "bg-jem1g": "Theme Primary Gradient",
+                "bg-jem2": "Theme Secondary",
+                "bg-jem2l": "Theme Secondary Light",
+                "bg-jem2a": "Theme Secondary Accent",
+                "bg-black": "Black",
+                "nav-trans": "Transparent"
+            },
+            "default_value": "bg-white",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_6660c5b8d17a0",
+            "label": "Nav Theme",
+            "name": "nav_theme",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Dark",
+            "ui_off_text": "Light",
+            "ui": 1,
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_648a4f03d248f",
+            "label": "Sticky Header",
+            "name": "sticky_head",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "Sticky",
+            "ui_off_text": "No",
+            "ui": 1,
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_66bbc8e6a624d",
+            "label": "Mobile Menu Btn Style",
+            "name": "nav_tog_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65247b4c59e4f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "btn-primary": "Primary Button",
+                "btn-secondary": "Secondary Button",
+                "btn-outline": "Outline",
+                "no-btn": "Text only button"
+            },
+            "default_value": "btn-primary",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_66bbc6c1a624c",
+            "label": "Mobile Menu Btn Icon",
+            "name": "nav_tog_icon",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Select an Icon from <a href=\"https:\/\/fontawesome.com\/\" target=\"_blank\">Font Awesome<\/a>.\r\n<br>\r\nFor this icon you just need the Icon Name. \r\n<br>\r\nExample: <strong><i class=\"fa-solid fa-question\"><\/i><\/strong>  =  <strong>fa-question<\/strong>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65247b4c59e4f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "fa-align-left",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65d7acd87ab12",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Top Nav Font Size and weights.",
+            "new_lines": "wpautop",
+            "esc_html": 0,
+            "wpml_cf_preferences": 2
+        },
+        {
+            "key": "field_65d7acb47ab11",
+            "label": "Mobile Size",
+            "name": "font-nav-m",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 18,
+            "min": "",
+            "max": 32,
+            "placeholder": "",
+            "step": 1,
+            "prepend": "",
+            "append": "px",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65d7ad637ab13",
+            "label": "Tablet Size",
+            "name": "font-nav-t",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 18,
+            "min": "",
+            "max": 32,
+            "placeholder": "",
+            "step": 1,
+            "prepend": "",
+            "append": "px",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65d7ad717ab14",
+            "label": "Desktop Size",
+            "name": "font-nav-d",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 22,
+            "min": "",
+            "max": 48,
+            "placeholder": "",
+            "step": 1,
+            "prepend": "",
+            "append": "px",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_65d7ad847ab15",
+            "label": "Weight",
+            "name": "font-nav-w",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "300": "300",
+                "400": "400",
+                "500": "500",
+                "600": "600",
+                "700": "700"
+            },
+            "default_value": 700,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "wpml_cf_preferences": 1,
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_65d7ade27ab16",
+            "label": "Desktop Menu Max Width",
+            "name": "nav_mw",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Max width for screens over 1200px wide",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": 1000,
+            "min": 500,
+            "max": 2000,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "%"
+        },
+        {
+            "key": "field_65d7ae407ab17",
+            "label": "Desktop Menu Justification",
+            "name": "nav_just",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "The spacing utilizes <a href=\"https:\/\/css-tricks.com\/snippets\/css\/a-guide-to-flexbox\/#aa-justify-content\" target=\"_blank\"><strong>Flex Box rules<\/strong><\/a>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "choices": {
+                "start": "Start",
+                "center": "Center",
+                "around": "Around",
+                "between": "Between",
+                "evenly": "Evenly",
+                "end": "End"
+            },
+            "default_value": "between",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1751503693
+}

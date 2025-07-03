@@ -161,3 +161,205 @@ function wd_nav_menus_load( $field ) {
      return $field;
 
 }
+
+//////////////////////////////////////////////////////////////////////////
+/// ** ACF BG Solid Img/Color Fill **
+///////////////////////////////////////////////////////////////////////////
+function acf_load_bgimg_choices( $field ) {
+    // Reset choices
+    $field['choices'] = array(
+        'bg-white' => 'White',
+        'bg-v1'  => 'Theme Primary',
+        'bg-v1l' => 'Theme Primary Light',
+        'bg-v1a' => 'Theme Primary Accent',
+        'bg-v1g' => 'Theme Primary Gradient',
+        'bg-v2'  => 'Theme Secondary',
+        'bg-v2l' => 'Theme Secondary Light',
+        'bg-v2a' => 'Theme Secondary Accent',
+        'bg-black' => 'Black',
+        'bg-img'   => 'Image',
+        'bg-trans' => 'Transparent/None',
+    );
+
+   return $field;
+}
+// set array for targeted  fields
+$bgimg_fields = array(
+    'bg',
+    'err_bg',
+    'hero_bg',
+    'faqs_h_bg',
+    'testimonials_h_bg',
+    'cases_h_bg',
+    'videos_h_bg',
+);
+// loop through em
+foreach ($bgimg_fields as $f ) {
+    add_filter('acf/load_field/name='.$f, 'acf_load_bgimg_choices');
+}
+
+//////////////////////////////////////////////////////////////////////////
+/// ** ACF BG Color only Fill **
+///////////////////////////////////////////////////////////////////////////
+function acf_load_bg_choices( $field ) {
+    // Reset choices
+    $field['choices'] = array(
+        'bg-white' => 'White',
+        'bg-v1'  => 'Theme Primary',
+        'bg-v1l' => 'Theme Primary Light',
+        'bg-v1a' => 'Theme Primary Accent',
+        'bg-v1g' => 'Theme Primary Gradient',
+        'bg-v2'  => 'Theme Secondary',
+        'bg-v2l' => 'Theme Secondary Light',
+        'bg-v2a' => 'Theme Secondary Accent',
+        'bg-black' => 'Black',
+    );
+
+   return $field;
+}
+
+// set array for targeted  fields
+$bgcol_fields = array(
+    'blog_h_over_bg',
+    'bsh_over_bg',
+    'hero_over_bg',
+    'foot_bg',
+    'err_s_bg',
+    'tb_bg'
+);
+// loop through em
+foreach ($bgcol_fields as $f ) {
+    add_filter('acf/load_field/name='.$f, 'acf_load_bg_choices');
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+/// ** ACF Button Option Fill **
+//////////////////////////////////////////////////////////////////////////
+function acf_load_btn_choices( $field ) {
+    
+    // Reset choices
+    $field['choices'] = array(
+        'btn-primary'          => 'Primary Button',
+        'btn-secondary'        => 'Secondary Button',
+        'btn-outline'          => 'Outline',
+        'no-btn'               => 'Text only button',
+    );
+
+   return $field;
+}
+// set array for targeted button fields
+$btn_fields = array(
+    'btn_style',
+    'tb_pho_style_tb',
+    'tb_pho_style',
+    'nav_tog_style'
+);
+// loop through em
+foreach ($btn_fields as $f) {
+    add_filter('acf/load_field/name='.$f, 'acf_load_btn_choices');
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+/// ** ACF Form Button Option Fill **
+//////////////////////////////////////////////////////////////////////////
+function acf_load_formbtn_choices( $field ) {
+    
+    // Reset choices
+    $field['choices'] = array(
+        'form-btn-primary'          => 'Primary Button',
+        'form-btn-secondary'        => 'Secondary Button',
+        'form-btn-outline'          => 'Outline',
+    );
+
+   return $field;
+}
+// set array for targeted button fields
+$form_fields = array(
+    'f_form_btn',
+    'form_btn'
+);
+// loop through em
+foreach ($form_fields as $f) {
+    add_filter('acf/load_field/name='.$f, 'acf_load_formbtn_choices');
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+/// ** ACF Border Option Fill **
+//////////////////////////////////////////////////////////////////////////
+function acf_load_bo_choices( $field ) {
+    
+    // Reset choices
+    $field['choices'] = array(
+        'bo-white'     => 'White',
+        'bo-v1'      => 'Theme Primary Dark',
+        'bo-v1l'     => 'Theme Primary Light',
+        'bo-v1a'     => 'Theme Primary Accent',
+        'bo-v2'      => 'Theme Secondary Dark',
+        'bo-v2l'     => 'Theme Secondary Light',
+        'bo-v2a'     => 'Theme Secondary Accent',
+        'bo-acc-light' => 'Light Theme Accent',
+        'bo-acc-dark'  => 'Dark Theme Accent',
+        'bo-black'     => 'Black',
+        
+    );
+
+   return $field;
+}
+
+add_filter('acf/load_field/name=bo_style', 'acf_load_bo_choices');
+
+
+
+
+//////////////////////////////////////////////////////////////////////////
+/// ** ACF Semantic Hx Options **
+///////////////////////////////////////////////////////////////////////////
+function acf_load_sem_hx_choices( $field ) {
+    
+    // Reset choices
+    $field['choices'] = array(
+        'h1'        => 'H1',
+        'h2'        => 'H2',
+        'h3'        => 'H3',
+        'h4'        => 'H4',
+        'h5'        => 'H5',
+        'h6'        => 'H6',
+        'p'         => 'P',
+    );
+
+   return $field;
+}
+add_filter('acf/load_field/name=sem_hx', 'acf_load_sem_hx_choices');
+
+//////////////////////////////////////////////////////////////////////////
+/// ** ACF Visual Hx Options **
+//////////////////////////////////////////////////////////////////////////
+function acf_load_vh_choices( $field ) {
+    
+    // Reset choices
+    $field['choices'] = array(
+        'h1'        => 'H1',
+        'h1 plus'   => 'H1+',
+        'h2'        => 'H2',
+        'h2 plus'   => 'H2+',
+        'h3'        => 'H3',
+        'h3 plus'   => 'H3+',
+        'h4'        => 'H4',
+        'h4 plus'   => 'H4+',
+        'h5'        => 'H5',
+        'h5 plus'   => 'H5+',
+        'h6'        => 'H6',
+        'h6 plus'   => 'H6+',
+        'subt'      => 'Subtitle',
+        'p'         => 'P',
+    );
+
+   return $field;
+}
+add_filter('acf/load_field/name=title_vh', 'acf_load_vh_choices');
+add_filter('acf/load_field/name=vis_hx', 'acf_load_vh_choices');
+
+
