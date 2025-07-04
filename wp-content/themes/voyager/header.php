@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.
@@ -62,7 +62,7 @@ defined( 'ABSPATH' ) || exit;
 	?>
 	<header id="wrapper-navbar" <?php echo $sticky; ?> class="bg-v1">
 
-		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'jem' ); ?></a>
+		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'voyager' ); ?></a>
 
 		<?php get_template_part('template-parts/components/header/navbar', 'main'); ?>
 

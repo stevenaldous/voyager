@@ -2,7 +2,7 @@
 /**
  * Hero Partial - Landing Page Form
  *
- * @package Jem
+ * @package Voyager
  * 
  * 
  */

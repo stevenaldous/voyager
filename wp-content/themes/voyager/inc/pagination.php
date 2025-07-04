@@ -2,7 +2,7 @@
 /**
  * Pagination layout
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.

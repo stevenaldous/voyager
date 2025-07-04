@@ -2,7 +2,7 @@
 /**
  * The template for displaying the Navbar Toggler
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.

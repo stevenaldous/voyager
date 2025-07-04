@@ -2,7 +2,7 @@
 /**
  * Hero Partial - Team info
  *
- * @package Jem
+ * @package Voyager
  * 
  * 
  */

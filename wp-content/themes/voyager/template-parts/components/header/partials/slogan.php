@@ -2,7 +2,7 @@
 /**
  * The template for displaying the header Slogan
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.

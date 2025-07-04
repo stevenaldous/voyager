@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying the accredition logo
- * @package Jem
+ * @package Voyager
  */
 
     $img = get_field('f_con_img','options');

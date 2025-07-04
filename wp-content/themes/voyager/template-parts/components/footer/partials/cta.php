@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying the footer CTA/info
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.

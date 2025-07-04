@@ -2,7 +2,7 @@
 /**
  * The template for displaying the header Main Menu
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.

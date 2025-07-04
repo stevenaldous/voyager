@@ -2,7 +2,7 @@
 /**
  * Hero - Page
  *
- * @package Jem
+ * @package Voyager
  * 
  * 
  */

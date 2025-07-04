@@ -2,7 +2,7 @@
 /**
  * Top Bar
  *
- * @package Jem
+ * @package Voyager
  * 
  * 
  */

@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer location and logo
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.

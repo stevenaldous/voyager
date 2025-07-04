@@ -2,7 +2,7 @@
 /**
  * Understrap Child Theme enqueue/deqeue functions
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.

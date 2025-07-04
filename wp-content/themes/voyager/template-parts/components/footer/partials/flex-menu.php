@@ -2,7 +2,7 @@
 /**
  * The template Displays the Footer Flex Column - Menu
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.

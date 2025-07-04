@@ -2,7 +2,7 @@
 /**
  * The template for displaying the Top Bar content and/or WPML code
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.

@@ -2,7 +2,7 @@
 /**
  * Hero Partial - Header Content
  *
- * @package Jem
+ * @package Voyager
  * 
  * 
  */

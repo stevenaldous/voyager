@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer menu
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.

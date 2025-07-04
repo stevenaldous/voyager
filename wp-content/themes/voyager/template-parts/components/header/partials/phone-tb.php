@@ -2,7 +2,7 @@
 /**
  * The template for displaying the header Phone Button
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.

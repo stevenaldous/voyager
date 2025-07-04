@@ -2,7 +2,7 @@
 /**
  * The template Displays the Footer FLex Column - Text Area
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.

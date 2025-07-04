@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer form
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.

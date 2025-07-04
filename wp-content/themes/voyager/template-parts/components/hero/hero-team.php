@@ -2,7 +2,7 @@
 /**
  * Hero - Team
  *
- * @package Jem
+ * @package Voyager
  * 
  * 
  */

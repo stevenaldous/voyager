@@ -2,7 +2,7 @@
 /**
  * The template sets up the initial logic for the flex footer column
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.

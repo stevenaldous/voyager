@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package Jem
+ * @package Voyager
  */
 
 // Exit if accessed directly.
@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-$container = get_theme_mod( 'understrap_container_type' ) ?: 'container-jem';
+$container = get_theme_mod( 'understrap_container_type' ) ?: 'container';
 
 $mt = ( get_field('hero_layout') == 'bar' ) && get_field( 'hero_bar_style' ) ? 'margin-bar' : '';
 
