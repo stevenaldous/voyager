@@ -20,12 +20,12 @@ if( function_exists('acf_add_options_page') ) {
     //     'parent_slug'   => 'theme-general-settings',
     // ));
 
-    // // Social Options Page // Site Settings & Content > Social Accounts
-    // acf_add_options_sub_page(array(
-    //     'page_title'    => 'Social Accounts',
-    //     'menu_title'    => 'Social Accounts',
-    //     'parent_slug'   => 'theme-general-settings',
-    // ));
+    // Social Options Page // Site Settings & Content > Social Accounts
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Social Accounts',
+        'menu_title'    => 'Social Accounts',
+        'parent_slug'   => 'theme-general-settings',
+    ));
 
     // SEO Settings
     acf_add_options_sub_page(array(

@@ -7,6 +7,9 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+
+$url = home_url( '/' );
+
 ?>
 
 <!-- Your site title as branding in the menu -->
@@ -14,36 +17,27 @@ defined( 'ABSPATH' ) || exit;
 
 <?php if ( is_front_page() && is_home() ) : ?>
 
-    <h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+    <h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( $url ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
 
 <?php else : ?>
 
-    <a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+    <a class="navbar-brand" rel="home" href="<?php echo esc_url( $url ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
 
 <?php endif; ?>
 
 <?php
 } else {
 
-    $logo_l  = get_theme_mod('light_logo');
-    // $logo    = get_theme_mod('custom_logo');    
     $name    = get_bloginfo( 'name' );
-
 
     $logo   = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) , 'full' ) ?: '';    
     // $logo_l = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) , 'full' ) ?: '';    
 
-    echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand animate__animated animate__fadeInDown" rel="home" aria-current="page">';
+    echo '<a href="'.esc_url( $url ).'" class="navbar-brand animate__animated animate__fadeInDown" rel="home" aria-current="page">';
 
     echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . $name . '" class="img-fluid logo-dark" decoding="async">';
 
-        if( $logo_l ) {
-            echo '<img src="' . esc_url( $logo_l ) . '" alt="' . $name . '" class="img-fluid logo-light" decoding="async">';
-        }
     echo '</a>';
-
-
-    // the_custom_logo();
 }
 ?>
 <!-- end custom logo -->

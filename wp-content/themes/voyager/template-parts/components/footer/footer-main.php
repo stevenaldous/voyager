@@ -22,10 +22,8 @@ defined( 'ABSPATH' ) || exit;
                 </div>
                 <?php /*** Copyright info ***/ ?>
                 <div class="site-info d-flex flex-column flex-md-row justify-content-start align-items-center">
-                    <?php //get_template_part( 'template-parts/modules/footer/partials/copy' ); ?>
-                    copyright
+                    <?php get_template_part( 'template-parts/components/footer/partials/copy' ); ?>
                 </div>
-                
             </div>
         </div>
     </div>

@@ -1,0 +1,110 @@
+{
+    "key": "group_62cf15aaee0a0",
+    "title": "Settings: Social Accounts",
+    "fields": [
+        {
+            "key": "field_646d338a4ec2f",
+            "label": "Social Repeater",
+            "name": "soc_rep",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_646d33a24ec30",
+            "button_label": "Add Social Platform",
+            "rows_per_page": 20,
+            "wpml_cf_preferences": 1,
+            "sub_fields": [
+                {
+                    "key": "field_646d33a24ec30",
+                    "label": "Platform",
+                    "name": "soc",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "fa-facebook-f": "Facebook",
+                        "fa-instagram": "Instagram",
+                        "fa-x-twitter": "X (Twitter)",
+                        "fa-google": "Google",
+                        "fa-linkedin-in": "LinkedIn",
+                        "fa-youtube": "YouTube",
+                        "fa-pinterest": "Pinterest",
+                        "fa-tiktok": "Tiktok",
+                        "fa-snapchat": "Snapchat",
+                        "fa-reddit": "Reddit",
+                        "fa-discord": "Discord",
+                        "fa-twitch": "Twitch",
+                        "fa-github": "Github"
+                    },
+                    "default_value": false,
+                    "return_format": "array",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "allow_in_bindings": 1,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "create_options": 0,
+                    "save_options": 0,
+                    "parent_repeater": "field_646d338a4ec2f"
+                },
+                {
+                    "key": "field_646d3d7e4ec31",
+                    "label": "Social Link",
+                    "name": "url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_646d338a4ec2f"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-social-accounts"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1751579953
+}

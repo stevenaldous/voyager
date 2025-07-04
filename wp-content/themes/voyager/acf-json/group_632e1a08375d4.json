@@ -23,8 +23,8 @@
         },
         {
             "key": "field_65b92e3d81509",
-            "label": "Hide or show top block",
-            "name": "hide_top_block",
+            "label": "Hide or Show Top Bar",
+            "name": "hide_topbar",
             "aria-label": "",
             "type": "true_false",
             "instructions": "",
@@ -37,10 +37,10 @@
             },
             "message": "",
             "default_value": 0,
+            "allow_in_bindings": 1,
             "ui_on_text": "Show",
             "ui_off_text": "Hide",
-            "ui": 1,
-            "wpml_cf_preferences": 1
+            "ui": 1
         },
         {
             "key": "field_65247c5d67ecd",
@@ -56,22 +56,22 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
             "choices": {
                 "bg-white": "White",
-                "bg-jem1": "Theme Primary",
-                "bg-jem1l": "Theme Primary Light",
-                "bg-jem1a": "Theme Primary Accent",
-                "bg-jem1g": "Theme Primary Gradient",
-                "bg-jem2": "Theme Secondary",
-                "bg-jem2l": "Theme Secondary Light",
-                "bg-jem2a": "Theme Secondary Accent",
+                "bg-v1": "Theme Primary",
+                "bg-v1l": "Theme Primary Light",
+                "bg-v1a": "Theme Primary Accent",
+                "bg-v1g": "Theme Primary Gradient",
+                "bg-v2": "Theme Secondary",
+                "bg-v2l": "Theme Secondary Light",
+                "bg-v2a": "Theme Secondary Accent",
                 "bg-black": "Black"
             },
-            "default_value": "bg-jem2",
+            "default_value": "bg-v2",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
+            "allow_in_bindings": 1,
             "ui": 0,
             "ajax": 0,
             "placeholder": "",
@@ -83,7 +83,7 @@
             "label": "Top Bar Theme",
             "name": "tb_th",
             "aria-label": "",
-            "type": "true_false",
+            "type": "button_group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -92,39 +92,15 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "Dark",
-            "ui_off_text": "Light",
-            "ui": 1,
-            "wpml_cf_preferences": 1
-        },
-        {
-            "key": "field_66d8b38510421",
-            "label": "",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66d8b3241041f",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "70",
-                "class": "",
-                "id": ""
+            "choices": {
+                "v-dark": "Dark",
+                "v-light": "Light"
             },
-            "wpml_cf_preferences": 2,
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "default_value": "v-dark",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
         },
         {
             "key": "field_65b9301cc4cfa",
@@ -136,16 +112,45 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "30",
+                "width": "20",
                 "class": "",
                 "id": ""
             },
             "message": "",
             "default_value": 0,
+            "allow_in_bindings": 1,
             "ui_on_text": "",
             "ui_off_text": "",
-            "ui": 1,
-            "wpml_cf_preferences": 1
+            "ui": 1
+        },
+        {
+            "key": "field_65b93055c4cfb",
+            "label": "Text",
+            "name": "tb_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65b9301cc4cfa",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_67e48d104b5a5",
@@ -165,11 +170,10 @@
                 ]
             ],
             "wrapper": {
-                "width": "30",
+                "width": "20",
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
             "choices": {
                 "h1": "H1",
                 "h1 plus": "H1+",
@@ -198,36 +202,6 @@
             "save_options": 0
         },
         {
-            "key": "field_65b93055c4cfb",
-            "label": "Text",
-            "name": "tb_text",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_65b9301cc4cfa",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "70",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 1,
-            "rows": 2,
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
             "key": "field_66d8b39810422",
             "label": "",
             "name": "",
@@ -245,11 +219,10 @@
                 ]
             ],
             "wrapper": {
-                "width": "70",
+                "width": "80",
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 2,
             "message": "",
             "new_lines": "wpautop",
             "esc_html": 0
@@ -865,5 +838,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1751503693
+    "modified": 1751572825
 }

@@ -7,19 +7,23 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
- 
- // vars
-$hpt1 = get_field('hp_txt1','options');
-$hpt2 = get_field('hp_txt2','options');
-$hptb = get_field('hp_txtb','options');
 
+// get font awesome weight
+$fa  = get_field('fa_def','options') ? 'fa-'.get_field('fa_def','options') : 'fa-light';
+
+// phone vars
 $ctry 	= get_field('pho_ctry','options');
 $pho 	= get_field('pho','options');
+
+// btn style vars
+$btn_st = get_field('tb_pho_style','options') ?: 'no-btn';
+$icon   = get_field('tb_pho_icon','options') ?: 'fa-phone';
+ 
 ?>
-<div class="d-flex align-items-center">
-    <div class="phone-cta ms-3 d-flex align-items-center">
-        <a href="tel:+<?php echo $ctry . $pho; ?>" aria-label="Call Us" class="btn btn-pho">
-            <?php  echo '<i class="fa-solid fa-phone mx-2" aria-hidden="true"></i>'; ?>
-        </a>
-    </div>
+<div class="d-flex align-items-center d-lg-none">
+    <a href="tel:+<?php echo $ctry . $pho; ?>" aria-label="Call Us" class="btn btn-pho <?php echo $btn_st; ?>">
+        <?php  echo '<i class="'.$fa.' '.$icon.' mx-2" aria-hidden="true"></i>'; ?>
+    </a>
 </div>
+
+
