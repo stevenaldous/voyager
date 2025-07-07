@@ -261,28 +261,6 @@
                     "parent_repeater": "field_65b96befc7e34"
                 },
                 {
-                    "key": "field_65b96befca84b",
-                    "label": "FA icon",
-                    "name": "icon",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "<a href=\"https:\/\/fontawesome.com\/\" target=\"_blank\">Font Awesome<\/a> Icon",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 1,
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "fa-question",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_65b96befc7e34"
-                },
-                {
                     "key": "field_65b96befca84e",
                     "label": "Button Style",
                     "name": "btn_style",
@@ -292,11 +270,10 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
-                    "wpml_cf_preferences": 1,
                     "choices": {
                         "btn-primary": "Primary Button",
                         "btn-secondary": "Secondary Button",
@@ -307,12 +284,13 @@
                     "return_format": "value",
                     "multiple": 0,
                     "allow_null": 0,
+                    "allow_in_bindings": 1,
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
-                    "parent_repeater": "field_65b96befc7e34",
                     "create_options": 0,
-                    "save_options": 0
+                    "save_options": 0,
+                    "parent_repeater": "field_65b96befc7e34"
                 }
             ]
         },
@@ -560,13 +538,13 @@
             "wpml_cf_preferences": 1,
             "choices": {
                 "bg-white": "White",
-                "bg-v1": "Theme Primary",
-                "bg-v1l": "Theme Primary Light",
-                "bg-v1a": "Theme Primary Accent",
-                "bg-v1g": "Theme Primary Gradient",
-                "bg-v2": "Theme Secondary",
-                "bg-v2l": "Theme Secondary Light",
-                "bg-v2a": "Theme Secondary Accent",
+                "bg-jem1": "Theme Primary",
+                "bg-jem1l": "Theme Primary Light",
+                "bg-jem1a": "Theme Primary Accent",
+                "bg-jem1g": "Theme Primary Gradient",
+                "bg-jem2": "Theme Secondary",
+                "bg-jem2l": "Theme Secondary Light",
+                "bg-jem2a": "Theme Secondary Accent",
                 "bg-black": "Black"
             },
             "default_value": false,
@@ -750,9 +728,9 @@
             "choices": {
                 "bg-trans": "Transparent (gaps)",
                 "bg-white": "White",
-                "bg-v1": "Theme Primary",
-                "bg-v1-grad": "Theme Primary Gradient",
-                "bg-v2": "Theme Secondary",
+                "bg-jem1": "Theme Primary",
+                "bg-jem1-grad": "Theme Primary Gradient",
+                "bg-jem2": "Theme Secondary",
                 "bg-dark": "Dark",
                 "bg-black": "Black",
                 "bg-img": "Image"
@@ -1106,8 +1084,8 @@
                         "id": ""
                     },
                     "choices": {
-                        .v-light": "Light BG",
-                        .v-dark": "Dark BG"
+                        "jem-light": "Light BG",
+                        "jem-dark": "Dark BG"
                     },
                     "default_value": false,
                     "return_format": "value",
@@ -1137,9 +1115,9 @@
                     },
                     "choices": {
                         "bg-white": "White",
-                        "bg-v1": "Theme Primary",
-                        "bg-v1-grad": "Theme Primary Gradient",
-                        "bg-v2": "Theme Secondary",
+                        "bg-jem1": "Theme Primary",
+                        "bg-jem1-grad": "Theme Primary Gradient",
+                        "bg-jem2": "Theme Secondary",
                         "bg-dark": "Dark",
                         "bg-black": "Black"
                     },
@@ -1246,13 +1224,13 @@
             "wpml_cf_preferences": 1,
             "choices": {
                 "bg-white": "White",
-                "bg-v1": "Theme Primary",
-                "bg-v1l": "Theme Primary Light",
-                "bg-v1a": "Theme Primary Accent",
-                "bg-v1g": "Theme Primary Gradient",
-                "bg-v2": "Theme Secondary",
-                "bg-v2l": "Theme Secondary Light",
-                "bg-v2a": "Theme Secondary Accent",
+                "bg-jem1": "Theme Primary",
+                "bg-jem1l": "Theme Primary Light",
+                "bg-jem1a": "Theme Primary Accent",
+                "bg-jem1g": "Theme Primary Gradient",
+                "bg-jem2": "Theme Secondary",
+                "bg-jem2l": "Theme Secondary Light",
+                "bg-jem2a": "Theme Secondary Accent",
                 "bg-black": "Black"
             },
             "default_value": false,
@@ -1320,12 +1298,12 @@
             "wpml_cf_preferences": 1,
             "choices": {
                 "bo-white": "White",
-                "bo-v1": "Theme Primary Dark",
-                "bo-v1l": "Theme Primary Light",
-                "bo-v1a": "Theme Primary Accent",
-                "bo-v2": "Theme Secondary Dark",
-                "bo-v2l": "Theme Secondary Light",
-                "bo-v2a": "Theme Secondary Accent",
+                "bo-jem1": "Theme Primary Dark",
+                "bo-jem1l": "Theme Primary Light",
+                "bo-jem1a": "Theme Primary Accent",
+                "bo-jem2": "Theme Secondary Dark",
+                "bo-jem2l": "Theme Secondary Light",
+                "bo-jem2a": "Theme Secondary Accent",
                 "bo-acc-light": "Light Theme Accent",
                 "bo-acc-dark": "Dark Theme Accent",
                 "bo-black": "Black"
@@ -1680,7 +1658,7 @@
                 "bg-v2a": "Theme Secondary Accent",
                 "bg-black": "Black"
             },
-            "default_value": "bg-v1",
+            "default_value": "bg-jem1",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -1966,5 +1944,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1751502858
+    "modified": 1751930991
 }

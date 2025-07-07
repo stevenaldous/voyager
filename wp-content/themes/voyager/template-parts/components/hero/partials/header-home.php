@@ -120,7 +120,7 @@ $anim   = 'fadeInUp';
         }
         // standard linked buttons
         else if($btn_type == 'main') {
-            if($btns) {  get_template_part('template-parts/components/button','group', $btns ) ;}
+            if($btns) {  get_template_part('template-parts/components/buttons/button','group', $btns ) ;}
         }
     ?>
 </header>
