@@ -7,8 +7,6 @@
  * 
  */
 
-    // vars
-    $show_tb  = get_field('hide_topbar', 'options') ?: false;
     // content status checks
     $con_tf   = get_field('tb_con_tf', 'options') ?: false;
     $wpml_tf  = get_field('tb_wpml_tf', 'options') ?: false;

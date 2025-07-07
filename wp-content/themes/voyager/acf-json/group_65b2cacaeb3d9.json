@@ -379,9 +379,9 @@
             },
             "choices": {
                 "bg-white": "White",
-                "bg-jem1": "Theme Primary",
-                "bg-jem1-grad": "Theme Primary Gradient",
-                "bg-jem2": "Theme Secondary",
+                "bg-v1": "Theme Primary",
+                "bg-v1-grad": "Theme Primary Gradient",
+                "bg-v2": "Theme Secondary",
                 "bg-dark": "Dark",
                 "bg-black": "Black"
             },

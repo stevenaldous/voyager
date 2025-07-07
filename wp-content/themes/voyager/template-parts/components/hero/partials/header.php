@@ -21,7 +21,7 @@ $pt = get_post_type();
 // default vars
 //////////////////////////
 // theme
-$th = get_field('hero_theme','options') ? ' jem-dark' : ' jem-light';
+$th = get_field('hero_theme','options') ? '.v-dark' : '.v-light';
 // align vars
 $align    = get_field('hero_align','options') ? 'text-' . get_field('hero_align','options') : 'text-center';
 $align_lg = get_field('hero_align','options') ? ' text-lg-' . get_field('hero_align_lg','options') : '';
@@ -137,7 +137,7 @@ elseif (is_category()) { $term   = get_queried_object(); $t = $term->name; }
 elseif (is_tag()) {  $t = get_the_title(); } 
 // author title
 elseif (is_author()) { $t = '<span class="vcard">' . get_the_author() . '</span>'; } 
-//for custom post types (May not be in use in this jem version)
+//for custom post types (May not be in use in this.v version)
 elseif (is_tax()) {  $t = 'All ' . get_post_type(); }
 // date archive title
 elseif (is_date()) { $t = sprintf( __( 'Archive: %s' ), get_the_date( _x( 'Y', 'Annual archives date format' ) ) ); }

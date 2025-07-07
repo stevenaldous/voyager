@@ -7,7 +7,7 @@
     background: transparent;
     font-size: 2rem;
     color: $body;
-    color: var(--color-body);
+    color: var(--color-body-light);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,4 +28,8 @@
 ///////////////////////////////////////////////////////////////////////////////////
 .offcanvas-menu {
     z-index: 1000000;
+}
+
+.offcanvas.show {
+    visibility: visible;
 }

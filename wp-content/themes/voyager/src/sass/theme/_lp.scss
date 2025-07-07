@@ -1,0 +1,31 @@
+///////////////////////////////////////////////////////////////////////////////////
+// Landing Page Template styles
+///////////////////////////////////////////////////////////////////////////////////
+body.single-lp {
+    .form-wrap {
+        a.phone {
+            font-size: var(--font-size-h6);
+            text-decoration: none;
+            font-weight: 600;
+            &::before {
+                content: '';
+                margin: 1rem auto;
+                display: block;
+                width: 80%;
+                border-top: solid 2px currentColor;
+            }
+        }
+        &.v-dark  a.phone::before {
+            border-color: var(--color-flair-dark);
+        }
+        &.v-light a.phone::before {
+            border-color: var(--color-flair-light);
+        }
+    }
+    @media #{$mq_md} {
+        .nav-inner .btn {
+            font-size: var(--font-size-h5);
+            white-space: nowrap;
+        }
+    }
+}

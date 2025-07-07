@@ -5,19 +5,6 @@
 .sidebar {
     // form styles
     form {
-        input[type="text"],
-        input[type="url"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="number"],
-        input[type="password"],
-        input[type="file"],
-        textarea{
-            background-color: transparent;
-            border: none;
-            border-bottom: var(--color-n200) solid 1px;
-            padding: 0.75rem 0.75rem 0.75rem 0;
-        }
         textarea { height: 100px;}
         .gfield_html {
             font-size: 0.625rem;
@@ -28,15 +15,13 @@
             }
         }
     }
-
-
     // menu styles 
     .sb-menu {
         padding: 0;
         width: 100%;
         li{
             padding: 0;
-            border-bottom: 1px var(--color-body) solid; 
+            border-bottom: 1px var(--color-body-light) solid; 
             &::before {
                 content: '\f061';
                 right: 0;
@@ -47,11 +32,11 @@
             a {
                 padding: 0.5rem;
                 color: $body;
-                color: var(--color-body);
+                color: var(--color-body-light);
                 text-decoration: none;
                 &:hover, &:focus {
-                    color: $v1-hover;
-                    color: var(--color-v1-hover);
+                    color: $v1-accent;
+                    color: var(--color-v1-accent);
                 }
             }
         }
@@ -73,8 +58,8 @@
                 color: var(--color-v1);
                 text-decoration: none;
                 &:hover, &:focus {
-                    color: $v1-hover;
-                    color: var(--color-v1-hover);
+                    color: $v1-accent;
+                    color: var(--color-v1-accent);
                 }
             }
         }
@@ -89,8 +74,8 @@
                 color: $v1;
                 color: var(--color-v1);
                 &:hover, &:focus { 
-                    color: $v1-hover;
-                    color: var(--color-v1-hover);
+                    color: $v1-accent;
+                    color: var(--color-v1-accent);
                 }
             }
         }
@@ -98,8 +83,8 @@
             color: $v2;
             color: var(--color-v2);
             &:hover, &:focus { 
-                color: $v2-hover;
-                color: var(--color-v2-hover);
+                color: $v2-accent;
+                color: var(--color-v2-accent);
             }
         }
         .bg-v2 .no-btn,
@@ -107,8 +92,8 @@
             color: $v2;
             color: var(--color-v2);
             &:hover, &:focus { 
-                color: $v2-hover;
-                color: var(--color-v2-hover);
+                color: $v2-accent;
+                color: var(--color-v2-accent);
             }
         }
     }
@@ -131,3 +116,15 @@
         padding: 0.5rem 1rem !important;
     }
 }
+
+
+// Resources Form 
+.single-resources .sb-form .ratio {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+

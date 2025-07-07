@@ -12,13 +12,12 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$th  = get_field('nav_theme' , 'options') ? ' v-dark ' : ' v-light ';
-$bg  = get_field('nav_bg' , 'options') ?: 'bg-white';
-$bgm = get_field('nav_bg_mob' , 'options') && ( $bg == 'nav-trans' )  ? ' ' . get_field('nav_bg_mob' , 'options') : '';
-
-$tf  = get_field('tb_pho_tf', 'options');
-
-$lp  = get_post_type() == 'lp' ? 1 : 0;
+// vars
+$th  	= get_field('nav_theme' , 'options') ? ' v-dark ' : ' v-light ';
+$bg  	= get_field('nav_bg' , 'options') ?: 'bg-white';
+$bgm 	= get_field('nav_bg_mob' , 'options') && ( $bg == 'nav-trans' )  ? ' ' . get_field('nav_bg_mob' , 'options') : '';
+$tf_ph  = get_field('tb_pho_tf', 'options');
+$tf_tb  = get_field('hide_topbar', 'options') ?: false;
 
 
 ?>
@@ -37,29 +36,19 @@ $lp  = get_post_type() == 'lp' ? 1 : 0;
 			<div class="d-flex order-lg-1 align-self-center btn-wrap">
 				<?php 
 					// phone button 
-					if($tf && !$lp  ) { 
+					if( $tf_ph ) { 
 						get_template_part('template-parts/components/header/partials/phone', 'btn'); 
 					}
-					elseif ( $lp == 1) {
-						get_template_part('template-parts/components/header/partials/phone', 'lp'); 
-					}
-				
+			
 					// Navbar Toggler 
-					if( !$lp || get_field('mb_nav_menu') ){
-						get_template_part('template-parts/components/header/partials/toggle'); 
-					}
-				
+					get_template_part('template-parts/components/header/partials/toggle'); 
 				?>
 			</div>
-			
-			<?php 
-				get_template_part('template-parts/components/header/partials/menu', 'main'); // Main Menu 
-			?>
-
+			<?php  get_template_part('template-parts/components/header/partials/menu', 'main'); // Main Menu  ?>
 		</div>
 
 	</div><?php // .container(-fluid) ?>
 
-	<?php get_template_part('template-parts/components/header/topbar'); // top bar ?>
+	<?php 		if( $tf_tb ) { get_template_part('template-parts/components/header/topbar'); }// top bar ?>
 
 </nav><?php // .site-navigation ?>

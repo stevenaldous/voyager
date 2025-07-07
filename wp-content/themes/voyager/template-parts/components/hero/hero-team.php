@@ -11,7 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // get site container width
-$container = get_theme_mod( 'understrap_container_type' ) ?: 'container-jem';
+$container = get_theme_mod( 'understrap_container_type' ) ?: 'container-voy';
 
 //Over Lay vars - Theme Default
 $over   = get_field('hero_over','options');
@@ -19,10 +19,10 @@ $obg    = get_field('hero_over_bg','options' ) ?: 'bg-dark';
 $op     = get_field('hero_over_opacity','options') ? ( get_field('hero_over_opacity','options') / 100 ) : 0.3;
 
 // background vars - Theme Default
-$bg     = get_field('hero_bg', 'options') ?: 'bg-jem1';
+$bg     = get_field('hero_bg', 'options') ?: 'bg-v1';
 $bgi    = get_field('hero_img','options');
 $bgi_lg = get_field('hero_img_lg','options');
-$th     = get_field('hero_theme','options') ? ' jem-dark' : ' jem-light';
+$th     = get_field('hero_theme','options') ? '.v-dark' : '.v-light';
 
 //Over Lay vars - Team Settings
 if( get_field('team_h_over','options') ) {

@@ -1,83 +1,76 @@
 // main nav colors - default navbar-light
 #main-nav .nav-inner {
-    // transparent BG
-    .search-wrap button,
-    .mob-drawer .btn-pho.pho-alt,
-    .main-menu button.dropdown-toggle { background-color: transparent; }
-    // bg - white 
-    .search-wrap input,
-    .search-wrap form,
+    .offcanvas-backdrop {
+        background-color: $v1;
+        background-color: var(--color-v1);
+    }
     .offcanvas { 
         background-color: $white; 
         background-color: var(--color-white); 
     }
 
-    // bg - v1
-    .btn-pho {
-        background-color: $v1;
-        background-color: var(--color-v1);
-    }
-    //  bg - v1-dark
-    .navbar-toggler,
-    .offcanvas-header .btn-close,
-    .offcanvas-backdrop {
-        background-color: $v1-dark;
-        background-color: var(--color-v1-dark);
-    }
-    // color - white
-    .navbar-toggler,
-    .offcanvas-header .btn-close,
-    .btn-pho {
-        color: $white;
-        color: var(--color-white);
-    }
-    // color - v1
-    .mob-drawer .btn-pho.pho-alt,
-    .main-menu button.dropdown-toggle.show {
-        color: $v1;
-        color: var(--color-v1);
-    }
-    // color - v1dark
-    .search-wrap input,
-    .main-menu a,
-    .main-menu button.dropdown-toggle  {
-        color: $v1-dark;
-        color: var(--color-v1-dark);
-    }
-    // hover - v1
-    .search-wrap button,
-    .navbar-toggler,
-    .offcanvas-header .btn-close {
-        &:focus, &:hover {
-            color: $v1;    
+    .main-menu {
+        button.dropdown-toggle { 
+            background-color: transparent; 
+            color: $v1;
             color: var(--color-v1);
+            &.show {
+                color: $v1;
+                color: var(--color-v1);
+            }
         }
-    }
-    // hover - v1dark
-    .mob-drawer .btn-pho.pho-alt,
-    .btn-pho,
-    .dropdown-toggle {
-        &:hover, &:focus { 
-            background-color: $v1-dark; 
-            background-color: var(--color-v1-dark); 
+        .dropdown-toggle {
+            &:hover, &:focus { 
+                background-color: $body; 
+                background-color: var(--color-v1); 
+            }
         }
-    }
-
-    // menu link mobile text styles hover
-    .main-menu a {
-        &:active, &:focus, &:hover  { 
-            background-color: $v1; 
-            background-color: var(--color-v1); 
-            color: $white; 
-            color: var(--color-white); 
+        a {
+            color: $v1;
+            color: var(--color-body-light);
+            &:active, &:focus, &:hover  { 
+                background-color: $v1; 
+                background-color: var(--color-v1); 
+                color: $white; 
+                color: var(--color-white); 
+            }
         }
     }
     
+    .mob-drawer .btn-pho.pho-alt {
+        background-color: transparent;
+        &:hover, &:focus { 
+            background-color: $body; 
+            background-color: var(--color-v1); 
+        }
+    }
+
+    // search mobile styles
+    .search-wrap {
+        button {
+            background-color: transparent;
+            &:focus, &:hover {
+                color: $v1;    
+                color: var(--color-v1);
+            }
+        }
+        input {
+            background-color: $white; 
+            background-color: var(--color-white); 
+            color: $v1;
+            color: var(--color-v1)
+        }
+        form { 
+            background-color: $white; 
+            background-color: var(--color-white); 
+        }
+
+    }
+
     .dropdown-toggle i { color: inherit;} // toggle icon inherit color setting
     .offcanvas-backdrop .show { opacity: 0.5 } //backdrop opacity
-    ////////////////
-    /// end of color set
-    ////////////////
+    // end of nav light
+
 
     // Mobile ONLY border bottom
     @media( max-width: $d_md - 1 ) {
@@ -86,16 +79,6 @@
     ///////////////////////////////////////////////////////////////////////////////////
     // tablet +
     @media( min-width: $d_md ) { 
-        .btn-pho { 
-            background-color: transparent; 
-            color: $v1;
-            color: var(--color-v1);
-            &:hover, &:focus {
-                background-color: transparent;
-                color: $v1-dark;
-                color: var(--color-v1-dark);
-            }
-        }
         .head-slogan { 
             border-right: var(--color-n200,$n200) solid 1px;
         }
@@ -111,17 +94,18 @@
                     background-color: $white;
                     background-color: var(--color-white);
                     input {
-                        border: solid 1px $v1-dark;
-                        box-shadow: 0 5px 5px rgba( $v1-dark, 0.16 );
+                        border: solid 1px $v1;
+                        box-shadow: 0 5px 5px rgba( $v1, 0.16 );
                     }
                 }
             }
             // input keyboard
             input:hover, input:focus {
-                border: solid 1px $v1-dark;
-                box-shadow: 0 5px 5px rgba( $v1-dark, 0.16 );
+                border: solid 1px $v1;
+                box-shadow: 0 5px 5px rgba( $v1, 0.16 );
             }
         }
+        .offcanvas { background-color: transparent; }
         .main-menu {
             a:hover {
                 background-color: transparent;
@@ -133,8 +117,8 @@
                 & > a.not-toggle,
                 & > a.dropdown-toggle {
                     &:hover, &:focus {
-                        color: $v1-hover;
-                        color: var(--color-v1-hover);
+                        color: $v1-accent;
+                        color: var(--color-v1-accent);
                         background-color: transparent
                     }
                 }
@@ -144,8 +128,8 @@
                 background-color: var(--color-white);
                 box-shadow: 0 3px 10px rgba( $black, 0.16 );
                 a:hover {
-                    background-color: $v1-dark;
-                    background-color: var(--color-v1-dark);
+                    background-color: $v1-accent;
+                    background-color: var(--color-v1-accent);
                     color: $white;
                     color: var(--color-white);
                 }
@@ -165,77 +149,56 @@
 }
 
 
-
-
 ///////////////////////////////////////////////////////////////////////////////////   
 // main nav colors - navbar dark
 ///////////////////////////////////////////////////////////////////////////////////   
-#main-nav.navbar-dark {
-    // transparent BG
-    // .search-wrap button,
-    // .mob-drawer .btn-pho.pho-alt,
-    // .main-menu button.dropdown-toggle { background-color: transparent; }
-    // bg - white 
-    .navbar-toggler { 
-        background-color: $white; 
-        background-color: var(--color-white); 
-    }
-    
-    .search-wrap input,
-    .search-wrap form,
-    .offcanvas { 
-        background-color: $v1-dark; 
-        background-color: var(--color-v1-dark); 
-    }
-
-    // bg - v1
-    .btn-pho {
-        background-color: $v2;
-        background-color: var(--color-v2);
-    }
-    //  bg - v1-dark
-    .offcanvas-header .btn-close,
+#main-nav.v-dark {
+    .offcanvas,
     .offcanvas-backdrop {
-        background-color: $v1-dark;
-        background-color: var(--color-v1-dark);
+        background-color: $v1;
+        background-color: var(--color-v1);
     }
-    // color - white
-    .navbar-toggler,
-    .offcanvas-header .btn-close,
-    .search-wrap input,
-    .main-menu a,
-    .main-menu button.dropdown-toggle {
-        color: $white;
-        color: var(--color-white);
-    }
-    // color - v1
-    .mob-drawer .btn-pho.pho-alt,
-    .main-menu button.dropdown-toggle.show,
-    .navbar-toggler {
-        color: $v1;
-        color: var(--color-v1);
-    }
-    // color - v1dark
-    .btn-pho {
-        color: $v1-dark;
-        color: var(--color-v1-dark);
-    }
-    // hover - v2
-    .search-wrap button,
-    .navbar-toggler,
-    .offcanvas-header .btn-close {
-        &:focus, &:hover {
-            color: $v2;    
-            color: var(--color-v2);
+    // main menu
+    .main-menu {
+        a {
+            color: $white;
+            color: var(--color-white);  
+        }
+        button.dropdown-toggle {
+            color: $white;
+            color: var(--color-white);
+            &.show {
+                color: $v1;
+                color: var(--color-v1);
+            }
+        }
+        .dropdown-toggle {
+            &:hover, &:focus { 
+                background-color: $v2-accent; 
+                background-color: var(--color-v2-accent); 
+            }
         }
     }
-    // hover - v1dark
-    .mob-drawer .btn-pho.pho-alt,
-    .btn-pho,
-    .dropdown-toggle {
+    // mob drawer
+    .mob-drawer .btn-pho.pho-alt {
+        color: $v1;
+        color: var(--color-v1);
         &:hover, &:focus { 
-            background-color: $v2-hover; 
-            background-color: var(--color-v2-hover); 
+            background-color: $v2-accent; 
+            background-color: var(--color-v2-accent); 
+        }
+    }
+    // search dark
+    .search-wrap {
+        input{
+            background-color: $v1; 
+            background-color: var(--color-v1); 
+            color: $white;
+            color: var(--color-white);
+        }
+        form {
+            background-color: $v1; 
+            background-color: var(--color-v1); 
         }
     }
 
@@ -259,16 +222,6 @@
     ///////////////////////////////////////////////////////////////////////////////////
     // tablet +
     @media( min-width: $d_md ) { 
-        .btn-pho { 
-            background-color: transparent; 
-            color: $white;
-            color: var(--color-white);
-            &:hover, &:focus {
-                background-color: transparent;
-                color: $v2-hover;
-                color: var(--color-v2-hover);
-            }
-        }
         .head-slogan { 
             border-right: var(--color-n200,$n200) solid 1px;
         }
@@ -284,15 +237,15 @@
                     background-color: $white;
                     background-color: var(--color-white);
                     input {
-                        border: solid 1px $v1-dark;
-                        box-shadow: 0 5px 5px rgba( $v1-dark, 0.16 );
+                        border: solid 1px $v1-accent;
+                        box-shadow: 0 5px 5px rgba( $v1-accent, 0.16 );
                     }
                 }
             }
             // input keyboard
             input:hover, input:focus {
-                border: solid 1px $v1-dark;
-                box-shadow: 0 5px 5px rgba( $v1-dark, 0.16 );
+                border: solid 1px $v1-accent;
+                box-shadow: 0 5px 5px rgba( $v1-accent, 0.16 );
             }
         }
         .main-menu {
@@ -306,45 +259,12 @@
                 & > a.not-toggle,
                 & > a.dropdown-toggle {
                     &:hover, &:focus {
-                        color: $v2-hover;
-                        color: var(--color-v2-hover);
+                        color: $v2-accent;
+                        color: var(--color-link-hover-light);
                         background-color: transparent
                     }
                 }
             }
-            .dropdown-menu {
-                background-color: $v1-dark;
-                background-color: var(--color-v1-dark);
-                box-shadow: 0 3px 10px rgba( $black, 0.16 );
-                a:hover {
-                    background-color: $v2;
-                    background-color: var(--color-v2);
-                    color: $v1-dark;
-                    color: var(--color-v1-dark);
-                }
-            }
-            .dropdown-menu button.dropdown-toggle { 
-                &:hover, &:focus {
-                    background-color: $v2;
-                    background-color: var(--color-v2);
-                    color: $v1-dark;
-                    color: var(--color-v1-dark);
-                }
-            }
-        }
-    }
-    /// end of laptop +
-    ///////////////////////////////////////////////////////////////////////////////////   
-    /// 
-    /// 
-    &.bg-v1 .nav-inner {
-        .search-wrap input,
-        .search-wrap form,
-        .offcanvas { 
-            background-color: $v1; 
-            background-color: var(--color-v1); 
-        }
-        @media( min-width: $d_lg ) {
             .dropdown-menu {
                 background-color: $v1;
                 background-color: var(--color-v1);
@@ -356,38 +276,45 @@
                     color: var(--color-v1);
                 }
             }
-        }
-    }
-    &.bg-black .nav-inner {
-        .search-wrap input,
-        .search-wrap form,
-        .offcanvas { 
-            background-color: $black; 
-            background-color: var(--color-black); 
-        }
-        @media( min-width: $d_lg ) {
-            .dropdown-menu {
-                background-color: $black;
-                background-color: var(--color-black);
-                box-shadow: 0 3px 10px rgba( $black, 0.16 );
-                a:hover {
+            .dropdown-menu button.dropdown-toggle { 
+                &:hover, &:focus {
                     background-color: $v2;
                     background-color: var(--color-v2);
-                    color: $black;
-                    color: var(--color-black);
+                    color: $v1;
+                    color: var(--color-v1);
                 }
             }
         }
     }
-}
+    /// end of laptop +
+    ///////////////////////////////////////////////////////////////////////////////////   
+    &.bg-v1 .nav-inner {
+        .search-wrap input,
+        .search-wrap form,
+        .offcanvas { 
+            background-color: inherit; 
+        }
+        @media( min-width: $d_lg ) {
+            .dropdown-menu {
+                background-color: $v1;
+                background-color: var(--color-v1);
+                button.dropdown-toggle:hover,
+                button.dropdown-toggle:focus,
+                a:hover,
+                a:focus {
+                    background-color: $white;
+                    background-color: var(--color-white);
+                    color: $v1;
+                    color: var(--color-v1);
+                }
+            }
+
+        }
+    }
 
 
-
-
-
-
-#main-nav.bg-v2 .nav-inner {
-    .search-wrap input,
+    &.bg-v2 .nav-inner {
+        .search-wrap input,
         .search-wrap form,
         .offcanvas { 
             background-color: $v2; 
@@ -397,13 +324,178 @@
             .dropdown-menu {
                 background-color: $v2;
                 background-color: var(--color-v2);
-                box-shadow: 0 3px 10px rgba( $black, 0.16 );
                 a:hover {
-                    background-color: $v1-hover;
-                    background-color: var(--color-v1-hover);
+                    background-color: $white;
+                    background-color: var(--color-white);
                     color: $v2;
                     color: var(--color-v2);
                 }
             }
         }
+    }
+    // solid dark bg
+    &.bg-dark .nav-inner {
+        @media( min-width: $d_lg ) {
+            .dropdown-menu {
+                background-color: var(--color-v1);
+                button.dropdown-toggle:hover,
+                button.dropdown-toggle:focus,
+                a:hover,
+                a:focus {
+                    background-color: $v2-accent;
+                    background-color: var(--color-v2-accent);
+                    color: $white;
+                    color: var(--color-white);
+                }
+            }
+        }
+    }
+    // solid black bg
+    &.bg-black .nav-inner {
+        .search-wrap input,
+        .search-wrap form,
+        .offcanvas { 
+            background-color: $black;
+            background-color: var(--color-black);
+        }
+        @media( min-width: $d_lg ) {
+            .dropdown-menu {
+                background-color: $black;
+                background-color: var(--color-black);
+                button.dropdown-toggle:hover,
+                button.dropdown-toggle:focus,
+                a:hover,
+                a:focus {
+                    background-color: $v2-accent;
+                    background-color: var(--color-v2-accent);
+                    color: $black;
+                    color: var(--color-black);
+                }
+            }
+        }
+    }
+}
+
+.nav-trans  { 
+    @include transition( 'background-color' 250ms );
+}
+
+// transparent Nav Styles. Desktop only
+@media( min-width: $d_lg ) {
+    .nav-trans  { 
+        @include transition( background-color linear 450ms )
+    }
+    #wrapper-navbar:not(.sticky-show) {
+        .nav-trans .search-wrap input,
+        .nav-trans .search-wrap form,
+        .nav-trans .offcanvas,
+        .nav-trans  { 
+            background-color: transparent !important;
+        }
+        .nav-trans .dropdown-menu{
+            backdrop-filter: blur(5px);
+        }
+        // dropdown colors
+
+        //white
+        .nav-trans.bg-white {
+            .dropdown-menu {
+                background-color: rgba( var(--color-rgb-white), 0.75 );
+                button.dropdown-toggle:hover,
+                button.dropdown-toggle:focus,
+                a:hover,
+                a:focus {
+                    background-color: var(--color-white);
+                    color: var(--color-v1);
+                }
+            }
+        }
+        //black
+        .nav-trans.bg-black {
+            .dropdown-menu {
+                background-color: rgba( var(--color-rgb-black), 0.75 );
+                button.dropdown-toggle:hover,
+                button.dropdown-toggle:focus,
+                a:hover,
+                a:focus {
+                    background-color: var(--color-black);
+                    color: var(--color-white);
+                }
+            }
+        }
+        //v1
+        .nav-trans.bg-v1 {
+            .dropdown-menu {
+                background-color: rgba( var(--color-rgb-v1), 0.75 );
+                button.dropdown-toggle:hover,
+                button.dropdown-toggle:focus,
+                a:hover,
+                a:focus {
+                    background-color: var(--color-v1);
+                    color: var(--color-white);
+                }
+            }
+        }
+
+        //v dark
+        .nav-trans.bg-dark {
+            .dropdown-menu {
+                background-color: rgba( var(--color-rgb-v1), 0.75 );
+                button.dropdown-toggle:hover,
+                button.dropdown-toggle:focus,
+                a:hover,
+                a:focus {
+                    background-color: var(--color-v1);
+                    color: var(--color-white);
+                }
+            }
+        }
+
+        //v2
+        .nav-trans.bg-v2 {
+            .dropdown-menu {
+                background-color: rgba( var(--color-rgb-v2), 0.75 );
+                button.dropdown-toggle:hover,
+                button.dropdown-toggle:focus,
+                a:hover,
+                a:focus {
+                    background-color: var(--color-v2);
+                    color: var(--color-white);
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+#main-nav {
+    &.bg-white .offcanvas {
+        background-color: var(--color-white) !important;
+    }
+    &.bg-v1 .offcanvas {
+        background-color: var(--color-v1) !important;
+    }
+    &.bg-v2 .offcanvas {
+        background-color: var(--color-v2) !important;
+    }
+    &.bg-dark .offcanvas {
+        background-color: var(--color-v1) !important;
+    }
+    &.bg-black .offcanvas {
+        background-color: var(--color-black) !important;
+    }
+
+    // laptop +
+    @media( min-width: $d_lg ) {
+        .offcanvas {
+            background-color: transparent !important;
+        }
+    }
 }

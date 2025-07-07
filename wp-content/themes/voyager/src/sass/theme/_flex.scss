@@ -75,27 +75,28 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////
-// FAQS - Bootstrap Accordion
+// Bootstrap Accordion
 ///////////////////////////////////////////////////////////////////////////////////
-/// 
 .accordion {
     .accordion-item {
+        background: transparent;
         @include mb-border-radius(0);
         border: none;
-        border-top: var(--color-n400) 2px solid;
-        &:last-of-type { border-bottom: var(--color-n400) 2px solid;}
+        border-bottom: currentColor 1.5px solid;
+        border-bottom-color: color-mix(in srgb, currentColor 20%, transparent);
     }
     .accordion-button {
-        color: $v1;
-        color: var(--color-v1);
+        background: transparent;
+        color: inherit;
         font-size: inherit;
         padding-right: 3rem;
+        padding-left: 0;
         &::after {
             // reset bootstrap settings for font awesome icon
             height: 100%;
             background-image: none;
             // icon
-			font: var(--v-fa);
+			font: var(--voy-fa);
 			content: '\2b';
 			color: inherit;
 			// render rules 
@@ -106,7 +107,7 @@
 			right: 0;
 			position: absolute;
 			text-align: center;
-			width: var(--fa-li-width,2em);
+			width: var(--fa-li-width,1em);
 			line-height: inherit;
             // positioning            
             display: flex;
@@ -116,19 +117,22 @@
           
         }
         &:not(.collapsed) {
-            background-color: $white;
-            background-color: var(--color-white);
-            color: $v1-hover;
-            color: var(--color-v1-hover);
+            background-color: transparent;
             box-shadow: none;
             &::after {
                 content: '\f068';
             }
         }
     }
+    //alternate icons
+    &.acc-chev .accordion-button {
+        &::after {
+            content: '\f078';
+        }
+    }
     // tax term options
     .accordion-item.tax-term {
-        .accordion-button.tax-term { color: $body; color: var(--color-body); }
+        .accordion-button.tax-term { color: $body; color: var(--color-body-light); }
         .accordion-body { 
             padding: 0; 
             .accordion-body { padding: 0 1.25rem 1rem; }

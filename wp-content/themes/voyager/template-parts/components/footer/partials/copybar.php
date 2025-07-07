@@ -11,11 +11,11 @@
 defined( 'ABSPATH' ) || exit;
 
 // get site container width
-$container = get_theme_mod( 'understrap_container_type' ) ?: 'container-jem';
+$container = get_theme_mod( 'understrap_container_type' ) ?: 'container-voy';
 
 // copy style Vars
 $cop_bg = get_field('copyr_bg','options') ?: ' bg-white';
-$cop_th = get_field('copyr_theme','options')  ? ' jem-dark' : ' jem-light';
+$cop_th = get_field('copyr_theme','options')  ? '.v-dark' : '.v-light';
 
 ?>
 

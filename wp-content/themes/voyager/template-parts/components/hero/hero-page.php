@@ -11,7 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // get site container width
-$container = get_theme_mod( 'understrap_container_type' ) ?: 'container-jem';
+$container = get_theme_mod( 'understrap_container_type' ) ?: 'container-voy';
 
 $pt = is_search() ? 'search' : get_post_type();
 
@@ -24,7 +24,7 @@ $obg    = get_field('hero_over_bg','options' ) ?: 'bg-dark';
 $op     = get_field('hero_over_opacity','options') ? ( get_field('hero_over_opacity','options') / 100 ) : 0.3;
 
 // background vars
-$bg     = get_field('hero_bg', 'options') ?: 'bg-jem1';
+$bg     = get_field('hero_bg', 'options') ?: 'bg-v1';
 $img    = get_field('hero_img','options');
 $img_lg = get_field('hero_img_lg','options');
 
@@ -67,7 +67,7 @@ if( get_field($acf . 'align_lg', $opts) ) { $al = ' align-items-' . get_field($a
 if( get_field($acf . 'just_lg', $opts) )  { $ju = ' justify-content-' . get_field($acf . 'just', $opts); }
 // bg var overrides
 if( get_field($acf . 'bg', $opts) ) {
-    $bg     = get_field($acf . 'bg', $opts) ?: 'bg-jem1';
+    $bg     = get_field($acf . 'bg', $opts) ?: 'bg-v1';
     $img    = get_field($acf . 'img', $opts) ?: ''; 
     $img_lg = get_field($acf . 'img_lg', $opts) ?: ''; 
 }

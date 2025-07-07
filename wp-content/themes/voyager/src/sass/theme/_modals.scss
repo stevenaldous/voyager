@@ -1,3 +1,20 @@
 ///////////////////////////////////////////////////////////////////////////////////
 // Modals aka PopUps
 ///////////////////////////////////////////////////////////////////////////////////
+.modal-header {
+    border-bottom: none;
+    .btn-close {
+        background: unset;
+        font-size: 2rem;
+    }
+}
+.modal-footer {
+    border-top: none;
+}
+
+.v-dark .modal-header .btn-close {
+    color: var(--color-body-dark);
+}
+.v-light .modal-header .btn-close {
+    color: var(--color-body-light);
+}

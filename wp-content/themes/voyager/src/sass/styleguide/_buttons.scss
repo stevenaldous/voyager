@@ -1,7 +1,4 @@
 ///////////////////////////////////////////////////////////////////////////////////
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////
 // Links //////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
@@ -12,12 +9,13 @@ a {
 	font-size: inherit;
 	text-decoration-thickness: 1px;
 	@include transition(all 250ms);
+	text-decoration: none;
 	&:hover, &:focus {
-		color: $v1-hover;
-		color: var(--color-v1-hover);
+		color: $v1-accent;
+		color: var(--color-v1-light);
+		text-decoration: underline;
 	}
 }
-
 a.img-link {
 	display: block;
 	width: 100%;
@@ -62,130 +60,63 @@ a.img-hover {
 ///////////////////////////////////////////////////////////////////////////////////
 .btn,
 input[type="submit"]  {
-	border: none;
-	@include mb-border-radius( 3px );
 	@include f1_bold();
-	@include letter-spacing( 40 );
-	font-size: 0.938rem;
-	line-height: 1.2;
+	line-height: normal;
 	padding: 1rem 2rem;
 	@include transition(all 350ms);
+	text-decoration: none;
+
+	// Theme ACF Variables
+	border: var(--border-btn);
+	@include mb-border-radius( var(--radius-btn)  );
+	font-size: var(--font-size-btn);
+	text-transform: var(--case-btn);
+	letter-spacing: var(--font-ls-btn , 0px);
 	&.btn-fw {
 		width: 100%;
 	}
-
+	&.btn-sm {
+		font-size: var(--font-size-btnsm);
+	}
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-
-	i { margin-left: 0.25rem; }
-	&.reverse {
-		flex-direction: row-reverse;
-		i {
-			margin-left: 0;
-			margin-right: 0.25rem;
-		}
-	}
-}
-.btn-primary {	
-	color: $white;
-	color: var(--color-white);
-	background-color: $v1;
-	background-color: var(--color-v1);
-	border: solid 2px currentColor;
 	&:hover, &:focus {
-		background-color: $v1-hover;
-		background-color: var(--color-v1-hover);
-		border-color: currentColor;
-	}
-}
-
-.btn-secondary {
-	color: $white;
-	color: var(--color-white);
-	background-color: $v2;
-	background-color: var(--color-v2);
-	border: solid 2px currentColor;
-	&:hover, &:focus {
-		color: $white;
-		color: var(--color-white);
-		background-color: $v2-hover;
-		background-color: var(--color-v2-hover);
-		border-color: currentColor;
-	}
-}
-
-.btn-outline {	
-	color: $white;
-	color: var(--color-white);
-	border: solid 2px var(--color-white);
-	background-color: transparent;
-	&:hover, &:focus {
-		color: $white;
-		color: var(--color-white);
-		background-color: $n200;
-		background-color: var(--color-n200);
-	}
-}
-
-.btn-outline-dark {	
-	color: $v1;
-	color: var(--color-v1);
-	border: solid 2px currentColor;
-	background-color: transparent;
-	&:hover, &:focus {
-		color: $white;
-		color: var(--color-white);
-		border-color: currentColor;
-		background-color: $v1-hover;
-		background-color: var(--color-v1-hover);
-
+		text-decoration: none;
 	}
 }
 
 .btn.no-btn {
-	padding: 0.5rem 0 0 0;
+	border: none;
 	color: $v1;
 	color: var(--color-v1);
+	padding: 0.5rem 0 0 0;
 	text-transform: uppercase;
 	text-decoration: none;
-	// text-underline-offset: 0.15rem;
-	// text-decoration-thickness: 2px;
+	text-underline-offset: 0.15rem;
+	text-decoration-thickness: 2px;
 	&:hover, &:focus {
-		color: $v1-hover;
-		color: var(--color-v1-hover);
+		color: $v1-accent;
+		color: var(--color-v1-light);
 	}
 }
 
 button:focus {outline:0 !important;}
-
-input[type="submit"] {
-	display: block;
-	margin: 0 auto;
-	width: 100%;
-	color: $white;
-	color: var(--color-white);
-	background-color: $v1;
-	background-color: var(--color-v1);
-	border: solid 2px currentColor;
-	&:hover, &:focus {
-		background-color: $v1-hover;
-		background-color: var(--color-v1-hover);
-		border-color: currentColor;
-	}
-}
 
 // social btn
 .btn-social {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	border: solid 2px currentColor;
-	@include mb-border-radius(5px);
+	// border: solid 2px currentColor;
+	// @include mb-border-radius(5px);
 	width: 36px;
 	height: 36px;
 	@include transition(all 350ms);
 	text-decoration: none;
+	&:hover, &:focus {
+		text-decoration: none;
+	}
 }
 .social li {
 	margin-left: 0.3rem;
@@ -193,4 +124,134 @@ input[type="submit"] {
 	font-size: 1.5rem;
 	&:first-of-type { margin-left: 0; }
 	&:last-of-type  { margin-right: 0; }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// default/light BG Buttons ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+.v-light {
+
+	// default/light BG theme primary
+	.form-btn-primary input[type="submit"],
+	.btn-primary {	
+		color: $white;
+		color: var(--color-white);
+		background-color: $v1;
+		background-color: var(--color-v1);
+		border-color: var(--color-v1);
+		&:hover, &:focus {
+			color: $white;
+			color: var(--color-white);
+			background-color: $v1-accent;
+			background-color: var(--color-v1-accent);
+			border-color: var(--color-v1-accent);
+		}
+	}
+
+	
+
+	// default/light BG theme secondary
+	.form-btn-secondary input[type="submit"],
+	.btn-secondary {
+		color: $white;
+		color: var(--color-white);
+		background-color: $v2;
+		background-color: var(--color-v2);
+		border-color: var(--color-v2);
+		&:hover, &:focus {
+			color: $white;
+			color: var(--color-white);
+			background-color: $v2-accent;
+			background-color: var(--color-v2-accent);
+			border-color: var(--color-v2-accent);
+		}
+	}
+
+	// dark outline for a light bg
+	.form-btn-outline input[type="submit"],
+	&.form-btn-outline input[type="submit"],
+	.btn-outline-dark,
+	.btn-outline {	
+		color: $v2;
+		color: var(--color-link-light);
+		background-color: transparent;
+		border-color: var(--color-link-light);
+		&:hover, &:focus {
+			color: $white;
+			color: var(--color-white);
+			background-color: var(--color-link-hover-light);
+			border-color: var(--color-link-hover-light);
+		}
+	}
+
+	// text only button color
+	.btn.no-btn {
+		color: $v2;
+		color: var(--color-link-light);
+		&:hover, &:focus {
+			color: $v1;
+			color: var(--color-link-light);
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// invert/dark BG Buttons /////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+.v-dark {
+	// invert/dark primary button
+	.form-btn-primary input[type="submit"],
+	.btn-primary {	
+		color: $white;
+		color: var(--color-white);
+		background-color: $v1-accent;
+		background-color: var(--color-v1-accent);
+		border-color: var(--color-v1-accent);
+		&:hover, &:focus {
+			color: $white;
+			color: var(--color-white);
+			background-color: $v2-accent;
+			background-color: var(--color-v2-accent);
+			border-color: var(--color-v2-accent);
+		}
+	}
+	.form-btn-secondary input[type="submit"],
+	.btn-secondary {
+		color: $white;
+		color: var(--color-white);
+		background-color: transparent;
+		border-color: var(--color-white);
+		&:hover, &:focus {
+			color: $white;
+			color: var(--color-white);
+			background-color: $v2-accent;
+			background-color: var(--color-v2-accent);
+			border-color: var(--color-v2-accent);
+		}
+	}
+
+	// outline
+	&.form-btn-outline input[type="submit"],
+	.form-btn-outline input[type="submit"],
+	.btn-outline {	
+		color: $white;
+		color: var(--color-link-dark);
+		border-color: var(--color-link-dark);
+		background-color: transparent;
+		&:hover, &:focus {
+			color: $white;
+			color: var(--color-link-dark);
+			background-color: var(--color-link-hover-dark);
+			border-color: var(--color-link-hover-dark);
+		}
+	}
+	// text only button color
+	.btn.no-btn {
+		color: $body;
+		color: var(--color-link-dark);
+		&:hover, &:focus {
+			color: $v1;
+			color: var(--color-link-hover-dark);
+		}
+	}
 }

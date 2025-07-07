@@ -38,7 +38,7 @@ $args = array(
 			<?php
 				wp_nav_menu( $args );
 				
-				get_template_part('template-parts/components/header/partials/search'); // Search
+				//get_template_part('template-parts/components/header/partials/search'); // Search
 			?>
 		</div>
 	</div>

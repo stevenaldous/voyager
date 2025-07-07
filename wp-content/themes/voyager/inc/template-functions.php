@@ -39,5 +39,3 @@ add_action( 'wp_head', 'voyager_pingback_header' );
 
 
 
-
-!defined('v_theme') && define('v_theme', 'v-dark');

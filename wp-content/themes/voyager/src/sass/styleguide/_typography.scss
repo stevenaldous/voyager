@@ -6,7 +6,7 @@
 // Basic Text Styles //////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 p, ol, ul { 
-	line-height: 1.8;
+	line-height: var(--font-lh-body, 1.8);
 	text-underline-offset: 0.15rem;
 	// font sizing and weight from color/font panel
 	font-size: var(--font-size-body );
@@ -23,7 +23,13 @@ p, ol, ul {
   h1,  h2,  h3,  h4,  h5,  h6,
  .h1, .h2, .h3, .h4, .h5, .h6 { 
 	font-family: var(--font-hx);
-	color: var(--color-hx)
+	font-weight: var(--font-weight-hx);
+	color: var(--color-hx-light);
+	line-height: var(--font-lh-hx, 1.2);
+	span,
+	&.plus {
+		font-weight: var(--font-weight-hx-plus);
+	}
 }
 
 $ids: '1', '2', '3', '4' ,'5', '6';
@@ -31,23 +37,20 @@ $ids: '1', '2', '3', '4' ,'5', '6';
 @each $id in ( $ids ) {
 	h#{$id}, .h#{$id}, .f#{$id} {
 		font-size: var(--font-size-h#{$id} );
-		font-weight: var(--font-weight-h#{$id});
-		line-height: 1.2;
 	}	
 }
 // subheader/subtitle
 .subh, .subt {
 	font-size: var(--font-size-subh );
 	font-weight: var(--font-weight-subh);
-	line-height: 1.417;
+	line-height: var(--font-lh-subh, 1.417);
 }
 .subt-shadow {
-	color: var(--color-hx);
+	color: var(--color-hx-light);
 	font-size: var(--font-size-h4);
-	line-height: 1.2;
+	line-height: var(--font-lh-hx, 1.2);
 	font-family: var(--font-hx);
-	text-shadow: 1px 1px 2px var(--color-hx) ;
-
+	text-shadow: 1px 1px 2px var(--color-hx-light) ;
 }
 .pret {
 	font-size: var(--font-size-pret );
@@ -92,7 +95,7 @@ main ul:not(.social):not(.slick-dots):not(.pagination):not(.clean) {
 		margin-bottom: 0.5rem;
 		&::before {
 			// icon
-			font: var(--v-fa);
+			font: var(--voy-fa);
 			content: '\f054';
 			color: $v2;
 			color: var(--color-v2);
@@ -156,8 +159,6 @@ li p:last-of-type { margin-bottom: 0; }
 .text-justify {
     text-align: justify;
 }
-
-
 // class to add design elements to divs or text
 .flair {
 	position: relative;
@@ -168,7 +169,7 @@ li p:last-of-type { margin-bottom: 0; }
 		// margin: 0 auto 1rem;
 		width: 80px;
 		height: 5px;
-		background-color: var(--color-v2, $v2);
+		background-color: var(--color-flair-light, $v2);
 		display: block;
 	}
 }
@@ -184,7 +185,7 @@ li p:last-of-type { margin-bottom: 0; }
 		margin-right: 0.5rem;
 	}
 }
-.bg-v2 .flair::before { background-color: var(--color-v1, $v1); }
+.bg-v2 .flair::before  { background-color: var(--color-v1, $v1); }
 .text-start .pret.flair  { justify-content: flex-start; }
 .text-center .pret.flair { justify-content: center; }
 .text-end .pret.flair    { justify-content: flex-end; }

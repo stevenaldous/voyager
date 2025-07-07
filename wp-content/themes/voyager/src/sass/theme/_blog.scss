@@ -16,8 +16,8 @@
         color: var(--color-v2);
         @include border-radius(6px);
         &:hover {
-            color: $v2-hover;
-            color: var(--color-v2-hover);
+            color: $v2-accent;
+            color: var(--color-v2-accent);
             background: transparent;
             text-decoration: underline;
         }
@@ -45,8 +45,8 @@
                 color: $v2;
                 color: var(--color-v2);
                 &:hover, &:focus {
-                    color: $v2-hover;
-                    color: var(--color-v2-hover);
+                    color: $v2-accent;
+                    color: var(--color-v2-accent);
                 }
             }
             .nav-previous i { margin-right: 0.5rem; }
@@ -70,8 +70,8 @@
                 color: var(--color-v2);
                 display: inline-block;
                 &:hover, &:focus {
-                    color: $v2-hover;
-                    color: var(--color-v2-hover);
+                    color: $v2-accent;
+                    color: var(--color-v2-accent);
                 }
                 &::after {
                     content: ',';
@@ -107,7 +107,7 @@
         color: $v1; 
         color: var(--color-v1);
         font-size: inherit;
-        &:hover, &:focus { color: var(--color-v1-hover); }
+        &:hover, &:focus { color: var(--color-v1-accent); }
     }
     img { @include border-radius(0); }
     .byline p:last-of-type::before,
@@ -121,8 +121,8 @@
     //     color: $v2;
     //     color: var(--color-v2);
     //     &:hover, &:focus {
-    //         color: $v2-hover;
-    //         color: var(--color-v2-hover);
+    //         color: $v2-accent;
+    //         color: var(--color-v2-accent);
     //     }
     // }
     .share-wrap {
@@ -152,7 +152,7 @@
         text-decoration: none;
         &:hover, &:focus {
             color: $body;
-            color: var(--color-body);
+            color: var(--color-body-light);
         }
     }
 }
@@ -200,7 +200,7 @@ $bht: 60px;
             display: inline-block;
 			text-rendering: auto;
 			-webkit-font-smoothing: antialiased;
-			font: var(--v-fa);
+			font: var(--voy-fa);
             position: absolute;
             right: 0;
             top: 0;
@@ -386,14 +386,14 @@ $bht: 60px;
 
 // dark themed styles 
 .blog-filter.dark-filter {
-    background-color: $v1-dark;
-    background-color: var(--color-v1-dark);
+    background-color: $v1;
+    background-color: var(--color-v1);
 
     .search-form .search-field,
     .search-form .no-btn,
     select {
-        background: $v1-dark;
-        background: var(--color-v1-dark);
+        background: $v1;
+        background: var(--color-v1);
         border: none;
         border-bottom: solid 1px var(--color-white);
         color: $white;
@@ -411,8 +411,8 @@ $bht: 60px;
         color: var(--color-white);
     }
     .selectCustom-options {
-        background-color: $v1-dark;
-        background-color: var(--color-v1-dark);
+        background-color: $v1;
+        background-color: var(--color-v1);
         .selectCustom-option {
             color: $white;
             color: var(--color-white);

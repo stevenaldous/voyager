@@ -2,23 +2,26 @@
 // Header formatting. for colors see header-light.scss and header-dark.scss=
 ///////////////////////////////////////////////////////////////////////////////////
 $drop_bht: 40px; 
+$btn_rad: 6px;
 
 #wrapper-navbar {
     position: relative;
-    // top: 0;
     width: 100%;
     z-index: 1000;
     // Stick header
     &.sticky-header { 
         top: 0;
+        &.navbar-trans {
+            position: fixed;
+        }
     }
     &.sticky {
-        
         position: fixed;
         top: -300px;
         width: 100%;
         box-shadow: 0 5px 5px rgba( $black, 0.16 ) ;
     }
+
     &.sticky-show {
         @include transition( top 0.75s ease-out );
         top: 0;
@@ -27,9 +30,18 @@ $drop_bht: 40px;
         @include transition( top 0.75s ease-in );
     } 
 }
+
+
+
+.navbar>.container-v{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
 ///////////////////////////////////////////////////////////////////////////////////  
 ///////////////////////////////////////////////////////////////////////////////////   
-// main nav size rules -- all colors
+// main nav size rules
 ///////////////////////////////////////////////////////////////////////////////////  
 ///////////////////////////////////////////////////////////////////////////////////  
 #main-nav {
@@ -37,25 +49,61 @@ $drop_bht: 40px;
     // mobile header logo
     a::after { content: none; }
     .navbar-brand {
-        display: block;
+        display: flex;
+        align-items: center;
+        width: 100%;
         height: 50px;
+        max-width: 40%;
         margin-right: 0.5rem; 
-        img { max-width: 100%; width: auto; height: 100%; max-height: 100%;} 
+        display: block;
+        padding: 0;
+        img {
+            object-fit: contain;
+            object-position: left;
+            margin-left: 0;
+            width:100%; 
+            height:100%;
+        }
     }
     .btn-wrap .btn {
         &.no-btn {
             padding-right: 1rem;
             text-decoration: none;
         }
+        &.btn-pho {
+            border-radius: $btn_rad;
+        }
     }
     .top-bar {
         position: relative;
         z-index: 1044;
+        .logo-wrap img {
+            max-height: 28px;
+            height: 100%;
+            width: auto;
+            margin-right: 16px;
+        }
         p { 
             line-height: 1.2; 
             margin-bottom: 0;
             font-family: var(--font-hx);
             font-weight: 500;
+        }
+        .btn-pho {
+            min-width: fit-content;
+        }
+    }
+    .wpml-ls-legacy-list-horizontal {
+        padding: 0 1rem 0 0;
+        li {
+            vertical-align: middle;
+        }
+        a {
+            padding-top: 0;
+            padding-bottom: 0;
+            span {
+                vertical-align: top;
+            }
         }
     }
     .top-bar.mob {
@@ -66,6 +114,7 @@ $drop_bht: 40px;
             padding: 0.75rem 2rem;
         }
     }
+
     // search
     .search-wrap {
         padding: 1rem;
@@ -93,30 +142,31 @@ $drop_bht: 40px;
         width: 50px;
         height: 50px;
         padding: 0;
-        @include border-radius(6px);
+        @include mb-border-radius( $btn_rad  );
+    }
+    .btn-close {
+        margin: 0 0 0 auto;
     }
     // phone btn
-    .btn-pho { padding: 0.5rem; }
-    .mob-drawer {
-        .btn-wrap { margin-bottom: 1rem;}
-        .btn-wrap .btn-alt { padding: 1rem;}
-        .btn-pho.pho-alt {
-            font-size: 1.375rem;
-            padding: 0;
-        }
+    .btn-pho { 
+        padding: 0.5rem; 
     }
     // nav link and dropdowns
     .nav-link, 
     .dropdown-item { 
         padding: 0.25rem 1rem;
+        &:hover, &:focus {
+            text-decoration: none;
+        }
     }
     .top-nav-item {
         & > a.not-toggle,
         & > a.dropdown-toggle { 
             font-size: 1.250rem;
             font-size: var(--font-size-nav); 
+            border-bottom: solid 4px transparent;
             &:hover,&:focus { 
-                border-bottom: solid 4px currentColor;
+                border-color: currentColor;
             }
         } 
     }    
@@ -131,6 +181,7 @@ $drop_bht: 40px;
             padding-left: 1rem;
             font-weight: 400;
             font-family: var(--font-hx);
+            white-space: normal;
             &.dropdown-toggle {
                 display: flex;
                 align-items: center;
@@ -177,15 +228,16 @@ $drop_bht: 40px;
                 min-width: 50%;
                 width: 100%;
                 align-self: stretch;
-                .btn { 
-                    width: 100%;
-                    border: none;
-                    @include border-radius(0);
-                    padding: 0.75rem;
-                    height: 100%;
-                }
+
             }
-            .btn-pho { display: none !important; }
+            .btn { 
+                width: 100%;
+                border: none;
+                @include border-radius(0);
+                padding: 0.75rem;
+                height: 100%;
+            }
+            
         }
         .main-menu {
             .top-nav-item {
@@ -213,16 +265,20 @@ $drop_bht: 40px;
     // tablet +
     @media( min-width: $d_md ) { 
         .navbar-brand { height: 90px; margin: 0.5rem 1rem 0.5rem 0; }
-        .btn-wrap .btn {
-            font-size: 0.625rem;
-            padding: 0.15rem 0.25rem;
-            width: 100%;
+        // .btn-wrap .btn {
+            // font-size: 0.625rem;
+            // padding: 0.15rem 0.25rem;
+            // width: 100%;
+        // }
+        .top-bar .btn-pho { 
+            padding: .75rem 2rem;
+            &.no-btn {
+                padding: 0.1rem 0.5rem 0.1rem 0;
+                font-weight: 700;
+                font-size: 1.375rem;
+            }
         }
-        .btn-pho { 
-            padding: 0.1rem 0.5rem 0.1rem 0;
-            font-weight: 700;
-            font-size: 1.375rem;
-        }
+
         .head-slogan { 
             background-color: transparent; 
             padding: 0rem 0.5rem 0rem 0rem;
@@ -239,24 +295,46 @@ $drop_bht: 40px;
             animation-name: initial !important;
             -webkit-animation: initial !important; 
             animation: initial !important; 
+
+            .btn-pho:not(.pho-alt),
+            .navbar-toggler {
+                font-size: 1.25rem;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &.no-btn {
+                    padding: 0;
+                    font-size: 1.875rem;
+                }
+            }
         }
+
     }
     ///////////////////////////////////////////////////////////////////////////////////
     // laptop +
     @media( min-width: $d_lg ) {
-        .btn-wrap .btn { font-size: 0.9rem; padding: 0.75rem 2rem; }
+        // .btn-wrap .btn { font-size: 0.9rem; padding: 0.75rem 2rem; }
+        .navbar-brand { 
+            max-width: 30%; 
+        }
         .offcanvas { 
             background-color: transparent; 
             width: 100%; 
         }
         // desktop search styles
-        .menu-main-menu-container { padding-left: 60px; width: 100%;}
+        .menu-main-menu-container { 
+            padding-left: 30px; 
+            width: 100%;}
         .search-wrap {
             .input-group {
                 display: flex;
                 align-items: center;
             }
-            form,button,input { min-height: 40px;}
+            form,button,input { 
+                min-height: 40px;
+            }
             form {
                 background-color: transparent;
                 position: relative;
@@ -288,14 +366,18 @@ $drop_bht: 40px;
             }
         }
         .main-menu {
-            // .current-menu-item > a { border-bottom: solid 4px var(--color-jem2);}
+            // .current-menu-item > a { border-bottom: solid 4px var(--color-v2);}
+            flex-wrap: wrap;
             .dropdown-menu {
                 width: 100%;
                 width: -webkit-fit-content;
                 width: -moz-fit-content;
                 width: fit-content;
                 min-width: 250px;
+                max-width: 250px;
                 @include mb-border-radius( 0 );
+                white-space: normal;
+
                 &.submenu { 
                     left: 0; 
                     top: 0; 
@@ -314,6 +396,7 @@ $drop_bht: 40px;
             button.dropdown-toggle { height: 100%; }
             // top nav styles
             .top-nav-item {
+                display: flex;
                 &:not(:last-of-type )::after {
                     content: '';
                     margin: 0 0.5rem 0 0;
@@ -332,8 +415,7 @@ $drop_bht: 40px;
                 }
                 &:last-of-type,
                 &:nth-last-of-type(2),
-                &:nth-last-of-type(3),
-                &:nth-last-of-type(4) {
+                &:nth-last-of-type(3) {
                     .dropdown-menu.submenu.show { left: -100%; }
                 }
             }

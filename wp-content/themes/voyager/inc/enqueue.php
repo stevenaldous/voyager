@@ -37,15 +37,3 @@ function theme_enqueue_styles() {
 	get_template_part('inc/google_fonts');
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
-
-
-
-// /**
-//  * Load the child theme's text domain
-//  */
-// function add_child_theme_textdomain() {
-// 	load_child_theme_textdomain( 'voyager-child', get_template_directory() . '/languages' );
-// }
-// add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
-
-

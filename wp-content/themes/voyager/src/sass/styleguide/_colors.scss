@@ -4,13 +4,12 @@
 // color variables set at :root {
 //
 // var(--color-v1)
-// var(--color-v1-hover)
+// var(--color-v1-accent)
 // var(--color-v1-light)
-// var(--color-v1-dark)
 // var(--color-v2)
-// var(--color-v2-hover)
-// var(--color-hx)
-// var(--color-body)
+// var(--color-v2-accent)
+// var(--color-hx-light)
+// var(--color-body-light)
 // var(--color-white)
 // var(--color-n50)
 // var(--color-n200)
@@ -32,23 +31,27 @@
 /// 
 
 // body/text color
-.c-body 	{ color: $body; color: var(--color-body);}
+.c-body 	{ color: $body; color: var(--color-body-light);}
 .c-headline { color: $headline; color: var(--color-headline);}
 
 // Primary accent vars
-.c-v1  { color: $v1; color: var(--color-v1); }
+.c-v1,
+.c-dark,
+.c-v1-dark,
+.c-v1d  { color: $v1; color: var(--color-v1); }
 .c-v1-light,
 .c-v1l { color: $v1-light; color: var(--color-v1-light); }
-.c-dark,
-.c-v1d-dark,
-.c-v1d { color: $v1-dark; color: var(--color-v1-dark); }
-.c-v1-hover,
-.c-v1h { color: $v1-hover; color: var(--color-v1-hover); }
+.c-v1-accent,
+.c-v1a { color: $v1-accent; color: var(--color-v1-accent); }
 
 // second accent vars
-.c-v2  { color: $v2; color: var(--color-v2); }
-.c-v2-hover,
-.c-v2h { color: $v2-hover; color: var(--color-v2-hover); }
+.c-v2,
+.c-v1-dark,
+.c-v2d { color: $v2; color: var(--color-v2); }
+.c-v1-light,
+.c-v1l { color: $v1-light; color: var(--color-v2-light); }
+.c-v2-accent,
+.c-v2a { color: $v2-accent; color: var(--color-v2-accent); }
 
 /* Netral Colors */
 .c-white { color: $white !important; color: var(--color-white) !important;}
@@ -78,38 +81,61 @@
 .c-review 	  { color: $review; color: var(--color-review);} 
 .c-review-50  { color: $review-50; color: var(--color-review-50);} 
 
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////
 // Backgrounds ////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
-// Primary accent vars
-.bg-trans { background: transparent;}
-.bg-v1  { 
+
+
+// primarybgs
+.bg-v1,
+.bg-dark,
+.bg-v1-dark,
+.bg-v1d { 
 	background: $v1; 
-	background: var(--color-v1, $v1); 
+	background: var(--color-v1) !important;; 
 }
 .bg-v1-light,
-.bg-v1l { background: $v1-light; background: var(--color-v1-light); }
-.bg-dark,
-.bg-v1d-dark,
-.bg-v1d { background: $v1-dark; background: var(--color-v1-dark) !important; }
-.bg-v1-hover,
-.bg-v1h { background: $v1-hover; background: var(--color-v1-hover); }
-.bg-v1-grad {  
+.bg-v1l { 
+	background: $v1-light; 
+	background: var(--color-v1-light); 
+}
+.bg-v1-accent,
+.bg-v1a { 
+	background: $v1-accent; 
+	background: var(--color-v1-accent); 
+}
+.bg-v1-grad,
+.bg-v1g {  
 	background: linear-gradient(180deg, rgba(var(--color-rgb-v1), 0.1) 0%, rgba( var(--color-rgb-white), 0.101042) 49.48%, rgba(var(--color-rgb-v1), 0.1) 100%),
 	linear-gradient(0deg, #FFFFFF, #FFFFFF);  
 }
+
+
+// secondary bgs
+.bg-v2,
+.bg-v2-dark,
+.bg-v2d { 
+	background: $v2; 
+	background: var(--color-v2); 
+}
+.bg-v2-light,
+.bg-v2l { 
+	background: $v2-light; 
+	background: var(--color-v2-light); 
+}
+.bg-v2-accent,
+.bg-v2a { 
+	background: $v2-accent; 
+	background: var(--color-v2-accent); 
+}
+
+// Misc BG vars
+.bg-trans { 
+	background: transparent;
+}
 .bg-blur {
-	background-image: linear-gradient(90.76deg, rgba( var(--color-rgb-white), 0.9) 2.23%, rgba( var(--color-rgb-white), 0) 50.76%, rgba( var(--color-rgb-white), 0.9) 99.28%);
 	backdrop-filter: blur(7.5px);	
 }
-// second accent vars
-.bg-v2  { background: $v2; background: var(--color-v2); }
-.bg-v2-hover,
-.bg-v2h { background: $v2-hover; background: var(--color-v2-hover); }
-
 /* Netral Colors */
 .bg-white { background: $white; background: var(--color-white);}
 .bg-n50   { background: $n50; background: var(--color-n50); }
@@ -137,28 +163,42 @@
 .bg-focus-50   { background: $focus-50; background: var(--color-focus-50);} 
 .bg-review 	   { background: $review; background: var(--color-review);} 
 .bg-review-50  { background: $review-50; background: var(--color-review-50);} 
-
-
-
 // MISC Backgrounds
 .bg-trans { background: transparent; }
 
+// text box bg rules
+.text-box {
+	position: relative;
+	z-index: 2;
+	&.has-bg {
+		.abs-cover {
+			z-index: 0;
+		}
+	}
+}
 
 // border colors
-.bo-white { border: solid 2px var(--color-white);}
-.bo-v1  { border: solid 2px var(--color-v1);}
-.bo-v2  { border: solid 2px var(--color-v2);}
-.bo-dark  { border: solid 2px var(--color-dark);}
-.bo-black { border: solid 2px var(--color-black);}
+.bo-white  { border-color: var(--color-white) !important;}
+.bo-v1   { border-color: var(--color-v1) !important;}
+.bo-v1l  { border-color: var(--color-v1-light) !important;}
+.bo-v1a  { border-color: var(--color-v1-accent) !important;}
+.bo-v2   { border-color: var(--color-v2) !important;}
+.bo-v2l  { border-color: var(--color-v2-light) !important;}
+.bo-v2a  { border-color: var(--color-v2-accent) !important;}
+.bo-black  { border-color: var(--color-black) !important;}
+.bo-acc-light,
+.bo-acc    { border-color: var(--color-flair-light) !important;}
+.bo-acc-dark { border-color: var(--color-flair-dark) !important;}
 
 ///////////////////////////////////////////////////////////////////////////////////
 // Color rules - Background and color utils
 ///////////////////////////////////////////////////////////////////////////////////
 
-// theme for light bg 
+// theme for light bg
+.v-dark .v-light,
 .v-light {
 	color: $body;
-	color: var(--color-body-light, $body);
+	color: var(--color-body-light);
 	h1,  h2,  h3,  h4,  h5,  h6,
 	.h1, .h2, .h3, .h4, .h5, .h6 { 
 		color: var(--color-hx-light);
@@ -197,7 +237,7 @@
 	color: var(--color-body-dark);
 	h1,  h2,  h3,  h4,  h5,  h6,
 	.h1, .h2, .h3, .h4, .h5, .h6 { 
-		color: var(--color-hx-dark, red);
+		color: var(--color-hx-dark);
 		span {
 			color: var(--color-hx-flair-dark);
 		}
@@ -224,7 +264,33 @@
 		background-color: var(--color-flair-dark);
 	}
 }
-
+// v secondary colors
+.bg-v2.v-dark {
+	h1,  h2,  h3,  h4,  h5,  h6,
+	.h1, .h2, .h3, .h4, .h5, .h6 { 
+		span { 
+			color: var(--color-white); 
+		}
+	}
+	.super-quote.sq-hi blockquote { border-color: var(--color-v2-link-hover);}
+	.subt,
+	ol li::marker {
+		color: var(--color-flair-dark);
+	}
+	
+	.icon-wrap.icon-circle::after,
+	.flair::before {
+		background-color: var(--color-flair-dark);
+	}
+	a:not(.btn), a.no-btn {
+		color: $white;
+		color: var(--color-white);
+		&:hover, &:focus {
+			color: $v1-accent;
+			color: var(--color-v2-link-hover);
+		}
+	}
+}
 
 // hover bgs for cards
 a {
@@ -246,25 +312,25 @@ a {
 		}
 	}
 	&.bg-v1:hover,&.bg-v1:focus {
-		background-color: var(--color-v1-hover);
+		background-color: var(--color-v1-accent);
 	}
 	&.bg-v2:hover,&.bg-v2:focus {
-		background-color: var(--color-v2-hover);
+		background-color: var(--color-v2-accent);
 	}
 	&.bg-dark:hover,&.bg-dark:focus {
-		background-color: var(--color-v1-hover) !important;
+		background-color: var(--color-v1-accent) !important;
 	}
 	&.bg-black:hover,&.bg-black:focus {
-		background-color: var(--color-v1-dark) !important;
+		background-color: var(--color-v1) !important;
 	}
 	&.bg-trans:hover,&.bg-trans:focus {
 		&.v-light { 
-			color: var(--color-v1-hover);
-			&:hover, &:focus { color: var(--color-v1-hover); } 
+			color: var(--color-link-light);
+			&:hover, &:focus { color: var(--color-link-hover-light); } 
 		}
 		&.v-dark { 
-			color: var(--color-v2);
-			&:hover, &:focus { color: var(--color-v2); } 
+			color: var(--color-link-dark);
+			&:hover, &:focus { color: var(--color-link-hover-dark); } 
 		}
 	}
 }

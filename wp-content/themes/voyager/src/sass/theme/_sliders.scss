@@ -49,9 +49,9 @@ $bhw: 22px; // dot size variable
         &.slick-active button {
             cursor: default;
             opacity: 1;
-            color: $v1-hover;
-            color: var(--color-v1-hover);
-            border-color: var(--color-v1-hover);
+            // color: $v1-accent;
+            // color: var(--color-v1-accent);
+            // border-color: var(--color-v1-accent);
         }
     }
 }
@@ -135,7 +135,7 @@ $bhw: 22px; // dot size variable
     .slick-next  { right: 0px; }
 }
 
-// centermode slider styles
+// center mode slider styles
 .centered-slider {
     .slick-slide {
         position: relative;
@@ -154,6 +154,23 @@ $bhw: 22px; // dot size variable
     }
 }
 
+// inline slider styles
+.slider-inline {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    .slick-arrow { 
+        z-index: 100;
+        position: relative;
+    }
+    .slick-prev  { left: 0px; }
+    .slick-next  { right: 0px; }
+    .slick-list,
+    .slick-track {
+        width: 100%;
+    }
+}
 ///////////////////////////////////////////////////////////////////////////////////
 // Colors
 ///////////////////////////////////////////////////////////////////////////////////
@@ -166,8 +183,8 @@ $bhw: 22px; // dot size variable
     opacity: 0.5;
     &:hover, &:focus {
         opacity: 1;
-        color: $v1-hover;
-        color: var(--color-v1-hover);
+        // color: $v1-accent;
+        // color: var(--color-v1-accent);
     }
 }
 // light background font color defaults
@@ -179,8 +196,8 @@ $bhw: 22px; // dot size variable
         color: $n200;
         color: var(--color-n200);
         &:hover, &:focus {
-            color: $v1-hover;
-            color: var(--color-v1-hover);
+            color: $v1-accent;
+            color: var(--color-v1-accent);
         }
     }
 }
@@ -189,20 +206,38 @@ $bhw: 22px; // dot size variable
 .bg-dark,
 .bg-v1,
 .bg-white .bg-dark,
-.bg-white .bg-v1 {
+.bg-white .bg-v1,
+.bg-black {
     .slick-dots li button,
 	.slick-arrow {
         color: $white;
         color: var(--color-white);
         &:hover, &:focus {
-            color: $v2-hover;
-            color: var(--color-v2-hover);
+            color: $v2-accent;
+            color: var(--color-v2-accent);
         }
     }
     .slick-dots.slick-active button {
-        color: $v2-hover;
-        color: var(--color-v2-hover);
-        border: solid 1px var(--color-v2-hover);
+        color: $v2-accent;
+        color: var(--color-v2-accent);
+        border: solid 1px var(--color-v2-accent);
+    }
+}
+
+.bg-v2 {
+    .slick-dots li button,
+	.slick-arrow {
+        color: $white;
+        color: var(--color-white);
+        &:hover, &:focus {
+            color: $v2-accent;
+            color: var(--color-link-hover-dark);
+        }
+    }
+    .slick-dots.slick-active button {
+        color: $v2-accent;
+        color: var(--color-link-hover-dark);
+        border: solid 1px var(--color-link-hover-dark);
     }
 }
 
@@ -221,4 +256,15 @@ $bhw: 22px; // dot size variable
         }
     }
     .slick-arrow:hover, .slick-arrow:focus { opacity: 1; }
+}
+
+
+// full height slides css
+.slides-fh {
+    .slick-track {
+        display: flex !important;
+    }
+    .slick-slide {
+        height: inherit;
+    }
 }

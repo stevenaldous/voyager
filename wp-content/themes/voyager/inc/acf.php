@@ -3,7 +3,7 @@
 ///////////////////////////////////////////////////////////////////////////
 //Add ACF site Options page
 if( function_exists('acf_add_options_page') ) {
-    // Main Jem Options Page // Site Settings & Content > Main Site Settings & Content
+    // Main.v Options Page // Site Settings & Content > Main Site Settings & Content
     acf_add_options_page(array(
         'page_title'    => 'Main Site Settings & Content',
         'menu_title'    => 'Site Settings & Content',

@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 // Form style Vars
 $bg     = get_field('form_bg') ?: ' bg-white';
-$th     = get_field('form_theme')  ? ' jem-dark' : ' jem-light';
+$th     = get_field('form_theme')  ? '.v-dark' : '.v-light';
 $f_btn  = get_field('form_btn') ?: 'form-btn-secondary'  ;
 $f_sty  = get_field('form_style') ? ' form-under ' : ' '  ;
 

@@ -11,11 +11,11 @@
 defined( 'ABSPATH' ) || exit;
 
 // get site container width
-$container = get_theme_mod( 'understrap_container_type' ) ?: 'container-jem';
+$container = get_theme_mod( 'understrap_container_type' ) ?: 'container-voy';
 
 $bg     = get_field( 'hero_bar_bg' ) ?:  'bg-white'; 
 $bg_img = get_field( 'hero_bar_img' ) ?: '';
-$th     = get_field( 'hero_bar_theme') ? ' jem-dark' : ' jem-light';
+$th     = get_field( 'hero_bar_theme') ? '.v-dark' : '.v-light';
 $fa     = get_field( 'fa_def','options') ? 'fa-'.get_field('fa_def','options') : 'fa-light';
 $c_al   = get_field( 'card_txt_align') ? ' text-'.get_field( 'card_txt_align') : ' text-start';
 $bar_st = get_field( 'hero_bar_style' ) ?: 'cont';
@@ -43,7 +43,7 @@ if( $bar_st == 'full' ):
         <div class="row">
             <?php // display features
                 while( have_rows('hero_features') ) {
-                    $th  = get_field( 'hero_bar_theme') ? ' jem-dark' : ' jem-light';
+                    $th  = get_field( 'hero_bar_theme') ? '.v-dark' : '.v-light';
                     the_row();
                     $i   = get_sub_field('icon');
                     $t   = get_sub_field('title');

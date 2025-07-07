@@ -13,7 +13,9 @@
         margin-bottom: 0;
         font-size: 1rem;
     }
-
+    .footer-main.border-top {
+        border-width: 20px !important;
+    }
     .navbar-brand {
         display: block;
         max-width: 100%;
@@ -36,7 +38,7 @@
     } 
 
     .social-wrap { display: flex; }
-    .border-top { opacity: 0.1; } // set opacity for divider
+    .copyr .border-top { opacity: 0.1; } // set opacity for divider
     .foot-menu .nav-link { padding-left: 0; }
     
     .site-info .si-links span:not(:first-of-type):before {
@@ -84,9 +86,25 @@
             color: $white;
             color: var(--color-white );
             &:nth-of-type(even) {
-                background-color: $v1-hover;
-                background-color: var(--color-v1-hover);        
+                background-color: $v1-accent;
+                background-color: var(--color-v1-light);        
             }
+        }
+    }
+
+    // Flex column Styles
+    .flex-col {
+        .loc:not(:first-of-type)::before {
+            content:'';
+            display: block;
+            position: relative;
+            height: 1px;
+            width: 100%;
+            background-color: currentColor;
+            opacity: 0.5;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        
         }
     }
 
@@ -95,7 +113,12 @@
     @media( min-width: $d_md ) {
         .loc-grid {
             flex-direction: row;
+            flex-wrap: wrap;
+            .loc-card { 
+                width: 33.33333333%
+            }
         }
+        
 
     }
     ///////////////////////////////////////////////////////////////////////////////////
@@ -114,25 +137,6 @@
                 font-size: 1rem;
             }
         }
-    }
-}
 
-
-// footer light bg
-footer .footer-contact {
-    .site-info,
-    .social {
-            // non hover items
-        p { 
-            color: $v1;
-            color: var(--color-v1);
-        }
-        //hoverable items
-        .si-links,
-        a, a.nav-link {
-            // color: $v1;
-            // color: var(--color-v1);
-            // &:hover, &:focus { color: $v1-hover; color: var(--color-v1-hover); }
-        }
     }
 }

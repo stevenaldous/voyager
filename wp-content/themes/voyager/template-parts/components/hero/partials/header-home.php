@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 $pt = get_post_type();
 
 // theme
-$th     = get_field('hero_theme','options') ? ' jem-dark' : ' jem-light';
+$th     = get_field('hero_theme','options') ? '.v-dark' : '.v-light';
 
 
 // align vars
