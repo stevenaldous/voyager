@@ -1,0 +1,165 @@
+{
+    "key": "group_62f6c8e92e76a",
+    "title": "Settings: Global JavaScript",
+    "fields": [
+        {
+            "key": "field_6594766a74121",
+            "label": "Global Javascript",
+            "name": "gjs_rep",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_65948305b89a8",
+            "button_label": "Add JavaScript",
+            "rows_per_page": 20,
+            "wpml_cf_preferences": 1,
+            "sub_fields": [
+                {
+                    "key": "field_65948305b89a8",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "35",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Marker.io",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6594766a74121"
+                },
+                {
+                    "key": "field_6594767974122",
+                    "label": "Location",
+                    "name": "loc",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "head": "Header",
+                        "foot": "Footer"
+                    },
+                    "default_value": "head",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_6594766a74121",
+                    "create_options": 0,
+                    "save_options": 0
+                },
+                {
+                    "key": "field_65947774d8d92",
+                    "label": "Install Date",
+                    "name": "startdate",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "m\/d\/Y",
+                    "return_format": "m\/d\/Y",
+                    "first_day": 1,
+                    "default_value": "07\/09\/2025",
+                    "parent_repeater": "field_6594766a74121",
+                    "wpml_cf_preferences": 1
+                },
+                {
+                    "key": "field_659476f374124",
+                    "label": "Expire Date (opt)",
+                    "name": "expdate",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "m\/d\/Y",
+                    "return_format": "m\/d\/Y",
+                    "first_day": 1,
+                    "parent_repeater": "field_6594766a74121",
+                    "wpml_cf_preferences": 1
+                },
+                {
+                    "key": "field_659476c074123",
+                    "label": "JavaScript",
+                    "name": "js",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "This will place any code written on this section on the page exactly as written. Be careful as this is one area where improper code will be displayed potentially breaking the page. All code must be wrapped and self closing. \r\n<br><br>\r\n&lt;script type=\"text\/javascript\"&gt;\r\n<br>\r\n   \/\/ some JavaScript\r\n<br>\r\n&lt;\/script&gt;",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_6594766a74121"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 8,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1752099290
+}

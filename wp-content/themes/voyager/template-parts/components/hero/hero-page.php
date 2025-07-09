@@ -117,7 +117,7 @@ if ( is_single() && ( $pt == 'post' ) ) {
     <div class="<?php echo esc_attr( $container ); ?>">
         <div class="row">
             <div class="col-12 d-flex flex-column<?php echo $al . $ju . $al_lg . $ju_lg; ?>">
-                <?php get_template_part( 'template-parts/modules/hero/partials/header' ); ?>
+                <?php get_template_part( 'template-parts/components/hero/partials/header' ); ?>
             </div>
         </div>
     </div>

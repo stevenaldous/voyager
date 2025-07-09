@@ -21,7 +21,7 @@ $pt = get_post_type();
 // default vars
 //////////////////////////
 // theme
-$th = get_field('hero_theme','options') ? '.v-dark' : '.v-light';
+$th = get_field('hero_theme','options') ?: 'v-light';
 // align vars
 $align    = get_field('hero_align','options') ? 'text-' . get_field('hero_align','options') : 'text-center';
 $align_lg = get_field('hero_align','options') ? ' text-lg-' . get_field('hero_align_lg','options') : '';

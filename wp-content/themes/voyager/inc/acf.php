@@ -225,7 +225,9 @@ $bgcol_fields = array(
     'hero_over_bg',
     'foot_bg',
     'err_s_bg',
-    'tb_bg'
+    'tb_bg',
+    'pop_bg',
+    'form_bg'
 );
 // loop through em
 foreach ($bgcol_fields as $f ) {

@@ -30,4 +30,4 @@ if( have_rows( $rep, $opt ) ) {
     }
     echo '</div>';
 
-} wp_reset_postdata();
+} wp_reset_postdata(); 

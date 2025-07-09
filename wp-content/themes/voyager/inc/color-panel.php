@@ -97,41 +97,59 @@ function voyager_color_panel() {
     ///////////////////////////////////////////        
     // Set Font Sizes
     ///////////////////////////////////////////        
-
-    // set array of typography variables
-    $typo = array(
-        'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'body', 'large', 'em', 'sm', 'display', 'subh', 'pret', 'nav'
+    // font size set
+    $fs_set = array(
+        'hx', 'hx-plus', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'body', 'large', 'em', 'sm', 'display', 'hero', 'subh', 'pret', 'nav', 'btn', 'btnsm'
     );
-    // set base font size and weights (mobile first)
-    foreach( $typo as $t ) {
-        $fs = get_field( 'font-'.$t.'-m', 'options' ); 
-        $fw = get_field( 'font-'.$t.'-w', 'options' );
-        if($fs) { echo '--font-size-'.$t.': ' . ( $fs / 16 )  . 'rem;';  }
-        if($fw) { echo '--font-weight-'.$t.': ' . $fw . ';';  }
-    } 
+    // font weight set
+    $fw_set = array(
+        'body', 'large', 'em', 'sm', 'display', 'hero', 'subh', 'pret', 'nav', 'hx', 'hx-plus',
+    );
+   // line height set
+    $lh_set = array(
+        'body', 'hx'
+    );
 
+    ///////////////////////////////////////////        
+    // Set Font Sizes vars
+    ///////////////////////////////////////////        
+    // set base font size and weights (mobile first)  
+    foreach( $fs_set as $t ) {
+        $fs = get_field( 'font-'.$t.'-m', 'options' ); 
+        if($fs) { echo '--font-size-'.$t.': ' . ( $fs / 16 )  . 'rem;';  }
+    }
     // reset font sizes for tablets
     echo '@media screen and (min-width: 798px) {'; 
-        foreach( $typo as $t ) {
+        foreach( $fs_set as $t ) {
             $fs = get_field( 'font-'.$t.'-t', 'options' );
             if($fs) { echo '--font-size-'.$t.': ' . ( $fs / 16 )  . 'rem;';  }
         } 
     echo '}';
-
     // reset font sizes for laptops
     echo '@media screen and (min-width: 1200px) {'; 
-        foreach( $typo as $t ) {
+        foreach( $fs_set as $t ) {
             $fs = get_field( 'font-'.$t.'-d', 'options' );
             if($fs) { echo '--font-size-'.$t.': ' . ( $fs / 16 )  . 'rem;';  }
         } 
     echo '}';
-
-
+    ///////////////////////////////////////////        
+    // Set Font Weight vars
+    ///////////////////////////////////////////        
+    foreach( $fw_set as $f ) {
+        $fw = get_field( 'font-'.$f.'-w', 'options' );
+        if($fw) { echo '--font-weight-'.$f.': ' . $fw . ';';  }
+    } 
+    ///////////////////////////////////////////        
+    // Set Line Height vars
+    ///////////////////////////////////////////        
+    foreach( $lh_set as $l ) {
+        $lh = get_field( 'font-'.$l.'-lh', 'options' );
+        if($lh) { echo '--font-lh-'.$l.': ' . ( $lh / 100 ) . ';';  }
+    } 
     // set font awesome icon for pseudo elements
     if( get_field('fa_def','options') ) {
-        echo ' --voy-fa: var(--fa-font-'.get_field('fa_def','options') .');';
+        echo ' --jem-fa: var(--fa-font-'.get_field('fa_def','options') .');';
     }
-
     ///////////////////////////////////////////        
     // Nav Max Width (desktop)
     ///////////////////////////////////////////        
