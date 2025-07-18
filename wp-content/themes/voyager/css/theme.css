@@ -30873,6 +30873,11 @@ button:focus {
   height: 100%;
 }
 
+.img-wrap img {
+  max-width: 100%;
+  height: auto;
+}
+
 .img-accent-bg {
   position: relative;
   z-index: 1;
