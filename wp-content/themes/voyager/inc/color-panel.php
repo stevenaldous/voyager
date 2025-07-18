@@ -148,7 +148,7 @@ function voyager_color_panel() {
     } 
     // set font awesome icon for pseudo elements
     if( get_field('fa_def','options') ) {
-        echo ' --jem-fa: var(--fa-font-'.get_field('fa_def','options') .');';
+        echo ' --voy-fa: var(--fa-font-'.get_field('fa_def','options') .');';
     }
     ///////////////////////////////////////////        
     // Nav Max Width (desktop)

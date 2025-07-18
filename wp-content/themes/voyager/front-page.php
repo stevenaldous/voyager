@@ -27,7 +27,7 @@ $mt = ( get_field('hero_layout') == 'bar' ) && get_field( 'hero_bar_style' ) ? '
 
         <?php // page content ?>
             <main class="site-main <?php echo $mt; ?>" id="main">                
-                <?php  get_template_part('template-parts/modules/home/home-flex'); // get home flex controller ?>
+                <?php  get_template_part('/template-parts/components/flex/flex', 'voyager'); // get home flex controller ?>
             </main>
         <?php // page content ?>
 

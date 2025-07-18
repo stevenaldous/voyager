@@ -393,6 +393,44 @@
             "ui": 1
         },
         {
+            "key": "field_664545c306f02",
+            "label": "Background",
+            "name": "bg",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg-white": "White",
+                "bg-v1": "Theme Primary",
+                "bg-v1l": "Theme Primary Light",
+                "bg-v1a": "Theme Primary Accent",
+                "bg-v1g": "Theme Primary Gradient",
+                "bg-v2": "Theme Secondary",
+                "bg-v2l": "Theme Secondary Light",
+                "bg-v2a": "Theme Secondary Accent",
+                "bg-black": "Black",
+                "bg-img": "Image",
+                "bg-trans": "Transparent\/None"
+            },
+            "default_value": "bg-v1",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
             "key": "field_6596089566d1e",
             "label": "Background Image Laptop+",
             "name": "bg_img_lg",
@@ -425,44 +463,6 @@
             "mime_types": "",
             "preview_size": "medium",
             "wpml_cf_preferences": 1
-        },
-        {
-            "key": "field_664545c306f02",
-            "label": "Background",
-            "name": "bg",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "bg-white": "White",
-                "bg-v1": "Theme Primary",
-                "bg-v1l": "Theme Primary Light",
-                "bg-v1a": "Theme Primary Accent",
-                "bg-v1g": "Theme Primary Gradient",
-                "bg-v2": "Theme Secondary",
-                "bg-v2l": "Theme Secondary Light",
-                "bg-v2a": "Theme Secondary Accent",
-                "bg-black": "Black",
-                "bg-img": "Image",
-                "bg-trans": "Transparent\/None"
-            },
-            "default_value": "bg-v1",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "wpml_cf_preferences": 1,
-            "create_options": 0,
-            "save_options": 0
         },
         {
             "key": "field_64b83067cd8b4",
@@ -504,7 +504,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "default"
+                "value": "templates\/contact.php"
             }
         ]
     ],
@@ -521,5 +521,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752099234
+    "modified": 1752797811
 }

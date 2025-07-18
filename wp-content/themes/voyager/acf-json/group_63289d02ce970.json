@@ -361,7 +361,6 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
             "choices": {
                 "v-dark": "Dark",
                 "v-light": "Light"
@@ -615,40 +614,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "default"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "default"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            },
-            {
-                "param": "page_type",
-                "operator": "==",
-                "value": "child"
+                "value": "templates\/page-builder.php"
             }
         ]
     ],
@@ -663,5 +629,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752099172
+    "modified": 1752797769
 }
