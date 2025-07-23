@@ -46,11 +46,19 @@ defined( 'ABSPATH' ) || exit;
 			echo $phjs;
 		}
 
+		// background color
+		$bg = get_field('bg_type','options');
+
+		if($bg == 'bg-theme') {
+			$bg = get_field('body_bg','options') ?: 'bg-white';
+		}
+
+
 	?>
 	
 </head>
 
-<body <?php body_class(); ?> <?php voyager_body_attributes(); ?> >
+<body <?php body_class( $bg ); ?> <?php voyager_body_attributes(); ?> >
 
 <?php do_action( 'wp_body_open' ); ?>
 

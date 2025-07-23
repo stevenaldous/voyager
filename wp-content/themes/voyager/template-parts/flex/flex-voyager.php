@@ -21,6 +21,10 @@ if( have_rows($flex) ):
 
             get_template_part('template-parts/flex/rows/voyager-content');
 
+        elseif( get_row_layout() === 'voyager_content_row' ):
+
+            get_template_part('template-parts/flex/rows/voyager-content-row');
+
         elseif( get_row_layout() == 'spotlight' ):
 
             get_template_part('template-parts/flex/rows/spotlight');

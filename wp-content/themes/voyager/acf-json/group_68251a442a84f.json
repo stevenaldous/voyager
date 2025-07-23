@@ -17,15 +17,15 @@
                 "id": ""
             },
             "layouts": {
-                "layout_680aca798f141": {
-                    "key": "layout_680aca798f141",
-                    "name": "voyager_content",
-                    "label": "Content Block",
+                "layout_68814735d6956": {
+                    "key": "layout_68814735d6956",
+                    "name": "voyager_content_row",
+                    "label": "Content Row",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_6825198a16ad7",
-                            "label": "Main Column",
+                            "key": "field_68814735d6957",
+                            "label": "Content",
                             "name": "",
                             "aria-label": "",
                             "type": "tab",
@@ -42,142 +42,21 @@
                             "selected": 0
                         },
                         {
-                            "key": "field_6825198a16ad8",
-                            "label": "Title",
-                            "name": "title",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "Highlight text by wrapping with a &lt;span&gt;&lt;\/span&gt;",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "75",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_6825198a16ad9",
-                            "label": "Title Style",
-                            "name": "title_vh",
-                            "aria-label": "",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "25",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "h1": "H1",
-                                "h1 plus": "H1+",
-                                "h2": "H2",
-                                "h2 plus": "H2+",
-                                "h3": "H3",
-                                "h3 plus": "H3+",
-                                "h4": "H4",
-                                "h4 plus": "H4+",
-                                "h5": "H5",
-                                "h5 plus": "H5+",
-                                "h6": "H6",
-                                "h6 plus": "H6+",
-                                "subt": "Subtitle",
-                                "p": "P"
-                            },
-                            "default_value": "h3",
-                            "return_format": "value",
-                            "multiple": 0,
-                            "allow_null": 0,
-                            "allow_in_bindings": 0,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": "",
-                            "create_options": 0,
-                            "save_options": 0
-                        },
-                        {
-                            "key": "field_6825198a16ada",
-                            "label": "Text",
-                            "name": "text",
-                            "aria-label": "",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "75",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 1,
-                            "rows": 5,
-                            "placeholder": "",
-                            "new_lines": "br"
-                        },
-                        {
-                            "key": "field_6825198a16adb",
-                            "label": "Main Tablet Style",
-                            "name": "main_md_lay",
-                            "aria-label": "",
-                            "type": "button_group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "25",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "col-md-12": "Stacked",
-                                "col-md-5": "Columns"
-                            },
-                            "default_value": "col-md-12",
-                            "return_format": "value",
-                            "allow_null": 0,
-                            "allow_in_bindings": 1,
-                            "layout": "horizontal"
-                        },
-                        {
-                            "key": "field_6825198a16adc",
-                            "label": "SubText",
-                            "name": "subt",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "100",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_6825198a16add",
-                            "label": "Button(s)",
-                            "name": "btn_rep",
+                            "key": "field_68814758d699d",
+                            "label": "Column(s)",
+                            "name": "column_rep",
                             "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_6825198a16ad6",
+                                        "operator": "!=empty"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -186,174 +65,16 @@
                             "layout": "block",
                             "min": 0,
                             "max": 2,
-                            "collapsed": "field_645abdeea3d52",
-                            "button_label": "Add Button",
+                            "collapsed": "",
+                            "button_label": "Add Column",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
-                                    "key": "field_6825198a16ade",
-                                    "label": "Button",
-                                    "name": "link",
+                                    "key": "field_68814735d6962",
+                                    "label": "Content Horizontal Alignment",
+                                    "name": "flex_align_x",
                                     "aria-label": "",
-                                    "type": "link",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "60",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "array",
-                                    "allow_in_bindings": 1,
-                                    "parent_repeater": "field_6825198a16add"
-                                },
-                                {
-                                    "key": "field_6825198a16adf",
-                                    "label": "Button Style",
-                                    "name": "btn_style",
-                                    "aria-label": "",
-                                    "type": "select",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "40",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "btn-primary": "Primary Button",
-                                        "btn-secondary": "Secondary Button",
-                                        "btn-outline": "Outline",
-                                        "no-btn": "Text only button"
-                                    },
-                                    "default_value": "btn-primary",
-                                    "return_format": "value",
-                                    "multiple": 0,
-                                    "allow_null": 0,
-                                    "allow_in_bindings": 1,
-                                    "ui": 0,
-                                    "ajax": 0,
-                                    "placeholder": "",
-                                    "create_options": 0,
-                                    "save_options": 0,
-                                    "parent_repeater": "field_6825198a16add"
-                                }
-                            ]
-                        },
-                        {
-                            "key": "field_6825198a16ae0",
-                            "label": "Flex Column",
-                            "name": "",
-                            "aria-label": "",
-                            "type": "tab",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "placement": "top",
-                            "endpoint": 0,
-                            "selected": 0
-                        },
-                        {
-                            "key": "field_6825198a16ae1",
-                            "label": "Content Option",
-                            "name": "layout",
-                            "aria-label": "",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "image": "Image",
-                                "accordion": "Accordion",
-                                "slider": "Slider",
-                                "cards": "Cards"
-                            },
-                            "default_value": "image",
-                            "return_format": "value",
-                            "multiple": 0,
-                            "allow_null": 0,
-                            "allow_in_bindings": 0,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": "",
-                            "create_options": 0,
-                            "save_options": 0
-                        },
-                        {
-                            "key": "field_6825198a16ae2",
-                            "label": "Flex Horizontal Padding",
-                            "name": "flex_pad_x",
-                            "aria-label": "",
-                            "type": "button_group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_6825198a16ae1",
-                                        "operator": "==",
-                                        "value": "slider"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "left": "<i class=\"dashicons dashicons-align-left\"><\/i>",
-                                "main": "<i class=\"dashicons dashicons-align-center\"><\/i>",
-                                "right": "<i class=\"dashicons dashicons-align-right\"><\/i>"
-                            },
-                            "default_value": "main",
-                            "return_format": "value",
-                            "allow_null": 0,
-                            "allow_in_bindings": 1,
-                            "layout": "horizontal"
-                        },
-                        {
-                            "key": "field_6825198a16ae3",
-                            "label": "Image",
-                            "name": "block_image",
-                            "aria-label": "",
-                            "type": "group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_6825198a16ae1",
-                                        "operator": "==",
-                                        "value": "image"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_6825198a16ae4",
-                                    "label": "Image",
-                                    "name": "image",
-                                    "aria-label": "",
-                                    "type": "image",
+                                    "type": "button_group",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -362,299 +83,50 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "id",
-                                    "library": "all",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": "",
-                                    "allow_in_bindings": 0,
-                                    "preview_size": "medium"
-                                },
-                                {
-                                    "key": "field_6825198b16ae5",
-                                    "label": "Border Radius",
-                                    "name": "rounded",
-                                    "aria-label": "",
-                                    "type": "button_group",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
                                     "choices": {
-                                        "rounded-1": "10px",
-                                        "rounded-2": "15px",
-                                        "rounded-3": "20px"
+                                        "start": "<i class=\"dashicons dashicons-align-left\"><\/i>",
+                                        "center": "<i class=\"dashicons dashicons-align-center\"><\/i>",
+                                        "end": "<i class=\"dashicons dashicons-align-right\"><\/i>"
                                     },
-                                    "default_value": "",
+                                    "default_value": "main",
                                     "return_format": "value",
-                                    "allow_null": 1,
+                                    "allow_null": 0,
                                     "allow_in_bindings": 1,
-                                    "layout": "horizontal"
-                                }
-                            ]
-                        },
-                        {
-                            "key": "field_6825198b16ae6",
-                            "label": "Accordion",
-                            "name": "block_accordion",
-                            "aria-label": "",
-                            "type": "group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_6825198a16ae1",
-                                        "operator": "==",
-                                        "value": "accordion"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "block",
-                            "sub_fields": [
+                                    "layout": "horizontal",
+                                    "parent_repeater": "field_68814758d699d"
+                                },
                                 {
-                                    "key": "field_6825198b16ae7",
-                                    "label": "Theme",
-                                    "name": "theme",
+                                    "key": "field_68815e3952907",
+                                    "label": "Content Vertical Alignment",
+                                    "name": "flex_align_y",
                                     "aria-label": "",
                                     "type": "button_group",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "25",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
                                     "choices": {
-                                        "v-light": "Light",
-                                        "v-dark": "Dark"
+                                        "start": "<i class=\"dashicons dashicons-align-left\"><\/i>",
+                                        "center": "<i class=\"dashicons dashicons-align-center\"><\/i>",
+                                        "end": "<i class=\"dashicons dashicons-align-right\"><\/i>"
                                     },
-                                    "default_value": "v-light",
+                                    "default_value": "main",
                                     "return_format": "value",
                                     "allow_null": 0,
-                                    "allow_in_bindings": 0,
-                                    "layout": "horizontal"
-                                },
-                                {
-                                    "key": "field_6825198b16ae8",
-                                    "label": "Background Color",
-                                    "name": "bg_color",
-                                    "aria-label": "",
-                                    "type": "select",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "bg-white": "White",
-                                        "bg-v1": "Theme Primary",
-                                        "bg-v1l": "Theme Primary Light",
-                                        "bg-v1a": "Theme Primary Accent",
-                                        "bg-v1g": "Theme Primary Gradient",
-                                        "bg-v2": "Theme Secondary",
-                                        "bg-v2l": "Theme Secondary Light",
-                                        "bg-v2a": "Theme Secondary Accent",
-                                        "bg-black": "Black",
-                                        "bg-light-grad": "Light Gradient"
-                                    },
-                                    "default_value": false,
-                                    "return_format": "value",
-                                    "multiple": 0,
-                                    "allow_null": 0,
-                                    "allow_in_bindings": 0,
-                                    "ui": 0,
-                                    "ajax": 0,
-                                    "placeholder": "",
-                                    "create_options": 0,
-                                    "save_options": 0
-                                },
-                                {
-                                    "key": "field_6825198b16ae9",
-                                    "label": "Border Radius",
-                                    "name": "rounded",
-                                    "aria-label": "",
-                                    "type": "button_group",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "rounded-1": "10px",
-                                        "rounded-2": "15px",
-                                        "rounded-3": "20px"
-                                    },
-                                    "default_value": "rounded-3",
-                                    "return_format": "value",
-                                    "allow_null": 1,
                                     "allow_in_bindings": 1,
-                                    "layout": "horizontal"
+                                    "layout": "horizontal",
+                                    "parent_repeater": "field_68814758d699d"
                                 },
                                 {
-                                    "key": "field_6825198b16aea",
-                                    "label": "Border",
-                                    "name": "border",
+                                    "key": "field_688147bfd69a0",
+                                    "label": "Voyager Content Blocks",
+                                    "name": "flex_content",
                                     "aria-label": "",
-                                    "type": "select",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "bo-white": "White",
-                                        "bo-v1": "Theme Primary Dark",
-                                        "bo-v1l": "Theme Primary Light",
-                                        "bo-v1a": "Theme Primary Accent",
-                                        "bo-v2": "Theme Secondary Dark",
-                                        "bo-v2l": "Theme Secondary Light",
-                                        "bo-v2a": "Theme Secondary Accent",
-                                        "bo-acc-light": "Light Theme Accent",
-                                        "bo-acc-dark": "Dark Theme Accent",
-                                        "bo-n50": "Neutral 50",
-                                        "bo-n200": "Neutral 200",
-                                        "bo-black": "Black"
-                                    },
-                                    "default_value": "bo-v1",
-                                    "return_format": "value",
-                                    "multiple": 0,
-                                    "allow_null": 1,
-                                    "allow_in_bindings": 0,
-                                    "ui": 0,
-                                    "ajax": 0,
-                                    "placeholder": "",
-                                    "create_options": 0,
-                                    "save_options": 0
-                                },
-                                {
-                                    "key": "field_6825198b16aeb",
-                                    "label": "Title Semantic Hx",
-                                    "name": "title_sh",
-                                    "aria-label": "",
-                                    "type": "select",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "35",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "h1": "H1",
-                                        "h2": "H2",
-                                        "h3": "H3",
-                                        "h4": "H4",
-                                        "h5": "H5",
-                                        "h6": "H6",
-                                        "p": "P"
-                                    },
-                                    "default_value": "h4",
-                                    "return_format": "value",
-                                    "multiple": 0,
-                                    "allow_null": 0,
-                                    "allow_in_bindings": 0,
-                                    "ui": 0,
-                                    "ajax": 0,
-                                    "placeholder": "",
-                                    "create_options": 0,
-                                    "save_options": 0
-                                },
-                                {
-                                    "key": "field_6825198b16aec",
-                                    "label": "Title Visual Style",
-                                    "name": "title_vh",
-                                    "aria-label": "",
-                                    "type": "select",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "35",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "h1": "H1",
-                                        "h1 plus": "H1+",
-                                        "h2": "H2",
-                                        "h2 plus": "H2+",
-                                        "h3": "H3",
-                                        "h3 plus": "H3+",
-                                        "h4": "H4",
-                                        "h4 plus": "H4+",
-                                        "h5": "H5",
-                                        "h5 plus": "H5+",
-                                        "h6": "H6",
-                                        "h6 plus": "H6+",
-                                        "subt": "Subtitle",
-                                        "p": "P"
-                                    },
-                                    "default_value": "h5",
-                                    "return_format": "value",
-                                    "multiple": 0,
-                                    "allow_null": 0,
-                                    "allow_in_bindings": 0,
-                                    "ui": 0,
-                                    "ajax": 0,
-                                    "placeholder": "",
-                                    "create_options": 0,
-                                    "save_options": 0
-                                },
-                                {
-                                    "key": "field_6825198b16aed",
-                                    "label": "Accordion Toggle",
-                                    "name": "acc_tog",
-                                    "aria-label": "",
-                                    "type": "button_group",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "30",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "acc-plus": "<i class=\"dashicons dashicons-plus-alt2\"><\/i>",
-                                        "acc-chev": "<i class=\"dashicons dashicons-arrow-down-alt2\"><\/i>"
-                                    },
-                                    "default_value": "acc-plus",
-                                    "return_format": "value",
-                                    "allow_null": 0,
-                                    "allow_in_bindings": 0,
-                                    "layout": "horizontal"
-                                },
-                                {
-                                    "key": "field_6825198b16aee",
-                                    "label": "Accordion",
-                                    "name": "group_rep",
-                                    "aria-label": "",
-                                    "type": "repeater",
+                                    "type": "flexible_content",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -663,723 +135,1335 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "layout": "block",
-                                    "pagination": 0,
-                                    "min": 0,
-                                    "max": 0,
-                                    "collapsed": "field_681bfc9e2d657",
-                                    "button_label": "Add Row",
-                                    "rows_per_page": 20,
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_6825198b16aef",
-                                            "label": "Question",
-                                            "name": "title",
-                                            "aria-label": "",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "40",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "maxlength": "",
-                                            "allow_in_bindings": 0,
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "parent_repeater": "field_6825198b16aee"
+                                    "layouts": {
+                                        "layout_688147c38f95f": {
+                                            "key": "layout_688147c38f95f",
+                                            "name": "voy_text",
+                                            "label": "Text Group",
+                                            "display": "block",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_68814735d6958",
+                                                    "label": "Title",
+                                                    "name": "title",
+                                                    "aria-label": "",
+                                                    "type": "text",
+                                                    "instructions": "Highlight text by wrapping with a &lt;span&gt;&lt;\/span&gt;",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "75",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "maxlength": "",
+                                                    "allow_in_bindings": 0,
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": ""
+                                                },
+                                                {
+                                                    "key": "field_68814735d6959",
+                                                    "label": "Title Style",
+                                                    "name": "title_vh",
+                                                    "aria-label": "",
+                                                    "type": "select",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "25",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "choices": {
+                                                        "h1": "H1",
+                                                        "h1 plus": "H1+",
+                                                        "h2": "H2",
+                                                        "h2 plus": "H2+",
+                                                        "h3": "H3",
+                                                        "h3 plus": "H3+",
+                                                        "h4": "H4",
+                                                        "h4 plus": "H4+",
+                                                        "h5": "H5",
+                                                        "h5 plus": "H5+",
+                                                        "h6": "H6",
+                                                        "h6 plus": "H6+",
+                                                        "subt": "Subtitle",
+                                                        "p": "P"
+                                                    },
+                                                    "default_value": "h3",
+                                                    "return_format": "value",
+                                                    "multiple": 0,
+                                                    "allow_null": 0,
+                                                    "allow_in_bindings": 0,
+                                                    "ui": 0,
+                                                    "ajax": 0,
+                                                    "placeholder": "",
+                                                    "create_options": 0,
+                                                    "save_options": 0
+                                                },
+                                                {
+                                                    "key": "field_68814735d695c",
+                                                    "label": "SubTitle",
+                                                    "name": "subt",
+                                                    "aria-label": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "100",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "maxlength": "",
+                                                    "allow_in_bindings": 0,
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": ""
+                                                },
+                                                {
+                                                    "key": "field_68814735d695a",
+                                                    "label": "Text",
+                                                    "name": "text",
+                                                    "aria-label": "",
+                                                    "type": "wysiwyg",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "100",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "allow_in_bindings": 0,
+                                                    "tabs": "all",
+                                                    "toolbar": "basic",
+                                                    "media_upload": 0,
+                                                    "delay": 0
+                                                },
+                                                {
+                                                    "key": "field_68814735d695d",
+                                                    "label": "Button(s)",
+                                                    "name": "btn_rep",
+                                                    "aria-label": "",
+                                                    "type": "repeater",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "min": 0,
+                                                    "max": 2,
+                                                    "collapsed": "",
+                                                    "button_label": "Add Button",
+                                                    "rows_per_page": 20,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_68814735d695e",
+                                                            "label": "Button",
+                                                            "name": "link",
+                                                            "aria-label": "",
+                                                            "type": "link",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "60",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "return_format": "array",
+                                                            "allow_in_bindings": 1,
+                                                            "parent_repeater": "field_68814735d695d"
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d695f",
+                                                            "label": "Button Style",
+                                                            "name": "btn_style",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "40",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "btn-primary": "Primary Button",
+                                                                "btn-secondary": "Secondary Button",
+                                                                "btn-outline": "Outline",
+                                                                "no-btn": "Text only button"
+                                                            },
+                                                            "default_value": "btn-primary",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 1,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0,
+                                                            "parent_repeater": "field_68814735d695d"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "min": "",
+                                            "max": ""
                                         },
-                                        {
-                                            "key": "field_6825198b16af0",
-                                            "label": "Answer",
-                                            "name": "text",
-                                            "aria-label": "",
-                                            "type": "textarea",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "60",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "maxlength": 400,
-                                            "allow_in_bindings": 0,
-                                            "rows": 4,
-                                            "placeholder": "",
-                                            "new_lines": "br",
-                                            "parent_repeater": "field_6825198b16aee"
+                                        "layout_68814810d69a1": {
+                                            "key": "layout_68814810d69a1",
+                                            "name": "voy_image",
+                                            "label": "Image",
+                                            "display": "block",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_68814735d6963",
+                                                    "label": "Image",
+                                                    "name": "block_image",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": [
+                                                        [
+                                                            {
+                                                                "field": "field_68814735d6961",
+                                                                "operator": "==",
+                                                                "value": "image"
+                                                            }
+                                                        ]
+                                                    ],
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_68814735d6964",
+                                                            "label": "Image",
+                                                            "name": "image",
+                                                            "aria-label": "",
+                                                            "type": "image",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "50",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "return_format": "id",
+                                                            "library": "all",
+                                                            "min_width": "",
+                                                            "min_height": "",
+                                                            "min_size": "",
+                                                            "max_width": "",
+                                                            "max_height": "",
+                                                            "max_size": "",
+                                                            "mime_types": "",
+                                                            "allow_in_bindings": 0,
+                                                            "preview_size": "medium"
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d6965",
+                                                            "label": "Border Radius",
+                                                            "name": "rounded",
+                                                            "aria-label": "",
+                                                            "type": "button_group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "rounded-1": "10px",
+                                                                "rounded-2": "15px",
+                                                                "rounded-3": "20px"
+                                                            },
+                                                            "default_value": "",
+                                                            "return_format": "value",
+                                                            "allow_null": 1,
+                                                            "allow_in_bindings": 1,
+                                                            "layout": "horizontal"
+                                                        },
+                                                        {
+                                                            "key": "field_688157a1b1732",
+                                                            "label": "Aspect Ratio (optional)",
+                                                            "name": "ratio",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "1x1": "1x1 (square)",
+                                                                "2x1": "2x1 (landscape)",
+                                                                "3x2": "3x2 (landscape)",
+                                                                "4x3": "4x3 (landscape)",
+                                                                "5x4": "5x4 (landscape)",
+                                                                "16x9": "16x9 (landscape)",
+                                                                "21x9": "21x9 (landscape)",
+                                                                "1x2": "1x2 (portrait)",
+                                                                "3x4": "3x4 (portrait)",
+                                                                "4x5": "4x5 (portrait)"
+                                                            },
+                                                            "default_value": false,
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 1,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "min": "",
+                                            "max": ""
+                                        },
+                                        "layout_688158503289b": {
+                                            "key": "layout_688158503289b",
+                                            "name": "voy_accordion",
+                                            "label": "Accordion",
+                                            "display": "block",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_68814735d6966",
+                                                    "label": "Accordion",
+                                                    "name": "block_accordion",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": [
+                                                        [
+                                                            {
+                                                                "field": "field_68814735d6961",
+                                                                "operator": "==",
+                                                                "value": "image"
+                                                            }
+                                                        ]
+                                                    ],
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_68814735d6967",
+                                                            "label": "Theme",
+                                                            "name": "theme",
+                                                            "aria-label": "",
+                                                            "type": "button_group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "v-light": "Light",
+                                                                "v-dark": "Dark"
+                                                            },
+                                                            "default_value": "v-light",
+                                                            "return_format": "value",
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "layout": "horizontal"
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d6968",
+                                                            "label": "Background Color",
+                                                            "name": "bg_color",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "bg-white": "White",
+                                                                "bg-v1": "Theme Primary",
+                                                                "bg-v1l": "Theme Primary Light",
+                                                                "bg-v1a": "Theme Primary Accent",
+                                                                "bg-v1g": "Theme Primary Gradient",
+                                                                "bg-v2": "Theme Secondary",
+                                                                "bg-v2l": "Theme Secondary Light",
+                                                                "bg-v2a": "Theme Secondary Accent",
+                                                                "bg-black": "Black",
+                                                                "bg-light-grad": "Light Gradient"
+                                                            },
+                                                            "default_value": false,
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d6969",
+                                                            "label": "Border Radius",
+                                                            "name": "rounded",
+                                                            "aria-label": "",
+                                                            "type": "button_group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "rounded-1": "10px",
+                                                                "rounded-2": "15px",
+                                                                "rounded-3": "20px"
+                                                            },
+                                                            "default_value": "rounded-3",
+                                                            "return_format": "value",
+                                                            "allow_null": 1,
+                                                            "allow_in_bindings": 1,
+                                                            "layout": "horizontal"
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d696a",
+                                                            "label": "Border",
+                                                            "name": "border",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "bo-white": "White",
+                                                                "bo-v1": "Theme Primary Dark",
+                                                                "bo-v1l": "Theme Primary Light",
+                                                                "bo-v1a": "Theme Primary Accent",
+                                                                "bo-v2": "Theme Secondary Dark",
+                                                                "bo-v2l": "Theme Secondary Light",
+                                                                "bo-v2a": "Theme Secondary Accent",
+                                                                "bo-acc-light": "Light Theme Accent",
+                                                                "bo-acc-dark": "Dark Theme Accent",
+                                                                "bo-n50": "Neutral 50",
+                                                                "bo-n200": "Neutral 200",
+                                                                "bo-black": "Black"
+                                                            },
+                                                            "default_value": "bo-v1",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 1,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d696b",
+                                                            "label": "Title Semantic Hx",
+                                                            "name": "title_sh",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "35",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "h1": "H1",
+                                                                "h2": "H2",
+                                                                "h3": "H3",
+                                                                "h4": "H4",
+                                                                "h5": "H5",
+                                                                "h6": "H6",
+                                                                "p": "P"
+                                                            },
+                                                            "default_value": "h4",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d696c",
+                                                            "label": "Title Visual Style",
+                                                            "name": "title_vh",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "35",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "h1": "H1",
+                                                                "h1 plus": "H1+",
+                                                                "h2": "H2",
+                                                                "h2 plus": "H2+",
+                                                                "h3": "H3",
+                                                                "h3 plus": "H3+",
+                                                                "h4": "H4",
+                                                                "h4 plus": "H4+",
+                                                                "h5": "H5",
+                                                                "h5 plus": "H5+",
+                                                                "h6": "H6",
+                                                                "h6 plus": "H6+",
+                                                                "subt": "Subtitle",
+                                                                "p": "P"
+                                                            },
+                                                            "default_value": "h5",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d696d",
+                                                            "label": "Accordion Toggle",
+                                                            "name": "acc_tog",
+                                                            "aria-label": "",
+                                                            "type": "button_group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "30",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "acc-plus": "<i class=\"dashicons dashicons-plus-alt2\"><\/i>",
+                                                                "acc-chev": "<i class=\"dashicons dashicons-arrow-down-alt2\"><\/i>"
+                                                            },
+                                                            "default_value": "acc-plus",
+                                                            "return_format": "value",
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "layout": "horizontal"
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d696e",
+                                                            "label": "Accordion",
+                                                            "name": "group_rep",
+                                                            "aria-label": "",
+                                                            "type": "repeater",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "layout": "block",
+                                                            "pagination": 0,
+                                                            "min": 0,
+                                                            "max": 0,
+                                                            "collapsed": "",
+                                                            "button_label": "Add Row",
+                                                            "rows_per_page": 20,
+                                                            "sub_fields": [
+                                                                {
+                                                                    "key": "field_68814735d696f",
+                                                                    "label": "Question",
+                                                                    "name": "title",
+                                                                    "aria-label": "",
+                                                                    "type": "text",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "40",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": "",
+                                                                    "maxlength": "",
+                                                                    "allow_in_bindings": 0,
+                                                                    "placeholder": "",
+                                                                    "prepend": "",
+                                                                    "append": "",
+                                                                    "parent_repeater": "field_68814735d696e"
+                                                                },
+                                                                {
+                                                                    "key": "field_68814735d6970",
+                                                                    "label": "Answer",
+                                                                    "name": "text",
+                                                                    "aria-label": "",
+                                                                    "type": "textarea",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "60",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": "",
+                                                                    "maxlength": 400,
+                                                                    "allow_in_bindings": 0,
+                                                                    "rows": 4,
+                                                                    "placeholder": "",
+                                                                    "new_lines": "br",
+                                                                    "parent_repeater": "field_68814735d696e"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "min": "",
+                                            "max": ""
+                                        },
+                                        "layout_688158673289e": {
+                                            "key": "layout_688158673289e",
+                                            "name": "voy_slider",
+                                            "label": "Slider",
+                                            "display": "block",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_68814735d6971",
+                                                    "label": "Slider",
+                                                    "name": "block_slider",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": [
+                                                        [
+                                                            {
+                                                                "field": "field_68814735d6961",
+                                                                "operator": "==",
+                                                                "value": "image"
+                                                            }
+                                                        ]
+                                                    ],
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_68814735d6972",
+                                                            "label": "Slides",
+                                                            "name": "",
+                                                            "aria-label": "",
+                                                            "type": "tab",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "placement": "top",
+                                                            "endpoint": 0,
+                                                            "selected": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d6973",
+                                                            "label": "Slider",
+                                                            "name": "group_rep",
+                                                            "aria-label": "",
+                                                            "type": "repeater",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "layout": "block",
+                                                            "pagination": 0,
+                                                            "min": 0,
+                                                            "max": 0,
+                                                            "collapsed": "",
+                                                            "button_label": "Add Slide",
+                                                            "rows_per_page": 20,
+                                                            "sub_fields": [
+                                                                {
+                                                                    "key": "field_68814735d6974",
+                                                                    "label": "Title",
+                                                                    "name": "title",
+                                                                    "aria-label": "",
+                                                                    "type": "text",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "50",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": "",
+                                                                    "maxlength": "",
+                                                                    "allow_in_bindings": 0,
+                                                                    "placeholder": "",
+                                                                    "prepend": "",
+                                                                    "append": "",
+                                                                    "parent_repeater": "field_68814735d6973"
+                                                                },
+                                                                {
+                                                                    "key": "field_68814735d6975",
+                                                                    "label": "Icon",
+                                                                    "name": "icon",
+                                                                    "aria-label": "",
+                                                                    "type": "text",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "30",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": "fa-medal",
+                                                                    "maxlength": "",
+                                                                    "allow_in_bindings": 0,
+                                                                    "placeholder": "",
+                                                                    "prepend": "",
+                                                                    "append": "",
+                                                                    "parent_repeater": "field_68814735d6973"
+                                                                },
+                                                                {
+                                                                    "key": "field_68814735d6976",
+                                                                    "label": "Icon BG",
+                                                                    "name": "icon_bg",
+                                                                    "aria-label": "",
+                                                                    "type": "select",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "20",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "choices": {
+                                                                        "bg-v1": "Theme Primary",
+                                                                        "bg-v1l": "Theme Primary Light",
+                                                                        "bg-v1a": "Theme Primary Accent",
+                                                                        "bg-v2": "Theme Secondary",
+                                                                        "bg-v2l": "Theme Secondary Light",
+                                                                        "bg-v2a": "Theme Secondary Accent",
+                                                                        "bg-black": "Black"
+                                                                    },
+                                                                    "default_value": "bg-v1",
+                                                                    "return_format": "value",
+                                                                    "multiple": 0,
+                                                                    "allow_null": 0,
+                                                                    "allow_in_bindings": 0,
+                                                                    "ui": 0,
+                                                                    "ajax": 0,
+                                                                    "placeholder": "",
+                                                                    "create_options": 0,
+                                                                    "save_options": 0,
+                                                                    "parent_repeater": "field_68814735d6973"
+                                                                },
+                                                                {
+                                                                    "key": "field_68814735d6977",
+                                                                    "label": "Text",
+                                                                    "name": "text",
+                                                                    "aria-label": "",
+                                                                    "type": "textarea",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "100",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": "",
+                                                                    "maxlength": 400,
+                                                                    "allow_in_bindings": 0,
+                                                                    "rows": 2,
+                                                                    "placeholder": "",
+                                                                    "new_lines": "br",
+                                                                    "parent_repeater": "field_68814735d6973"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d6978",
+                                                            "label": "Settings",
+                                                            "name": "",
+                                                            "aria-label": "",
+                                                            "type": "tab",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "placement": "top",
+                                                            "endpoint": 0,
+                                                            "selected": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d6979",
+                                                            "label": "Slide Settings",
+                                                            "name": "",
+                                                            "aria-label": "",
+                                                            "type": "message",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "message": "",
+                                                            "new_lines": "wpautop",
+                                                            "esc_html": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d697a",
+                                                            "label": "Slide Theme",
+                                                            "name": "theme",
+                                                            "aria-label": "",
+                                                            "type": "button_group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "v-light": "Light",
+                                                                "v-dark": "Dark"
+                                                            },
+                                                            "default_value": "v-light",
+                                                            "return_format": "value",
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "layout": "horizontal"
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d697b",
+                                                            "label": "Slide BG Color",
+                                                            "name": "bg_color",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "bg-white": "White",
+                                                                "bg-v1": "Theme Primary",
+                                                                "bg-v1l": "Theme Primary Light",
+                                                                "bg-v1a": "Theme Primary Accent",
+                                                                "bg-v1g": "Theme Primary Gradient",
+                                                                "bg-v2": "Theme Secondary",
+                                                                "bg-v2l": "Theme Secondary Light",
+                                                                "bg-v2a": "Theme Secondary Accent",
+                                                                "bg-black": "Black",
+                                                                "bg-light-grad": "Light Gradient"
+                                                            },
+                                                            "default_value": false,
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d697c",
+                                                            "label": "Border Radius",
+                                                            "name": "rounded",
+                                                            "aria-label": "",
+                                                            "type": "button_group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "rounded-1": "10px",
+                                                                "rounded-2": "15px",
+                                                                "rounded-3": "20px"
+                                                            },
+                                                            "default_value": "rounded-3",
+                                                            "return_format": "value",
+                                                            "allow_null": 1,
+                                                            "allow_in_bindings": 1,
+                                                            "layout": "horizontal"
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d697d",
+                                                            "label": "Border",
+                                                            "name": "border",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "bo-white": "White",
+                                                                "bo-v1": "Theme Primary Dark",
+                                                                "bo-v1l": "Theme Primary Light",
+                                                                "bo-v1a": "Theme Primary Accent",
+                                                                "bo-v2": "Theme Secondary Dark",
+                                                                "bo-v2l": "Theme Secondary Light",
+                                                                "bo-v2a": "Theme Secondary Accent",
+                                                                "bo-acc-light": "Light Theme Accent",
+                                                                "bo-acc-dark": "Dark Theme Accent",
+                                                                "bo-n50": "Neutral 50",
+                                                                "bo-n200": "Neutral 200",
+                                                                "bo-black": "Black"
+                                                            },
+                                                            "default_value": "bo-v1",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 1,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d697e",
+                                                            "label": "Slider Settings",
+                                                            "name": "",
+                                                            "aria-label": "",
+                                                            "type": "message",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "message": "",
+                                                            "new_lines": "wpautop",
+                                                            "esc_html": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d697f",
+                                                            "label": "Mobile Slides",
+                                                            "name": "pp_sm",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": 1,
+                                                            "min": 1,
+                                                            "max": 2,
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": 1,
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d6980",
+                                                            "label": "Tablet Slides",
+                                                            "name": "pp_md",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": 2,
+                                                            "min": 1,
+                                                            "max": 6,
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": 1,
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d6981",
+                                                            "label": "Laptop Slides",
+                                                            "name": "pp_lg",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": 1,
+                                                            "min": 1,
+                                                            "max": 8,
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": 1,
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d6982",
+                                                            "label": "Desktop Slides",
+                                                            "name": "pp_xl",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": 2,
+                                                            "min": 1,
+                                                            "max": 11,
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": 1,
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "min": "",
+                                            "max": ""
+                                        },
+                                        "layout_688158bb328a0": {
+                                            "key": "layout_688158bb328a0",
+                                            "name": "voy_cards",
+                                            "label": "Cards",
+                                            "display": "block",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_68814735d6983",
+                                                    "label": "Cards",
+                                                    "name": "block_cards",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": [
+                                                        [
+                                                            {
+                                                                "field": "field_68814735d6961",
+                                                                "operator": "==",
+                                                                "value": "image"
+                                                            }
+                                                        ]
+                                                    ],
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_68814735d6984",
+                                                            "label": "Card Theme",
+                                                            "name": "theme",
+                                                            "aria-label": "",
+                                                            "type": "button_group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "v-light": "Light",
+                                                                "v-dark": "Dark"
+                                                            },
+                                                            "default_value": "v-light",
+                                                            "return_format": "value",
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "layout": "horizontal"
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d6985",
+                                                            "label": "Card BG Color",
+                                                            "name": "bg_color",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "bg-white": "White",
+                                                                "bg-v1": "Theme Primary",
+                                                                "bg-v1l": "Theme Primary Light",
+                                                                "bg-v1a": "Theme Primary Accent",
+                                                                "bg-v1g": "Theme Primary Gradient",
+                                                                "bg-v2": "Theme Secondary",
+                                                                "bg-v2l": "Theme Secondary Light",
+                                                                "bg-v2a": "Theme Secondary Accent",
+                                                                "bg-black": "Black",
+                                                                "bg-light-grad": "Light Gradient"
+                                                            },
+                                                            "default_value": "bg-white",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d6986",
+                                                            "label": "Border Radius",
+                                                            "name": "rounded",
+                                                            "aria-label": "",
+                                                            "type": "button_group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "rounded-1": "10px",
+                                                                "rounded-2": "15px",
+                                                                "rounded-3": "20px"
+                                                            },
+                                                            "default_value": "rounded-3",
+                                                            "return_format": "value",
+                                                            "allow_null": 1,
+                                                            "allow_in_bindings": 1,
+                                                            "layout": "horizontal"
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d6987",
+                                                            "label": "Border",
+                                                            "name": "border",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "bo-white": "White",
+                                                                "bo-v1": "Theme Primary Dark",
+                                                                "bo-v1l": "Theme Primary Light",
+                                                                "bo-v1a": "Theme Primary Accent",
+                                                                "bo-v2": "Theme Secondary Dark",
+                                                                "bo-v2l": "Theme Secondary Light",
+                                                                "bo-v2a": "Theme Secondary Accent",
+                                                                "bo-acc-light": "Light Theme Accent",
+                                                                "bo-acc-dark": "Dark Theme Accent",
+                                                                "bo-n50": "Neutral 50",
+                                                                "bo-n200": "Neutral 200",
+                                                                "bo-black": "Black"
+                                                            },
+                                                            "default_value": false,
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 1,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68814735d6988",
+                                                            "label": "Cards",
+                                                            "name": "group_rep",
+                                                            "aria-label": "",
+                                                            "type": "repeater",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "layout": "block",
+                                                            "pagination": 0,
+                                                            "min": 0,
+                                                            "max": 2,
+                                                            "collapsed": "",
+                                                            "button_label": "Add Slide",
+                                                            "rows_per_page": 20,
+                                                            "sub_fields": [
+                                                                {
+                                                                    "key": "field_68814735d6989",
+                                                                    "label": "Icon",
+                                                                    "name": "icon",
+                                                                    "aria-label": "",
+                                                                    "type": "text",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "30",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": "fa-medal",
+                                                                    "maxlength": "",
+                                                                    "allow_in_bindings": 0,
+                                                                    "placeholder": "",
+                                                                    "prepend": "",
+                                                                    "append": "",
+                                                                    "parent_repeater": "field_68814735d6988"
+                                                                },
+                                                                {
+                                                                    "key": "field_68814735d698a",
+                                                                    "label": "Text",
+                                                                    "name": "text",
+                                                                    "aria-label": "",
+                                                                    "type": "textarea",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "70",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": "",
+                                                                    "maxlength": 400,
+                                                                    "allow_in_bindings": 0,
+                                                                    "rows": 2,
+                                                                    "placeholder": "",
+                                                                    "new_lines": "br",
+                                                                    "parent_repeater": "field_68814735d6988"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "min": "",
+                                            "max": ""
                                         }
-                                    ]
+                                    },
+                                    "min": "",
+                                    "max": "",
+                                    "button_label": "Add Content Block",
+                                    "parent_repeater": "field_68814758d699d"
                                 }
                             ]
                         },
                         {
-                            "key": "field_6825198b16af1",
-                            "label": "Slider",
-                            "name": "block_slider",
-                            "aria-label": "",
-                            "type": "group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_6825198a16ae1",
-                                        "operator": "==",
-                                        "value": "slider"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_6825198b16af2",
-                                    "label": "Slides",
-                                    "name": "",
-                                    "aria-label": "",
-                                    "type": "tab",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "placement": "top",
-                                    "endpoint": 0,
-                                    "selected": 0
-                                },
-                                {
-                                    "key": "field_6825198b16af3",
-                                    "label": "Slider",
-                                    "name": "group_rep",
-                                    "aria-label": "",
-                                    "type": "repeater",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "layout": "block",
-                                    "pagination": 0,
-                                    "min": 0,
-                                    "max": 0,
-                                    "collapsed": "field_681e8faf10776",
-                                    "button_label": "Add Slide",
-                                    "rows_per_page": 20,
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_6825198b16af4",
-                                            "label": "Title",
-                                            "name": "title",
-                                            "aria-label": "",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "50",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "maxlength": "",
-                                            "allow_in_bindings": 0,
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "parent_repeater": "field_6825198b16af3"
-                                        },
-                                        {
-                                            "key": "field_6825198b16af5",
-                                            "label": "Icon",
-                                            "name": "icon",
-                                            "aria-label": "",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "30",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "fa-medal",
-                                            "maxlength": "",
-                                            "allow_in_bindings": 0,
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "parent_repeater": "field_6825198b16af3"
-                                        },
-                                        {
-                                            "key": "field_6825198b16af6",
-                                            "label": "Icon BG",
-                                            "name": "icon_bg",
-                                            "aria-label": "",
-                                            "type": "select",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "20",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "choices": {
-                                                "bg-v1": "Theme Primary",
-                                                "bg-v1l": "Theme Primary Light",
-                                                "bg-v1a": "Theme Primary Accent",
-                                                "bg-v2": "Theme Secondary",
-                                                "bg-v2l": "Theme Secondary Light",
-                                                "bg-v2a": "Theme Secondary Accent",
-                                                "bg-black": "Black"
-                                            },
-                                            "default_value": "bg-v1",
-                                            "return_format": "value",
-                                            "multiple": 0,
-                                            "allow_null": 0,
-                                            "allow_in_bindings": 0,
-                                            "ui": 0,
-                                            "ajax": 0,
-                                            "placeholder": "",
-                                            "create_options": 0,
-                                            "save_options": 0,
-                                            "parent_repeater": "field_6825198b16af3"
-                                        },
-                                        {
-                                            "key": "field_6825198b16af7",
-                                            "label": "Text",
-                                            "name": "text",
-                                            "aria-label": "",
-                                            "type": "textarea",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "100",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "maxlength": 400,
-                                            "allow_in_bindings": 0,
-                                            "rows": 2,
-                                            "placeholder": "",
-                                            "new_lines": "br",
-                                            "parent_repeater": "field_6825198b16af3"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "key": "field_6825198b16af8",
-                                    "label": "Settings",
-                                    "name": "",
-                                    "aria-label": "",
-                                    "type": "tab",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "placement": "top",
-                                    "endpoint": 0,
-                                    "selected": 0
-                                },
-                                {
-                                    "key": "field_6825198b16af9",
-                                    "label": "Slide Settings",
-                                    "name": "",
-                                    "aria-label": "",
-                                    "type": "message",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "message": "",
-                                    "new_lines": "wpautop",
-                                    "esc_html": 0
-                                },
-                                {
-                                    "key": "field_6825198b16afa",
-                                    "label": "Slide Theme",
-                                    "name": "theme",
-                                    "aria-label": "",
-                                    "type": "button_group",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "v-light": "Light",
-                                        "v-dark": "Dark"
-                                    },
-                                    "default_value": "v-light",
-                                    "return_format": "value",
-                                    "allow_null": 0,
-                                    "allow_in_bindings": 0,
-                                    "layout": "horizontal"
-                                },
-                                {
-                                    "key": "field_6825198b16afb",
-                                    "label": "Slide BG Color",
-                                    "name": "bg_color",
-                                    "aria-label": "",
-                                    "type": "select",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "bg-white": "White",
-                                        "bg-v1": "Theme Primary",
-                                        "bg-v1l": "Theme Primary Light",
-                                        "bg-v1a": "Theme Primary Accent",
-                                        "bg-v1g": "Theme Primary Gradient",
-                                        "bg-v2": "Theme Secondary",
-                                        "bg-v2l": "Theme Secondary Light",
-                                        "bg-v2a": "Theme Secondary Accent",
-                                        "bg-black": "Black",
-                                        "bg-light-grad": "Light Gradient"
-                                    },
-                                    "default_value": false,
-                                    "return_format": "value",
-                                    "multiple": 0,
-                                    "allow_null": 0,
-                                    "allow_in_bindings": 0,
-                                    "ui": 0,
-                                    "ajax": 0,
-                                    "placeholder": "",
-                                    "create_options": 0,
-                                    "save_options": 0
-                                },
-                                {
-                                    "key": "field_6825198b16afc",
-                                    "label": "Border Radius",
-                                    "name": "rounded",
-                                    "aria-label": "",
-                                    "type": "button_group",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "rounded-1": "10px",
-                                        "rounded-2": "15px",
-                                        "rounded-3": "20px"
-                                    },
-                                    "default_value": "rounded-3",
-                                    "return_format": "value",
-                                    "allow_null": 1,
-                                    "allow_in_bindings": 1,
-                                    "layout": "horizontal"
-                                },
-                                {
-                                    "key": "field_6825198b16afd",
-                                    "label": "Border",
-                                    "name": "border",
-                                    "aria-label": "",
-                                    "type": "select",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "bo-white": "White",
-                                        "bo-v1": "Theme Primary Dark",
-                                        "bo-v1l": "Theme Primary Light",
-                                        "bo-v1a": "Theme Primary Accent",
-                                        "bo-v2": "Theme Secondary Dark",
-                                        "bo-v2l": "Theme Secondary Light",
-                                        "bo-v2a": "Theme Secondary Accent",
-                                        "bo-acc-light": "Light Theme Accent",
-                                        "bo-acc-dark": "Dark Theme Accent",
-                                        "bo-n50": "Neutral 50",
-                                        "bo-n200": "Neutral 200",
-                                        "bo-black": "Black"
-                                    },
-                                    "default_value": "bo-v1",
-                                    "return_format": "value",
-                                    "multiple": 0,
-                                    "allow_null": 1,
-                                    "allow_in_bindings": 0,
-                                    "ui": 0,
-                                    "ajax": 0,
-                                    "placeholder": "",
-                                    "create_options": 0,
-                                    "save_options": 0
-                                },
-                                {
-                                    "key": "field_6825198b16afe",
-                                    "label": "Slider Settings",
-                                    "name": "",
-                                    "aria-label": "",
-                                    "type": "message",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "message": "",
-                                    "new_lines": "wpautop",
-                                    "esc_html": 0
-                                },
-                                {
-                                    "key": "field_6825198b16aff",
-                                    "label": "Mobile Slides",
-                                    "name": "pp_sm",
-                                    "aria-label": "",
-                                    "type": "number",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": 1,
-                                    "min": 1,
-                                    "max": 2,
-                                    "allow_in_bindings": 0,
-                                    "placeholder": "",
-                                    "step": 1,
-                                    "prepend": "",
-                                    "append": ""
-                                },
-                                {
-                                    "key": "field_6825198b16b00",
-                                    "label": "Tablet Slides",
-                                    "name": "pp_md",
-                                    "aria-label": "",
-                                    "type": "number",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": 2,
-                                    "min": 1,
-                                    "max": 6,
-                                    "allow_in_bindings": 0,
-                                    "placeholder": "",
-                                    "step": 1,
-                                    "prepend": "",
-                                    "append": ""
-                                },
-                                {
-                                    "key": "field_6825198b16b01",
-                                    "label": "Laptop Slides",
-                                    "name": "pp_lg",
-                                    "aria-label": "",
-                                    "type": "number",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": 1,
-                                    "min": 1,
-                                    "max": 8,
-                                    "allow_in_bindings": 0,
-                                    "placeholder": "",
-                                    "step": 1,
-                                    "prepend": "",
-                                    "append": ""
-                                },
-                                {
-                                    "key": "field_6825198b16b02",
-                                    "label": "Desktop Slides",
-                                    "name": "pp_xl",
-                                    "aria-label": "",
-                                    "type": "number",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": 2,
-                                    "min": 1,
-                                    "max": 11,
-                                    "allow_in_bindings": 0,
-                                    "placeholder": "",
-                                    "step": 1,
-                                    "prepend": "",
-                                    "append": ""
-                                }
-                            ]
-                        },
-                        {
-                            "key": "field_6825204ead076",
-                            "label": "Cards",
-                            "name": "block_cards",
-                            "aria-label": "",
-                            "type": "group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_6825198a16ae1",
-                                        "operator": "==",
-                                        "value": "cards"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_6825204ead07f",
-                                    "label": "Card Theme",
-                                    "name": "theme",
-                                    "aria-label": "",
-                                    "type": "button_group",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "v-light": "Light",
-                                        "v-dark": "Dark"
-                                    },
-                                    "default_value": "v-light",
-                                    "return_format": "value",
-                                    "allow_null": 0,
-                                    "allow_in_bindings": 0,
-                                    "layout": "horizontal"
-                                },
-                                {
-                                    "key": "field_6825204ead080",
-                                    "label": "Card BG Color",
-                                    "name": "bg_color",
-                                    "aria-label": "",
-                                    "type": "select",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "bg-white": "White",
-                                        "bg-v1": "Theme Primary",
-                                        "bg-v1l": "Theme Primary Light",
-                                        "bg-v1a": "Theme Primary Accent",
-                                        "bg-v1g": "Theme Primary Gradient",
-                                        "bg-v2": "Theme Secondary",
-                                        "bg-v2l": "Theme Secondary Light",
-                                        "bg-v2a": "Theme Secondary Accent",
-                                        "bg-black": "Black",
-                                        "bg-light-grad": "Light Gradient"
-                                    },
-                                    "default_value": "bg-white",
-                                    "return_format": "value",
-                                    "multiple": 0,
-                                    "allow_null": 0,
-                                    "allow_in_bindings": 0,
-                                    "ui": 0,
-                                    "ajax": 0,
-                                    "placeholder": "",
-                                    "create_options": 0,
-                                    "save_options": 0
-                                },
-                                {
-                                    "key": "field_6825204ead081",
-                                    "label": "Border Radius",
-                                    "name": "rounded",
-                                    "aria-label": "",
-                                    "type": "button_group",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "rounded-1": "10px",
-                                        "rounded-2": "15px",
-                                        "rounded-3": "20px"
-                                    },
-                                    "default_value": "rounded-3",
-                                    "return_format": "value",
-                                    "allow_null": 1,
-                                    "allow_in_bindings": 1,
-                                    "layout": "horizontal"
-                                },
-                                {
-                                    "key": "field_6825204ead082",
-                                    "label": "Border",
-                                    "name": "border",
-                                    "aria-label": "",
-                                    "type": "select",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "25",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "bo-white": "White",
-                                        "bo-v1": "Theme Primary Dark",
-                                        "bo-v1l": "Theme Primary Light",
-                                        "bo-v1a": "Theme Primary Accent",
-                                        "bo-v2": "Theme Secondary Dark",
-                                        "bo-v2l": "Theme Secondary Light",
-                                        "bo-v2a": "Theme Secondary Accent",
-                                        "bo-acc-light": "Light Theme Accent",
-                                        "bo-acc-dark": "Dark Theme Accent",
-                                        "bo-n50": "Neutral 50",
-                                        "bo-n200": "Neutral 200",
-                                        "bo-black": "Black"
-                                    },
-                                    "default_value": false,
-                                    "return_format": "value",
-                                    "multiple": 0,
-                                    "allow_null": 1,
-                                    "allow_in_bindings": 0,
-                                    "ui": 0,
-                                    "ajax": 0,
-                                    "placeholder": "",
-                                    "create_options": 0,
-                                    "save_options": 0
-                                },
-                                {
-                                    "key": "field_6825204ead078",
-                                    "label": "Cards",
-                                    "name": "group_rep",
-                                    "aria-label": "",
-                                    "type": "repeater",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "layout": "block",
-                                    "pagination": 0,
-                                    "min": 0,
-                                    "max": 2,
-                                    "collapsed": "field_681e8faf10776",
-                                    "button_label": "Add Slide",
-                                    "rows_per_page": 20,
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_6825204ead07a",
-                                            "label": "Icon",
-                                            "name": "icon",
-                                            "aria-label": "",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "30",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "fa-medal",
-                                            "maxlength": "",
-                                            "allow_in_bindings": 0,
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "parent_repeater": "field_6825204ead078"
-                                        },
-                                        {
-                                            "key": "field_6825204ead07c",
-                                            "label": "Text",
-                                            "name": "text",
-                                            "aria-label": "",
-                                            "type": "textarea",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "70",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "maxlength": 400,
-                                            "allow_in_bindings": 0,
-                                            "rows": 2,
-                                            "placeholder": "",
-                                            "new_lines": "br",
-                                            "parent_repeater": "field_6825204ead078"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "key": "field_6825198b16b03",
+                            "key": "field_68814735d698b",
                             "label": "Design Options",
                             "name": "",
                             "aria-label": "",
@@ -1397,7 +1481,7 @@
                             "selected": 0
                         },
                         {
-                            "key": "field_6825198b16b04",
+                            "key": "field_68814735d698c",
                             "label": "Theme",
                             "name": "theme",
                             "aria-label": "",
@@ -1421,7 +1505,7 @@
                             "layout": "horizontal"
                         },
                         {
-                            "key": "field_6825198b16b05",
+                            "key": "field_68814735d698d",
                             "label": "Background",
                             "name": "bg",
                             "aria-label": "",
@@ -1459,14 +1543,22 @@
                             "save_options": 0
                         },
                         {
-                            "key": "field_6825198b16b06",
+                            "key": "field_68814735d698e",
                             "label": "Main Column Order",
                             "name": "col_ord",
                             "aria-label": "",
                             "type": "button_group",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_68814758d699d",
+                                        "operator": ">",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "25",
                                 "class": "",
@@ -1483,7 +1575,7 @@
                             "layout": "horizontal"
                         },
                         {
-                            "key": "field_6825198b16b07",
+                            "key": "field_68814735d698f",
                             "label": "Main Column Order Desktop+",
                             "name": "col_ord_xl",
                             "aria-label": "",
@@ -1507,14 +1599,22 @@
                             "layout": "horizontal"
                         },
                         {
-                            "key": "field_6825198b16b08",
-                            "label": "Flex Column Width Tablet+",
+                            "key": "field_68814735d6990",
+                            "label": "Second Column Width Tablet+",
                             "name": "col_md",
                             "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_68814758d699d",
+                                        "operator": ">",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "25",
                                 "class": "",
@@ -1546,14 +1646,22 @@
                             "save_options": 0
                         },
                         {
-                            "key": "field_6825198b16b09",
-                            "label": "Flex Column Width Laptop+",
+                            "key": "field_68814735d6991",
+                            "label": "Second Column Width Laptop+",
                             "name": "col_lg",
                             "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_68814758d699d",
+                                        "operator": ">",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "25",
                                 "class": "",
@@ -1585,14 +1693,22 @@
                             "save_options": 0
                         },
                         {
-                            "key": "field_6825198b16b0a",
-                            "label": "Flex Column Width Dektop+",
+                            "key": "field_68814735d6992",
+                            "label": "Second Column Width Desktop+",
                             "name": "col_xl",
                             "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_68814758d699d",
+                                        "operator": ">",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "25",
                                 "class": "",
@@ -1624,14 +1740,22 @@
                             "save_options": 0
                         },
                         {
-                            "key": "field_6825198b16b0b",
+                            "key": "field_68814735d6993",
                             "label": "Desktop+ Column Gap",
                             "name": "col_gap",
                             "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_68814758d699d",
+                                        "operator": ">",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "25",
                                 "class": "",
@@ -1654,7 +1778,7 @@
                             "save_options": 0
                         },
                         {
-                            "key": "field_6825198b16b0c",
+                            "key": "field_68814735d6994",
                             "label": "Background Image",
                             "name": "bg_img",
                             "aria-label": "",
@@ -1664,9 +1788,8 @@
                             "conditional_logic": [
                                 [
                                     {
-                                        "field": "field_6825198b16b05",
-                                        "operator": "==",
-                                        "value": "bg-img"
+                                        "field": "field_68814735d698d",
+                                        "operator": "=="
                                     }
                                 ]
                             ],
@@ -1688,7 +1811,7 @@
                             "preview_size": "medium"
                         },
                         {
-                            "key": "field_6825198b16b0d",
+                            "key": "field_68814735d6995",
                             "label": "Background Image Laptop+",
                             "name": "bg_img_lg",
                             "aria-label": "",
@@ -1698,9 +1821,8 @@
                             "conditional_logic": [
                                 [
                                     {
-                                        "field": "field_6825198b16b05",
-                                        "operator": "==",
-                                        "value": "bg-img"
+                                        "field": "field_68814735d698d",
+                                        "operator": "=="
                                     }
                                 ]
                             ],
@@ -1722,7 +1844,7 @@
                             "preview_size": "medium"
                         },
                         {
-                            "key": "field_6825198b16b0e",
+                            "key": "field_68814735d6996",
                             "label": "Section Padding",
                             "name": "",
                             "aria-label": "",
@@ -1740,7 +1862,7 @@
                             "esc_html": 0
                         },
                         {
-                            "key": "field_6825198b16b0f",
+                            "key": "field_68814735d6997",
                             "label": "Top Padding All Screens",
                             "name": "t_pad",
                             "aria-label": "",
@@ -1773,7 +1895,7 @@
                             "save_options": 0
                         },
                         {
-                            "key": "field_6825198b16b10",
+                            "key": "field_68814735d6998",
                             "label": "Top Padding Tablet +",
                             "name": "t_pad_t",
                             "aria-label": "",
@@ -1806,7 +1928,7 @@
                             "save_options": 0
                         },
                         {
-                            "key": "field_6825198b16b11",
+                            "key": "field_68814735d6999",
                             "label": "Top Padding Desktop +",
                             "name": "t_pad_d",
                             "aria-label": "",
@@ -1839,7 +1961,7 @@
                             "save_options": 0
                         },
                         {
-                            "key": "field_6825198b16b12",
+                            "key": "field_68814735d699a",
                             "label": "Bottom Padding All Screens",
                             "name": "b_pad",
                             "aria-label": "",
@@ -1872,7 +1994,7 @@
                             "save_options": 0
                         },
                         {
-                            "key": "field_6825198b16b13",
+                            "key": "field_68814735d699b",
                             "label": "Bottom Padding Tablet +",
                             "name": "b_pad_t",
                             "aria-label": "",
@@ -1905,7 +2027,7 @@
                             "save_options": 0
                         },
                         {
-                            "key": "field_6825198b16b14",
+                            "key": "field_68814735d699c",
                             "label": "Bottom Padding Desktop +",
                             "name": "b_pad_d",
                             "aria-label": "",
@@ -3220,10 +3342,10 @@
     "position": "normal",
     "style": "default",
     "label_placement": "top",
-    "instruction_placement": "label",
+    "instruction_placement": "field",
     "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752795172
+    "modified": 1753313654
 }

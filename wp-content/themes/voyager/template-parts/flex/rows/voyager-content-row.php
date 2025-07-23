@@ -7,7 +7,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' ) ?: 'container';
 
 // Load spacing/class options
-include( locate_template( 'template-parts/modules/flex/flex-options.php', false, false ) );
+include( locate_template( 'template-parts/flex/flex-options.php', false, false ) );
 // btn group/select over ride
 $th   = get_sub_field('theme') ?: 'v-light';
 
@@ -22,9 +22,13 @@ $ord    = get_sub_field('col_ord') ?: ' order-2';
 $ord_xl = get_sub_field('col_ord_xl') ? ' '.get_sub_field('col_ord_xl') : '';
 $ord    = $ord .$ord_xl;
 
-$layout  = get_sub_field('layout');  
+// vars
+$rep = 'column_rep';
+$ct  = get_sub_field( $rep ) ? count( get_sub_field( $rep ) )  : 0;
+
+
 ?>
-<div class="flex-voy-content fvc-<?php echo $layout. ' '. $bg . ' ' . $th . $pt . $pb ;?> py-5 position-relative">
+<div class="flex-voy-content <?php echo  $bg . ' ' . $th . $pt . $pb ;?> py-5 position-relative">
     <?php 
         if( $bg == 'bg-img' ) {
             // get vars to pass to template
@@ -35,13 +39,20 @@ $layout  = get_sub_field('layout');
         }
     ?>
     <div class="<?php echo esc_attr( $container ) . $pt . $pb ; ?> ">
-        <div class="row gap-4 <?php echo $gap; ?>">
-            <div class="col-12 col-md order-1">
-                <?php get_template_part('template-parts/modules/flex/rows/partials/voyager-content-text'); ?>
+        <div class="row">
+            <?php // check for content and print
+                while( have_rows($rep) ): the_row(); 
+
+                $alx = get_sub_field('flex_align_x') ? ' align-items-'. get_sub_field('flex_align_x') : ' align-items-start' ;
+                $aly = get_sub_field('flex_align_y') ? ' justify-content-'. get_sub_field('flex_align_y') : ' justify-content-center';
+
+
+                $o = '';
+            ?>
+
+            <div class="col-12 col-md-6 <?php  echo $alx . $aly; ?> d-flex flex-column">
+                <?php get_template_part('template-parts/flex/flex-voyager-content'); ?>
             </div>
-            <div class="col-12 <?php echo $col .' '. $ord; ?> d-flex">
-                <?php get_template_part('template-parts/components/groups/'.$layout); ?>
-            </div>
-        </div>
+            <?php endwhile; wp_reset_postdata(); ?>
     </div>
 </div>
