@@ -3,16 +3,14 @@
 $filepath = '/inc/cpts/';
 // CPT list for register
 $voyager_cpts = array(
-  // 'team',
+  'testimonials',
+  'team',
   'services',
-  // 'locations',
   // 'cases',
-  // 'testimonials',
+
   // 'faqs',
   // 'awards',
   // 'resources',
-  // 'videos',
-  // 'lp',
 );
 
 // array for cpt menu removal

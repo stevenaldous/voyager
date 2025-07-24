@@ -3,125 +3,6 @@
     "title": "Settings: SEO, CPTS & Sitemap",
     "fields": [
         {
-            "key": "field_643999e2ff935",
-            "label": "Team",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0,
-            "selected": 0,
-            "wpml_cf_preferences": 1
-        },
-        {
-            "key": "field_6307dee3df6a1",
-            "label": "Team",
-            "name": "gcpt_team",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 1,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1,
-            "wpml_cf_preferences": 1
-        },
-        {
-            "key": "field_64399a73b9fac",
-            "label": "Slug",
-            "name": "team_slug",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_64399d3faad3e",
-            "label": "Category",
-            "name": "team_tax",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "def": "Default Category",
-                "cpt": "CPT Category"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 1,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "wpml_cf_preferences": 1,
-            "create_options": 0,
-            "save_options": 0
-        },
-        {
-            "key": "field_6439c81467d04",
-            "label": "Category Slug",
-            "name": "team_tax_slug",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_64399d3faad3e",
-                        "operator": "==",
-                        "value": "cpt"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_64399a0b56433",
             "label": "Services",
             "name": "",
@@ -363,8 +244,8 @@
             "append": ""
         },
         {
-            "key": "field_643999f456430",
-            "label": "FAQs",
+            "key": "field_643999e2ff935",
+            "label": "Team - Coming Soon",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -378,8 +259,125 @@
             },
             "placement": "left",
             "endpoint": 0,
-            "selected": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6307dee3df6a1",
+            "label": "Team",
+            "name": "gcpt_team",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
             "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_64399a73b9fac",
+            "label": "Slug",
+            "name": "team_slug",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64399d3faad3e",
+            "label": "Category",
+            "name": "team_tax",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "def": "Default Category",
+                "cpt": "CPT Category"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "wpml_cf_preferences": 1,
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_6439c81467d04",
+            "label": "Category Slug",
+            "name": "team_tax_slug",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64399d3faad3e",
+                        "operator": "==",
+                        "value": "cpt"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_643999f456430",
+            "label": "FAQs - Coming Soon",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6307e201433fd",
@@ -483,7 +481,7 @@
         },
         {
             "key": "field_64baddf9026aa",
-            "label": "Resources",
+            "label": "Resources - Coming Soon",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -497,8 +495,7 @@
             },
             "placement": "left",
             "endpoint": 0,
-            "selected": 0,
-            "wpml_cf_preferences": 1
+            "selected": 0
         },
         {
             "key": "field_64bade0c026ab",
@@ -601,127 +598,8 @@
             "append": ""
         },
         {
-            "key": "field_64922b2038f38",
-            "label": "Videos",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0,
-            "selected": 0,
-            "wpml_cf_preferences": 1
-        },
-        {
-            "key": "field_64922b4f38f39",
-            "label": "Videos",
-            "name": "gcpt_videos",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 1,
-            "message": "",
-            "default_value": 1,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
-        },
-        {
-            "key": "field_64922b5238f3a",
-            "label": "Slug",
-            "name": "vids_slug",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_64922b5838f3b",
-            "label": "Category",
-            "name": "vids_tax",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "def": "Default Category",
-                "cpt": "CPT Category"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 1,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "wpml_cf_preferences": 1,
-            "create_options": 0,
-            "save_options": 0
-        },
-        {
-            "key": "field_64922b5b38f3c",
-            "label": "Category Slug",
-            "name": "vids_tax_slug",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6439c5cd7b818",
-                        "operator": "==",
-                        "value": "cpt"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_643999f35642f",
-            "label": "Awards",
+            "label": "Awards - Coming Soon",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -735,8 +613,7 @@
             },
             "placement": "left",
             "endpoint": 0,
-            "selected": 0,
-            "wpml_cf_preferences": 1
+            "selected": 0
         },
         {
             "key": "field_6307e221433ff",
@@ -886,5 +763,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1751926455
+    "modified": 1753398368
 }

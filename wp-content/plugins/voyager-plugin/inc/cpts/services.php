@@ -25,8 +25,8 @@ function create_services() {
     array(
       // cpt labels 
       'labels'      => array(
-        'name'          => __('Service Areas', 'textdomain'),
-        'singular_name' => __('Service Area', 'textdomain'),
+        'name'          => __('Services', 'textdomain'),
+        'singular_name' => __('Service', 'textdomain'),
       ),
       // cpt settings 
       'public'      => true,
