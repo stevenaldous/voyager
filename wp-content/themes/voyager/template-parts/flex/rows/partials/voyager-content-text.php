@@ -24,8 +24,7 @@ $btns   = array( 'class' => 'flex-column flex-md-r ow justify-content-'.$al.' al
 
 ?>
 
-<div class="row text-<?php echo $al; ?>">
-    <div class="col-12 <?php echo $col; ?>">
+<div class="vc-text">
         <?php
         // print title w/options
             if($t) { echo '<' . $sh . ' class="'.$vh.'">' . $t . '</' . $sh . '>'; }
@@ -33,8 +32,6 @@ $btns   = array( 'class' => 'flex-column flex-md-r ow justify-content-'.$al.' al
             // print Subtitle if present
             if($subt) { echo '<p class="subt mt-4 ">'. $subt . '</p>'; };
         ?>
-    </div>
-    <div class="col-12 col-md">
         <?php
             // check for and print text content.  
             if( $text ) { 
@@ -48,5 +45,4 @@ $btns   = array( 'class' => 'flex-column flex-md-r ow justify-content-'.$al.' al
             // get buttons
             get_template_part('template-parts/components/buttons/button','group', $btns);
         ?>
-    </div>
 </div>

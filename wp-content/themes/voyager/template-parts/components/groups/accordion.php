@@ -12,6 +12,7 @@ $bg     = get_sub_field('bg_color') ?: 'bg-white';
 $th     = get_sub_field('theme') ?: 'v-light';
 $rnd    = get_sub_field('rounded') ?: '';
 $bo     = get_sub_field('border') ? get_sub_field('border') .' border border-3 ': '';
+$p      = $bg == 'bg-trans' ? '' : ' p-4 p-xxl-5';
 $tog    = get_sub_field('acc_tog') ?: 'acc-plus';
 $sh     = get_sub_field('title_sh') ?: 'h3';
 $vh     = get_sub_field('title_vh') ?: 'h5';
@@ -19,7 +20,7 @@ $vh     = get_sub_field('title_vh') ?: 'h5';
 if( have_rows($rep) ):
 
 ?>
-<div class="w-100 accordion-wrap <?php echo $bg.' '.$th.' '.$rnd.' '.$bo; ?>">
+<div class="w-100 accordion-wrap <?php echo $bg.' '.$th.' '.$rnd.' '.$bo . $p; ?>">
     <div class="accordion <?php echo $tog; ?>" id="accordion<?php echo $acc_id; ?>">
     <?php 
             while( have_rows($rep) ):

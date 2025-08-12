@@ -10,12 +10,8 @@ $container = get_theme_mod( 'understrap_container_type' ) ?: 'container';
 include( locate_template( 'template-parts/flex/flex-options.php', false, false ) );
 // btn group/select over ride
 $th   = get_sub_field('theme') ?: 'v-light';
+$col    = 'col-12';
 
-// col widths
-$col_md = get_sub_field('col_md') ? ' col-md-'.get_sub_field('col_md') : '';
-$col_lg = get_sub_field('col_lg') ? ' col-lg-'.get_sub_field('col_lg') : '';
-$col_xl = get_sub_field('col_xl') ? ' col-xl-'.get_sub_field('col_xl') : '';
-$col    = 'col-12' . $col_md . $col_lg . $col_xl;
 // gap and order
 $gap    = get_sub_field('col_gap') ?  ' gap-xl-'.get_sub_field('col_gap') : '';
 $ord    = get_sub_field('col_ord') ?: ' order-2';
@@ -26,6 +22,14 @@ $ord    = $ord .$ord_xl;
 $rep = 'column_rep';
 $ct  = get_sub_field( $rep ) ? count( get_sub_field( $rep ) )  : 0;
 
+//get cols
+if($ct > 1 ) {
+    // col widths
+    $col_md = get_sub_field('col_md') ? ' col-md-'.get_sub_field('col_md') : '';
+    $col_lg = get_sub_field('col_lg') ? ' col-lg-'.get_sub_field('col_lg') : '';
+    $col_xl = get_sub_field('col_xl') ? ' col-xl-'.get_sub_field('col_xl') : '';
+    $col    = 'col-12' . $col_md . $col_lg . $col_xl;
+}
 
 ?>
 <div class="flex-voy-content <?php echo  $bg . ' ' . $th . $pt . $pb ;?> py-5 position-relative">
@@ -50,9 +54,10 @@ $ct  = get_sub_field( $rep ) ? count( get_sub_field( $rep ) )  : 0;
                 $o = '';
             ?>
 
-            <div class="col-12 col-md-6 <?php  echo $alx . $aly; ?> d-flex flex-column">
+            <div class="<?php  echo $col .' '. $alx . $aly; ?> d-flex flex-column">
                 <?php get_template_part('template-parts/flex/flex-voyager-content'); ?>
             </div>
             <?php endwhile; wp_reset_postdata(); ?>
+        </div>
     </div>
 </div>

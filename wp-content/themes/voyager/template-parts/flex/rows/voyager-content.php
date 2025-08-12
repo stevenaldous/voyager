@@ -24,7 +24,7 @@ $ord    = $ord .$ord_xl;
 
 $layout  = get_sub_field('layout');  
 ?>
-<div class="flex-voy-content fvc-<?php echo $layout. ' '. $bg . ' ' . $th . $pt . $pb ;?> py-5 position-relative">
+<div class="TEST flex-voy-content fvc-<?php echo $layout. ' '. $bg . ' ' . $th . $pt . $pb ;?> py-5 position-relative">
     <?php 
         if( $bg == 'bg-img' ) {
             // get vars to pass to template
