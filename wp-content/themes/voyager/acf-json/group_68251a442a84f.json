@@ -1273,7 +1273,7 @@
                 "layout_68814735d6956": {
                     "key": "layout_68814735d6956",
                     "name": "voyager_content_row",
-                    "label": "Content Row",
+                    "label": "Voyager Content Row",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -2003,7 +2003,7 @@
                                                                     "label": "Answer",
                                                                     "name": "text",
                                                                     "aria-label": "",
-                                                                    "type": "textarea",
+                                                                    "type": "wysiwyg",
                                                                     "instructions": "",
                                                                     "required": 0,
                                                                     "conditional_logic": 0,
@@ -2013,11 +2013,11 @@
                                                                         "id": ""
                                                                     },
                                                                     "default_value": "",
-                                                                    "maxlength": 400,
                                                                     "allow_in_bindings": 0,
-                                                                    "rows": 4,
-                                                                    "placeholder": "",
-                                                                    "new_lines": "br",
+                                                                    "tabs": "all",
+                                                                    "toolbar": "basic",
+                                                                    "media_upload": 0,
+                                                                    "delay": 1,
                                                                     "parent_repeater": "field_68814735d696e"
                                                                 }
                                                             ]
@@ -2853,7 +2853,7 @@
                         },
                         {
                             "key": "field_68814735d6990",
-                            "label": "Second Column Width Tablet+",
+                            "label": "Main Column Width Tablet+",
                             "name": "col_md",
                             "aria-label": "",
                             "type": "select",
@@ -2900,7 +2900,7 @@
                         },
                         {
                             "key": "field_68814735d6991",
-                            "label": "Second Column Width Laptop+",
+                            "label": "Main Column Width Laptop+",
                             "name": "col_lg",
                             "aria-label": "",
                             "type": "select",
@@ -2947,7 +2947,7 @@
                         },
                         {
                             "key": "field_68814735d6992",
-                            "label": "Second Column Width Desktop+",
+                            "label": "Main Column Width Desktop+",
                             "name": "col_xl",
                             "aria-label": "",
                             "type": "select",
@@ -3347,5 +3347,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1754952610
+    "modified": 1755020201
 }

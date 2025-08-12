@@ -17,11 +17,7 @@ if( have_rows($flex) ):
      // loop through the rows of data
     while ( have_rows($flex) ) : the_row();
 
-        if(  get_row_layout() == 'voyager_content' ):
-
-            get_template_part('template-parts/flex/rows/voyager-content');
-
-        elseif( get_row_layout() === 'voyager_content_row' ):
+        if( get_row_layout() === 'voyager_content_row' ):
 
             get_template_part('template-parts/flex/rows/voyager-content-row');
 
