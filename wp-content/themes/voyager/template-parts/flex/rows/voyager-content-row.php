@@ -4,13 +4,17 @@
 defined( 'ABSPATH' ) || exit;
 
 // get site container width
-$container = get_theme_mod( 'understrap_container_type' ) ?: 'container';
+$container  = get_theme_mod( 'understrap_container_type' ) ?: 'container';
+
+// check for header
+$head_tf    = get_sub_field('vcr_head_tf');
+$header     = get_sub_field('vcr_header');
 
 // Load spacing/class options
 include( locate_template( 'template-parts/flex/flex-options.php', false, false ) );
 // btn group/select over ride
-$th   = get_sub_field('theme') ?: 'v-light';
-$col    = 'col-12';
+$th         = get_sub_field('theme') ?: 'v-light';
+$col        = 'col-12';
 
 // gap and order
 $gap    = get_sub_field('col_gap') ?  ' gap-xl-'.get_sub_field('col_gap') : '';
@@ -56,7 +60,11 @@ if(have_rows($rep)):
         }
     ?>
     <div class="<?php echo esc_attr( $container ) . $pt . $pb ; ?> ">
+
+        <?php if( $head_tf ) { get_template_part('template-parts/flex/rows/partials/vcr', 'header', array('header'=>$header)); }  ?>
+
         <div class="row">
+
             <?php // check for content and print
                 while( have_rows($rep) ): the_row();
 

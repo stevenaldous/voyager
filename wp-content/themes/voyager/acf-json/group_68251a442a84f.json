@@ -1277,6 +1277,213 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_68d1bc161c678",
+                            "label": "Include Section Header\/Title?",
+                            "name": "vcr_head_tf",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 0,
+                            "ui_on_text": "Show Header",
+                            "ui_off_text": "None",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_68d1bd811c67a",
+                            "label": "Header",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_68d1bc161c678",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_68d1bd681c679",
+                            "label": "Section Title",
+                            "name": "vcr_header",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_68d1c92a3bff5",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Highlight text by wrapping with a &lt;span&gt;&lt;\/span&gt;",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_68d1cfdb3bff6",
+                                    "label": "Title Style",
+                                    "name": "title_vh",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "h1": "H1",
+                                        "h1 plus": "H1+",
+                                        "h2": "H2",
+                                        "h2 plus": "H2+",
+                                        "h3": "H3",
+                                        "h3 plus": "H3+",
+                                        "h4": "H4",
+                                        "h4 plus": "H4+",
+                                        "h5": "H5",
+                                        "h5 plus": "H5+",
+                                        "h6": "H6",
+                                        "h6 plus": "H6+",
+                                        "subt": "Subtitle",
+                                        "p": "P"
+                                    },
+                                    "default_value": "h2",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0
+                                },
+                                {
+                                    "key": "field_68d1d0113bff7",
+                                    "label": "Title Semantic Hx",
+                                    "name": "title_sh",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "h2": "H2",
+                                        "h3": "H3",
+                                        "h4": "H4",
+                                        "h5": "H5",
+                                        "h6": "H6",
+                                        "p": "P",
+                                        "subt": "Subtitle"
+                                    },
+                                    "default_value": "h2",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0
+                                },
+                                {
+                                    "key": "field_68d1d07f3bff9",
+                                    "label": "Title Alignment",
+                                    "name": "title_align",
+                                    "aria-label": "",
+                                    "type": "button_group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "start": "<i class=\"dashicons dashicons-align-left\"><\/i>",
+                                        "center": "<i class=\"dashicons dashicons-align-center\"><\/i>",
+                                        "end": "<i class=\"dashicons dashicons-align-right\"><\/i>"
+                                    },
+                                    "default_value": "main",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 1,
+                                    "layout": "horizontal"
+                                },
+                                {
+                                    "key": "field_68d1d0a33bffa",
+                                    "label": "Title Style",
+                                    "name": "title_style",
+                                    "aria-label": "",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui_on_text": "Accent",
+                                    "ui_off_text": "Default",
+                                    "ui": 1
+                                }
+                            ]
+                        },
+                        {
                             "key": "field_68814735d6957",
                             "label": "Content",
                             "name": "",
@@ -1302,14 +1509,7 @@
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_6825198a16ad6",
-                                        "operator": "!=empty"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -3832,14 +4032,16 @@
             }
         ]
     ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
+    "menu_order": 1,
+    "position": "acf_after_title",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "field",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1758304177
+    "modified": 1758580951
 }

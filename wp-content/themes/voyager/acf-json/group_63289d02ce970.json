@@ -615,6 +615,11 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "templates\/page-builder.php"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
             }
         ]
     ],
@@ -629,5 +634,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752797769
+    "modified": 1758576837
 }
