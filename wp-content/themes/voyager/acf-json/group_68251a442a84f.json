@@ -2706,6 +2706,500 @@
                                             ],
                                             "min": "",
                                             "max": ""
+                                        },
+                                        "layout_68cd9476299c2": {
+                                            "key": "layout_68cd9476299c2",
+                                            "name": "voy_cpt",
+                                            "label": "Custom Post Type",
+                                            "display": "block",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_68cd9476299c3",
+                                                    "label": "Slider",
+                                                    "name": "block_cpt",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": [
+                                                        [
+                                                            {
+                                                                "field": "field_6825198a16ad6",
+                                                                "operator": "!=empty"
+                                                            }
+                                                        ]
+                                                    ],
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_68cd95ca68c37",
+                                                            "label": "Custom Post Type ---------------->",
+                                                            "name": "cpt_cpt",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "50",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "services": "Services",
+                                                                "testimonials": "Testimonials",
+                                                                "team": "Team"
+                                                            },
+                                                            "default_value": "testimonials",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68cd963968c38",
+                                                            "label": "Layout",
+                                                            "name": "cpt_layout",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "50",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "slider": "Slider",
+                                                                "gird": "Card Grid",
+                                                                "list": "List"
+                                                            },
+                                                            "default_value": "slider",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68cd9476299c4",
+                                                            "label": "Testimonials",
+                                                            "name": "cpt_testimonials",
+                                                            "aria-label": "",
+                                                            "type": "relationship",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": [
+                                                                [
+                                                                    {
+                                                                        "field": "field_68cd95ca68c37",
+                                                                        "operator": "==",
+                                                                        "value": "testimonials"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "post_type": [
+                                                                "testimonials"
+                                                            ],
+                                                            "post_status": [
+                                                                "publish"
+                                                            ],
+                                                            "taxonomy": "",
+                                                            "filters": [
+                                                                "search"
+                                                            ],
+                                                            "return_format": "object",
+                                                            "min": "",
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "elements": "",
+                                                            "bidirectional": 0,
+                                                            "bidirectional_target": []
+                                                        },
+                                                        {
+                                                            "key": "field_68cd965a68c39",
+                                                            "label": "Team",
+                                                            "name": "cpt_team",
+                                                            "aria-label": "",
+                                                            "type": "relationship",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": [
+                                                                [
+                                                                    {
+                                                                        "field": "field_68cd95ca68c37",
+                                                                        "operator": "==",
+                                                                        "value": "testimonials"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "post_type": [
+                                                                "team"
+                                                            ],
+                                                            "post_status": [
+                                                                "publish"
+                                                            ],
+                                                            "taxonomy": "",
+                                                            "filters": [
+                                                                "search"
+                                                            ],
+                                                            "return_format": "object",
+                                                            "min": "",
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "elements": "",
+                                                            "bidirectional": 0,
+                                                            "bidirectional_target": []
+                                                        },
+                                                        {
+                                                            "key": "field_68cd966a68c3a",
+                                                            "label": "Team Services",
+                                                            "name": "cpt_services",
+                                                            "aria-label": "",
+                                                            "type": "relationship",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": [
+                                                                [
+                                                                    {
+                                                                        "field": "field_68cd95ca68c37",
+                                                                        "operator": "==",
+                                                                        "value": "testimonials"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "post_type": [
+                                                                "services"
+                                                            ],
+                                                            "post_status": [
+                                                                "publish"
+                                                            ],
+                                                            "taxonomy": "",
+                                                            "filters": [
+                                                                "search"
+                                                            ],
+                                                            "return_format": "object",
+                                                            "min": "",
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "elements": "",
+                                                            "bidirectional": 0,
+                                                            "bidirectional_target": []
+                                                        },
+                                                        {
+                                                            "key": "field_68cd9476299ca",
+                                                            "label": "Settings",
+                                                            "name": "",
+                                                            "aria-label": "",
+                                                            "type": "tab",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "placement": "top",
+                                                            "endpoint": 0,
+                                                            "selected": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68cd9476299cb",
+                                                            "label": "Slide Settings",
+                                                            "name": "",
+                                                            "aria-label": "",
+                                                            "type": "message",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "message": "",
+                                                            "new_lines": "wpautop",
+                                                            "esc_html": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68cd9476299cc",
+                                                            "label": "Slide Theme",
+                                                            "name": "theme",
+                                                            "aria-label": "",
+                                                            "type": "button_group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "v-light": "Light",
+                                                                "v-dark": "Dark"
+                                                            },
+                                                            "default_value": "v-light",
+                                                            "return_format": "value",
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "layout": "horizontal"
+                                                        },
+                                                        {
+                                                            "key": "field_68cd9476299cd",
+                                                            "label": "Slide BG Color",
+                                                            "name": "bg_color",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "bg-white": "White",
+                                                                "bg-v1": "Theme Primary",
+                                                                "bg-v1l": "Theme Primary Light",
+                                                                "bg-v1a": "Theme Primary Accent",
+                                                                "bg-v1g": "Theme Primary Gradient",
+                                                                "bg-v2": "Theme Secondary",
+                                                                "bg-v2l": "Theme Secondary Light",
+                                                                "bg-v2a": "Theme Secondary Accent",
+                                                                "bg-black": "Black",
+                                                                "bg-light-grad": "Light Gradient"
+                                                            },
+                                                            "default_value": false,
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68cd9476299ce",
+                                                            "label": "Border Radius",
+                                                            "name": "rounded",
+                                                            "aria-label": "",
+                                                            "type": "button_group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "rounded-1": "10px",
+                                                                "rounded-2": "15px",
+                                                                "rounded-3": "20px"
+                                                            },
+                                                            "default_value": "rounded-3",
+                                                            "return_format": "value",
+                                                            "allow_null": 1,
+                                                            "allow_in_bindings": 1,
+                                                            "layout": "horizontal"
+                                                        },
+                                                        {
+                                                            "key": "field_68cd9476299cf",
+                                                            "label": "Border",
+                                                            "name": "border",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "bo-white": "White",
+                                                                "bo-v1": "Theme Primary Dark",
+                                                                "bo-v1l": "Theme Primary Light",
+                                                                "bo-v1a": "Theme Primary Accent",
+                                                                "bo-v2": "Theme Secondary Dark",
+                                                                "bo-v2l": "Theme Secondary Light",
+                                                                "bo-v2a": "Theme Secondary Accent",
+                                                                "bo-acc-light": "Light Theme Accent",
+                                                                "bo-acc-dark": "Dark Theme Accent",
+                                                                "bo-n50": "Neutral 50",
+                                                                "bo-n200": "Neutral 200",
+                                                                "bo-black": "Black"
+                                                            },
+                                                            "default_value": "bo-v1",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 1,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68cd9476299d0",
+                                                            "label": "Slider Settings",
+                                                            "name": "",
+                                                            "aria-label": "",
+                                                            "type": "message",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": [
+                                                                [
+                                                                    {
+                                                                        "field": "field_68cd963968c38",
+                                                                        "operator": "==",
+                                                                        "value": "slider"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "message": "",
+                                                            "new_lines": "wpautop",
+                                                            "esc_html": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68cd9476299d1",
+                                                            "label": "Mobile Slides",
+                                                            "name": "pp_sm",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": 1,
+                                                            "min": 1,
+                                                            "max": 2,
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": 1,
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68cd9476299d2",
+                                                            "label": "Tablet Slides",
+                                                            "name": "pp_md",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": 2,
+                                                            "min": 1,
+                                                            "max": 6,
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": 1,
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68cd9476299d3",
+                                                            "label": "Laptop Slides",
+                                                            "name": "pp_lg",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": 1,
+                                                            "min": 1,
+                                                            "max": 8,
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": 1,
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68cd9476299d4",
+                                                            "label": "Desktop Slides",
+                                                            "name": "pp_xl",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": 2,
+                                                            "min": 1,
+                                                            "max": 11,
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": 1,
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "min": "",
+                                            "max": ""
                                         }
                                     },
                                     "min": "",
@@ -3347,5 +3841,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1755020201
+    "modified": 1758304177
 }
