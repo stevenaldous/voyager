@@ -3,7 +3,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // get site container width
-$container = get_theme_mod( 'understrap_container_type' ) ?: 'container-jem';
+$container = get_theme_mod( 'understrap_container_type' ) ?: 'container';
 
 if( have_rows('block_cpt') ): while( have_rows('block_cpt') ): the_row(); 
 

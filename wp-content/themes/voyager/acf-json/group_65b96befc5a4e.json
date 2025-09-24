@@ -728,9 +728,9 @@
             "choices": {
                 "bg-trans": "Transparent (gaps)",
                 "bg-white": "White",
-                "bg-jem1": "Theme Primary",
-                "bg-jem1-grad": "Theme Primary Gradient",
-                "bg-jem2": "Theme Secondary",
+                "bg-voy1": "Theme Primary",
+                "bg-voy1-grad": "Theme Primary Gradient",
+                "bg-voy2": "Theme Secondary",
                 "bg-dark": "Dark",
                 "bg-black": "Black",
                 "bg-img": "Image"
@@ -1084,8 +1084,8 @@
                         "id": ""
                     },
                     "choices": {
-                        "jem-light": "Light BG",
-                        "jem-dark": "Dark BG"
+                        "voy-light": "Light BG",
+                        "voy-dark": "Dark BG"
                     },
                     "default_value": false,
                     "return_format": "value",
@@ -1115,9 +1115,9 @@
                     },
                     "choices": {
                         "bg-white": "White",
-                        "bg-jem1": "Theme Primary",
-                        "bg-jem1-grad": "Theme Primary Gradient",
-                        "bg-jem2": "Theme Secondary",
+                        "bg-voy1": "Theme Primary",
+                        "bg-voy1-grad": "Theme Primary Gradient",
+                        "bg-voy2": "Theme Secondary",
                         "bg-dark": "Dark",
                         "bg-black": "Black"
                     },
@@ -1224,13 +1224,13 @@
             "wpml_cf_preferences": 1,
             "choices": {
                 "bg-white": "White",
-                "bg-jem1": "Theme Primary",
-                "bg-jem1l": "Theme Primary Light",
-                "bg-jem1a": "Theme Primary Accent",
-                "bg-jem1g": "Theme Primary Gradient",
-                "bg-jem2": "Theme Secondary",
-                "bg-jem2l": "Theme Secondary Light",
-                "bg-jem2a": "Theme Secondary Accent",
+                "bg-voy1": "Theme Primary",
+                "bg-voy1l": "Theme Primary Light",
+                "bg-voy1a": "Theme Primary Accent",
+                "bg-voy1g": "Theme Primary Gradient",
+                "bg-voy2": "Theme Secondary",
+                "bg-voy2l": "Theme Secondary Light",
+                "bg-voy2a": "Theme Secondary Accent",
                 "bg-black": "Black"
             },
             "default_value": false,
@@ -1298,12 +1298,12 @@
             "wpml_cf_preferences": 1,
             "choices": {
                 "bo-white": "White",
-                "bo-jem1": "Theme Primary Dark",
-                "bo-jem1l": "Theme Primary Light",
-                "bo-jem1a": "Theme Primary Accent",
-                "bo-jem2": "Theme Secondary Dark",
-                "bo-jem2l": "Theme Secondary Light",
-                "bo-jem2a": "Theme Secondary Accent",
+                "bo-voy1": "Theme Primary Dark",
+                "bo-voy1l": "Theme Primary Light",
+                "bo-voy1a": "Theme Primary Accent",
+                "bo-voy2": "Theme Secondary Dark",
+                "bo-voy2l": "Theme Secondary Light",
+                "bo-voy2a": "Theme Secondary Accent",
                 "bo-acc-light": "Light Theme Accent",
                 "bo-acc-dark": "Dark Theme Accent",
                 "bo-black": "Black"
@@ -1658,7 +1658,7 @@
                 "bg-v2a": "Theme Secondary Accent",
                 "bg-black": "Black"
             },
-            "default_value": "bg-jem1",
+            "default_value": "bg-voy1",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,

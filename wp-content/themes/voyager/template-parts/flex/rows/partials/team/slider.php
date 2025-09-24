@@ -4,7 +4,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // get site container width
-$container = get_theme_mod( 'understrap_container_type' ) ?: 'container-jem';
+$container = get_theme_mod( 'understrap_container_type' ) ?: 'container';
 
 
 get_template_part('template-parts/components/sliders/cpt','acf'); 
