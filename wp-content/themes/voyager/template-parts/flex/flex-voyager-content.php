@@ -36,6 +36,11 @@ if( have_rows('flex_content') ):
             get_template_part('template-parts/flex/rows/partials/cards');
     
     
+        elseif( get_row_layout() == 'voy_cpt' ):
+
+            get_template_part('template-parts/components/groups/cpt');
+    
+    
 
         endif; 
 
