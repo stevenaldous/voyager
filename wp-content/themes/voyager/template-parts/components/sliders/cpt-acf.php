@@ -7,11 +7,23 @@ $posts = get_sub_field( 'cpt_'.$cpt );
 $sl_id = rand( 1, 50000 ); // slider ID
 $fa    = get_field('fa_def','options') ? 'fa-'.get_field('fa_def','options') : 'fa-light';
 
+// check for card color settings
+$args = array(
+    'bg' => get_sub_field('bg_color'),
+    'th' => get_sub_field('theme'), 
+    'bo' => get_sub_field('border'), 
+    'bw' => get_sub_field('border-w'), 
+    'rd' => get_sub_field('rounded'), 
+    'sh' => get_sub_field('shadow'), 
+);
+
+
 // set slider defaults by post type
 $pp_sm = 1;
 $pp_md = 1;
 $pp_lg = 2;
 $pp_xl = 2;
+
 if($cpt == 'team') {
     $pp_sm = 1;
     $pp_md = 3;

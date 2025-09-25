@@ -10,31 +10,28 @@
 defined( 'ABSPATH' ) || exit;
 
     // styling vars from parent field groups (CMS)
-    $mw_lg   = '';
-    $fa  = get_field('fa_def','options') ? 'fa-'.get_field('fa_def','options') : 'fa-light';
-    $i   = '';
-    $bg  = get_field('test_def_bg','options') ?: 'bg-white';
-    $th  = get_field('test_def_theme','options') ? ' voy-dark' : ' voy-light';
-    $al  = get_field('test_def_align','options') ?: 'center';
-    $rnd =  get_field('test_def_round', 'options' ) ? ' rounded' :  '';
-    $bor  = get_field( 'test_def_bor', 'options' ) ? ' border ' . get_field( 'test_def_bor', 'options' ) :  '';
-    $stars = get_field('stars');
-    $vh = 'h5 plus';
+    $mw_lg      = '';
+    $al         = 'center';
+    $fa         = get_field('fa_def','options') ? 'fa-'.get_field('fa_def','options') : 'fa-light';
+    $i          = '';
+    $stars      = get_field('stars');
+    $vh         = 'h5 plus';
 
     // card text truncate value
     $lim = get_field('test_txt_limit','options') ?: 200;
 
-    $lp  = 0; 
+    // Load spacing/class options
+    include( locate_template( 'template-parts/components/cards/card-settings.php', false, false ) );
+    
     // check for vars passed into template part
     if( $args ) {
         $mw_lg = array_key_exists('mw_lg', $args) ? ' mw-lg-'.$args['mw_lg'] : $mw_lg;
-        $lp    = array_key_exists('lp', $args) ? $args['lp'] : $lp;
     }
 
-    // post vars
+
+    // content vars
     $t       = get_the_title();
     $client  = get_field('client');
-
     $content = get_field('content');
 
     // read more link
@@ -49,9 +46,6 @@ defined( 'ABSPATH' ) || exit;
     else {
         $rm = '&#8288;...';
     }
-
-
-    $shad    =  is_front_page() || $lp ? '' : ' shadow';
 
     if( is_page_template('page-templates/cpt-archive.php') ) {
         $content = $content;
@@ -71,7 +65,7 @@ defined( 'ABSPATH' ) || exit;
         $i   = '<img src="'.$img['sizes']['medium'].'" alt="'.$img['alt'].'" />';
     }
 ?>
-<article class="testimonial-card p-4 p-lg-5 h-100 <?php echo $bg . $th . $mw_lg . $rnd . $shad . $bor; ?> ">
+<article class="testimonial-card p-4 p-lg-5 h-100 <?php echo $card_style . $mw_lg; ?> ">
     <div class="tc-inner text-<?php echo $al; ?>">
         <?php 
             // card icon/image
