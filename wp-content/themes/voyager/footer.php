@@ -13,6 +13,7 @@ defined( 'ABSPATH' ) || exit;
 $foot = get_field( 'foot_template','options') ?: 'main';
 $bg   = get_field( 'foot_bg','options') ?: 'bg-v1';
 $th   = get_field('foot_theme') ?: 'v-dark';
+$bo   = get_field( 'foot_bo','options' ) ? ' border-top ' . get_field( 'foot_bo','options' ) : '';
 
 ?>
 	<div id="wrapper-footer">
@@ -22,9 +23,14 @@ $th   = get_field('foot_theme') ?: 'v-dark';
 					get_template_part( 'template-parts/components/footer/footer', 'contact' );
 				}
 				else {
-					echo '<div class="footer-main footer '.$bg.' '.$th.'">';
+	
+					get_template_part( 'template-parts/components/footer/pre-foot/flex-prefoot' );
+	
+					echo '<div class="footer-main footer '.$bg.' '.$th.$bo.'">';
 						get_template_part( 'template-parts/components/footer/footer', $foot );
 					echo '</div>';
+					
+					get_template_part('template-parts/components/footer/partials/copybar');
 				}
 			?>
 		</footer>

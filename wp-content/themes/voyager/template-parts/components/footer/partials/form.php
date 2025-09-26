@@ -16,7 +16,7 @@ $t      = get_field( $acf.'t', $opt );
 $vh     = get_field( $acf.'vh', $opt ) ?: 'h4';
 $al     = get_field( $acf.'align', $opt ) ?: 'center' ;
 //form vars
-$form   = get_field( $acf.'form', $opt );
+$form   = get_field( 'ws_form_fmenu', $opt );
 $f_btn  = get_field( $acf.'btn', $opt) ?: 'form-btn-secondary'  ;
 $f_sty  = get_field( $acf.'style', $opt) ? ' form-under ' : ' '  ;
 
@@ -24,6 +24,6 @@ $f_sty  = get_field( $acf.'style', $opt) ? ' form-under ' : ' '  ;
 <div class="form-wrap <?php echo $f_sty.$f_btn; ?>">
     <?php
         if($t)    { echo '<h2 class="text-'.$al . ' ' .$vh.' mb-4">'.$t.'</h2>'; }
-        if($form) { echo gravity_form( $form, false, true, false, false, true, false, false ); } 
+        if($form) { echo  do_shortcode('[ws_form id="'.$form.'"]'); } 
     ?>
 </div>

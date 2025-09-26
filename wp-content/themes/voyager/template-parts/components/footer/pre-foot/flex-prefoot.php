@@ -20,13 +20,13 @@ defined( 'ABSPATH' ) || exit;
          // loop through the rows of data
         while ( have_rows('flex_prefoot','options') ) : the_row();
     
-            if(  get_row_layout() == 'locs' ):
+            if(  get_row_layout() == 'cta' ):
     
-                get_template_part('template-parts/modules/footer/pre-foot/rows/locs');
+                get_template_part('template-parts/components/footer/pre-foot/rows/cta');
     
-            elseif( get_row_layout() == 'cta' ):
+            elseif( get_row_layout() == 'custom' ):
     
-                get_template_part('template-parts/modules/footer/pre-foot/rows/cta');
+                get_template_part('template-parts/components/footer/pre-foot/rows/custom');
 
             endif; 
 

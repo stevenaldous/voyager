@@ -11,20 +11,32 @@
 defined( 'ABSPATH' ) || exit;
 
 
+$forms = wsf_form_get_all( );
+
 ?>
-<div class="footer-main footer">
+<div class="footer-main footer pt-4">
     <div class="container">
         <div class="row ">
-            <div class="col-12 d-flex flex-column flex-md-row justify-content-between align-items-center pt-3">
-            <?php /*** Social ***/ ?>
-                <div class="social-wrap justify-content-end order-md-1 mb-3 mb-md-0">
-                    <?php get_template_part('template-parts/components/buttons/social'); ?>
+            <?php /*** Form Column ***/ ?>
+                <div class="col-12 col-md-6 col-lg-7 col-end order-md-1 d-flex flex-column align-items-center justify-content-start"> 
+                    <div class="d-md-none text-center">
+                        <?php /*** Logo ***/ ?>
+                        <?php get_template_part( 'template-parts/components/footer/partials/logo' ); ?>
+                    </div>
+                    <?php /*** Form ***/ ?>
+                    <?php get_template_part( 'template-parts/components/footer/partials/form' ); ?>
                 </div>
-                <?php /*** Copyright info ***/ ?>
-                <div class="site-info d-flex flex-column flex-md-row justify-content-start align-items-center">
-                    <?php get_template_part( 'template-parts/components/footer/partials/copy' ); ?>
+                <?php /*** Form Column ***/ ?>
+                <?php /*** Info Column ***/ ?>
+                <div class="col-12 col-md-6 col-lg-5 col-start order-md-0">
+                    <div class="d-none d-md-block">
+                        <?php get_template_part( 'template-parts/components/footer/partials/logo' ); ?>
+                    </div>
+                    <?php /*** Location + Logo ***/ ?>
+                    <div class="f-loc text-center text-md-start mt-4 mt-md-0">
+                        <?php get_template_part( 'template-parts/components/footer/partials/main' ); ?>
+                    </div>   
                 </div>
-            </div>
         </div>
     </div>
 </div>

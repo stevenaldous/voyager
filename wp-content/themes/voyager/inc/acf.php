@@ -145,9 +145,12 @@ add_filter('acf/load_field/name=startdate', function ($field) {
  * Dynamically populates any ACF field with voy_nav_menu with list of navigation menus
  *
 */
-add_filter( 'acf/load_field/name=voy_nav_menu', 'wd_nav_menus_load' );
-function wd_nav_menus_load( $field ) {
+add_filter( 'acf/load_field/name=voy_nav_menu', 'wp_nav_menus_load' );
+function wp_nav_menus_load( $field ) {
+    // reset choices
+    $field['choices'] = array();
 
+    // get menus
      $menus = wp_get_nav_menus();
 
      if ( ! empty( $menus ) ) {
@@ -161,7 +164,32 @@ function wd_nav_menus_load( $field ) {
      return $field;
 
 }
+/**
+ * ACF Populate Select Field with WSForms
+ * @link https://www.advancedcustomfields.com/resources/acf-load_field/
+ * @link https://www.advancedcustomfields.com/resources/dynamically-populate-a-select-fields-choices/
+ *
+ * Dynamically populates any ACF field with voy_nav_menu with list of navigation menus
+ *
+*/
+add_filter( 'acf/load_field/name=ws_form_fmenu', 'wp_ws_forms_load' );
+function wp_ws_forms_load( $field ) {
+    // reset choices
+    $field['choices'] = array();
 
+    // get all WSForms
+    $forms = wsf_form_get_all( );
+
+    if ( ! empty( $forms ) ) {
+        foreach ( $forms as $form ) {
+            // set select choice for each form item
+            $field['choices'][ $form['id'] ] = $form['label'];
+        }
+    }
+
+     return $field;
+
+}
 //////////////////////////////////////////////////////////////////////////
 /// ** ACF BG Solid Img/Color Fill **
 ///////////////////////////////////////////////////////////////////////////
@@ -192,6 +220,7 @@ $bgimg_fields = array(
     'testimonials_h_bg',
     'cases_h_bg',
     'videos_h_bg',
+    'copyr_bg',
 );
 // loop through em
 foreach ($bgimg_fields as $f ) {
@@ -296,10 +325,10 @@ function acf_load_bo_choices( $field ) {
     // Reset choices
     $field['choices'] = array(
         'bo-white'     => 'White',
-        'bo-v1'      => 'Theme Primary Dark',
+        'bo-v1'      => 'Theme Primary',
         'bo-v1l'     => 'Theme Primary Light',
         'bo-v1a'     => 'Theme Primary Accent',
-        'bo-v2'      => 'Theme Secondary Dark',
+        'bo-v2'      => 'Theme Secondary',
         'bo-v2l'     => 'Theme Secondary Light',
         'bo-v2a'     => 'Theme Secondary Accent',
         'bo-acc-light' => 'Light Theme Accent',

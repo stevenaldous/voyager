@@ -227,17 +227,17 @@ $bhw: 22px; // dot size variable
 .bg-v2 {
     .slick-dots li button,
 	.slick-arrow {
-        color: $white;
-        color: var(--color-white);
+        color: $v2-accent;
+        color: var(--color-v2-accent);
         &:hover, &:focus {
             color: $v2-accent;
-            color: var(--color-link-hover-dark);
+            color: var(--color-v2-link-hover);
         }
     }
     .slick-dots.slick-active button {
         color: $v2-accent;
-        color: var(--color-link-hover-dark);
-        border: solid 1px var(--color-link-hover-dark);
+        color: var(--color-v2-link-hover);
+        border: solid 1px var(--color-v2-link-hover);
     }
 }
 

@@ -34057,19 +34057,19 @@ a[class*=card-] {
 
 .bg-v2 .slick-dots li button,
 .bg-v2 .slick-arrow {
-  color: #FFFFFF;
-  color: var(--color-white);
+  color: #f9c81e;
+  color: var(--color-v2-accent);
 }
 .bg-v2 .slick-dots li button:hover, .bg-v2 .slick-dots li button:focus,
 .bg-v2 .slick-arrow:hover,
 .bg-v2 .slick-arrow:focus {
   color: #f9c81e;
-  color: var(--color-link-hover-dark);
+  color: var(--color-v2-link-hover);
 }
 .bg-v2 .slick-dots.slick-active button {
   color: #f9c81e;
-  color: var(--color-link-hover-dark);
-  border: solid 1px var(--color-link-hover-dark);
+  color: var(--color-v2-link-hover);
+  border: solid 1px var(--color-v2-link-hover);
 }
 
 @media screen and (min-width: 992px) {

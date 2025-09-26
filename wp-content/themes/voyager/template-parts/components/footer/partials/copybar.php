@@ -11,11 +11,10 @@
 defined( 'ABSPATH' ) || exit;
 
 // get site container width
-$container = get_theme_mod( 'understrap_container_type' ) ?: 'container-voy';
-
+$container = get_theme_mod( 'understrap_container_type' ) ?: 'container';
 // copy style Vars
 $cop_bg = get_field('copyr_bg','options') ?: ' bg-white';
-$cop_th = get_field('copyr_theme','options')  ? '.v-dark' : '.v-light';
+$cop_th = get_field('copyr_theme','options')  ? ' v-dark' : ' v-light';
 
 ?>
 
@@ -31,11 +30,11 @@ $cop_th = get_field('copyr_theme','options')  ? '.v-dark' : '.v-light';
             <div class="col-12 d-flex flex-column flex-md-row justify-content-between align-items-center pt-3">
             <?php /*** Social ***/ ?>
                 <div class="social-wrap justify-content-end order-md-1 mb-3 mb-md-0">
-                    <?php get_template_part('template-parts/components/social'); ?>
+                    <?php get_template_part('template-parts/components/buttons/social'); ?>
                 </div>
                 <?php /*** Copyright info ***/ ?>
                 <div class="site-info d-flex flex-row justify-content-start align-items-center">
-                    <?php get_template_part( 'template-parts/modules/footer/partials/copy' ); ?>
+                    <?php get_template_part( 'template-parts/components/footer/partials/copybar-copy' ); ?>
                 </div>
                 
             </div>
