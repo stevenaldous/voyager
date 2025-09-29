@@ -25,7 +25,4 @@ defined( 'ABSPATH' ) || exit;
 		} wp_reset_postdata();
 		echo '</ul>';
 	} 
-    else {
-        echo '<h6>Just a little Anti-Social</h6>';
-    }
 ?>
