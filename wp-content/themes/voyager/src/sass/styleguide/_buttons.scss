@@ -59,7 +59,8 @@ a.img-hover {
 // Buttons ////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 .btn,
-input[type="submit"]  {
+input[type="submit"],
+button[type="submit"]  {
 	@include f1_bold();
 	line-height: normal;
 	padding: 1rem 2rem;
@@ -130,9 +131,9 @@ button:focus {outline:0 !important;}
 // default/light BG Buttons ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 .v-light {
-
 	// default/light BG theme primary
 	.form-btn-primary input[type="submit"],
+	.form-btn-primary button[type="submit"],
 	.btn-primary {	
 		color: $white;
 		color: var(--color-white);
@@ -152,6 +153,7 @@ button:focus {outline:0 !important;}
 
 	// default/light BG theme secondary
 	.form-btn-secondary input[type="submit"],
+	.form-btn-secondary button[type="submit"],
 	.btn-secondary {
 		color: $white;
 		color: var(--color-white);
@@ -170,6 +172,8 @@ button:focus {outline:0 !important;}
 	// dark outline for a light bg
 	.form-btn-outline input[type="submit"],
 	&.form-btn-outline input[type="submit"],
+	.form-btn-outline button[type="submit"],
+	&.form-btn-outline button[type="submit"],
 	.btn-outline-dark,
 	.btn-outline {	
 		color: $v2;
@@ -201,6 +205,7 @@ button:focus {outline:0 !important;}
 .v-dark {
 	// invert/dark primary button
 	.form-btn-primary input[type="submit"],
+	.form-btn-primary button[type="submit"],
 	.btn-primary {	
 		color: $white;
 		color: var(--color-white);
@@ -216,23 +221,26 @@ button:focus {outline:0 !important;}
 		}
 	}
 	.form-btn-secondary input[type="submit"],
+	.form-btn-secondary button[type="submit"],
 	.btn-secondary {
 		color: $white;
-		color: var(--color-white);
-		background-color: transparent;
-		border-color: var(--color-white);
+		color: var(--color-body-light);
+		background-color: var(--color-v2);
+		border-color: var(--color-v2);
 		&:hover, &:focus {
 			color: $white;
-			color: var(--color-white);
-			background-color: $v2-accent;
-			background-color: var(--color-v2-accent);
-			border-color: var(--color-v2-accent);
+			color: var(--color-body-light);
+			background-color: $v2-light;
+			background-color: var(--color-v2-light);
+			border-color: var(--color-v2-light);
 		}
 	}
 
 	// outline
 	&.form-btn-outline input[type="submit"],
 	.form-btn-outline input[type="submit"],
+	&.form-btn-outline button[type="submit"],
+	.form-btn-outline button[type="submit"],
 	.btn-outline {	
 		color: $white;
 		color: var(--color-link-dark);

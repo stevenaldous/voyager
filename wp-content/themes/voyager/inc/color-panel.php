@@ -158,6 +158,26 @@ function voyager_color_panel() {
     }
 
     ///////////////////////////////////////////        
+    // Set BTN Vars (font sizes above)
+    ///////////////////////////////////////////        
+    if( get_field('btn-rad','options') ) {
+        echo ' --radius-btn: '.get_field('btn-rad','options').'px;';
+    }
+    if( get_field('font-btn-ls','options') ) {
+        echo ' --font-ls-btn: '. ( get_field('font-btn-ls','options') / 100 ) .'em;';
+    }
+    if( get_field('btn-case','options') ) {
+        echo ' --case-btn: '.get_field('btn-case','options').';';
+    }
+    if( get_field('btn-border','options') != null ) {
+        echo ' --border-btn: '.get_field('btn-border','options').'px solid currentColor;';
+    }
+    else {
+        echo ' --border-btn: none;';
+    }
+
+
+    ///////////////////////////////////////////        
     // Set Font Families
     ///////////////////////////////////////////        
     $font_hx   = get_field('font_hx', 'options');
@@ -166,91 +186,96 @@ function voyager_color_panel() {
 
     // Set Header Font Family
     switch ( $font_hx ) {
-        case 1: // Merriweather
-            echo '--font-hx: "Merriweather", serif;';
+        case 1: // Barlow Condensed
+            echo ' --font-hx: "Barlow Condensed", sans-serif;';
             break;
-        case 2: // Poppins
-            echo '--font-hx: "Poppins", sans-serif;';
+        case 2: // Bitter
+            echo ' --font-hx: "Bitter", serif;';
             break;
-        case 3: // Oswald
-            echo '--font-hx: "Oswald", sans-serif;';
+        case 3: // DM Serif Display
+            echo ' --font-hx: "DM Serif Display", serif;';
             break;
-        case 4: // Barlow Condensed
-            echo '--font-hx: "Barlow Condensed", sans-serif;';
+        case 4: //Exo 2
+            echo ' --font-hx: "Exo 2", sans-serif;';
             break;
-        case 5: // Rubik
-            echo '--font-hx: "Rubik", sans-serif;';
+        case 5: // Lato
+            echo ' --font-hx: "Lato", sans-serif;';
             break;
-        case 6: // Bitter
-            echo '--font-hx: "Bitter", serif;';
+        case 6: // League Gothic
+            echo ' --font-hx: "League Gothic", sans-serif;';
             break;
-        case 7: // League Gothic
-            echo '--font-hx: "League Gothic", sans-serif;';
+        case 7: // Libre Baskerville
+            echo ' --font-hx: "Libre Baskerville", serif;';
             break;
-        case 8: //Exo 2
-            echo '--font-hx: "Exo 2", sans-serif;';
+        case 8: // Figtree
+            echo ' --font-hx: "Figtree", sans-serif;';
             break;
-        case 9: // Libre Baskerville
-            echo '--font-hx: "Libre Baskerville", serif;';
+        case 9: // Fjalla One
+            echo ' --font-hx: "Fjalla One", serif;';
             break;
-        case 10: // Lato
-            echo '--font-hx: "Lato", sans-serif;';
+        case 10: // Merriweather
+            echo ' --font-hx: "Merriweather", serif;';
             break;
-        case 11: // Playfair Display
-            echo '--font-hx: "Playfair Display", serif;';
+        case 11: // Montserrat
+            echo ' --font-hx: "Montserrat", sans-serif;';
             break;
-        case 12: // Source Serif
-            echo '--font-hx: "Source Serif 4", serif;';
+        case 12: // Oswald
+            echo ' --font-hx: "Oswald", sans-serif;';
             break;
-        case 13: // DM Serif Display
-            echo '--font-hx: "DM Serif Display", serif;';
+        case 13: // Playfair Display
+            echo ' --font-hx: "Playfair Display", serif;';
             break;
-        case 14: // Roboto Slab
-            echo '--font-hx: "Roboto Slab", serif;';
+        case 14: // Poppins
+            echo ' --font-hx: "Poppins", sans-serif;';
             break;
-        case 15: // Montserrat
-            echo '--font-hx: "Montserrat", sans-serif;';
+        case 15: // Roboto Slab
+            echo ' --font-hx: "Roboto Slab", serif;';
+            break;
+        case 16: // Rubik
+            echo ' --font-hx: "Rubik", sans-serif;';
+            break;
+        case 17: // Source Serif
+            echo ' --font-hx: "Source Serif 4", serif;';
             break;
         default: // Merriweather
-        echo '--font-hx: "Merriweather", serif;';
+        echo ' --font-hx: "Merriweather", serif;';
     }
 
 
     switch ( $font_body ) {
-        case 1: // Mulish
-            echo '--font-body: "Mulish", sans-serif;';
+        case 1: // Alegreya Sans
+            echo '--font-body: "Alegreya Sans", sans-serif ;';
             break;
-        case 2: // Open Sans
-            echo '--font-body: "Open Sans", sans-serif ;';
+        case 2: // Inter Light
+            echo '--font-body: "Inter", sans-serif ;';
             break;
         case 3: // Montserrat
             echo '--font-body: "Montserrat", sans-serif ;';
             break;
-        case 4: // Raleway
-            echo '--font-body: "Raleway", sans-serif ;';
+        case 4: // Mulish
+            echo '--font-body: "Mulish", sans-serif;';
             break;
-        case 5: // PT Serif
-            echo '--font-body: "PT Serif", serif ;';
+        case 5: // Open Sans
+            echo '--font-body: "Open Sans", sans-serif ;';
             break;
-        case 6: // Alegreya Sans
-            echo '--font-body: "Alegreya Sans", sans-serif ;';
-            break;
-        case 7: // Work Sans
-            echo '--font-body: "Work Sans", sans-serif ;';
-            break;
-        case 8: // Inter Light
-            echo '--font-body: "Inter", sans-serif ;';
-            break;
-        case 9: // Poppins Light
+        case 6: // Poppins Light
             echo '--font-body: "Poppins", sans-serif;';
             break;
-        case 10: // Roboto
+        case 7: // PT Serif
+            echo '--font-body: "PT Serif", serif ;';
+            break;
+        case 8: // Raleway
+            echo '--font-body: "Raleway", sans-serif ;';
+            break;
+        case 9: // Roboto
             echo '--font-body: "Roboto", sans-serif;';
+            break;
+        case 10: // Work Sans
+            echo '--font-body: "Work Sans", sans-serif ;';
             break;
         default: // Mulish
         echo '--font-body: "Mulish", sans-serif;';
     }
-
 
 
 

@@ -30640,7 +30640,8 @@ a.img-hover:hover .overlay, a.img-hover:focus .overlay {
 }
 
 .btn,
-input[type=submit] {
+input[type=submit],
+button[type=submit] {
   font-family: "Mulish", sans-serif;
   font-family: var(--font-body);
   font-weight: 700;
@@ -30664,16 +30665,20 @@ input[type=submit] {
   align-items: center;
 }
 .btn.btn-fw,
-input[type=submit].btn-fw {
+input[type=submit].btn-fw,
+button[type=submit].btn-fw {
   width: 100%;
 }
 .btn.btn-sm, .btn-group-sm > .btn,
-input[type=submit].btn-sm {
+input[type=submit].btn-sm,
+button[type=submit].btn-sm {
   font-size: var(--font-size-btnsm);
 }
 .btn:hover, .btn:focus,
 input[type=submit]:hover,
-input[type=submit]:focus {
+input[type=submit]:focus,
+button[type=submit]:hover,
+button[type=submit]:focus {
   text-decoration: none;
 }
 
@@ -30725,6 +30730,7 @@ button:focus {
 }
 
 .v-light .form-btn-primary input[type=submit],
+.v-light .form-btn-primary button[type=submit],
 .v-light .btn-primary {
   color: #FFFFFF;
   color: var(--color-white);
@@ -30733,6 +30739,8 @@ button:focus {
   border-color: var(--color-v1);
 }
 .v-light .form-btn-primary input[type=submit]:hover, .v-light .form-btn-primary input[type=submit]:focus,
+.v-light .form-btn-primary button[type=submit]:hover,
+.v-light .form-btn-primary button[type=submit]:focus,
 .v-light .btn-primary:hover,
 .v-light .btn-primary:focus {
   color: #FFFFFF;
@@ -30742,6 +30750,7 @@ button:focus {
   border-color: var(--color-v1-accent);
 }
 .v-light .form-btn-secondary input[type=submit],
+.v-light .form-btn-secondary button[type=submit],
 .v-light .btn-secondary {
   color: #FFFFFF;
   color: var(--color-white);
@@ -30750,6 +30759,8 @@ button:focus {
   border-color: var(--color-v2);
 }
 .v-light .form-btn-secondary input[type=submit]:hover, .v-light .form-btn-secondary input[type=submit]:focus,
+.v-light .form-btn-secondary button[type=submit]:hover,
+.v-light .form-btn-secondary button[type=submit]:focus,
 .v-light .btn-secondary:hover,
 .v-light .btn-secondary:focus {
   color: #FFFFFF;
@@ -30759,6 +30770,7 @@ button:focus {
   border-color: var(--color-v2-accent);
 }
 .v-light .form-btn-outline input[type=submit], .v-light.form-btn-outline input[type=submit],
+.v-light .form-btn-outline button[type=submit], .v-light.form-btn-outline button[type=submit],
 .v-light .btn-outline-dark,
 .v-light .btn-outline {
   color: #FFD954;
@@ -30767,6 +30779,8 @@ button:focus {
   border-color: var(--color-link-light);
 }
 .v-light .form-btn-outline input[type=submit]:hover, .v-light .form-btn-outline input[type=submit]:focus, .v-light.form-btn-outline input[type=submit]:hover, .v-light.form-btn-outline input[type=submit]:focus,
+.v-light .form-btn-outline button[type=submit]:hover,
+.v-light .form-btn-outline button[type=submit]:focus, .v-light.form-btn-outline button[type=submit]:hover, .v-light.form-btn-outline button[type=submit]:focus,
 .v-light .btn-outline-dark:hover,
 .v-light .btn-outline-dark:focus,
 .v-light .btn-outline:hover,
@@ -30786,6 +30800,7 @@ button:focus {
 }
 
 .v-dark .form-btn-primary input[type=submit],
+.v-dark .form-btn-primary button[type=submit],
 .v-dark .btn-primary {
   color: #FFFFFF;
   color: var(--color-white);
@@ -30794,6 +30809,8 @@ button:focus {
   border-color: var(--color-v1-accent);
 }
 .v-dark .form-btn-primary input[type=submit]:hover, .v-dark .form-btn-primary input[type=submit]:focus,
+.v-dark .form-btn-primary button[type=submit]:hover,
+.v-dark .form-btn-primary button[type=submit]:focus,
 .v-dark .btn-primary:hover,
 .v-dark .btn-primary:focus {
   color: #FFFFFF;
@@ -30803,23 +30820,27 @@ button:focus {
   border-color: var(--color-v2-accent);
 }
 .v-dark .form-btn-secondary input[type=submit],
+.v-dark .form-btn-secondary button[type=submit],
 .v-dark .btn-secondary {
   color: #FFFFFF;
-  color: var(--color-white);
-  background-color: transparent;
-  border-color: var(--color-white);
+  color: var(--color-body-light);
+  background-color: var(--color-v2);
+  border-color: var(--color-v2);
 }
 .v-dark .form-btn-secondary input[type=submit]:hover, .v-dark .form-btn-secondary input[type=submit]:focus,
+.v-dark .form-btn-secondary button[type=submit]:hover,
+.v-dark .form-btn-secondary button[type=submit]:focus,
 .v-dark .btn-secondary:hover,
 .v-dark .btn-secondary:focus {
   color: #FFFFFF;
-  color: var(--color-white);
+  color: var(--color-body-light);
   background-color: #f9c81e;
-  background-color: var(--color-v2-accent);
-  border-color: var(--color-v2-accent);
+  background-color: var(--color-v2-light);
+  border-color: var(--color-v2-light);
 }
 .v-dark.form-btn-outline input[type=submit],
-.v-dark .form-btn-outline input[type=submit],
+.v-dark .form-btn-outline input[type=submit], .v-dark.form-btn-outline button[type=submit],
+.v-dark .form-btn-outline button[type=submit],
 .v-dark .btn-outline {
   color: #FFFFFF;
   color: var(--color-link-dark);
@@ -30828,7 +30849,9 @@ button:focus {
 }
 .v-dark.form-btn-outline input[type=submit]:hover, .v-dark.form-btn-outline input[type=submit]:focus,
 .v-dark .form-btn-outline input[type=submit]:hover,
-.v-dark .form-btn-outline input[type=submit]:focus,
+.v-dark .form-btn-outline input[type=submit]:focus, .v-dark.form-btn-outline button[type=submit]:hover, .v-dark.form-btn-outline button[type=submit]:focus,
+.v-dark .form-btn-outline button[type=submit]:hover,
+.v-dark .form-btn-outline button[type=submit]:focus,
 .v-dark .btn-outline:hover,
 .v-dark .btn-outline:focus {
   color: #FFFFFF;
@@ -34098,358 +34121,6 @@ a[class*=card-] {
 }
 
 /******** Button styles are set in _styleguide.scss ********/
-.gform_wrapper .gform_fields {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.gform_wrapper .gfield_label {
-  font-size: var(--font-size-body);
-  color: var(--color-body-light);
-  font-weight: var(--font-weight-body);
-}
-.gform_wrapper .hidden_label .gfield_label {
-  position: absolute;
-  left: 10000px;
-  height: 1px;
-  width: 1px;
-  opacity: 0;
-}
-.gform_wrapper .ginput_container_select select,
-.gform_wrapper input[type=text],
-.gform_wrapper input[type=url],
-.gform_wrapper input[type=email],
-.gform_wrapper input[type=tel],
-.gform_wrapper input[type=number],
-.gform_wrapper input[type=password],
-.gform_wrapper input[type=file],
-.gform_wrapper textarea {
-  font-family: var(--font-body);
-  font-weight: var(--font-weight-body);
-  background-color: rgba(var(--color-rgb-body-light), 0.1);
-  border: solid 1px;
-  border-color: rgba(var(--color-rgb-body-light), 0.4);
-  padding: 0.75rem 0.75rem 0.75rem 0.75rem;
-  margin-bottom: 1rem;
-  width: 100%;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  border-radius: 2px;
-}
-@media screen and (min-width: 768px) {
-  .gform_wrapper .ginput_container_select select,
-  .gform_wrapper input[type=text],
-  .gform_wrapper input[type=url],
-  .gform_wrapper input[type=email],
-  .gform_wrapper input[type=tel],
-  .gform_wrapper input[type=number],
-  .gform_wrapper input[type=password],
-  .gform_wrapper input[type=file],
-  .gform_wrapper textarea {
-    width: 100%;
-  }
-}
-.gform_wrapper .ginput_container_select select::-webkit-input-placeholder,
-.gform_wrapper input[type=text]::-webkit-input-placeholder,
-.gform_wrapper input[type=url]::-webkit-input-placeholder,
-.gform_wrapper input[type=email]::-webkit-input-placeholder,
-.gform_wrapper input[type=tel]::-webkit-input-placeholder,
-.gform_wrapper input[type=number]::-webkit-input-placeholder,
-.gform_wrapper input[type=password]::-webkit-input-placeholder,
-.gform_wrapper input[type=file]::-webkit-input-placeholder,
-.gform_wrapper textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: currentColor;
-  opacity: 0.4;
-}
-.gform_wrapper .ginput_container_select select::-moz-placeholder,
-.gform_wrapper input[type=text]::-moz-placeholder,
-.gform_wrapper input[type=url]::-moz-placeholder,
-.gform_wrapper input[type=email]::-moz-placeholder,
-.gform_wrapper input[type=tel]::-moz-placeholder,
-.gform_wrapper input[type=number]::-moz-placeholder,
-.gform_wrapper input[type=password]::-moz-placeholder,
-.gform_wrapper input[type=file]::-moz-placeholder,
-.gform_wrapper textarea::-moz-placeholder { /* Firefox 19+ */
-  color: currentColor;
-  opacity: 0.4;
-}
-.gform_wrapper .ginput_container_select select:-ms-input-placeholder,
-.gform_wrapper input[type=text]:-ms-input-placeholder,
-.gform_wrapper input[type=url]:-ms-input-placeholder,
-.gform_wrapper input[type=email]:-ms-input-placeholder,
-.gform_wrapper input[type=tel]:-ms-input-placeholder,
-.gform_wrapper input[type=number]:-ms-input-placeholder,
-.gform_wrapper input[type=password]:-ms-input-placeholder,
-.gform_wrapper input[type=file]:-ms-input-placeholder,
-.gform_wrapper textarea:-ms-input-placeholder { /* IE 10+ */
-  color: currentColor;
-  opacity: 0.4;
-}
-.gform_wrapper .ginput_container_select select:-moz-placeholder,
-.gform_wrapper input[type=text]:-moz-placeholder,
-.gform_wrapper input[type=url]:-moz-placeholder,
-.gform_wrapper input[type=email]:-moz-placeholder,
-.gform_wrapper input[type=tel]:-moz-placeholder,
-.gform_wrapper input[type=number]:-moz-placeholder,
-.gform_wrapper input[type=password]:-moz-placeholder,
-.gform_wrapper input[type=file]:-moz-placeholder,
-.gform_wrapper textarea:-moz-placeholder { /* Firefox 18- */
-  color: currentColor;
-  opacity: 0.4;
-}
-.gform_wrapper .textarea.small {
-  height: 6rem;
-}
-.gform_wrapper .gfield[class*=fa-] {
-  position: relative;
-}
-.gform_wrapper .gfield[class*=fa-]::before {
-  position: absolute;
-  top: 15px;
-  left: 10px;
-  height: calc(100% - 1rem);
-  color: currentColor;
-  display: flex;
-  align-items: flex-start;
-}
-.gform_wrapper .gfield[class*=fa-] .ginput_container_select select,
-.gform_wrapper .gfield[class*=fa-] input[type=text],
-.gform_wrapper .gfield[class*=fa-] input[type=url],
-.gform_wrapper .gfield[class*=fa-] input[type=email],
-.gform_wrapper .gfield[class*=fa-] input[type=tel],
-.gform_wrapper .gfield[class*=fa-] input[type=number],
-.gform_wrapper .gfield[class*=fa-] input[type=password],
-.gform_wrapper .gfield[class*=fa-] input[type=file],
-.gform_wrapper .gfield[class*=fa-] textarea {
-  padding-left: 2rem;
-}
-.gform_wrapper .gfield[class*=fa-].gfield--input-type-textarea::before {
-  top: 11px;
-}
-.gform_wrapper .gfield_description {
-  font-family: var(--font-body);
-  padding: 0.25rem 1rem;
-  margin-bottom: 0.5rem;
-}
-.gform_wrapper .gfield_description.validation_message {
-  background-color: rgba(var(--color-rgb-error), 0.7);
-  color: var(--color-white);
-  width: fit-content;
-}
-.gform_wrapper .ginput_container_name {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.gform_wrapper .ginput_container_name span {
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .gform_wrapper .ginput_container_name {
-    flex-direction: row;
-  }
-  .gform_wrapper .ginput_container_name span {
-    max-width: 49%;
-  }
-}
-.gform_wrapper .gfield {
-  width: 100%;
-  display: inline-block;
-}
-@media (min-width: 768px) {
-  .gform_wrapper .gfield.gfield--width-half {
-    max-width: 49%;
-  }
-}
-.gform_wrapper .ginput_container_select,
-.gform_wrapper .ginput_container_checkbox {
-  margin-bottom: 1rem;
-}
-.gform_wrapper .ginput_container_select {
-  position: relative;
-}
-.gform_wrapper .ginput_container_select select {
-  width: 100%;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  border-radius: 2px;
-  border: solid 1px var(--color-white);
-  padding: 0.75rem 0.75rem 0.75rem 0.75rem;
-  appearance: none;
-  position: relative;
-  padding-right: 32px;
-  color: var(--color-body-light);
-}
-.gform_wrapper .ginput_container_select option, .gform_wrapper .ginput_container_select optgroup {
-  -webkit-appearance: none;
-  color: var(--color-body-light);
-}
-.gform_wrapper .ginput_container_select::after {
-  font: var(--voy-fa);
-  content: "\f078";
-  color: currentColor;
-  display: inline-block;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  top: 0;
-  right: 0;
-  padding-top: 0.75rem;
-  position: absolute;
-  text-align: center;
-  width: var(--fa-li-width, 2em);
-  line-height: inherit;
-}
-.gform_wrapper .gfield--type-honeypot,
-.gform_wrapper .gfield_visibility_hidden,
-.gform_wrapper .gfield:not(.gfield--type-consent):not(.gfield--type-checkbox) label,
-.gform_wrapper .gfield.gfield--type-consent legend {
-  position: absolute;
-  height: 1px;
-  width: 1px;
-  visibility: hidden;
-  opacity: 0;
-}
-.gform_wrapper .gfield--type-checkbox .gchoice {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-bottom: 0.5rem;
-}
-.gform_wrapper .gfield--type-checkbox .gchoice input {
-  margin: 5px 6px 0 0;
-}
-.gform_wrapper .gfield--type-checkbox .gchoice label {
-  font-size: 0.875rem;
-  font-size: 0.875rem;
-  font-family: var(--font-body);
-}
-.gform_wrapper .gfield--type-checkbox .gchoice input:focus + label,
-.gform_wrapper .gfield--type-checkbox .gchoice input:hover + label {
-  text-decoration: underline;
-}
-.gform_wrapper .gfield.gfield--type-consent {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
-.gform_wrapper .gfield.gfield--type-consent .gfield_consent_description {
-  order: 0;
-}
-.gform_wrapper .gfield.gfield--type-consent .ginput_container_consent {
-  order: 1;
-  display: flex;
-  align-items: flex-start;
-  text-align: left;
-}
-.gform_wrapper .gfield.gfield--type-consent .ginput_container_consent input {
-  margin: 5px 5px 0 0;
-}
-@media (min-width: 768px) {
-  .gform_wrapper .gfield.gfield--type-consent {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-.gform_wrapper .gform_card_icon_container {
-  display: flex;
-}
-.gform_wrapper .gform_card_icon_container .gform_card_icon {
-  text-indent: -9000px;
-  width: 40px;
-  height: 32px;
-  margin-right: 4px;
-  position: relative;
-}
-.gform_wrapper .gform_card_icon_container .gform_card_icon::after {
-  text-indent: 0;
-  display: block;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font: var(--fa-font-brands);
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 2rem;
-  text-align: center;
-  color: #0C39BE;
-  pointer-events: none;
-}
-.gform_wrapper .gform_card_icon_container .gform_card_icon.gform_card_icon_amex::after {
-  content: "\f1f3";
-}
-.gform_wrapper .gform_card_icon_container .gform_card_icon.gform_card_icon_discover::after {
-  content: "\f1f2";
-}
-.gform_wrapper .gform_card_icon_container .gform_card_icon.gform_card_icon_mastercard::after {
-  content: "\f1f1";
-}
-.gform_wrapper .gform_card_icon_container .gform_card_icon.gform_card_icon_visa::after {
-  content: "\f1f0";
-}
-.gform_wrapper .gform_card_icon_container .gform_card_icon.gform_card_icon_jcb::after {
-  content: "\f24b";
-}
-.gform_wrapper .gform_card_icon_container .gform_card_icon.gform_card_icon_maestro::after {
-  content: "\f1f1";
-}
-.gform_wrapper .ginput_cardextras {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.gform_wrapper .ginput_cardextras [class*=ginput_cardinfo] {
-  display: inline-block;
-}
-.gform_wrapper .ginput_cardextras .ginput_cardinfo_left {
-  width: 65%;
-}
-.gform_wrapper .ginput_cardextras .ginput_cardinfo_right {
-  width: 34%;
-}
-.gform_wrapper .ginput_cardextras .ginput_card_expiration_container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.gform_wrapper .ginput_cardextras .ginput_card_expiration_container [class*=ginput_card_expiration] {
-  width: 49%;
-}
-.gform_wrapper .ginput_cardextras .ginput_card_expiration_container [class*=ginput_card_expiration] select {
-  width: 100%;
-}
-.gform_wrapper .ginput_cardextras .ginput_card_security_code {
-  padding-top: 0.55rem;
-}
-.gform_wrapper input[type=submit] {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-}
-.gform_wrapper .ginput_complex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.gform_wrapper .gform-grid-col {
-  display: inline-block;
-}
-.gform_wrapper .ginput_full,
-.gform_wrapper .ginput_left,
-.gform_wrapper .ginput_right {
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .gform_wrapper .ginput_left, .gform_wrapper .ginput_right {
-    width: 49%;
-  }
-}
-
 header.form-header .title {
   font-size: 1.875rem;
   font-weight: 700;
@@ -34459,21 +34130,6 @@ header.form-header .subt {
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 1px;
-}
-
-.form-under form .ginput_container_select select,
-.form-under form input[type=text],
-.form-under form input[type=url],
-.form-under form input[type=email],
-.form-under form input[type=tel],
-.form-under form input[type=number],
-.form-under form input[type=password],
-.form-under form input[type=file],
-.form-under form textarea {
-  background-color: transparent !important;
-  border: none;
-  border-bottom: solid 1px;
-  border-radius: 0;
 }
 
 .form-wrap.bg-white .form-header .title,
@@ -34690,6 +34346,21 @@ header.form-header .subt {
 .search-bar.bg-dark .search-submit:hover, .search-bar.bg-dark .search-submit:focus {
   color: #f9c81e;
   color: var(--color-v2-accent);
+}
+
+.form-under form .ginput_container_select select,
+.form-under form input[type=text],
+.form-under form input[type=url],
+.form-under form input[type=email],
+.form-under form input[type=tel],
+.form-under form input[type=number],
+.form-under form input[type=password],
+.form-under form input[type=file],
+.form-under form textarea {
+  background-color: transparent !important;
+  border: none;
+  border-bottom: solid 1px;
+  border-radius: 0;
 }
 
 /* Global button reset */
