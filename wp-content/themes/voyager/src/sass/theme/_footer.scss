@@ -125,7 +125,8 @@
     // laptop +
     @media( min-width: $d_lg ) {
         .navbar-brand {
-            height: 150px;
+            height: 250px;
+            max-height: 250px;
             margin: 0 auto 1rem 0;
         }
         // form styles
@@ -138,5 +139,14 @@
             }
         }
 
+    }
+
+    // desktop +
+    @media( min-width: $d_xxl ) {
+        .navbar-brand {
+            height: 350px;
+            max-height: 350px;
+            margin: 0 auto 1rem 0;
+        }
     }
 }

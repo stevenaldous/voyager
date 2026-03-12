@@ -348,7 +348,16 @@ function acf_load_bo_choices( $field ) {
 
 add_filter('acf/load_field/name=bo_style', 'acf_load_bo_choices');
 
+// set array for targeted  fields
+$bo_fields = array(
+    'bo_style',
+    'foot_bo'
 
+);
+// loop through em
+foreach ($bo_fields as $f ) {
+    add_filter('acf/load_field/name='.$f, 'acf_load_bo_choices');
+}
 
 
 //////////////////////////////////////////////////////////////////////////

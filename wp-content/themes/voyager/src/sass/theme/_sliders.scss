@@ -212,11 +212,11 @@ $bhw: 22px; // dot size variable
 .v-dark {
     .slick-dots li button,
 	.slick-arrow {
-        color: $white;
-        color: var(--color-white);
+            color: $v1-accent;
+            color: var(--color-v1-accent);
         &:hover, &:focus {
-            color: $v2-accent;
-            color: var(--color-v2-accent);
+            color: $v1-accent;
+            color: var(--color-v1-accent);
         }
     }
     .slick-dots.slick-active button {
