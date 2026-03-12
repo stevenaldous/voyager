@@ -172,6 +172,7 @@
 	// Render any interface elements that rely on the form object
 	$.WS_Form.prototype.form_render = function() {
 
+		// Captchas
 		this.recaptchas = [];
 		this.recaptchas_v2_default = [];
 		this.recaptchas_v2_invisible = [];
@@ -180,8 +181,14 @@
 		this.hcaptchas = [];
 		this.hcaptchas_default = [];
 		this.hcaptchas_invisible = [];
+		this.hcpatchas_conditions = [];
 		this.turnstiles = [];
 		this.turnstiles_default = [];
+		this.turnstiles_conditions = [];
+		this.captchafoxes = [];
+		this.captchafoxes_default = [];
+		this.captchafoxes_invisible = [];
+		this.captchafoxes_conditions = [];
 
 		// Set style ID if not set (Used by site builders that don't have form object available when rendering)
 		if(this.form.meta.style_id && typeof(this.form_obj.attr('data-wsf-style-id')) === 'undefined') {
@@ -240,6 +247,9 @@
 
 		// Turnstile
 		if(typeof(this.form_turnstile) === 'function') { this.form_turnstile(); }
+
+		// CaptchaFox
+		if(typeof(this.form_captchafox) === 'function') { this.form_captchafox(); }
 
 		// Email
 		if(typeof(this.form_email) === 'function') { this.form_email(); }
@@ -360,8 +370,11 @@
 		// Reset hCaptcha
 		if(typeof(this.hcaptcha_reset) === 'function') { this.hcaptcha_reset(); }
 
-		// Reset turnstile
+		// Reset Turnstile
 		if(typeof(this.turnstile_reset) === 'function') { this.turnstile_reset(); }
+
+		// Reset CaptchaFox
+		if(typeof(this.captchafox_reset) === 'function') { this.captchafox_reset(); }
 		// Trigger
 		this.trigger('reset-complete');
 	}
@@ -498,8 +511,11 @@
 		// Reset hCaptcha
 		if(typeof(this.hcaptcha_reset) === 'function') { this.hcaptcha_reset(); }
 
-		// Reset turnstile
+		// Reset Turnstile
 		if(typeof(this.turnstile_reset) === 'function') { this.turnstile_reset(); }
+
+		// Reset CaptchaFox
+		if(typeof(this.captchafox_reset) === 'function') { this.captchafox_reset(); }
 		// Trigger
 		this.trigger('clear-complete');
 	}
@@ -675,10 +691,10 @@
 
 		var ws_this = this;
 
-		// Regular file fields
-		$('inputa[type="email"]:not([data-init-email])', this.form_canvas_obj).each(function() {
+		// Regular email fields
+		$('input[type="email"]:not([data-init-email])', this.form_canvas_obj).each(function() {
 
-	 		// Get field data
+			// Get field data
 			var field = ws_this.get_field($(this));
 
 			// Check for allow / deny
@@ -711,7 +727,7 @@
 		var field_value = obj.val();
 		if(field_value == '') { return; }
 
- 		// Get field data
+		// Get field data
 		var field = this.get_field(obj);
 
 		// Check for allow / deny
@@ -742,7 +758,7 @@
 
 			// Get message
 			var allow_deny_message = this.get_object_meta_value(field, 'allow_deny_message', '');
-			if(!allow_deny_message) { allow_deny_message = this.language('email_allow_deny_message'); }
+			if(!allow_deny_message) { allow_deny_message = this.language('error_email_allow_deny_message'); }
 
 			// Set invalid feedback
 			this.set_invalid_feedback(obj, allow_deny_message);
@@ -1572,34 +1588,34 @@
 		}
 
 		// Process custom validity messages - Groups
-		$('[id^="' + this.form_id_prefix + 'group-"]:not([data-wsf-group-hidden])', this.form_canvas_obj).find('[name]:not([type="hidden"]),[data-static],[data-recaptcha],[data-hcaptcha],[data-turnstile]').each(function() {
+		$('[id^="' + this.form_id_prefix + 'group-"]:not([data-wsf-group-hidden])', this.form_canvas_obj).find('[name]:not([type="hidden"]),[data-static],[data-recaptcha],[data-hcaptcha],[data-turnstile],[data-captchafox]').each(function() {
 
 			ws_this.form_bypass_process($(this), '-group', false);
 		});
 
-		$('[id^="' + this.form_id_prefix + 'group-"][data-wsf-group-hidden]', this.form_canvas_obj).find('[name]:not([type="hidden"]),[data-static],[data-recaptcha],[data-hcaptcha],[data-turnstile]').each(function() {
+		$('[id^="' + this.form_id_prefix + 'group-"][data-wsf-group-hidden]', this.form_canvas_obj).find('[name]:not([type="hidden"]),[data-static],[data-recaptcha],[data-hcaptcha],[data-turnstile],[data-captchafox]').each(function() {
 
 			ws_this.form_bypass_process($(this), '-group', true);
 		});
 
 		// Process custom validity messages - Sections
-		$('[id^="' + this.form_id_prefix + 'section-"]:not([style*="display:none"],[style*="display: none"])', this.form_canvas_obj).find('[name]:not([type="hidden"],[data-hidden-group]),[data-static],[data-recaptcha],[data-hcaptcha],[data-turnstile]').each(function() {
+		$('[id^="' + this.form_id_prefix + 'section-"]:not([style*="display:none"],[style*="display: none"])', this.form_canvas_obj).find('[name]:not([type="hidden"],[data-hidden-group]),[data-static],[data-recaptcha],[data-hcaptcha],[data-turnstile],[data-captchafox]').each(function() {
 
 			ws_this.form_bypass_process($(this), '-section', false);
 		});
 
-		$('[id^="' + this.form_id_prefix + 'section-"][style*="display:none"], [id^="' + this.form_id_prefix + 'section-"][style*="display: none"]').find('[name]:not([type="hidden"]),[data-static],[data-recaptcha],[data-hcaptcha],[data-turnstile]').each(function() {
+		$('[id^="' + this.form_id_prefix + 'section-"][style*="display:none"], [id^="' + this.form_id_prefix + 'section-"][style*="display: none"]').find('[name]:not([type="hidden"]),[data-static],[data-recaptcha],[data-hcaptcha],[data-turnstile],[data-captchafox]').each(function() {
 
 			ws_this.form_bypass_process($(this), '-section', true);
 		});
 
 		// Process custom validity messages - Fields
-		$('[id^="' + this.form_id_prefix + 'field-wrapper-"]:not([style*="display:none"],[style*="display: none"])', this.form_canvas_obj).find('[name]:not([type="hidden"],[data-hidden-section],[data-hidden-group]),[data-static],[data-recaptcha],[data-hcaptcha],[data-turnstile]').each(function() {
+		$('[id^="' + this.form_id_prefix + 'field-wrapper-"]:not([style*="display:none"],[style*="display: none"])', this.form_canvas_obj).find('[name]:not([type="hidden"],[data-hidden-section],[data-hidden-group]),[data-static],[data-recaptcha],[data-hcaptcha],[data-turnstile],[data-captchafox]').each(function() {
 
 			ws_this.form_bypass_process($(this), '', false);
 		});
 
-		$('[id^="' + this.form_id_prefix + 'field-wrapper-"][style*="display:none"], [id^="' + this.form_id_prefix + 'field-wrapper-"][style*="display: none"]', this.form_canvas_obj).find('[name]:not([type="hidden"]),[data-static],[data-recaptcha],[data-hcaptcha],[data-turnstile]').each(function() {
+		$('[id^="' + this.form_id_prefix + 'field-wrapper-"][style*="display:none"], [id^="' + this.form_id_prefix + 'field-wrapper-"][style*="display: none"]', this.form_canvas_obj).find('[name]:not([type="hidden"]),[data-static],[data-recaptcha],[data-hcaptcha],[data-turnstile],[data-captchafox]').each(function() {
 
 			ws_this.form_bypass_process($(this), '', true);
 		});
@@ -1865,7 +1881,7 @@
 			this.form_ecommerce_calculate();
 		}
 
-		// Mark form as validated
+		// Mark form as validatefd
 		this.form_canvas_obj.addClass(this.class_validated);
 
 		// Check validity of form
@@ -1891,6 +1907,12 @@
 
 				// Execute (Once hCaptcha executes, it calls form_submit)
 				this.hcaptcha_invisible_execute();
+
+			// CaptchaFox
+			} else if(this.captchafoxes_invisible.length > 0) {
+
+				// Execute (Once CaptchaFox executes, it calls form_submit)
+				this.captchafox_invisible_execute();
 
 			} else {
 
@@ -1975,6 +1997,15 @@
 				if(object_focus === false) { object_focus = captcha_validate_return.object_focus; }
 				if(group_index_focus === false) { group_index_focus = captcha_validate_return.group_index_focus; }
 			}
+
+			// CaptchaFox validation
+			var captcha_validate_return = this.form_validate_captcha(this.captchafoxes_default, 'captchafox', form);
+			if(typeof(captcha_validate_return) === 'object') {
+
+				form_validated = false;
+				if(object_focus === false) { object_focus = captcha_validate_return.object_focus; }
+				if(group_index_focus === false) { group_index_focus = captcha_validate_return.group_index_focus; }
+			}
 		}
 
 		// Process accessibility
@@ -2015,7 +2046,7 @@
 	}
 
 	// Form - Validate - Real time
-	$.WS_Form.prototype.form_validate_real_time = function(form) {
+	$.WS_Form.prototype.form_validate_real_time = function() {
 
 		var ws_this = this;
 
@@ -2077,7 +2108,7 @@
 		}
 
 		// Inline validation on change - Sections
-		$('[data-wsf-section-validated-class]:not([data-wsf-section-validated-class-init])').each(function() {
+		$('[data-wsf-section-validated-class]:not([data-wsf-section-validated-class-init])', this.form_canvas_obj).each(function() {
 
 			// Mark as inititalized so it doesn't initialize again
 			$(this).attr('data-wsf-section-validated-class-init', '');
@@ -2102,7 +2133,7 @@
 		});
 
 		// Inline validation on change - Fields
-		$('[data-wsf-field-validated-class]:not([data-wsf-field-validated-class-init])').each(function() {
+		$('[data-wsf-field-validated-class]:not([data-wsf-field-validated-class-init])', this.form_canvas_obj).each(function() {
 
 			// Mark as inititalized so it doesn't initialize again
 			$(this).attr('data-wsf-field-validated-class-init', '');
@@ -2762,6 +2793,9 @@
 		// ITI tel field processing
 		if(typeof(this.form_tel_post) === 'function') { this.form_tel_post(form_data); }
 
+		// Media capture
+		if(typeof(this.form_media_capture_post) === 'function') { this.form_media_capture_post(form_data); }
+
 		// Call API
 		this.api_call('submit', 'POST', form_data, function(response) {
 
@@ -2774,8 +2808,11 @@
 				// Reset hCaptcha
 				if(typeof(ws_this.hcaptcha_reset) === 'function') { ws_this.hcaptcha_reset(); }
 
-				// Reset turnstile
+				// Reset Turnstile
 				if(typeof(ws_this.turnstile_reset) === 'function') { ws_this.turnstile_reset(); }
+
+				// Reset CaptchaFox
+				if(typeof(ws_this.captchafox_reset) === 'function') { ws_this.captchafox_reset(); }
 			}
 
 			// Check for validation errors
@@ -2900,8 +2937,11 @@
 			// Reset hCaptcha
 			if(typeof(ws_this.hcaptcha_reset) === 'function') { ws_this.hcaptcha_reset(); }
 
-			// Reset turnstile
+			// Reset Turnstile
 			if(typeof(ws_this.turnstile_reset) === 'function') { ws_this.turnstile_reset(); }
+
+			// Reset CaptchaFox
+			if(typeof(ws_this.captchafox_reset) === 'function') { ws_this.captchafox_reset(); }
 
 			// Show error message
 			if(typeof(response.error_message) !== 'undefined') {
@@ -3070,6 +3110,13 @@
 
 		// Timer - Start
 		var timer_start = new Date();
+
+		// Check permalinks
+		if(ws_form_settings.use_rest_route) {
+
+			var ajax_path_parts = ajax_path.split('?');
+			ajax_path = encodeURIComponent(ajax_path_parts[0]) + (ajax_path_parts[1] ? '&' + ajax_path_parts[1] : '');
+		}
 
 		// Make AJAX request
 		var url = force_ajax_path ? (ws_form_settings.url_ajax + ajax_path) : ((ajax_path == 'submit') ? this.form_obj.attr('action') : (ws_form_settings.url_ajax + ajax_path));
@@ -3464,7 +3511,7 @@
 				// Process accessibility
 				this.form_accessibility();
 
-          		// Process next action
+				// Process next action
 				this.action_js_process_next();
 
 				break;
@@ -3512,7 +3559,7 @@
 				this.form_file_dropzonejs_populate(field_obj);
 
 				// Log event
-          		// Process next action
+				// Process next action
 				this.action_js_process_next();
 
 				break;

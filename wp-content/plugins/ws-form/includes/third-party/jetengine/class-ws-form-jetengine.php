@@ -1,7 +1,9 @@
 <?php
 
-$slug = 'test-options-page';
-
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
 
 	class WS_Form_JetEngine {
 
@@ -1203,7 +1205,7 @@ $slug = 'test-options-page';
 
 				case 'switcher' :
 
-					return empty($meta_value) ? 'false' : 'true';
+					return WS_Form_Common::is_true($meta_value) ? 'true' : 'false';
 
 				case 'select' :
 				case 'posts' :

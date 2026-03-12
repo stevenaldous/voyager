@@ -1,6 +1,6 @@
 /*!
   * Understrap [object Object] v1.0.0 (https://stevenaldous.com)
-  * Copyright 2013-2025 The Voyager Author (https://stevenaldous.com/)
+  * Copyright 2013-2026 The Voyager Author (https://stevenaldous.com/)
   * Licensed under GPL (http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
   */
 (function (global, factory) {

@@ -1,5 +1,10 @@
 <?php
 
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
+
 	class WS_Form_API_Field extends WS_Form_API {
 
 		public function __construct() {
@@ -157,7 +162,7 @@
 			WS_Form_Common::file_download_headers($filename, 'text/csv');
 
 			// Open stream
-			$out = fopen('php://output', 'w');
+			$out = fopen('php://output', 'w'); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen -- Required for streaming output to browser
 
 			// Build header
 			$row_array = array('wsf_id', 'wsf_default', 'wsf_required', 'wsf_disabled', 'wsf_hidden');
@@ -166,7 +171,7 @@
 				if(!isset($column->label)) { parent::api_throw_error(__('Column label not found', 'ws-form')); }
 				$row_array[] = $column->label;
 			}
-			WS_Form_Common::esc_fputcsv($out, $row_array);
+			WS_Form_File::esc_fputcsv($out, $row_array);
 
 			// Build rows
 			foreach($rows as $row) {
@@ -181,11 +186,11 @@
 				$data = array($row->id, $default, $required, $disabled, $hidden);
 				$data = array_merge($data, (array)$row->data);
 
-				WS_Form_Common::esc_fputcsv($out, $data);
+				WS_Form_File::esc_fputcsv($out, $data);
 			}
 
 			// Close stream
-			fclose($out);
+			fclose($out); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose -- Required for streaming output to browser
 
 			// Exit (Ensures WordPress intentional 'null' is not sent)
 			exit;
@@ -214,11 +219,14 @@
 				if(!$meta_value) { parent::api_throw_error(__('Unable to read meta data', 'ws-form') + ': ' + $meta_key); }
 
 				// Get files
-				if(!isset($_FILES)) { parent::api_throw_error(__('No files found', 'ws-form')); }
-				if(!isset($_FILES['file'])) { parent::api_throw_error(__('No files found', 'ws-form')); }
+				// phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- NONCE already checked, only checking if it exists
+				$files = $_FILES;
+
+				// Check if file element exists
+				if(!isset($files['file'])) { parent::api_throw_error(__('No files found', 'ws-form')); }
 
 				// Run through files
-				$file = $_FILES['file'];
+				$file = $files['file'];
 
 				// Get CSV meta_value
 				$meta_value = WS_Form_Common::csv_file_to_data_grid_meta_value($file, $meta_key, $meta_value);

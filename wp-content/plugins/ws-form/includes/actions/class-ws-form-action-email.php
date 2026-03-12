@@ -1,5 +1,10 @@
 <?php
 
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
+
 	class WS_Form_Action_Email extends WS_Form_Action {
 
 		public $id = 'email';
@@ -90,7 +95,7 @@
 					isset($this->tos[0]['action_' . $this->id . '_email'])
 				) {
 
-					/* translators: %s = Email addresses */
+					/* translators: %s: Email addresses */
 					self::success(sprintf(__('Round robin recipient: %s', 'ws-form'), $this->tos[0]['action_' . $this->id . '_email']));
 				}
 			}
@@ -125,6 +130,7 @@
 
 			if($email_reply_to !== false) {
 
+				// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 				$email_reply_to = apply_filters('wsf_action_email_reply_to', $email_reply_to, $form, $submit_parse, $config);
 
 				$email_headers[] = 'Reply-To: ' . $email_reply_to;
@@ -133,6 +139,7 @@
 			// Build header - CC's
 			$cc_emails = !empty($this->ccs) ? self::process_email_rows($form, $submit_parse, $this->ccs) : array();
 
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			$cc_emails = apply_filters('wsf_action_email_cc', $cc_emails, $form, $submit_parse, $config);
 
 			if(is_array($cc_emails)) {
@@ -149,6 +156,7 @@
 			// Build header - BCC's
 			$bcc_emails = !empty($this->bccs) ? self::process_email_rows($form, $submit_parse, $this->bccs) : array();
 
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			$bcc_emails = apply_filters('wsf_action_email_bcc', $bcc_emails, $form, $submit_parse, $config);
 
 			// Check return from filter
@@ -209,7 +217,7 @@
 					if($file_path === false) { continue; }
 
 					// Check file exists
-					if(!file_exists($file_path)) { continue; }
+					if(!WS_Form_File::file_exists($file_path)) { continue; }
 
 					// Add file to email_attachments
 					$email_attachments[] = array(
@@ -247,12 +255,13 @@
 
 				$template_filename = (($email_content_type == 'text/html') ? 'html/standard.html' : 'plain/standard.txt');
 
-				$email_template = file_get_contents(sprintf('%sincludes/templates/email/%s', WS_FORM_PLUGIN_DIR_PATH, $template_filename));
+				$email_template = WS_Form_File::file_get_contents(sprintf('%sincludes/templates/email/%s', WS_FORM_PLUGIN_DIR_PATH, $template_filename));
 
 			} else {
 
 				$email_template = '#email_message';
 			}
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			$email_template = apply_filters('wsf_action_email_template', $email_template, $form, $submit_parse, $config);
 
 			// Build message
@@ -291,7 +300,7 @@
 			if(is_rtl()) { $email_attr_html_array[] = ' dir="rtl"'; }
 			$email_attr_html = implode(' ', $email_attr_html_array);
 
-			// Build message - Parse email variables
+			// Build parse variables
 			$variables = array(
 
 				'email_subject' 			=> $email_subject,
@@ -299,6 +308,8 @@
 				'email_charset' 			=> $email_charset,
 				'email_attr_html' 			=> $email_attr_html
 			);
+
+			// Build message - Parse email variables
 			$email_message = WS_Form_Common::mask_parse($email_message, $variables);
 
 			// Pre-parse filter
@@ -315,11 +326,17 @@
 			$email_message = str_replace("</p>\n</p>", '</p>', $email_message);
 
 			// Filters
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			$email_to = apply_filters('wsf_action_email_to', $email_to, $form, $submit_parse, $config);
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			$email_subject = apply_filters('wsf_action_email_subject', $email_subject, $form, $submit_parse, $config);
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			$email_message = apply_filters('wsf_action_email_message', $email_message, $form, $submit_parse, $config);
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			$email_headers = apply_filters('wsf_action_email_headers', $email_headers, $form, $submit_parse, $config);
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			$email_attachments = apply_filters('wsf_action_email_attachments', $email_attachments, $form, $submit_parse, $config, $temp_path);
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			$email_attachments = apply_filters('wsf_action_email_email_attachments', $email_attachments, $form, $submit_parse, $config, $temp_path);	// Used by PDF add-on (Legacy)
 
 			// If there are any errors, bail
@@ -355,16 +372,16 @@
 					$path = $email_attachment['path'];
 
 					// Delete each file
-					if(file_exists($path)) {
+					if(WS_Form_File::file_exists($path)) {
 
 						wp_delete_file($path);
 					}
 				}
 
 				// Remove temporary path
-				if(file_exists($temp_path)) {
+				if(WS_Form_File::file_exists($temp_path)) {
 
-					rmdir($temp_path);
+					WS_Form_File::rmdir($temp_path);
 				}
 			}
 
@@ -377,18 +394,40 @@
 
 				if(!empty($this->wp_mail_error_message)) {
 
+					switch($this->wp_mail_error_message) {
+
+						// Determine learn more URL
+						case 'Could not instantiate mail function.' :
+
+							$url_learn_more = WS_Form_Common::get_plugin_website_url('/knowledgebase/error-could-not-instantiate-mail-function-when-sending-emails/');
+
+							break;
+
+						default :
+
+							$url_learn_more = WS_Form_Common::get_plugin_website_url('/knowledgebase/error-sending-email-error/');
+					}
+
 					self::error(sprintf(
 
-						/* translators: wp_mail error message */
-						__('Error sending email: %s', 'ws-form'),
-						$this->wp_mail_error_message
-					));
+						'%s: %s <a href="%s" target="_blank">%s</a>',
+						esc_html(__('Error sending email', 'ws-form')),
+						$this->wp_mail_error_message,
+						$url_learn_more,
+						esc_html(__('Learn more', 'ws-form'))
+					), false, true, true);
 
 					$this->wp_mail_error_message = '';
 
 				} else {
 
-					self::error(__('Error sending email', 'ws-form'));
+					self::error(sprintf(
+
+						'%s <a href="%s" target="_blank">%s</a>',
+						esc_html(__('Error sending email', 'ws-form')),
+						WS_Form_Common::get_plugin_website_url('/knowledgebase/error-sending-email-error/'),
+						esc_html(__('Learn more', 'ws-form'))
+					), false, true, true);
 				}
 			}
 		}
@@ -437,7 +476,7 @@
 				) {
 					$this->wp_mail_error_message = sprintf(
 
-						/* translators: %1$s = Error code, %2$s = Error message */
+						/* translators: %1$s: Error code, %2$s: Error message */
 						__('Postmark error %1$s: %2$s', 'ws-form'),
 						$body_decoded->ErrorCode,
 						$body_decoded->Message
@@ -478,7 +517,7 @@
 
 					self::error(sprintf(
 
-						/* translators: %s = Email address */
+						/* translators: %s: Email address */
 						__('Invalid email address: %s', 'ws-form'),
 						$email
 					));
@@ -486,6 +525,7 @@
 				}
 
 				// Run wsf_action_email_email_validate filter hook
+				// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 				$email_validate = apply_filters('wsf_action_email_email_validate', true, $email, $form->id, false);
 
 				// If string returned, use string as error message
@@ -500,7 +540,7 @@
 
 					self::error(sprintf(
 
-						/* translators: %s = Email address */
+						/* translators: %s: Email address */
 						__('Invalid email address: %s', 'ws-form'),
 						$email
 					));
@@ -515,7 +555,7 @@
 
 					self::error(sprintf(
 
-						/* translators: %s = Email address */
+						/* translators: %s: Email address */
 						__('Invalid email address or display name too long: %s', 'ws-form'),
 						$email
 					));
@@ -749,6 +789,7 @@
 			$settings->can_repost = $this->can_repost;
 
 			// Apply filter
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			$settings = apply_filters('wsf_action_email_settings', $settings);
 
 			return $settings;
@@ -892,7 +933,9 @@
 						array(
 
 							'logic'			=>	'==',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 							'meta_key'		=>	'action_' . $this->id . '_content_type',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value'	=>	'text/html'
 						)
 					)
@@ -919,7 +962,9 @@
 						array(
 
 							'logic'			=>	'==',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 							'meta_key'		=>	'action_' . $this->id . '_content_type',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value'	=>	'text/plain'
 						),
 					),
@@ -939,14 +984,18 @@
 						array(
 
 							'logic'				=>	'==',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 							'meta_key'			=>	'action_' . $this->id . '_content_type',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value'		=>	'text/html'
 						),
 
 						array(
 
 							'logic'				=>	'==',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 							'meta_key'			=>	'action_' . $this->id . '_message_editor',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value'		=>	'text_editor',
 							'logic_previous'	=>	'&&'
 						)
@@ -966,14 +1015,18 @@
 						array(
 
 							'logic'				=>	'==',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 							'meta_key'			=>	'action_' . $this->id . '_content_type',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value'		=>	'text/html'
 						),
 
 						array(
 
 							'logic'				=>	'==',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 							'meta_key'			=>	'action_' . $this->id . '_message_editor',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value'		=>	'html_editor',
 							'logic_previous'	=>	'&&'
 						)
@@ -1003,13 +1056,13 @@
 				// Attachments - Media
 				'action_' . $this->id . '_attachments_media'	=> array(
 
-					'label'						=>	__('Media Attachments', 'ws-form'),
+					'label'						=>	__('Media Library Attachments', 'ws-form'),
 					'type'						=>	'repeater',
 					'meta_keys'					=>	array(
 
 						'action_' . $this->id . '_attachment'
 					),
-					'help'						=>	__('Add media files as email attachments.', 'ws-form')
+					'help'						=>	__('Add media library files as email attachments.', 'ws-form')
 				),
 
 				// Attachment URL

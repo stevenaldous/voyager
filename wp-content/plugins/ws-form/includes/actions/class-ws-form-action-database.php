@@ -1,5 +1,10 @@
 <?php
 
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
+
 	class WS_Form_Action_Database extends WS_Form_Action {
 
 		public $id = 'database';
@@ -202,7 +207,9 @@
 						array(
 
 							'logic'			=>	'!=',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 							'meta_key'		=>	'action_' . $this->id . '_field_filter',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value'	=>	''
 						)
 					)
@@ -240,7 +247,9 @@
 						array(
 
 							'logic'			=>	'==',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 							'meta_key'		=>	'action_' . $this->id . '_expire',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value'	=>	'on'
 						)
 					)
@@ -285,7 +294,8 @@
 			$settings->can_repost = $this->can_repost;
 
 			// Apply filter
-			$settings = apply_filters('wsf_action_' . $this->id . '_settings', $settings);
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
+			$settings = apply_filters('wsf_action_database_settings', $settings);
 
 			return $settings;
 		}

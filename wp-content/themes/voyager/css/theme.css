@@ -30204,6 +30204,14 @@ li p:last-of-type {
   backdrop-filter: blur(7.5px);
 }
 
+.bg-dkg {
+  background: linear-gradient(135deg,  var(--color-v1),  var(--color-v2));
+}
+
+.bg-ltg {
+  background: linear-gradient(135deg,   #EDE9FE,   #E0F2FE);
+}
+
 /* Netral Colors */
 .bg-white {
   background: #FFFFFF;

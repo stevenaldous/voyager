@@ -1,5 +1,10 @@
 <?php
 
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
+
 	// WPML
 	// https://wpml.org/documentation/support/string-package-translation/
 
@@ -36,6 +41,7 @@
 			// https://wpml.org/wpml-hook/wpml_translate_string/
 			return apply_filters(
 
+				// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Third party
 				'wpml_translate_string',
 				$string_value,										// String value
 				$string_name,										// String name
@@ -49,6 +55,7 @@
 			// https://wpml.org/wpml-hook/wpml_start_string_package_registration/
 			do_action(
 
+				// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Third party
 				'wpml_start_string_package_registration',
 				self::get_package_object($form_id, $form_label)		// Package
 			);
@@ -60,6 +67,7 @@
 			// https://wpml.org/wpml-hook/wpml_register_string/
 			do_action(
 
+				// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Third party
 				'wpml_register_string',
 				$string_value,										// String value
 				$string_name,										// String name
@@ -75,6 +83,7 @@
 			// https://wpml.org/wpml-hook/wpml_delete_unused_package_strings/
 			do_action(
 
+				// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Third party
 				'wpml_delete_unused_package_strings',
 				self::get_package_object($form_id, $form_label)		// Package
 			);
@@ -86,6 +95,7 @@
 			// https://wpml.org/wpml-hook/wpml_delete_package/
 			do_action(
 
+				// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Third party
 				'wpml_delete_package',
 				self::get_package_name($form_id),					// Package name
 				self::get_package_kind()							// Package kind

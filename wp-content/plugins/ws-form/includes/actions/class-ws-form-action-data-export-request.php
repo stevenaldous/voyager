@@ -1,5 +1,10 @@
 <?php
 
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
+
 	class WS_Form_Action_Data_Export_Request extends WS_Form_Action {
 
 		public $id = 'data_export_request';
@@ -198,7 +203,8 @@
 			$settings->can_repost = $this->can_repost;
 
 			// Apply filter
-			$settings = apply_filters('wsf_action_' . $this->id . '_settings', $settings);
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
+			$settings = apply_filters('wsf_action_data_export_request_settings', $settings);
 
 			return $settings;
 		}

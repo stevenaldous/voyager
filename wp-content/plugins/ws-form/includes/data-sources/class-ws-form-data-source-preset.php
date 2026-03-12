@@ -1,5 +1,10 @@
 <?php
 
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
+
 	#[AllowDynamicProperties]
 	class WS_Form_Data_Source_Preset extends WS_Form_Data_Source {
 
@@ -18,6 +23,7 @@
 			add_action('rest_api_init', array($this, 'rest_api_init'), 10, 0);
 
 			// Records per page
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			$this->records_per_page = apply_filters('wsf_data_source_' . $this->id . '_records_per_age', $this->records_per_page);
 
 			// Register init actin
@@ -43,7 +49,13 @@
 			if(!$api_request) { 
 
 				// Return data
-				return array('error' => false, 'error_message' => '', 'meta_value' => $meta_value);
+				return array(
+
+					'error' => false,
+					'error_message' => '',
+					// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+					'meta_value' => $meta_value
+				);
 			}
 
 			// Check meta key
@@ -73,7 +85,15 @@
 			if($preset_id === '') {
 
 				// Return data
-				return array('error' => false, 'error_message' => '', 'meta_value' => $meta_value, 'max_num_pages' => 0, 'meta_keys' => array());
+				return array(
+
+					'error' => false,
+					'error_message' => '',
+					// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+					'meta_value' => $meta_value,
+					'max_num_pages' => 0,
+					'meta_keys' => array()
+				);
 			}
 
 			// Retrieve presets
@@ -113,7 +133,7 @@
 
 				if(is_wp_error($wp_remote_get_response)) {
 
-					/* translators: %s = Data source URL */
+					/* translators: %s: Data source URL */
 					return self::error(sprintf(__('Error retrieving CSV file: %s', 'ws-form'), $url), $field_id, $this, $api_request);
 				}
 
@@ -147,7 +167,16 @@
 			}
 
 			// Return data
-			return array('error' => false, 'error_message' => '', 'meta_value' => $meta_value, 'max_num_pages' => 0, 'meta_keys' => array(), 'deselect_data_source_id' => true);
+			return array(
+
+				'error' => false,
+				'error_message' => '',
+				// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+				'meta_value' => $meta_value,
+				'max_num_pages' => 0,
+				'meta_keys' => array(),
+				'deselect_data_source_id' => true
+			);
 		}
 
 		// Get meta keys
@@ -185,6 +214,7 @@
 			$settings->endpoint_get = 'data-source/' . $this->id . '/';
 
 			// Apply filter
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			$settings = apply_filters('wsf_data_source_' . $this->id . '_settings', $settings);
 
 			return $settings;
@@ -264,7 +294,9 @@
 						array(
 
 							'logic'				=>	'!=',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 							'meta_key'			=>	'data_source_' . $this->id . '_preset_id',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value'		=>	''
 						)
 					),

@@ -1,5 +1,10 @@
 <?php
 
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
+
 	class WS_Form_ACF {
 
 		// Get fields all
@@ -1204,6 +1209,7 @@
 
 				return array(
 
+					// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 					'meta_key' => $field_object_parent['name'],
 					'acf_key' => $field_object_parent['key'],
 					'type' => $field_object_parent['type']
@@ -1426,6 +1432,7 @@
 				case 'page_link' :
 				case 'relationship' :
 				case 'select' :
+				case 'taxonomy' :
 				case 'user' :
 
 					// If not set as multiple, save as string
@@ -1621,9 +1628,13 @@
 			}
 			
 			// Apply filters
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Third party
 			$valid = apply_filters( "acf/validate_value/type={$field['type']}",		$valid, $value, $field, $input );
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Third party
 			$valid = apply_filters( "acf/validate_value/name={$field['_name']}", 	$valid, $value, $field, $input );
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Third party
 			$valid = apply_filters( "acf/validate_value/key={$field['key']}", 		$valid, $value, $field, $input );
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Third party
 			$valid = apply_filters( "acf/validate_value", 							$valid, $value, $field, $input );
 
 			// Check valid variable
@@ -1646,7 +1657,7 @@
 					'action' 					=> 'field_invalid_feedback',
 					'field_id' 					=> $field_id,
 					'section_repeatable_index' 	=> $section_repeatable_index,
-					/* translators: %s = Field label */
+					/* translators: %s: Field label */
 					'message' 					=> sprintf(__('%s value is required', 'ws-form'), $field['label'])
 				);
 

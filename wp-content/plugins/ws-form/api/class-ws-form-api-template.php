@@ -1,5 +1,10 @@
 <?php
 
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
+
 	class WS_Form_API_Template extends WS_Form_API {
 
 		public function __construct() {
@@ -110,7 +115,7 @@
 			WS_Form_Common::file_download_headers($filename, 'application/json');
 
 			// Output form as JSON
-			echo $ws_form_template->json;	// phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+			WS_Form_Common::echo_json($ws_form_template->json);
 			exit;
 		}
 
@@ -154,17 +159,17 @@
 			$index = $ws_form_template->index;
 
 			// Load config file
-			if(!file_exists($file_config)) {
+			if(!WS_Form_File::file_exists($file_config)) {
 
 				parent::api_throw_error(sprintf(
 
-					/* translators: %s = Config file name */
+					/* translators: %s: Config file name */
 					__('Unable to open config.json file: %s', 'ws-form'),
 
 					$file_config
 				));
 			}
-			$config_file_json = file_get_contents($file_config);
+			$config_file_json = WS_Form_File::file_get_contents($file_config);
 
 			// JSON decode config file
 			$config_file_object = json_decode($config_file_json);
@@ -172,7 +177,7 @@
 
 				parent::api_throw_error(sprintf(
 
-					/* translators: %s = Config file name */
+					/* translators: %s: Config file name */
 					__('Unable to decode config.json file: %s', 'ws-form'),
 
 					$file_config
@@ -184,11 +189,11 @@
 			$config_file_object->template_categories[$category_index]->templates = array_values($config_file_object->template_categories[$category_index]->templates);
 
 			// Write config file
-			if(file_put_contents($file_config, wp_json_encode($config_file_object)) === false) {
+			if(WS_Form_File::file_put_contents($file_config, wp_json_encode($config_file_object)) === false) {
 
 				parent::api_throw_error(sprintf(
 
-					/* translators: %s = Config file name */
+					/* translators: %s: Config file name */
 					__('Unable to write config.json file: %s', 'ws-form'),
 
 					$file_config
@@ -203,14 +208,14 @@
 				$file_json = $ws_form_template->file_json;
 
 				if(
-					!file_exists($file_json) ||
+					!WS_Form_File::file_exists($file_json) ||
 					!wp_delete_file($file_json)
 				) {
 
 					// Throw error
 					parent::api_throw_error(sprintf(
 
-						/* translators: %s = Template file name */
+						/* translators: %s: Template file name */
 						__('Template file not found: %s', 'ws-form'),
 
 						$file_json

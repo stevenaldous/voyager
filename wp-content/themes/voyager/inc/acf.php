@@ -206,6 +206,8 @@ function acf_load_bgimg_choices( $field ) {
         'bg-v2a' => 'Theme Secondary Accent',
         'bg-black' => 'Black',
         'bg-img'   => 'Image',
+        'bg-dkg' => 'Theme Dark Gradient',
+        'bg-ltg' => 'Theme Light Gradient',
         'bg-trans' => 'Transparent/None',
     );
 
@@ -241,6 +243,8 @@ function acf_load_bg_choices( $field ) {
         'bg-v2'  => 'Theme Secondary',
         'bg-v2l' => 'Theme Secondary Light',
         'bg-v2a' => 'Theme Secondary Accent',
+        'bg-dkg' => 'Theme Dark Gradient',
+        'bg-ltg' => 'Theme Light Gradient',
         'bg-black' => 'Black',
     );
 
@@ -256,7 +260,8 @@ $bgcol_fields = array(
     'err_s_bg',
     'tb_bg',
     'pop_bg',
-    'form_bg'
+    'form_bg',
+    'body_bg'
 );
 // loop through em
 foreach ($bgcol_fields as $f ) {

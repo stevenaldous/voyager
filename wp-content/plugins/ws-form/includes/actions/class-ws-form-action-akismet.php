@@ -1,5 +1,10 @@
 <?php
 
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
+
 	class WS_Form_Action_Akismet_V1 extends WS_Form_Action {
 
 		public $id = 'akismetv1';
@@ -281,9 +286,9 @@
 
 				$instructions_array[] = '<li>' . sprintf(
 
-					/* translators: %s = Akismet plugin installation URL */
-					__('Install and activate the <a href="%s" target="_blank">Akismet plugin</a>.', 'ws-form'),
-					'https://akismet.com/?utm_source=ws_form'
+					/* translators: %s: Akismet plugin installation link */
+					__('Install and activate the %s plugin.', 'ws-form'),
+					'<a href="https://akismet.com/?utm_source=ws_form" target="_blank">Akismet</a>',
 				) . '</li>';
 
 			} else {
@@ -341,7 +346,9 @@
 						array(
 
 							'logic'				=>	'==',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 							'meta_key'			=>	'action_' . $this->id . '_enabled',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value'		=>	'on'
 						)
 					)
@@ -354,7 +361,7 @@
 					'type'						=>	'repeater',
 					'help'						=>	sprintf(
 
-						/* translators: %s = WS Form */
+						/* translators: %s: WS Form */
 						__('Select which %s fields Akismet should check for spam.', 'ws-form'),
 
 						WS_FORM_NAME_GENERIC
@@ -372,7 +379,9 @@
 						array(
 
 							'logic'				=>	'==',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 							'meta_key'			=>	'action_' . $this->id . '_enabled',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value'		=>	'on'
 						)
 					)
@@ -395,7 +404,9 @@
 						array(
 
 							'logic'				=>	'==',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 							'meta_key'			=>	'action_' . $this->id . '_enabled',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value'		=>	'on'
 						)
 					)
@@ -413,7 +424,9 @@
 						array(
 
 							'logic'				=>	'==',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 							'meta_key'			=>	'action_' . $this->id . '_enabled',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value'		=>	'on'
 						)
 					)
@@ -431,7 +444,9 @@
 						array(
 
 							'logic'				=>	'==',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 							'meta_key'			=>	'action_' . $this->id . '_enabled',
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value'		=>	'on'
 						)
 					)

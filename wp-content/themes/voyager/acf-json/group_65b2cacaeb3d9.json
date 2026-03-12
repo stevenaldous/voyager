@@ -76,7 +76,10 @@
             "default_value": "#0E1437",
             "enable_opacity": 0,
             "return_format": "string",
-            "allow_in_bindings": 1
+            "allow_in_bindings": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed1d9",
@@ -95,7 +98,10 @@
             "default_value": "#052657",
             "enable_opacity": 0,
             "return_format": "string",
-            "allow_in_bindings": 1
+            "allow_in_bindings": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed1dd",
@@ -114,7 +120,10 @@
             "default_value": "#244D8B",
             "enable_opacity": 0,
             "return_format": "string",
-            "allow_in_bindings": 1
+            "allow_in_bindings": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66452d1f4ad7a",
@@ -152,7 +161,10 @@
             "default_value": "#B18C0C",
             "enable_opacity": 0,
             "return_format": "string",
-            "allow_in_bindings": 1
+            "allow_in_bindings": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed1e5",
@@ -171,7 +183,10 @@
             "default_value": "#CAAC41",
             "enable_opacity": 0,
             "return_format": "string",
-            "allow_in_bindings": 1
+            "allow_in_bindings": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66452d654ad7b",
@@ -190,7 +205,10 @@
             "default_value": "#E7CC6C",
             "enable_opacity": 0,
             "return_format": "string",
-            "allow_in_bindings": 1
+            "allow_in_bindings": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66452da84ad7c",
@@ -209,7 +227,10 @@
             "default_value": "#244D8B",
             "enable_opacity": 0,
             "return_format": "string",
-            "allow_in_bindings": 1
+            "allow_in_bindings": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66590b852d36e",
@@ -285,7 +306,10 @@
             "default_value": "#fff",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66590c5937699",
@@ -380,9 +404,14 @@
             "choices": {
                 "bg-white": "White",
                 "bg-v1": "Theme Primary",
-                "bg-v1-grad": "Theme Primary Gradient",
+                "bg-v1l": "Theme Primary Light",
+                "bg-v1a": "Theme Primary Accent",
+                "bg-v1g": "Theme Primary Gradient",
                 "bg-v2": "Theme Secondary",
-                "bg-dark": "Dark",
+                "bg-v2l": "Theme Secondary Light",
+                "bg-v2a": "Theme Secondary Accent",
+                "bg-dkg": "Theme Dark Gradient",
+                "bg-ltg": "Theme Light Gradient",
                 "bg-black": "Black"
             },
             "default_value": false,
@@ -395,6 +424,30 @@
             "wpml_cf_preferences": 1,
             "create_options": 0,
             "save_options": 0
+        },
+        {
+            "key": "field_69b2fcfdef1f7",
+            "label": "Default Theme",
+            "name": "theme_def",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "v-light": "Light",
+                "v-dark": "Dark"
+            },
+            "default_value": "v-light",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
         },
         {
             "key": "field_662978faa0d9c",
@@ -450,7 +503,10 @@
             "default_value": "#111D42",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_6515f64383f3d",
@@ -469,7 +525,10 @@
             "default_value": "#3F4761",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_662989d1afca4",
@@ -488,7 +547,10 @@
             "default_value": "#3F4761",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66297b15dbe62",
@@ -507,7 +569,10 @@
             "default_value": "#1F2F63",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66a974f4bb275",
@@ -526,7 +591,10 @@
             "wpml_cf_preferences": 1,
             "default_value": "#E86E16",
             "enable_opacity": 0,
-            "return_format": "string"
+            "return_format": "string",
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66a971a1da186",
@@ -545,7 +613,10 @@
             "wpml_cf_preferences": 1,
             "default_value": "#111D42",
             "enable_opacity": 0,
-            "return_format": "string"
+            "return_format": "string",
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66297d844b3aa",
@@ -564,7 +635,10 @@
             "wpml_cf_preferences": 1,
             "default_value": "#E86E16",
             "enable_opacity": 0,
-            "return_format": "string"
+            "return_format": "string",
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66297bebdbe63",
@@ -583,7 +657,10 @@
             "default_value": "#1C1E23",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_662979b2a0d9e",
@@ -639,7 +716,10 @@
             "default_value": "#FFFFFF",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66297e0baf681",
@@ -658,7 +738,10 @@
             "default_value": "#FFFFFF",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_662989b9afca3",
@@ -677,7 +760,10 @@
             "default_value": "#ffffff",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66297e2caf683",
@@ -696,7 +782,10 @@
             "wpml_cf_preferences": 1,
             "default_value": "#F68950",
             "enable_opacity": 0,
-            "return_format": "string"
+            "return_format": "string",
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66a974a5bb274",
@@ -715,7 +804,10 @@
             "wpml_cf_preferences": 1,
             "default_value": "#FFFFFF",
             "enable_opacity": 0,
-            "return_format": "string"
+            "return_format": "string",
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66a970b7da185",
@@ -734,7 +826,10 @@
             "wpml_cf_preferences": 1,
             "default_value": "#FFFFFF",
             "enable_opacity": 0,
-            "return_format": "string"
+            "return_format": "string",
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66297e28af682",
@@ -753,7 +848,10 @@
             "wpml_cf_preferences": 1,
             "default_value": "#FFFFFF",
             "enable_opacity": 0,
-            "return_format": "string"
+            "return_format": "string",
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_66297e30af684",
@@ -772,7 +870,10 @@
             "wpml_cf_preferences": 1,
             "default_value": "#E86E16",
             "enable_opacity": 0,
-            "return_format": "string"
+            "return_format": "string",
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed1ec",
@@ -829,7 +930,10 @@
             "default_value": "#FFFFFF",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed1f1",
@@ -848,7 +952,10 @@
             "default_value": "#FFFFFF",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed1f3",
@@ -867,7 +974,10 @@
             "default_value": "#A7ADBD",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed1f7",
@@ -886,7 +996,10 @@
             "default_value": "#7C849C",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed1f9",
@@ -905,7 +1018,10 @@
             "default_value": "#6E7691",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed1fb",
@@ -924,7 +1040,10 @@
             "default_value": "#636A82",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed1fe",
@@ -943,7 +1062,10 @@
             "default_value": "#52596C",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed200",
@@ -962,7 +1084,10 @@
             "default_value": "#1C1E23",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed203",
@@ -1019,7 +1144,10 @@
             "default_value": "#DF0E0E",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed208",
@@ -1038,7 +1166,10 @@
             "default_value": "#F44141",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed20b",
@@ -1057,7 +1188,10 @@
             "default_value": "#FF8900",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed20d",
@@ -1076,7 +1210,10 @@
             "default_value": "#FFC27C",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed210",
@@ -1095,7 +1232,10 @@
             "default_value": "#01B977",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed212",
@@ -1114,7 +1254,10 @@
             "default_value": "#25D998",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed215",
@@ -1133,7 +1276,10 @@
             "default_value": "#291AD1",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed217",
@@ -1152,7 +1298,10 @@
             "default_value": "#5375EE",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed21a",
@@ -1171,7 +1320,10 @@
             "default_value": "#FFD954",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65b2cacaed21c",
@@ -1190,7 +1342,10 @@
             "default_value": "#FFF0BB",
             "enable_opacity": 0,
             "return_format": "string",
-            "wpml_cf_preferences": 1
+            "wpml_cf_preferences": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         }
     ],
     "location": [
@@ -1211,5 +1366,6 @@
     "active": true,
     "description": "Color Panel - Colors",
     "show_in_rest": 0,
-    "modified": 1751504161
+    "display_title": "",
+    "modified": 1773337993
 }

@@ -1,5 +1,10 @@
 <?php
 
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
+
 	class WS_Form_Meta_Box {
 
 		public static $meta_box_fields = false;
@@ -182,7 +187,7 @@
 					!$traverse &&
 					isset($meta_box_field['fields']) &&
 					is_array($meta_box_field['fields']) &&
-					(count($meta_box_field['fields']) == 0)
+					(count($meta_box_field['fields']) > 0)
 				) {
 
 					foreach($meta_box_field['fields'] as $meta_box_sub_field_index => $meta_box_sub_field) {
@@ -735,12 +740,6 @@
 						case 'phoneUS' :
 
 							$meta_return['input_mask'] = '(999) 999-9999';
-
-							break;
-
-						case 'accept' :
-
-							$meta_return['accept'] = '(999) 999-9999';
 
 							break;
 					}

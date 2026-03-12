@@ -1,5 +1,10 @@
 <?php
 
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
+
 	class WS_Form_ACPT {
 
 		public static $acpt_fields = array();
@@ -1092,6 +1097,7 @@
 
 				return array(
 
+					// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 					'meta_key' => $acpt_parent_field_object->name,
 					'acpt_id' => $acpt_parent_field_object->id,
 					'type' => $acpt_parent_field_object->type
@@ -1757,6 +1763,20 @@
 							'url' => $meta_value,
 							'label' => ''
 						);
+					}
+
+					break;
+
+				case 'Address' :
+
+					// Check if Google Map mapped
+					if(
+						($meta_value != '') &&
+						is_array($meta_value) &&
+						isset($meta_value['address']) &&
+						is_string($meta_value['address'])
+					) {
+						$meta_value = $meta_value['address'];
 					}
 
 					break;

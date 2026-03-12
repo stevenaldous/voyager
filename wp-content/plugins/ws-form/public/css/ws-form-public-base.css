@@ -188,8 +188,8 @@
   letter-spacing: var(--wsf-field-letter-spacing);
   line-height: var(--wsf-field-line-height);
   margin: 0;
-  min-height: auto;
   max-width: none;
+  min-height: auto;
   opacity: 1;
   padding: var(--wsf-field-padding);
   -webkit-text-decoration: var(--wsf-field-text-decoration);
@@ -732,6 +732,7 @@
 .wsf-form.wsf-validated [role=\"radiogroup\"][data-wsf-invalid] ~ .wsf-invalid-feedback,
 .wsf-form.wsf-validated [data-select-min-max]:invalid ~ .wsf-invalid-feedback,
 .wsf-form.wsf-validated [data-checkbox-min-max]:invalid ~ .wsf-invalid-feedback,
+.wsf-form.wsf-validated [data-captcha-invalid] ~ .wsf-invalid-feedback,
 .wsf-form.wsf-validated .wsf-input-group:has(.iti .wsf-field:invalid) ~ .wsf-invalid-feedback,
 .wsf-form .wsf-validated .wsf-field:invalid ~ .wsf-invalid-feedback,
 .wsf-form .wsf-validated .wsf-field.wsf-invalid ~ .wsf-invalid-feedback,
@@ -739,8 +740,18 @@
 .wsf-form .wsf-validated [role=\"radiogroup\"][data-wsf-invalid] ~ .wsf-invalid-feedback,
 .wsf-form .wsf-validated [data-select-min-max]:invalid ~ .wsf-invalid-feedback,
 .wsf-form .wsf-validated [data-checkbox-min-max]:invalid ~ .wsf-invalid-feedback,
+.wsf-form .wsf-validated [data-captcha-invalid] ~ .wsf-invalid-feedback,
 .wsf-form .wsf-validated .wsf-input-group:has(.iti .wsf-field:invalid) ~ .wsf-invalid-feedback {
   display: block;
+}
+.wsf-form [data-type=captchafox]:has([data-mode=hidden]),
+.wsf-form [data-type=recaptcha]:has([data-recaptcha-type=v2_invisible], [data-recaptcha-type=v3_default]),
+.wsf-form [data-type=turnstile]:has([data-appearance=interaction-only]) {
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 0;
 }
 .wsf-form.wsf-field-border-placement-bottom [data-wsf-legal].wsf-field,
 .wsf-form.wsf-field-border-placement-bottom input.wsf-field[type=text] ~ canvas,

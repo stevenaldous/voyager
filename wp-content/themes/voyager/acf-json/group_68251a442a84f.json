@@ -320,6 +320,8 @@
                                 "bg-v2a": "Theme Secondary Accent",
                                 "bg-black": "Black",
                                 "bg-img": "Image",
+                                "bg-dkg": "Theme Dark Gradient",
+                                "bg-ltg": "Theme Light Gradient",
                                 "bg-trans": "Transparent\/None"
                             },
                             "default_value": "bg-trans",
@@ -969,6 +971,8 @@
                                 "bg-v2a": "Theme Secondary Accent",
                                 "bg-black": "Black",
                                 "bg-img": "Image",
+                                "bg-dkg": "Theme Dark Gradient",
+                                "bg-ltg": "Theme Light Gradient",
                                 "bg-trans": "Transparent\/None"
                             },
                             "default_value": "bg-trans",
@@ -3547,6 +3551,8 @@
                                 "bg-v2a": "Theme Secondary Accent",
                                 "bg-black": "Black",
                                 "bg-img": "Image",
+                                "bg-dkg": "Theme Dark Gradient",
+                                "bg-ltg": "Theme Light Gradient",
                                 "bg-trans": "Transparent\/None"
                             },
                             "default_value": "bg-trans",
@@ -4114,5 +4120,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1758836038
+    "display_title": "",
+    "modified": 1773337874
 }

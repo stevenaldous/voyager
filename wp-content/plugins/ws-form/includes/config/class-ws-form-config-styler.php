@@ -1,5 +1,10 @@
 <?php
 
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
+
 	class WS_Form_Config_Styler extends WS_Form_Config {
 
 		// Configuration - Styler
@@ -3276,6 +3281,7 @@
 			);
 
 			// Apply filter
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			return apply_filters('wsf_config_styler', $styler);
 		}
 
@@ -3322,6 +3328,7 @@
 			}
 
 			// Apply filter
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			return apply_filters('wsf_config_styler_color', $meta);
 		}
 
@@ -3339,6 +3346,7 @@
 			);
 
 			// Apply filter
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			return apply_filters('wsf_config_styler_typography', $meta);
 		}
 
@@ -3418,6 +3426,7 @@
 			);
 
 			// Apply filter
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			return apply_filters('wsf_config_styler_typography_meta', $meta);
 		}
 
@@ -3452,6 +3461,7 @@
 			);
 
 			// Apply filter
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			return apply_filters('wsf_config_styler_padding_meta', $meta);
 		}
 
@@ -3475,6 +3485,7 @@
 			}
 
 			// Apply filter
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			return apply_filters('wsf_config_styler_gap', $meta);
 		}
 
@@ -3499,6 +3510,7 @@
 			}
 
 			// Apply filter
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			return apply_filters('wsf_config_styler_gap_meta', $meta);
 		}
 
@@ -3512,6 +3524,7 @@
 			$meta = array_merge($meta, self::get_styler_typography($key_prefix, $var_prefix, $default_font_size, $default_font_weight, $default_line_height));
 
 			// Apply filter
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			return apply_filters('wsf_config_styler_color_typograpy', $meta);
 		}
 
@@ -3528,6 +3541,7 @@
 			$meta = array_merge($meta, self::get_styler_gap($key_prefix, $var_prefix, $default_gap));
 
 			// Apply filter
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			return apply_filters('wsf_config_styler_color_typograpy_gap', $meta);
 		}
 	}

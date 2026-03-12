@@ -1,5 +1,10 @@
 <?php
 
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
+
 	#[AllowDynamicProperties]
 	class WS_Form_Data_Source_Post_Status extends WS_Form_Data_Source {
 
@@ -18,6 +23,7 @@
 			add_action('rest_api_init', array($this, 'rest_api_init'), 10, 0);
 
 			// Records per page
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			$this->records_per_page = apply_filters('wsf_data_source_' . $this->id . '_records_per_age', $this->records_per_page);
 
 			// Register init actin
@@ -123,7 +129,15 @@
 			$meta_keys = parent::get_column_mapping(array(), $meta_value, $meta_key_config);
 
 			// Return data
-			return array('error' => false, 'error_message' => '', 'meta_value' => $meta_value, 'max_num_pages' => 0, 'meta_keys' => $meta_keys);
+			return array(
+
+				'error' => false,
+				'error_message' => '',
+				// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+				'meta_value' => $meta_value,
+				'max_num_pages' => 0,
+				'meta_keys' => $meta_keys
+			);
 		}
 
 		// Get default columns
@@ -171,6 +185,7 @@
 			$settings->endpoint_get = 'data-source/' . $this->id . '/';
 
 			// Apply filter
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- All hooks prefixed with wsf_
 			$settings = apply_filters('wsf_data_source_' . $this->id . '_settings', $settings);
 
 			return $settings;

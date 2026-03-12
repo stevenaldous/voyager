@@ -1,5 +1,10 @@
 <?php
 
+	// Exit if accessed directly
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit;
+	}
+
 	/**
 	 * Form preview
 	 */
@@ -39,6 +44,7 @@
 			if(defined('CT_VERSION')) {
 
 				global $ct_replace_render_template;
+				// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound -- Third party global
 				$ct_replace_render_template = self::template_include();
 			}
 		}
@@ -48,7 +54,7 @@
 			global $wp, $wp_query;
 
 			// Set post ID
-			$post_id = -1;
+			$post_id = 2147483647;
 
 			// Post constructor
 			$post = new stdClass();
@@ -72,7 +78,7 @@
 			$wp_post = new WP_Post($post);
 
 			// Add post to cache
-			wp_cache_add($post_id, $wp_post, 'posts');
+			wp_cache_set($post_id, $wp_post, 'posts');
 
 			// Update the main query
 			$wp_query->post = $wp_post;
@@ -146,10 +152,10 @@
 				$template_file = $templates_path . '/' . $template;
 
 				// Skip files that don't exist
-				if(!file_exists($template_file)) { continue; }
+				if(!WS_Form_File::file_exists($template_file)) { continue; }
 
 				// Load template into string
-				$template_html = file_get_contents($template_file);
+				$template_html = WS_Form_File::file_get_contents($template_file);
 
 				// Look for reference to loading content
 				if(
