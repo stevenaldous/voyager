@@ -19,6 +19,11 @@ get_header();
 $sb     = get_field('sb'); 
 $class  = $sb ? 'col-12 col-lg-8' : 'col';  
 
+// defaul theme
+$th     = get_field('theme_def','options') ?: 'v-light';
+
+
+
 ?>
 <div class="page-wrapper" id="page-wrapper">
 	<div id="content" tabindex="-1">
@@ -28,11 +33,9 @@ $class  = $sb ? 'col-12 col-lg-8' : 'col';
                 <div class="container">
                     <div class="row">
                         <div class="<?php echo $class; ?>">
-
-                        
-                        <?php the_content(  ); ?>
-
-
+                        <div class="<?php echo $th; ?> py-5 mb-5">
+                            <?php the_content(  ); ?>
+                        </div>
                         <?php get_template_part('/template-parts/components/flex/flex', 'controller'); ?>
                         </div>
                         <?php if( $sb ) { get_template_part('/template-parts/components/sidebars/sidebar'); }; ?>

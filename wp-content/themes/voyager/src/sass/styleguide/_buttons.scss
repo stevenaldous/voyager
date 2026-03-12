@@ -248,7 +248,7 @@ button:focus {outline:0 !important;}
 		background-color: transparent;
 		&:hover, &:focus {
 			color: $white;
-			color: var(--color-link-dark);
+			color: var(--color-v1);
 			background-color: var(--color-link-hover-dark);
 			border-color: var(--color-link-hover-dark);
 		}

@@ -261,6 +261,7 @@ $bgcol_fields = array(
     'tb_bg',
     'pop_bg',
     'form_bg',
+    'bg_color',
     'body_bg'
 );
 // loop through em

@@ -237,6 +237,9 @@ function voyager_color_panel() {
         case 17: // Source Serif
             echo ' --font-hx: "Source Serif 4", serif;';
             break;
+        case 18: // Syne
+            echo ' --font-hx: "Syne", sans-serif;';
+            break;
         default: // Merriweather
         echo ' --font-hx: "Merriweather", serif;';
     }
@@ -272,6 +275,9 @@ function voyager_color_panel() {
             break;
         case 10: // Work Sans
             echo '--font-body: "Work Sans", sans-serif ;';
+            break;
+        case 11: // Jost
+            echo '--font-body: "Jost", sans-serif ;';
             break;
         default: // Mulish
         echo '--font-body: "Mulish", sans-serif;';

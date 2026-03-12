@@ -190,14 +190,15 @@ $bhw: 22px; // dot size variable
 // light background font color defaults
 .light-slider,
 .bg-dark .bg-white,
-.bg-dark .bg-light {
+.bg-dark .bg-light,
+.v-light {
     .slick-dots li button,
     .slick-arrow {
-        color: $n200;
-        color: var(--color-n200);
+        color: $v1;
+        color: var(--color-v1-light);
         &:hover, &:focus {
-            color: $v1-accent;
-            color: var(--color-v1-accent);
+            // color: $v1-accent;
+            // color: var(--color-v1-accent);
         }
     }
 }
@@ -207,7 +208,8 @@ $bhw: 22px; // dot size variable
 .bg-v1,
 .bg-white .bg-dark,
 .bg-white .bg-v1,
-.bg-black {
+.bg-black,
+.v-dark {
     .slick-dots li button,
 	.slick-arrow {
         color: $white;

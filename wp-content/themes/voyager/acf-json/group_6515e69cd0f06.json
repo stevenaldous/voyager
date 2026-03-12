@@ -35,7 +35,6 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
             "choices": {
                 "1": "Barlow Condensed",
                 "2": "Bitter",
@@ -53,7 +52,8 @@
                 "14": "Poppins",
                 "15": "Roboto Slab",
                 "16": "Rubik",
-                "17": "Source Serif"
+                "17": "Source Serif",
+                "18": "Syne"
             },
             "default_value": 10,
             "return_format": "value",
@@ -1282,10 +1282,10 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
             "choices": {
                 "1": "Alegreya Sans",
                 "2": "Inter Light",
+                "11": "Jost",
                 "3": "Montserrat",
                 "4": "Mulish",
                 "5": "Open Sans",
@@ -2161,5 +2161,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752099182
+    "display_title": "",
+    "modified": 1773338809
 }

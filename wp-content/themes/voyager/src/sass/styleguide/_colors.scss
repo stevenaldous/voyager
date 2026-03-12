@@ -138,10 +138,10 @@
 }
 // custom colors to my theme
 .bg-dkg {
-	background:  linear-gradient(135deg, var(--color-v1), var(--color-v2))
+	background:  radial-gradient(ellipse at 5% 80%, rgba(74, 255, 106, 0.08) 0%, transparent 50%), radial-gradient(ellipse at 95% 10%, rgba(0, 180, 200, 0.08) 0%, transparent 50%), linear-gradient(150deg, #060D07, #071410)
 }
 .bg-ltg {
-	background: linear-gradient(135deg, #EDE9FE, #E0F2FE)
+	background: linear-gradient(140deg, #ECFDF5, #E0FFFE, #F0FDF4)
 }
 /* Netral Colors */
 .bg-white { background: $white; background: var(--color-white);}
@@ -247,6 +247,8 @@
 		color: var(--color-hx-dark);
 		span {
 			color: var(--color-hx-flair-dark);
+			// custom my site
+			text-shadow: 0 0 20px rgba(var(--color-rgb-hx-flair-dark), 0.6);
 		}
    }
 	a:not(.btn),
@@ -276,7 +278,8 @@
 	h1,  h2,  h3,  h4,  h5,  h6,
 	.h1, .h2, .h3, .h4, .h5, .h6 { 
 		span { 
-			color: var(--color-white); 
+			color: var(--color-white);
+
 		}
 	}
 	.super-quote.sq-hi blockquote { border-color: var(--color-v2-link-hover);}

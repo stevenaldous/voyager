@@ -64,6 +64,9 @@
 		case 17: // Source Serif 4
             $fh = 'Source+Serif+4:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700';
             break;
+        case 18: // Syne
+            $fh = 'Syne:wght@400..800';
+            break;
         default: // Merriweather
             $fh = 'Merriweather:ital,wght@0,400;0,700;1,400;1,700';
     }
@@ -100,6 +103,9 @@
             break;
         case 10: // Work Sans
 			$fb = 'Work+Sans:ital,wght@0,300..700;1,300..700';
+            break;
+       case 11: // Jost
+			$fb = 'Jost:ital,wght@0,100..900;1,100..900';
             break;
         default:  // Mulish
             $fb = 'Mulish:ital,wght@0,300..700;1,300..700';
