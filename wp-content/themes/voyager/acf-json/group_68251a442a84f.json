@@ -1775,6 +1775,105 @@
                                                             "parent_repeater": "field_68814735d695d"
                                                         }
                                                     ]
+                                                },
+                                                {
+                                                    "key": "field_69b3540377f13",
+                                                    "label": "Bottom Margin All Screens",
+                                                    "name": "b_mar",
+                                                    "aria-label": "",
+                                                    "type": "select",
+                                                    "instructions": "",
+                                                    "required": 1,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "34",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "choices": [
+                                                        "None",
+                                                        "XS",
+                                                        "S",
+                                                        "M",
+                                                        "L",
+                                                        "XL"
+                                                    ],
+                                                    "default_value": 4,
+                                                    "return_format": "value",
+                                                    "multiple": 0,
+                                                    "allow_null": 0,
+                                                    "allow_in_bindings": 1,
+                                                    "ui": 0,
+                                                    "ajax": 0,
+                                                    "placeholder": "",
+                                                    "create_options": 0,
+                                                    "save_options": 0
+                                                },
+                                                {
+                                                    "key": "field_69b3540677f14",
+                                                    "label": "Bottom Margin Tablet +",
+                                                    "name": "b_mar_t",
+                                                    "aria-label": "",
+                                                    "type": "select",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "33",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "choices": [
+                                                        "None",
+                                                        "XS",
+                                                        "S",
+                                                        "M",
+                                                        "L",
+                                                        "XL"
+                                                    ],
+                                                    "default_value": false,
+                                                    "return_format": "value",
+                                                    "multiple": 0,
+                                                    "allow_null": 1,
+                                                    "allow_in_bindings": 1,
+                                                    "ui": 0,
+                                                    "ajax": 0,
+                                                    "placeholder": "",
+                                                    "create_options": 0,
+                                                    "save_options": 0
+                                                },
+                                                {
+                                                    "key": "field_69b3540977f15",
+                                                    "label": "Bottom Margin Desktop +",
+                                                    "name": "b_mar_d",
+                                                    "aria-label": "",
+                                                    "type": "select",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "33",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "choices": [
+                                                        "None",
+                                                        "XS",
+                                                        "S",
+                                                        "M",
+                                                        "L",
+                                                        "XL"
+                                                    ],
+                                                    "default_value": false,
+                                                    "return_format": "value",
+                                                    "multiple": 0,
+                                                    "allow_null": 1,
+                                                    "allow_in_bindings": 1,
+                                                    "ui": 0,
+                                                    "ajax": 0,
+                                                    "placeholder": "",
+                                                    "create_options": 0,
+                                                    "save_options": 0
                                                 }
                                             ],
                                             "min": "",
@@ -1981,8 +2080,9 @@
                                                                 "bg-v2": "Theme Secondary",
                                                                 "bg-v2l": "Theme Secondary Light",
                                                                 "bg-v2a": "Theme Secondary Accent",
-                                                                "bg-black": "Black",
-                                                                "bg-light-grad": "Light Gradient"
+                                                                "bg-dkg": "Theme Dark Gradient",
+                                                                "bg-ltg": "Theme Light Gradient",
+                                                                "bg-black": "Black"
                                                             },
                                                             "default_value": false,
                                                             "return_format": "value",
@@ -2488,8 +2588,9 @@
                                                                 "bg-v2": "Theme Secondary",
                                                                 "bg-v2l": "Theme Secondary Light",
                                                                 "bg-v2a": "Theme Secondary Accent",
-                                                                "bg-black": "Black",
-                                                                "bg-light-grad": "Light Gradient"
+                                                                "bg-dkg": "Theme Dark Gradient",
+                                                                "bg-ltg": "Theme Light Gradient",
+                                                                "bg-black": "Black"
                                                             },
                                                             "default_value": false,
                                                             "return_format": "value",
@@ -2759,8 +2860,9 @@
                                                                 "bg-v2": "Theme Secondary",
                                                                 "bg-v2l": "Theme Secondary Light",
                                                                 "bg-v2a": "Theme Secondary Accent",
-                                                                "bg-black": "Black",
-                                                                "bg-light-grad": "Light Gradient"
+                                                                "bg-dkg": "Theme Dark Gradient",
+                                                                "bg-ltg": "Theme Light Gradient",
+                                                                "bg-black": "Black"
                                                             },
                                                             "default_value": "bg-white",
                                                             "return_format": "value",
@@ -3218,8 +3320,9 @@
                                                                 "bg-v2": "Theme Secondary",
                                                                 "bg-v2l": "Theme Secondary Light",
                                                                 "bg-v2a": "Theme Secondary Accent",
-                                                                "bg-black": "Black",
-                                                                "bg-light-grad": "Light Gradient"
+                                                                "bg-dkg": "Theme Dark Gradient",
+                                                                "bg-ltg": "Theme Light Gradient",
+                                                                "bg-black": "Black"
                                                             },
                                                             "default_value": false,
                                                             "return_format": "value",
@@ -3567,6 +3670,100 @@
                             "save_options": 0
                         },
                         {
+                            "key": "field_68814735d6994",
+                            "label": "Background Image",
+                            "name": "bg_img",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_68814735d698d",
+                                        "operator": "==",
+                                        "value": "bg-img"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "0.25",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_68814735d6995",
+                            "label": "Background Image Laptop+",
+                            "name": "bg_img_lg",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_68814735d698d",
+                                        "operator": "==",
+                                        "value": "bg-img"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "0.25",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_69b361d8da5db",
+                            "label": "",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_68814735d698d",
+                                        "operator": "!=",
+                                        "value": "bg-img"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        },
+                        {
                             "key": "field_68814735d698e",
                             "label": "Main Column Order",
                             "name": "col_ord",
@@ -3589,12 +3786,76 @@
                                 "id": ""
                             },
                             "choices": {
-                                "order-2": "First",
-                                "order-0": "Second"
+                                "order-0": "First",
+                                "order-2": "Second"
                             },
-                            "default_value": "order-2",
+                            "default_value": "order-0",
                             "return_format": "value",
                             "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_69b360d01cbe8",
+                            "label": "Main Column Order Tablet+",
+                            "name": "col_ord_md",
+                            "aria-label": "",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_68814758d699d",
+                                        "operator": ">",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "order-lg-0": "First",
+                                "order-lg-2": "Second"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 1,
+                            "allow_in_bindings": 0,
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_69b360d21cbe9",
+                            "label": "Main Column Order Laptop+",
+                            "name": "col_ord_lg",
+                            "aria-label": "",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_68814758d699d",
+                                        "operator": ">",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "order-lg-0": "First",
+                                "order-lg-2": "Second"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 1,
                             "allow_in_bindings": 0,
                             "layout": "horizontal"
                         },
@@ -3606,15 +3867,23 @@
                             "type": "button_group",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_68814758d699d",
+                                        "operator": ">",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "25",
                                 "class": "",
                                 "id": ""
                             },
                             "choices": {
-                                "order-xl-2": "First",
-                                "order-xl-0": "Second"
+                                "order-lg-0": "First",
+                                "order-lg-2": "Second"
                             },
                             "default_value": "",
                             "return_format": "value",
@@ -3800,72 +4069,6 @@
                             "placeholder": "",
                             "create_options": 0,
                             "save_options": 0
-                        },
-                        {
-                            "key": "field_68814735d6994",
-                            "label": "Background Image",
-                            "name": "bg_img",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_68814735d698d",
-                                        "operator": "=="
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "id",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "0.25",
-                            "mime_types": "",
-                            "allow_in_bindings": 0,
-                            "preview_size": "medium"
-                        },
-                        {
-                            "key": "field_68814735d6995",
-                            "label": "Background Image Laptop+",
-                            "name": "bg_img_lg",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_68814735d698d",
-                                        "operator": "=="
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "id",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "0.25",
-                            "mime_types": "",
-                            "allow_in_bindings": 0,
-                            "preview_size": "medium"
                         },
                         {
                             "key": "field_68814735d6996",
@@ -4121,5 +4324,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1773337874
+    "modified": 1773364265
 }

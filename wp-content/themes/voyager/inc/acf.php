@@ -172,7 +172,6 @@ function wp_nav_menus_load( $field ) {
  * Dynamically populates any ACF field with voy_nav_menu with list of navigation menus
  *
 */
-add_filter( 'acf/load_field/name=ws_form_fmenu', 'wp_ws_forms_load' );
 function wp_ws_forms_load( $field ) {
     // reset choices
     $field['choices'] = array();
@@ -188,7 +187,17 @@ function wp_ws_forms_load( $field ) {
     }
 
      return $field;
+}
 
+
+// set array for targeted button fields
+$forms = array(
+    'ws_form_fmenu',
+    'form_form',
+);
+// loop through em
+foreach ($forms as $f) {
+    add_filter('acf/load_field/name='.$f, 'wp_ws_forms_load');
 }
 //////////////////////////////////////////////////////////////////////////
 /// ** ACF BG Solid Img/Color Fill **

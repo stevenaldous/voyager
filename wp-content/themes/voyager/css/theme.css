@@ -34757,10 +34757,10 @@ iframe {
 }
 @media (min-width: 768px) {
   .hero {
-    min-height: 500px;
+    min-height: 350px;
   }
   .hero:not(.hero-team):not(.hero-resources):not(.hero-faqs) header {
-    max-width: 850px;
+    max-width: 1000px;
   }
 }
 

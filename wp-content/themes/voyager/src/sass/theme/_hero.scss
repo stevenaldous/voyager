@@ -22,8 +22,8 @@
     h1,.h1 { font-size: var(--font-size-hero); }
     .subt { font-size: var(--font-size-h5); }
     @media #{$mq-md} {
-        min-height: 500px;
-        &:not(.hero-team):not(.hero-resources):not(.hero-faqs) header { max-width: 850px;}
+        min-height: 350px;
+        &:not(.hero-team):not(.hero-resources):not(.hero-faqs) header { max-width: 1000px;}
     }
 }
 

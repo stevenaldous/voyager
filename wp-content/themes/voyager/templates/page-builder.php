@@ -21,12 +21,9 @@ $class  = $sb ? 'col-12 col-lg-8' : 'col';
                 <div class="container">
                     <div class="row">
                         <div class="<?php echo $class; ?>">
+           
+                            <?php  get_template_part('template-parts/flex/flex', 'voyager'); // get home flex controller ?>
 
-                        
-                        <?php the_content(  ); ?>
-
-
-                        <?php get_template_part('/template-parts/components/flex/flex', 'voyager'); ?>
                         </div>
                         <?php if( $sb ) { get_template_part('/template-parts/components/sidebars/sidebar'); }; ?>
                     </div>

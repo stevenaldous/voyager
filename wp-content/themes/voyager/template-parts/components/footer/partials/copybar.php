@@ -36,7 +36,6 @@ $cop_th = get_field('copyr_theme','options')  ? ' v-dark' : ' v-light';
                 <div class="site-info d-flex flex-row justify-content-start align-items-center">
                     <?php get_template_part( 'template-parts/components/footer/partials/copybar-copy' ); ?>
                 </div>
-                
             </div>
         </div>
     </div>   

@@ -166,6 +166,8 @@
                 "bg-v2": "Theme Secondary",
                 "bg-v2l": "Theme Secondary Light",
                 "bg-v2a": "Theme Secondary Accent",
+                "bg-dkg": "Theme Dark Gradient",
+                "bg-ltg": "Theme Light Gradient",
                 "bg-black": "Black"
             },
             "default_value": "bg-white",
@@ -294,11 +296,11 @@
             "wpml_cf_preferences": 2
         },
         {
-            "key": "field_64a6fb704c8a8",
+            "key": "field_69b87bdd54584",
             "label": "Form",
             "name": "form_form",
             "aria-label": "",
-            "type": "forms",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -307,10 +309,19 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
-            "return_format": "id",
+            "choices": {
+                "1": "Contact Me"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
             "allow_null": 0,
-            "multiple": 0
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_658f639f01792",
@@ -417,6 +428,8 @@
                 "bg-v2a": "Theme Secondary Accent",
                 "bg-black": "Black",
                 "bg-img": "Image",
+                "bg-dkg": "Theme Dark Gradient",
+                "bg-ltg": "Theme Light Gradient",
                 "bg-trans": "Transparent\/None"
             },
             "default_value": "bg-v1",
@@ -521,5 +534,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752797811
+    "display_title": "",
+    "modified": 1773698256
 }

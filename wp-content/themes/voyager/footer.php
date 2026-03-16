@@ -19,7 +19,7 @@ $bo   = get_field( 'foot_bo','options' ) ? ' border-top ' . get_field( 'foot_bo'
 	<div id="wrapper-footer">
 		<footer class="site-footer" id="colophon">
 			<?php 
-				if( is_page_template( 'page-templates/contact.php' ) || is_404() ||  is_page_template( 'page-templates/thanks.php' ) ) {
+				if( is_page_template( 'templates/contact.php' ) || is_404() ||  is_page_template( 'page-templates/thanks.php' ) ) {
 					get_template_part( 'template-parts/components/footer/footer', 'contact' );
 				}
 				else {

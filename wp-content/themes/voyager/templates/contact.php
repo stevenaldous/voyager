@@ -24,6 +24,7 @@ $text   = get_field('text');
 $cta    = get_field('cta');
 
 // form vars
+$form  = get_field( 'form_form');
 $f_th  = get_field('form_theme') ? ' v-dark' : ' v-light';
 $f_bg  = get_field('form_bg') ?: 'bg-blur';
 $f_rd  = get_field('form_rnd') ? ' rounded-3' : '';
@@ -64,7 +65,7 @@ $gmap   = get_field('map_url','options');
                         <?php // Form Col  ?>
                         <div class="col pt-4 p-md-5">
                             <div class="form-wrap p-4 p-lg-5 <?php echo $f_bg . $f_th . $f_sty . $f_btn  . $f_rd ; ?> shadow">
-                                <?php get_template_part('template-parts/components/forms/gform');// contact bar ?>
+                                <?php if($form) { echo  do_shortcode('[ws_form id="'.$form.'"]'); }  ?>
                             </div>
                         </div>
                     </div>
@@ -84,8 +85,6 @@ $gmap   = get_field('map_url','options');
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             <?php endif; ?>

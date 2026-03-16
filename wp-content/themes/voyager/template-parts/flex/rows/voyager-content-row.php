@@ -19,8 +19,10 @@ $col        = 'col-12';
 // gap and order
 $gap    = get_sub_field('col_gap') ?  ' gap-xl-'.get_sub_field('col_gap') : '';
 $ord    = get_sub_field('col_ord') ?: ' order-2';
+$ord_md = get_sub_field('col_ord_md') ? ' '.get_sub_field('col_ord_md') : '';
+$ord_lg = get_sub_field('col_ord_lg') ? ' '.get_sub_field('col_ord_lg') : '';
 $ord_xl = get_sub_field('col_ord_xl') ? ' '.get_sub_field('col_ord_xl') : '';
-$ord    = $ord .$ord_xl;
+$ord    = $ord . $ord_md . $ord_lg . $ord_xl;
 
 // vars
 $rep = 'column_rep';
@@ -71,14 +73,19 @@ if(have_rows($rep)):
                 // if second row, use col2 values
                 if(get_row_index() == 2 ) {
                     $col = $col2;
+                    $ord = '';
+                }
+                else {
+                    //$ord = ' test';
                 }
 
+                //content alignment vars
                 $alx = get_sub_field('flex_align_x') ? ' align-items-'. get_sub_field('flex_align_x') : ' align-items-start' ;
                 $aly = get_sub_field('flex_align_y') ? ' justify-content-'. get_sub_field('flex_align_y') : ' justify-content-center';
 
-                $o = '';
+                
             ?>
-            <div class="<?php  echo $col .' '. $alx . $aly; ?> d-flex flex-column">
+            <div class="<?php  echo $col .' '. $alx . $aly . ' '. $ord; ?> d-flex flex-column">
                 <?php get_template_part('template-parts/flex/flex-voyager-content'); ?>
             </div>
             <?php endwhile; wp_reset_postdata(); ?>

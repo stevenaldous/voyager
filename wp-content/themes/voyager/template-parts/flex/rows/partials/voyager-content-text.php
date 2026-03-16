@@ -20,11 +20,18 @@ $subtxt = get_sub_field( 'subtxt' );
 $al     = get_sub_field( 'text_align' ) ?: 'start';
 $col    = get_sub_field( 'main_md_lay' ) ? get_sub_field( 'main_md_lay' ) .' col-lg-12' : '';
 
+// spacing - bottom Margin
+$mb = ' mb-' . get_sub_field('b_mar');
+$mbt = get_sub_field('b_mar_t') ? ' mb-md-' . get_sub_field('b_mar_t') : '';
+$mbd = get_sub_field('b_mar_d') ? ' mb-xl-' . get_sub_field('b_mar_d') : '';
+$mb = $mb . $mbt . $mbd;
+
+// buttons
 $btns   = array( 'class' => 'flex-column flex-md-r ow justify-content-'.$al.' align-items-'.$al.' align-items-md-start', );
 
 ?>
 
-<div class="vc-text">
+<div class="vc-text<?php echo $mb; ?>">
         <?php
         // print title w/options
             if($t) { echo '<' . $sh . ' class="'.$vh.'">' . $t . '</' . $sh . '>'; }
