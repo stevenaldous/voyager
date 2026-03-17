@@ -9,5 +9,6 @@
                             // styleguide contains Hx fonts, links, buttons, etc
 @import "typography";       // Headings, Lists, and body font rules
 @import "colors";           // rules for background colors, font colors, etc. More global rules than specific section rules
-@import "buttons";          // Buttons and Link colors
+// @import "buttons";          // Buttons and Link colors
+@import "buttons_custom";          // Buttons and Link colors
 @import "media";            // images, iframes, aspect ratios, etc

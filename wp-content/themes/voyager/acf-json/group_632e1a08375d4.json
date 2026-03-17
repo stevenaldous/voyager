@@ -65,6 +65,8 @@
                 "bg-v2": "Theme Secondary",
                 "bg-v2l": "Theme Secondary Light",
                 "bg-v2a": "Theme Secondary Accent",
+                "bg-dkg": "Theme Dark Gradient",
+                "bg-ltg": "Theme Light Gradient",
                 "bg-black": "Black"
             },
             "default_value": "bg-v2",
@@ -229,7 +231,7 @@
         },
         {
             "key": "field_66bbc5b526945",
-            "label": "Phone Button",
+            "label": "CTA Button",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -241,36 +243,39 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
             "placement": "left",
             "endpoint": 0,
             "selected": 0
         },
         {
             "key": "field_65247b4c59e4f",
-            "label": "Include Phone Button?",
-            "name": "tb_pho_tf",
+            "label": "CTA Button Type",
+            "name": "nav_cta",
             "aria-label": "",
-            "type": "true_false",
+            "type": "button_group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "30",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
+            "choices": {
+                "none": "None",
+                "btn": "Button",
+                "phone": "Phone Button"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
         },
         {
             "key": "field_632e1b2bca56b",
             "label": "Phone Button Text",
-            "name": "tb_pho_text",
+            "name": "nav_cta_pho_text",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -280,26 +285,51 @@
                     {
                         "field": "field_65247b4c59e4f",
                         "operator": "==",
-                        "value": "1"
+                        "value": "phone"
                     }
                 ]
             ],
             "wrapper": {
-                "width": "70",
+                "width": "60",
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
+            "key": "field_69b991b6635c1",
+            "label": "CTA Button",
+            "name": "nav_cta_btn",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65247b4c59e4f",
+                        "operator": "==",
+                        "value": "btn"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
             "key": "field_66bb901330068",
-            "label": "Phone Button Style",
-            "name": "tb_pho_style",
+            "label": "CTA Button Style Mobile",
+            "name": "nav_cta_style",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -309,7 +339,14 @@
                     {
                         "field": "field_65247b4c59e4f",
                         "operator": "==",
-                        "value": "1"
+                        "value": "phone"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_65247b4c59e4f",
+                        "operator": "==",
+                        "value": "btn"
                     }
                 ]
             ],
@@ -318,7 +355,6 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
             "choices": {
                 "btn-primary": "Primary Button",
                 "btn-secondary": "Secondary Button",
@@ -329,6 +365,7 @@
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
+            "allow_in_bindings": 1,
             "ui": 0,
             "ajax": 0,
             "placeholder": "",
@@ -337,8 +374,8 @@
         },
         {
             "key": "field_66bbc1eea876a",
-            "label": "Phone Button Style Top Bar",
-            "name": "tb_pho_style_tb",
+            "label": "CTA Button Style Laptop+",
+            "name": "nav_cta_style_lg",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -348,7 +385,14 @@
                     {
                         "field": "field_65247b4c59e4f",
                         "operator": "==",
-                        "value": "1"
+                        "value": "btn"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_65247b4c59e4f",
+                        "operator": "==",
+                        "value": "phone"
                     }
                 ]
             ],
@@ -357,7 +401,6 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
             "choices": {
                 "btn-primary": "Primary Button",
                 "btn-secondary": "Secondary Button",
@@ -378,7 +421,7 @@
         {
             "key": "field_66bbc14aa8768",
             "label": "Phone Icon Mobile",
-            "name": "tb_pho_icon",
+            "name": "nav_cta_icon",
             "aria-label": "",
             "type": "text",
             "instructions": "Select an Icon from <a href=\"https:\/\/fontawesome.com\/\" target=\"_blank\">Font Awesome<\/a>.\r\n<br>\r\nFor this icon you just need the Icon Name. \r\n<br>\r\nExample: <strong><i class=\"fa-solid fa-question\"><\/i><\/strong>  =  <strong>fa-question<\/strong>",
@@ -388,7 +431,14 @@
                     {
                         "field": "field_65247b4c59e4f",
                         "operator": "==",
-                        "value": "1"
+                        "value": "phone"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_65247b4c59e4f",
+                        "operator": "==",
+                        "value": "btn"
                     }
                 ]
             ],
@@ -397,17 +447,17 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
             "default_value": "fa-phone",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
             "key": "field_66bbc1c5a8769",
-            "label": "Phone Icon Desktop+",
-            "name": "tb_pho_icon_lg",
+            "label": "Phone Icon Laptop+",
+            "name": "nav_cta_icon_lg",
             "aria-label": "",
             "type": "text",
             "instructions": "If blank, no icon will be displayed on Desktop",
@@ -417,7 +467,14 @@
                     {
                         "field": "field_65247b4c59e4f",
                         "operator": "==",
-                        "value": "1"
+                        "value": "phone"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_65247b4c59e4f",
+                        "operator": "==",
+                        "value": "btn"
                     }
                 ]
             ],
@@ -426,9 +483,9 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
@@ -477,16 +534,16 @@
             "wpml_cf_preferences": 1,
             "choices": {
                 "bg-white": "White",
-                "bg-v1": "Theme Primary",
-                "bg-v1l": "Theme Primary Light",
-                "bg-v1a": "Theme Primary Accent",
-                "bg-v1g": "Theme Primary Gradient",
-                "bg-v2": "Theme Secondary",
-                "bg-v2l": "Theme Secondary Light",
-                "bg-v2a": "Theme Secondary Accent",
+                "bg-jem1": "Theme Primary",
+                "bg-jem1l": "Theme Primary Light",
+                "bg-jem1a": "Theme Primary Accent",
+                "bg-jem1g": "Theme Primary Gradient",
+                "bg-jem2": "Theme Secondary",
+                "bg-jem2l": "Theme Secondary Light",
+                "bg-jem2a": "Theme Secondary Accent",
                 "bg-black": "Black"
             },
-            "default_value": "bg-v1",
+            "default_value": "bg-jem1",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -513,13 +570,13 @@
             "wpml_cf_preferences": 1,
             "choices": {
                 "bg-white": "White",
-                "bg-v1": "Theme Primary",
-                "bg-v1l": "Theme Primary Light",
-                "bg-v1a": "Theme Primary Accent",
-                "bg-v1g": "Theme Primary Gradient",
-                "bg-v2": "Theme Secondary",
-                "bg-v2l": "Theme Secondary Light",
-                "bg-v2a": "Theme Secondary Accent",
+                "bg-jem1": "Theme Primary",
+                "bg-jem1l": "Theme Primary Light",
+                "bg-jem1a": "Theme Primary Accent",
+                "bg-jem1g": "Theme Primary Gradient",
+                "bg-jem2": "Theme Secondary",
+                "bg-jem2l": "Theme Secondary Light",
+                "bg-jem2a": "Theme Secondary Accent",
                 "bg-black": "Black",
                 "nav-trans": "Transparent"
             },
@@ -838,5 +895,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1751572825
+    "display_title": "",
+    "modified": 1773776870
 }

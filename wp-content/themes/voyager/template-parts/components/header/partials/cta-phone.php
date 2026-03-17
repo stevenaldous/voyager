@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the header Phone Button
+ * The template for displaying the header Phone Button Mobile
  *
  * @package Voyager
  */
@@ -16,12 +16,12 @@ $ctry 	= get_field('pho_ctry','options');
 $pho 	= get_field('pho','options');
 
 // btn style vars
-$btn_st = get_field('tb_pho_style','options') ?: 'no-btn';
-$icon   = get_field('tb_pho_icon','options') ?: 'fa-phone';
+$btn_st = get_field('nav_cta_style','options') ?: 'no-btn';
+$icon   = get_field('nav_cta_icon','options') ?: 'fa-phone';
  
 ?>
 <div class="d-flex align-items-center d-lg-none">
-    <a href="tel:+<?php echo $ctry . $pho; ?>" aria-label="Call Us" class="btn btn-pho <?php echo $btn_st; ?>">
+    <a href="tel:+<?php echo $ctry . $pho; ?>" aria-label="Call Us" class="btn btn-cta btn-pho <?php echo $btn_st; ?>">
         <?php  echo '<i class="'.$fa.' '.$icon.' mx-2" aria-hidden="true"></i>'; ?>
     </a>
 </div>

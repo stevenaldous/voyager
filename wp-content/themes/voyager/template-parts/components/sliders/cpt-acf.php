@@ -41,7 +41,7 @@ if($posts):
 
 ?>
 
-<div class="slider-wrap">   
+<div class="slider-wrap slides-fh">   
     <div class="slick-controls <?php echo $cpt.'-controls'.$sl_id; ?> mt-3 mx-auto"></div>
     <div id="<?php echo $cpt . $sl_id; ?>" class="">
         <?php // loop through all selected CPT posts

@@ -1,0 +1,293 @@
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+// Links //////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+a {
+    color: $v1;
+	color: var(--color-v1);
+	font-weight: 700;
+	font-size: inherit;
+	text-decoration-thickness: 1px;
+	@include transition(all 250ms);
+	text-decoration: none;
+	&:hover, &:focus {
+		color: $v1-accent;
+		color: var(--color-v1-light);
+		text-decoration: underline;
+	}
+}
+a.img-link {
+	display: block;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	@include mb-border-radius(0);
+	img {
+		@include transition( all ease-in-out 450ms ); /* Animation */
+		cursor: pointer;
+	}
+	&:hover img, &:focus img {
+		transform: scale(1.03);
+	}
+}
+a.img-hover {
+	position: relative;
+	.overlay {
+		background-color: rgba( $v2, 0.8) ;
+		background-color: rgba( var(--color-v2), 0.8) ;
+		color: $white;
+		color: var(--color-white);
+		opacity: 0;
+		@include transition( opacity ease-in-out 450ms ); /* Animation */
+		&::after {
+			content: 'Learn More';
+			text-transform: uppercase;
+			color: $white;
+            font-size: 1.1rem;
+            padding: 0.5rem 1.5rem;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            @include transform( translateY(-50%) );
+            text-align: center;
+		}
+	}
+	&:hover, &:focus { .overlay { opacity: 1; } }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// Buttons ////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+.btn,
+input[type="submit"],
+button[type="submit"]  {
+	@include f2_bold();
+	line-height: normal;
+	padding: 12px 26px;
+	@include transition(all 350ms);
+	text-decoration: none;
+
+	// Theme ACF Variables
+	border: var(--border-btn);
+	@include mb-border-radius( var(--radius-btn)  );
+	font-size: var(--font-size-btn);
+	text-transform: var(--case-btn);
+	letter-spacing: var(--font-ls-btn , 0px);
+	&.btn-fw {
+		width: 100%;
+	}
+	&.btn-sm {
+		font-size: var(--font-size-btnsm);
+	}
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+}
+
+.btn.no-btn {
+	border: none;
+	color: $v1;
+	color: var(--color-v1);
+	padding: 0.5rem 0 0 0;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-underline-offset: 0.15rem;
+	text-decoration-thickness: 2px;
+	&:hover, &:focus {
+		color: $v1-accent;
+		color: var(--color-v1-light);
+	}
+}
+
+button:focus {outline:0 !important;}
+
+// social btn
+.btn-social {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	// border: solid 2px currentColor;
+	// @include mb-border-radius(5px);
+	width: 36px;
+	height: 36px;
+	@include transition(all 350ms);
+	text-decoration: none;
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+}
+.social li {
+	margin-left: 0.3rem;
+	margin-right: 0.3rem;
+	font-size: 1.5rem;
+	&:first-of-type { margin-left: 0; }
+	&:last-of-type  { margin-right: 0; }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// default/light BG Buttons ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+.v-light {
+	// default/light BG theme primary
+	.form-btn-primary input[type="submit"],
+	.form-btn-primary button[type="submit"],
+	.btn-primary {	
+		color: $white;
+		color: var(--color-white);
+		background-color: $v1;
+		background-color: var(--color-v1-light);
+		border-color: var(--color-v1-light);
+		&:hover, &:focus {
+			color: $white;
+			color: var(--color-white);
+			background-color: #14532D;
+			border-color: #14532D;
+		}
+		&:hover {
+			box-shadow: 0 4px 14px rgba(22, 101, 52, 0.3);
+		}
+		&:focus {
+			outline: 2px solid #15803D !important;
+			outline-offset: 3px;
+		}
+	}
+
+	
+
+	// default/light BG theme secondary
+	.form-btn-secondary input[type="submit"],
+	.form-btn-secondary button[type="submit"],
+	.btn-secondary {
+		color: $white;
+		color: var(--color-white);
+		background-color: $v2;
+		background-color: var(--color-link-light);
+		border-color: var(--color-link-light);
+		&:hover {
+			// color: $white;
+			// color: var(--color-white);
+			background-color: #0C4A6E;
+			border-color: #0C4A6E;
+			box-shadow: 0 4px 14px rgba(14, 116, 144, 0.25);
+		}
+		&:focus {
+			outline: 2px solid #15803D !important;
+			outline-offset: 3px;
+		}
+	}
+
+	// dark outline for a light bg
+	.form-btn-outline input[type="submit"],
+	&.form-btn-outline input[type="submit"],
+	.form-btn-outline button[type="submit"],
+	&.form-btn-outline button[type="submit"],
+	.btn-outline-dark,
+	.btn-outline {	
+		color: $v2;
+		color: var(--color-link-light);
+		background-color: transparent;
+		border-color: var(--color-link-light);
+		&:hover {
+			color: var(--color-link-light);
+			background-color: rgba( var(--color-rgb-link-light), .08 );
+			border-color: var(--color-link-light);
+			box-shadow: 0 0 18px rgba(var(--color-rgb-link-light), 0.2);
+		}
+		&:focus {
+			outline: 2px solid #15803D !important;
+			outline-offset: 3px;
+		}
+
+	}
+
+	// text only button color
+	.btn.no-btn {
+		color: $v2;
+		color: var(--color-link-light);
+		&:hover, &:focus {
+			color: $v1;
+			color: var(--color-link-hover-light);
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// invert/dark BG Buttons /////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+.v-dark {
+	// invert/dark primary button
+	.form-btn-primary input[type="submit"],
+	.form-btn-primary button[type="submit"],
+	.btn-primary {	
+		color: $white;
+		color: var(--color-white);
+		background-color: $v1-light;
+		background-color: var(--color-v1-light);
+		border-color: var(--color-v1-light);
+		&:hover {
+			box-shadow: 0 0 20px rgba(74, 255, 106, 0.25), 0 4px 16px rgba(22, 101, 52, 0.4);
+			background-color: #15803D;
+			border-color: #15803D;
+		}
+		&:focus {
+			outline: 2px solid var(--color-v1-accent, #4AFF6A) !important;
+			outline-offset: 3px;
+			box-shadow: 0 0 14px rgba(74, 255, 106, 0.35);
+		}
+	}
+	.form-btn-secondary input[type="submit"],
+	.form-btn-secondary button[type="submit"],
+	.btn-secondary {
+		color: $v1;
+		color: var(--color-v1);
+		background-color: var(--color-v2-light);
+		border-color: var(--color-v2-light);
+		&:hover {
+			box-shadow: 0 0 20px rgba(0, 180, 200, 0.3), 0 4px 16px rgba(0, 180, 200, 0.25);;
+			background-color: #00E5FF;
+			border-color: #00E5FF;
+		}
+		&:focus {
+			background-color: var(--color-v2-light);
+			border-color: var(--color-v2-light);
+			outline: 2px solid var(--color-v1-accent, #4AFF6A) !important;
+			outline-offset: 3px;
+			box-shadow: 0 0 14px rgba(74, 255, 106, 0.35);
+		}
+	}
+
+	// outline
+	&.form-btn-outline input[type="submit"],
+	.form-btn-outline input[type="submit"],
+	&.form-btn-outline button[type="submit"],
+	.form-btn-outline button[type="submit"],
+	.btn-outline {	
+		color: $white;
+		color: var(--color-link-dark);
+		border-color: var(--color-link-dark);
+		background-color: transparent;
+		&:hover, &:focus {
+			color: $white;
+			color: var(--color-link-dark);
+			background-color: rgba( var(--color-rgb-link-dark), 0.12);
+			box-shadow: 0 0 18px rgba(var(--color-rgb-link-dark), 0.2);
+		}
+	}
+	// text only button color
+	.btn.no-btn {
+		color: $body;
+		color: var(--color-link-dark);
+		&:hover, &:focus {
+			color: $v1;
+			color: var(--color-link-hover-dark);
+		}
+	}
+}
+
+
+
+
+/////////////

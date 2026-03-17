@@ -171,6 +171,16 @@ $bhw: 22px; // dot size variable
         width: 100%;
     }
 }
+
+// full height slides css
+.slides-fh {
+    .slick-track {
+        display: flex !important;
+    }
+    .slick-slide {
+        height: inherit;
+    }
+}
 ///////////////////////////////////////////////////////////////////////////////////
 // Colors
 ///////////////////////////////////////////////////////////////////////////////////

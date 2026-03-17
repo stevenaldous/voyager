@@ -268,6 +268,7 @@ $bgcol_fields = array(
     'foot_bg',
     'err_s_bg',
     'tb_bg',
+    'nav_bg',
     'pop_bg',
     'form_bg',
     'bg_color',
@@ -297,8 +298,8 @@ function acf_load_btn_choices( $field ) {
 // set array for targeted button fields
 $btn_fields = array(
     'btn_style',
-    'tb_pho_style_tb',
-    'tb_pho_style',
+    'nav_cta_style_lg',
+    'nav_cta_style',
     'nav_tog_style'
 );
 // loop through em

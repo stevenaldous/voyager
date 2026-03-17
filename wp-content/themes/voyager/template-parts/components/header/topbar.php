@@ -13,7 +13,7 @@
     // styling
     $bg       = get_field('tb_bg', 'options') ?: 'bg-v2';
     $th       = get_field('tb_th', 'options') ?: 'v-dark';
-    $tf       = get_field('tb_pho_tf', 'options');
+    $cta       = get_field('nav_cta', 'options');
     $lp       = get_post_type() == 'lp' ? 1 : 0;
  
     $jus     = $con_tf ? 'justify-content-between' : 'justify-content-end';
@@ -27,7 +27,8 @@
         <?php // Phone and Button ?>
     
         <?php 
-            if($tf )    { get_template_part('template-parts/components/header/partials/phone-tb'); } // phone CTA
+            if( $cta == 'phone')    { get_template_part('template-parts/components/header/partials/cta-phone-lg'); } // phone CTA
+            elseif( $cta == 'btn' ) { get_template_part('template-parts/components/header/partials/cta-btn-lg'); }
         ?>
     </div>
 </div>

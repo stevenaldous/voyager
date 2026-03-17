@@ -64,8 +64,8 @@ $gmap   = get_field('map_url','options');
 
                         <?php // Form Col  ?>
                         <div class="col pt-4 p-md-5">
-                            <div class="form-wrap p-4 p-lg-5 <?php echo $f_bg . $f_th . $f_sty . $f_btn  . $f_rd ; ?> shadow">
-                                <?php if($form) { echo  do_shortcode('[ws_form id="'.$form.'"]'); }  ?>
+                            <div class="form-wrap p-4 p-lg-5 <?php echo $f_bg . $f_th . $f_sty . $f_rd ; ?> shadow">
+                                <?php if($form) { echo  do_shortcode('[ws_form id="'.$form.'" class="'.$f_btn.'"]'); }  ?>
                             </div>
                         </div>
                     </div>

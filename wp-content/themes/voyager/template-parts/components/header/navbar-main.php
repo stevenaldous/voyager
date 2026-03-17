@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 $th  	= get_field('nav_theme' , 'options') ? ' v-dark ' : ' v-light ';
 $bg  	= get_field('nav_bg' , 'options') ?: 'bg-white';
 $bgm 	= get_field('nav_bg_mob' , 'options') && ( $bg == 'nav-trans' )  ? ' ' . get_field('nav_bg_mob' , 'options') : '';
-$tf_ph  = get_field('tb_pho_tf', 'options');
+$cta    = get_field('nav_cta', 'options');
 $tf_tb  = get_field('hide_topbar', 'options') ?: false;
 
 
@@ -35,16 +35,19 @@ $tf_tb  = get_field('hide_topbar', 'options') ?: false;
 			<?php // Top bar for desktop and tablet  ?>
 			<div class="d-flex order-lg-1 align-self-center btn-wrap">
 				<?php 
-					// phone button 
-					if( $tf_ph ) { 
-						get_template_part('template-parts/components/header/partials/phone', 'btn'); 
+					// CTA button 
+					if( $cta == 'phone' ) { 
+						get_template_part('template-parts/components/header/partials/cta-phone'); 
 					}
-			
+					elseif( $cta == 'btn' ) { 
+						get_template_part('template-parts/components/header/partials/cta-btn'); 
+					}
 					// Navbar Toggler 
 					get_template_part('template-parts/components/header/partials/toggle'); 
 				?>
 			</div>
 			<?php  get_template_part('template-parts/components/header/partials/menu', 'main'); // Main Menu  ?>
+
 		</div>
 
 	</div><?php // .container(-fluid) ?>

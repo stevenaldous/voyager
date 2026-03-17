@@ -13,6 +13,8 @@ $fa  = get_field('fa_def','options') ? 'fa-'.get_field('fa_def','options') : 'fa
 
 // vars
 $just = get_field('nav_just', 'options') ?: 'end';
+$cta  = get_field('nav_cta', 'options');
+$tb   = get_field('hide_topbar', 'options') ? true : false;
 
 // main menu args
 $args = array(
@@ -38,11 +40,30 @@ $args = array(
 			<?php
 				wp_nav_menu( $args );
 				
+				if( $tb == false && $cta ) {
+					echo '<div class="ms-3 d-none d-lg-block">';
+						// CTA button 
+						if( $cta == 'phone' ) { 
+							get_template_part('template-parts/components/header/partials/cta-phone-lg'); 
+						}
+						elseif( $cta == 'btn') { 
+							get_template_part('template-parts/components/header/partials/cta-btn-lg'); 
+						}
+					
+					echo '</div>';
+				}
+	
+				// Navbar Toggler 
+				get_template_part('template-parts/components/header/partials/toggle'); 
+
+
+
 				//get_template_part('template-parts/components/header/partials/search'); // Search
 			?>
 		</div>
 	</div>
 	<!-- The WordPress Menu goes here -->
+	
 	
 
 </div><!-- .offcanvas -->
