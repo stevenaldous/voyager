@@ -32094,6 +32094,15 @@ html {
 
 html, body {
   overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+html, body, #page {
+  height: 100%;
+}
+
+#page {
+  overflow-y: scroll;
 }
 
 body {
@@ -32173,6 +32182,13 @@ body.bg-hex {
   outline: none !important;
   box-shadow: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+.bg-img-fixed {
+  position: fixed;
+  z-index: -2;
+  width: 100vw;
+  height: 100vh;
 }
 
 .sr-only {
@@ -34613,6 +34629,11 @@ iframe {
   #main-nav .offcanvas {
     background-color: transparent !important;
   }
+}
+
+#wrapper-footer {
+  top: 100vh;
+  position: sticky;
 }
 
 .site-footer a:not(.btn):not([class*=h6]), .site-footer a.nav-link {

@@ -168,7 +168,8 @@
                 "bg-v2a": "Theme Secondary Accent",
                 "bg-dkg": "Theme Dark Gradient",
                 "bg-ltg": "Theme Light Gradient",
-                "bg-black": "Black"
+                "bg-black": "Black",
+                "bg-trans": "Transparent\/None"
             },
             "default_value": "bg-white",
             "return_format": "value",
@@ -362,154 +363,6 @@
             "ui_off_text": "Hide",
             "ui": 1,
             "wpml_cf_preferences": 1
-        },
-        {
-            "key": "field_658f635d01790",
-            "label": "Style\/Options",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0,
-            "wpml_cf_preferences": 1
-        },
-        {
-            "key": "field_6595ff5831831",
-            "label": "Content Theme",
-            "name": "theme",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 1,
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "Dark Bg",
-            "ui_off_text": "Light BG",
-            "ui": 1
-        },
-        {
-            "key": "field_664545c306f02",
-            "label": "Background",
-            "name": "bg",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "bg-white": "White",
-                "bg-v1": "Theme Primary",
-                "bg-v1l": "Theme Primary Light",
-                "bg-v1a": "Theme Primary Accent",
-                "bg-v1g": "Theme Primary Gradient",
-                "bg-v2": "Theme Secondary",
-                "bg-v2l": "Theme Secondary Light",
-                "bg-v2a": "Theme Secondary Accent",
-                "bg-black": "Black",
-                "bg-img": "Image",
-                "bg-dkg": "Theme Dark Gradient",
-                "bg-ltg": "Theme Light Gradient",
-                "bg-trans": "Transparent\/None"
-            },
-            "default_value": "bg-v1",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 1,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "create_options": 0,
-            "save_options": 0
-        },
-        {
-            "key": "field_6596089566d1e",
-            "label": "Background Image Laptop+",
-            "name": "bg_img_lg",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "There is a maximum file size of 0.5MB allowed. For the end user the smaller the better load times! If you need to compress your image, simply upload to <a href=\"https:\/\/tinypng.com\/\" target=\"_blank\">TinyPng<\/a> and only use a JPEG unless there is transparency.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_664545c306f02",
-                        "operator": "==",
-                        "value": "bg-img"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "30",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "0.5",
-            "mime_types": "",
-            "preview_size": "medium",
-            "wpml_cf_preferences": 1
-        },
-        {
-            "key": "field_64b83067cd8b4",
-            "label": "Background Image",
-            "name": "bg_img",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "There is a maximum file size of 0.5MB allowed. For the end user the smaller the better load times! If you need to compress your image, simply upload to <a href=\"https:\/\/tinypng.com\/\" target=\"_blank\">TinyPng<\/a> and only use a JPEG unless there is transparency.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_664545c306f02",
-                        "operator": "==",
-                        "value": "bg-img"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "30",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "0.5",
-            "mime_types": "",
-            "preview_size": "medium",
-            "wpml_cf_preferences": 1
         }
     ],
     "location": [
@@ -535,5 +388,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1773698256
+    "modified": 1773792127
 }

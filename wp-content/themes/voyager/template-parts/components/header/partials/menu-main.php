@@ -52,12 +52,6 @@ $args = array(
 					
 					echo '</div>';
 				}
-	
-				// Navbar Toggler 
-				get_template_part('template-parts/components/header/partials/toggle'); 
-
-
-
 				//get_template_part('template-parts/components/header/partials/search'); // Search
 			?>
 		</div>

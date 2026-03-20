@@ -213,11 +213,11 @@ function acf_load_bgimg_choices( $field ) {
         'bg-v2'  => 'Theme Secondary',
         'bg-v2l' => 'Theme Secondary Light',
         'bg-v2a' => 'Theme Secondary Accent',
-        'bg-black' => 'Black',
-        'bg-img'   => 'Image',
         'bg-dkg' => 'Theme Dark Gradient',
         'bg-ltg' => 'Theme Light Gradient',
         'bg-trans' => 'Transparent/None',
+        'bg-black' => 'Black',
+        'bg-img'   => 'Image',
     );
 
    return $field;
@@ -225,6 +225,7 @@ function acf_load_bgimg_choices( $field ) {
 // set array for targeted  fields
 $bgimg_fields = array(
     'bg',
+    'page_bg',
     'err_bg',
     'hero_bg',
     'faqs_h_bg',
@@ -255,6 +256,7 @@ function acf_load_bg_choices( $field ) {
         'bg-dkg' => 'Theme Dark Gradient',
         'bg-ltg' => 'Theme Light Gradient',
         'bg-black' => 'Black',
+        'bg-trans' => 'Transparent/None',
     );
 
    return $field;

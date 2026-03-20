@@ -1,0 +1,176 @@
+{
+    "key": "group_69b9eaf6038ae",
+    "title": "Page Settings",
+    "fields": [
+        {
+            "key": "field_6595ff5831831",
+            "label": "Content Theme",
+            "name": "page_theme",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "v-dark": "Dark",
+                "v-light": "Light"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_69b9eaf6ee3f9",
+            "label": "Page Background Color",
+            "name": "page_bg",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg-white": "White",
+                "bg-v1": "Theme Primary",
+                "bg-v1l": "Theme Primary Light",
+                "bg-v1a": "Theme Primary Accent",
+                "bg-v1g": "Theme Primary Gradient",
+                "bg-v2": "Theme Secondary",
+                "bg-v2l": "Theme Secondary Light",
+                "bg-v2a": "Theme Secondary Accent",
+                "bg-dkg": "Theme Dark Gradient",
+                "bg-ltg": "Theme Light Gradient",
+                "bg-trans": "Transparent\/None",
+                "bg-black": "Black",
+                "bg-img": "Image"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_64b83067cd8b4",
+            "label": "Background Image",
+            "name": "page_bg_img",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "There is a maximum file size of 0.5MB allowed. For the end user the smaller the better load times! If you need to compress your image, simply upload to <a href=\"https:\/\/tinypng.com\/\" target=\"_blank\">TinyPng<\/a> and only use a JPEG unless there is transparency.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_69b9eaf6ee3f9",
+                        "operator": "==",
+                        "value": "bg-img"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "0.5",
+            "mime_types": "",
+            "allow_in_bindings": 1,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_6596089566d1e",
+            "label": "Background Image Laptop+",
+            "name": "page_bg_img_lg",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "There is a maximum file size of 0.5MB allowed. For the end user the smaller the better load times! If you need to compress your image, simply upload to <a href=\"https:\/\/tinypng.com\/\" target=\"_blank\">TinyPng<\/a> and only use a JPEG unless there is transparency.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_69b9eaf6ee3f9",
+                        "operator": "==",
+                        "value": "bg-img"
+                    },
+                    {
+                        "field": "field_64b83067cd8b4",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "0.5",
+            "mime_types": "",
+            "allow_in_bindings": 1,
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/contact.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/page-builder.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1773793767
+}

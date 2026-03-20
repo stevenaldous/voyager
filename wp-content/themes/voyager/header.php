@@ -48,12 +48,11 @@ defined( 'ABSPATH' ) || exit;
 
 		// background color
 		$bg = get_field('bg_type','options');
+		$bg = get_field('page_bg' ) ?: $bg;
 
 		if($bg == 'bg-theme') {
 			$bg = get_field('body_bg','options') ?: 'bg-white';
 		}
-
-
 	?>
 	
 </head>
@@ -61,6 +60,8 @@ defined( 'ABSPATH' ) || exit;
 <body <?php body_class( $bg ); ?> <?php voyager_body_attributes(); ?> >
 
 <?php do_action( 'wp_body_open' ); ?>
+
+<?php if( $bg == 'bg-img' ) { get_template_part('template-parts/components/header/partials/bg-image'); } ?>
 
 <div class="site" id="page">
 

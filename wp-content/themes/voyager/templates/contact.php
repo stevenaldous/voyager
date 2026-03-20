@@ -14,7 +14,6 @@ $container = get_theme_mod('understrap_container_type' ) ?: 'container';
 
 // style vars
 $th     = get_field('theme') ? ' v-dark' : ' v-light';
-$bg     = get_field('bg' ) ?: 'bg-v1';
 $img    = get_field('bg_img' );
 $img_lg = get_field('bg_img_lg');
 
@@ -38,11 +37,11 @@ $gmap   = get_field('map_url','options');
 ?>
 <div class="page-wrapper" id="contact-wrapper">
 	<div id="content" tabindex="-1">
-        <main class="site-main <?php echo $bg;?>" id="main">
+        <main class="site-main" id="main">
             <?php //top section ?>
             <div class="py-5 ">
 
-                <?php if($bg == 'bg-img' ) { get_template_part('template-parts/components/overlay-img'); } ?>
+                <?php // if($bg == 'bg-img' ) { get_template_part('template-parts/components/overlay-img'); } ?>
                 
 
                 <div class="<?php echo esc_attr( $container ); ?>">
