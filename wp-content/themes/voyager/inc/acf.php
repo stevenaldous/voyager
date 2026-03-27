@@ -68,12 +68,12 @@ if( function_exists('acf_add_options_page') ) {
     //     'parent_slug'   => 'edit.php?post_type=badges',
     // ));
 
-    // // Testimonials Options
-    // acf_add_options_sub_page(array(
-    //     'page_title'    => 'Testimonials Settings',
-    //     'menu_title'    => 'Testimonials Settings',
-    //     'parent_slug'   => 'edit.php?post_type=testimonials',
-    // ));
+    // Testimonials Options
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Testimonials Settings',
+        'menu_title'    => 'Testimonials Settings',
+        'parent_slug'   => 'edit.php?post_type=testimonials',
+    ));
 
 };
 
@@ -274,7 +274,14 @@ $bgcol_fields = array(
     'pop_bg',
     'form_bg',
     'bg_color',
-    'body_bg'
+    'body_bg',
+    'test_def_bg',
+    'hero_bar_bg',
+    'nav_bg_mob',
+    'nav_bg',
+    'testimonials_h_over_bg',
+    'bg_over',
+    'hero_head_bg'
 );
 // loop through em
 foreach ($bgcol_fields as $f ) {
@@ -363,7 +370,9 @@ add_filter('acf/load_field/name=bo_style', 'acf_load_bo_choices');
 // set array for targeted  fields
 $bo_fields = array(
     'bo_style',
-    'foot_bo'
+    'foot_bo',
+    'test_def_bor',
+    'hero_head_bo'
 
 );
 // loop through em

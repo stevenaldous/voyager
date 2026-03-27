@@ -1,4 +1,4 @@
-<?php /* Template Name: Contact Page 
+<?php /* Template Name: Testimonials CPT Page 
 *
 *
 *
@@ -22,17 +22,8 @@ $t 	    = get_field('title') ? get_field('title') : get_bloginfo( 'name' );
 $text   = get_field('text');
 $cta    = get_field('cta');
 
-// form vars
-$form  = get_field( 'form_form');
-$f_th  = get_field('form_theme') ? ' v-dark' : ' v-light';
-$f_bg  = get_field('form_bg') ?: 'bg-blur';
-$f_rd  = get_field('form_rnd') ? ' rounded-3' : '';
-$f_btn = get_field('form_btn') ?: 'form-btn-secondary';
-$f_sty = get_field('form_style') ? ' form-under ' : ' ';
 
-// map
-$mtf    = get_field('map_tf');
-$gmap   = get_field('map_url','options');
+
 
 ?>
 <div class="page-wrapper" id="contact-wrapper">

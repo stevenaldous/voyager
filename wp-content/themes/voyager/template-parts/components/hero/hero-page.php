@@ -11,7 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // get site container width
-$container = get_theme_mod( 'understrap_container_type' ) ?: 'container-voy';
+$container = get_theme_mod( 'voyager_container_type' ) ?: 'container-voy';
 
 $pt = is_search() ? 'search' : get_post_type();
 

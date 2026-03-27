@@ -400,9 +400,11 @@
                 "bg-v2": "Theme Secondary",
                 "bg-v2l": "Theme Secondary Light",
                 "bg-v2a": "Theme Secondary Accent",
+                "bg-dkg": "Theme Dark Gradient",
+                "bg-ltg": "Theme Light Gradient",
+                "bg-trans": "Transparent\/None",
                 "bg-black": "Black",
-                "bg-img": "Image",
-                "bg-trans": "Transparent\/None"
+                "bg-img": "Image"
             },
             "default_value": false,
             "return_format": "value",
@@ -547,7 +549,10 @@
                 "bg-v2": "Theme Secondary",
                 "bg-v2l": "Theme Secondary Light",
                 "bg-v2a": "Theme Secondary Accent",
-                "bg-black": "Black"
+                "bg-dkg": "Theme Dark Gradient",
+                "bg-ltg": "Theme Light Gradient",
+                "bg-black": "Black",
+                "bg-trans": "Transparent\/None"
             },
             "default_value": "bg-dark",
             "return_format": "value",
@@ -628,11 +633,10 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "field",
-    "hide_on_screen": [
-        "the_content"
-    ],
+    "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1758576837
+    "display_title": "",
+    "modified": 1774571197
 }

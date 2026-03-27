@@ -41,15 +41,6 @@ function voyager_customize_register( $wp_customize ) {
     $wp_customize->remove_section('background_image');
 	$wp_customize->remove_section('header_image');
 
-	
-
-    // remove understrap settings
-    $wp_customize->remove_control('understrap_site_info_override');
-    // $wp_customize->remove_control('understrap_container_type');
-
-    // $wp_customize->remove_control('understrap_navbar_type');
-    // $wp_customize->remove_control('understrap_sidebar_position');
-
 
 	$wp_customize->add_setting( 'light_logo', array(
         'default' => get_theme_file_uri('images/logos/logo.png'), // Add Default Image URL 

@@ -545,7 +545,10 @@
                 "bg-v2": "Theme Secondary",
                 "bg-v2l": "Theme Secondary Light",
                 "bg-v2a": "Theme Secondary Accent",
-                "bg-black": "Black"
+                "bg-dkg": "Theme Dark Gradient",
+                "bg-ltg": "Theme Light Gradient",
+                "bg-black": "Black",
+                "bg-trans": "Transparent\/None"
             },
             "default_value": false,
             "return_format": "value",
@@ -704,7 +707,7 @@
         },
         {
             "key": "field_65c1474669569",
-            "label": "Hero Background",
+            "label": "Hero Bar Background",
             "name": "hero_bar_bg",
             "aria-label": "",
             "type": "select",
@@ -724,21 +727,25 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
             "choices": {
-                "bg-trans": "Transparent (gaps)",
                 "bg-white": "White",
                 "bg-v1": "Theme Primary",
-                "bg-v1-grad": "Theme Primary Gradient",
+                "bg-v1l": "Theme Primary Light",
+                "bg-v1a": "Theme Primary Accent",
+                "bg-v1g": "Theme Primary Gradient",
                 "bg-v2": "Theme Secondary",
-                "bg-dark": "Dark",
+                "bg-v2l": "Theme Secondary Light",
+                "bg-v2a": "Theme Secondary Accent",
+                "bg-dkg": "Theme Dark Gradient",
+                "bg-ltg": "Theme Light Gradient",
                 "bg-black": "Black",
-                "bg-img": "Image"
+                "bg-trans": "Transparent\/None"
             },
             "default_value": false,
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
+            "allow_in_bindings": 1,
             "ui": 0,
             "ajax": 0,
             "placeholder": "",
@@ -1084,20 +1091,20 @@
                         "id": ""
                     },
                     "choices": {
-                        "voy-light": "Light BG",
-                        "voy-dark": "Dark BG"
+                        "v-light": "Light BG",
+                        "v-dark": "Dark BG"
                     },
                     "default_value": false,
                     "return_format": "value",
                     "multiple": 0,
                     "allow_null": 1,
+                    "allow_in_bindings": 1,
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
-                    "parent_repeater": "field_65bec24c3a972",
-                    "wpml_cf_preferences": 1,
                     "create_options": 0,
-                    "save_options": 0
+                    "save_options": 0,
+                    "parent_repeater": "field_65bec24c3a972"
                 },
                 {
                     "key": "field_66723763f9974",
@@ -1116,22 +1123,28 @@
                     "choices": {
                         "bg-white": "White",
                         "bg-v1": "Theme Primary",
-                        "bg-v1-grad": "Theme Primary Gradient",
+                        "bg-v1l": "Theme Primary Light",
+                        "bg-v1a": "Theme Primary Accent",
+                        "bg-v1g": "Theme Primary Gradient",
                         "bg-v2": "Theme Secondary",
-                        "bg-dark": "Dark",
-                        "bg-black": "Black"
+                        "bg-v2l": "Theme Secondary Light",
+                        "bg-v2a": "Theme Secondary Accent",
+                        "bg-dkg": "Theme Dark Gradient",
+                        "bg-ltg": "Theme Light Gradient",
+                        "bg-black": "Black",
+                        "bg-trans": "Transparent\/None"
                     },
                     "default_value": false,
                     "return_format": "value",
                     "multiple": 0,
                     "allow_null": 1,
+                    "allow_in_bindings": 1,
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
-                    "parent_repeater": "field_65bec24c3a972",
-                    "wpml_cf_preferences": 1,
                     "create_options": 0,
-                    "save_options": 0
+                    "save_options": 0,
+                    "parent_repeater": "field_65bec24c3a972"
                 }
             ]
         },
@@ -1221,7 +1234,6 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
             "choices": {
                 "bg-white": "White",
                 "bg-v1": "Theme Primary",
@@ -1231,12 +1243,16 @@
                 "bg-v2": "Theme Secondary",
                 "bg-v2l": "Theme Secondary Light",
                 "bg-v2a": "Theme Secondary Accent",
-                "bg-black": "Black"
+                "bg-dkg": "Theme Dark Gradient",
+                "bg-ltg": "Theme Light Gradient",
+                "bg-black": "Black",
+                "bg-trans": "Transparent\/None"
             },
             "default_value": false,
             "return_format": "value",
             "multiple": 0,
             "allow_null": 1,
+            "allow_in_bindings": 1,
             "ui": 0,
             "ajax": 0,
             "placeholder": "",
@@ -1298,10 +1314,10 @@
             "wpml_cf_preferences": 1,
             "choices": {
                 "bo-white": "White",
-                "bo-v1": "Theme Primary Dark",
+                "bo-v1": "Theme Primary",
                 "bo-v1l": "Theme Primary Light",
                 "bo-v1a": "Theme Primary Accent",
-                "bo-v2": "Theme Secondary Dark",
+                "bo-v2": "Theme Secondary",
                 "bo-v2l": "Theme Secondary Light",
                 "bo-v2a": "Theme Secondary Accent",
                 "bo-acc-light": "Light Theme Accent",
@@ -1646,7 +1662,6 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
             "choices": {
                 "bg-white": "White",
                 "bg-v1": "Theme Primary",
@@ -1656,12 +1671,16 @@
                 "bg-v2": "Theme Secondary",
                 "bg-v2l": "Theme Secondary Light",
                 "bg-v2a": "Theme Secondary Accent",
-                "bg-black": "Black"
+                "bg-dkg": "Theme Dark Gradient",
+                "bg-ltg": "Theme Light Gradient",
+                "bg-black": "Black",
+                "bg-trans": "Transparent\/None"
             },
             "default_value": "bg-v1",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
+            "allow_in_bindings": 1,
             "ui": 0,
             "ajax": 0,
             "placeholder": "",
@@ -1692,9 +1711,11 @@
                 "bg-v2": "Theme Secondary",
                 "bg-v2l": "Theme Secondary Light",
                 "bg-v2a": "Theme Secondary Accent",
+                "bg-dkg": "Theme Dark Gradient",
+                "bg-ltg": "Theme Light Gradient",
+                "bg-trans": "Transparent\/None",
                 "bg-black": "Black",
-                "bg-img": "Image",
-                "bg-trans": "Transparent\/None"
+                "bg-img": "Image"
             },
             "default_value": false,
             "return_format": "value",
@@ -1938,11 +1959,10 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "field",
-    "hide_on_screen": [
-        "the_content"
-    ],
+    "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1758576567
+    "display_title": "",
+    "modified": 1774575181
 }

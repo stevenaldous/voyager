@@ -24,8 +24,8 @@
             "append": ""
         },
         {
-            "key": "field_68bb66b60e558",
-            "label": "Company\/Location",
+            "key": "field_69c5d5995b875",
+            "label": "Company Location",
             "name": "location",
             "aria-label": "",
             "type": "text",
@@ -33,13 +33,13 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "60",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "maxlength": "",
-            "allow_in_bindings": 0,
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
@@ -50,25 +50,25 @@
             "name": "stars",
             "aria-label": "",
             "type": "range",
-            "instructions": "If left blank, no stars will be displayed.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "40",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "min": "",
             "max": 5,
-            "allow_in_bindings": 1,
             "step": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "wpml_cf_preferences": 1
         },
         {
             "key": "field_62d5e5b13017d",
-            "label": "Review",
+            "label": "Content",
             "name": "content",
             "aria-label": "",
             "type": "textarea",
@@ -83,9 +83,9 @@
             "default_value": "",
             "maxlength": "",
             "allow_in_bindings": 0,
-            "rows": 4,
+            "rows": "",
             "placeholder": "",
-            "new_lines": "wpautop"
+            "new_lines": ""
         }
     ],
     "location": [
@@ -101,12 +101,13 @@
     "position": "normal",
     "style": "default",
     "label_placement": "top",
-    "instruction_placement": "field",
+    "instruction_placement": "label",
     "hide_on_screen": [
         "the_content"
     ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1757112406
+    "display_title": "",
+    "modified": 1774572993
 }

@@ -11,7 +11,8 @@
 defined( 'ABSPATH' ) || exit;
 
 // get site container width
-$container = get_theme_mod( 'understrap_container_type' ) ?: 'container';
+$container = get_theme_mod( 'voyager_container_type' ) ?: 'container';
+
 // copy style Vars
 $cop_bg = get_field('copyr_bg','options') ?: ' bg-white';
 $cop_th = get_field('copyr_theme','options')  ? ' v-dark' : ' v-light';

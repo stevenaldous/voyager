@@ -118,9 +118,10 @@
                 "bg-v2a": "Theme Secondary Accent",
                 "bg-dkg": "Theme Dark Gradient",
                 "bg-ltg": "Theme Light Gradient",
-                "bg-black": "Black"
+                "bg-black": "Black",
+                "bg-trans": "Transparent\/None"
             },
-            "default_value": "bg-jem2",
+            "default_value": "bg-v1",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -1763,7 +1764,6 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
             "choices": {
                 "bg-white": "White",
                 "bg-v1": "Theme Primary",
@@ -1773,16 +1773,17 @@
                 "bg-v2": "Theme Secondary",
                 "bg-v2l": "Theme Secondary Light",
                 "bg-v2a": "Theme Secondary Accent",
-                "bg-black": "Black",
-                "bg-img": "Image",
                 "bg-dkg": "Theme Dark Gradient",
                 "bg-ltg": "Theme Light Gradient",
-                "bg-trans": "Transparent\/None"
+                "bg-trans": "Transparent\/None",
+                "bg-black": "Black",
+                "bg-img": "Image"
             },
-            "default_value": "bg-jem2",
+            "default_value": "bg-v1",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
+            "allow_in_bindings": 1,
             "ui": 0,
             "ajax": 0,
             "placeholder": "",
@@ -1913,5 +1914,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1773698018
+    "modified": 1774574648
 }

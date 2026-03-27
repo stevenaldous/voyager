@@ -6,7 +6,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // get site container width
-$container = get_theme_mod( 'understrap_container_type' ) ?: 'container';
+$container = get_theme_mod( 'voyager_container_type' ) ?: 'container';
 
 // content Vars
 $sh     = get_sub_field( 'sem_hx' ) ? get_sub_field( 'sem_hx' ) : 'h2';

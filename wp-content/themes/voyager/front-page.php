@@ -15,7 +15,8 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-$container = get_theme_mod( 'understrap_container_type' ) ?: 'container';
+// get site container width
+$container = get_theme_mod( 'voyager_container_type' ) ?: 'container';
 
 $mt = ( get_field('hero_layout') == 'bar' ) && get_field( 'hero_bar_style' ) ? 'margin-bar' : '';
 
